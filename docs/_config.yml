@@ -31,6 +31,7 @@ url: "https://alyssabyrnes.github.io/" # the base hostname & protocol for your s
 
 # Build settings
 remote_theme: pages-themes/hacker@v0.2.0
+theme: jekyll-theme-hacker
 
 plugins:
   - jekyll-feed
