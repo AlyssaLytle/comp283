@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  "Welcome to 283!"
-date: 2023-04-02 
+title:  "Welcome to 283!" 
+date:   2023-04-02 15:55:14 -0400
 ---
 
 # Hello, world!
+
+Howdy! Just testing!
