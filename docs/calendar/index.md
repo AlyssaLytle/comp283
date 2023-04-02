@@ -1,3 +1,9 @@
+---
+layout: default
+title: calendar
+contributors: Alyssa Byrnes
+---
+
 # Class Calendar
 
 * Wed, May 17: Pseudocode
