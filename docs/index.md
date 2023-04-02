@@ -7,3 +7,4 @@ title: home
 ---
 
 # Welcome to Discrete Structures!
+
