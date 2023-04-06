@@ -5,5 +5,35 @@ contributors: Alyssa Byrnes
 ---
 
 # Syllabus
+# Discrete Structures (Comp 283-002)
 
-*Coming Soon!*
+## *Welcome!*
+- Course Style: Virtual, Asynchronous
+- Instructor Information:
+Alyssa Byrnes-Lytle (she/her/hers)
+- Email: abyrnes1@cs.unc.edu 
+- Office Hours: virtual, by appointment
+- Contact: via email or on EdStem
+- Learning Assistants: *(TBA)*
+- Office Hours: virtual; times will be displayed on Campuswire 
+***(Please fill out [this survey](http://whenisgood.net/y9txm3r) to indicate your weekly availability so that we know when to schedule office hours.)***
+
+## About the Class
+- Target Audience: 
+Anyone who wants to learn how to speak and think like a computer scientist!
+- Prerequisites:
+Calculus I
+- Textbook: 
+We have no required textbook for this class. 
+- Helpful Optional Textbooks:
+    - [Applied Discrete Structures - Al Doerr and Ken Levasseur](https://discretemath.org/)
+    - [Discrete Mathematics: An Open Introduction - Oscar Levin](https://discrete.openmathbooks.org/dmoi3.html)
+    - [Proofs - Jay Cummings](https://www.amazon.com/Proofs-Long-Form-Mathematics-Textbook-Math/dp/B08T8JCVF1/ref=sr_1_1?crid=2VC36XMADFKH0&keywords=proofs&qid=1680805106&sprefix=proofs%2Caps%2C81&sr=8-1)
+
+## Class tools:
+- **(Class Website)**[https://alyssabyrnes.github.io/comp283/] - Bookmark this link! Lessons and important information will be posted here!
+- **EdStem** - a question and answer site we will use for most class questions, announcements, and discussions. Join via this url: https://edstem.org/us/join/SsfjTf 
+- **Zoom** - a video chat service, will be used for office hours
+- **Canvas** - A UNC-hosted class management site, you can use this to access your grades and course materials such as lecture slides and handouts
+- **YouCanBookMe** - use this to schedule office hours with me [here](https://byrnes.youcanbook.me/)
+- **Gradescope** - used for assignments and assessments, I will enroll each student in advance
