@@ -30,7 +30,14 @@ We have no required textbook for this class.
     - [Discrete Mathematics: An Open Introduction - Oscar Levin](https://discrete.openmathbooks.org/dmoi3.html)
     - [Proofs - Jay Cummings](https://www.amazon.com/Proofs-Long-Form-Mathematics-Textbook-Math/dp/B08T8JCVF1/ref=sr_1_1?crid=2VC36XMADFKH0&keywords=proofs&qid=1680805106&sprefix=proofs%2Caps%2C81&sr=8-1)
 
-## Class tools:
+## Class Design
+* Monday-Wednesday there will be online video lessons and corresponding assignments for you to complete on Gradescope. 
+* Thursday I will host a live online review session 01:15 PM - 02:45 PM.
+* Friday will be **quiz day** where you are quizzed on previously learned concepts.
+* I will be available throughout the week to answer questions on our [class social media site](https://edstem.org/).
+
+
+## Class tools
 - [Class Website](https://alyssabyrnes.github.io/comp283/) - Bookmark this link! Lessons and important information will be posted here!
 - **EdStem** - a question and answer site we will use for most class questions, announcements, and discussions. Join via this url: [https://edstem.org/us/join/SsfjTf](https://edstem.org/us/join/SsfjTf)
 - **Zoom** - a video chat service, will be used for office hours
