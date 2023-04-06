@@ -38,10 +38,6 @@ We have no required textbook for this class.
 - **YouCanBookMe** - use this to schedule office hours with me [here](https://byrnes.youcanbook.me/)
 - **Gradescope** - used for assignments and assessments, I will enroll each student in advance
 
-## Assignment Types
-Collaboration is highly encouraged for all assignments except exams. I insist that everything you turn in is in your own typing or writing. Good scholarship requires that sources are credited, and collaborators acknowledged.
-
-*(More to be added in this section soon!)*
 
 ## Grading Breakup
 - 20%: Final Exam
