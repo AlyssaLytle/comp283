@@ -44,7 +44,10 @@ Collaboration is highly encouraged for all assignments except exams. I insist th
 *(More to be added in this section soon!)*
 
 ## Grading Breakup
-*(Coming Soon!)*
+- 20%: Final Exam
+- 20%: Quiz Grades (10% Each Quiz, Drop Lowest Grade)
+- 60%: Gradescope Lessons and Assignments
+
 
 ## Academic and Course Policies
 ### Attendance
@@ -55,7 +58,7 @@ Disability/religious observance/pregnancy, as required by law and approved by Ac
 Significant health condition and/or personal/family emergency as approved by the Office of the Dean of Students, Gender Violence Service Coordinators, and/or the Equal Opportunity and Compliance Office (EOC).
 
 
-### Class Policy:
+#### Class Policy:
 Please communicate with me early about potential absences. Please be aware that you are bound by the Honor Code when making a request for a University approved absence.
 
 ### Honor Code Statement
