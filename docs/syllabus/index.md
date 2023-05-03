@@ -14,7 +14,7 @@ Alyssa Byrnes-Lytle (she/her/hers)
 - Email: abyrnes1@cs.unc.edu 
 - Office Hours: virtual, by appointment
 - Contact: via email or on EdStem
-- Learning Assistants: *(TBA)*
+- Learning Assistants: Coralee Vickers, Adela Zhang, and Yuvraj Jain
 - Office Hours: virtual; times will be displayed on Campuswire 
 ***(Please fill out [this survey](http://whenisgood.net/y9txm3r) to indicate your weekly availability so that we know when to schedule office hours.)***
 
