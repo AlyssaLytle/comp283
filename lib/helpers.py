@@ -30,7 +30,7 @@ def lesson_page(title: str, topics: list[dict]):
     f = open(location + page_title, "w")
     f.writelines(page_info)
     f.close()
-    print("Page made:" + page_title)
+    print("Page made: " + "/calendar/" + page_title )
 
 def update_calendar(page_title: str, date):
     """Update a date on the calendar""" 
