@@ -6,8 +6,8 @@ contributors: Alyssa Byrnes
 
 # Class Calendar
 
-* Wed, May 17: Pseudocode
-* Thu, May 18: Propositional Logic
+* Wed, May 17: [LaTeX + Pseudocode](/latex-and-pseudocode.md)
+* Thu, May 18: [Propositional Logic](/propositional-logic.md)
 * Fri, May 19: Practice and Review
 * Mon, May 22: Sets, Tuples, and Counting
 * Tue, May 23: Quantifiers
