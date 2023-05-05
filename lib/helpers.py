@@ -7,14 +7,15 @@ def _page_header(title) -> str:
     page_str: str = "---\nlayout: default\n"
     page_str += f"title: {title}\n"
     page_str += "contributors: Alyssa Byrnes\n---\n\n"
+    page_str += "# " + title + "\n\n"
     return page_str
 
 def _link_dict_to_md(links: dict[str,str]) -> str:
     """Converts a dict of links to an md list"""
     link_str = ""
     for title in links:
-        link_str += f"[{title}]({links[title]}) | "
-    return link_str[:-3]
+        link_str += f"[{title}]({links[title]}), "
+    return link_str[:-2]
 
 def lesson_page(title: str, topics: list[dict]):
     """Generate a page for a day's lessons"""
