@@ -5,7 +5,7 @@ contributors: Alyssa Byrnes
 ---
 
 # Syllabus
-# Discrete Structures (Comp 283-002)
+# Discrete Structures (Comp 283-001)
 
 ## *Welcome!*
 - Course Style: Virtual, Asynchronous
