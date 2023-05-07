@@ -12,7 +12,7 @@ contributors: Alyssa Byrnes
 - Instructor Information:
 Alyssa Byrnes-Lytle (she/her/hers)
 - Email: abyrnes1@cs.unc.edu 
-- Office Hours: virtual, by appointment
+- Office Hours: virtual, [by appointment](https://byrnes.youcanbook.me/)
 - Contact: via email or on EdStem
 - Learning Assistants: Coralee Vickers, Adela Zhang, and Yuvraj Jain
 - Office Hours: virtual; times will be displayed on Campuswire 
