@@ -15,25 +15,25 @@ contributors: Alyssa Byrnes
 ## Calendar
 * Wed, May 17: [LaTeX + Pseudocode](/calendar/latex-and-pseudocode.md)
 * Thu, May 18: [Propositional Logic](/calendar/propositional-logic.md)
-* Fri, May 19: Practice and Review
-* Mon, May 22: Sets, Tuples, and Counting
-* Tue, May 23: Quantifiers
-* Wed, May 24: Set Operations
-* Thu, May 25: Practice and Review
-* Fri, May 26: Quiz 0
-* Tue, May 30: Relations
-* Wed, May 31: Functions
-* Thu, June 01: Practice and Review
+* Fri, May 19: [Practice and Review](/calendar/practice-and-review-0.md)
+* Mon, May 22: [Sets, Tuples, and Counting](/calendar/sets-tuples-and-counting.md)
+* Tue, May 23: [Quantifiers]()
+* Wed, May 24: [Set Operations]()
+* Thu, May 25: [Practice and Review](/calendar/practice-and-review-1.md)
+* Fri, May 26: Quiz 0 
+* Tue, May 30: [Relations]()
+* Wed, May 31: [Functions]()
+* Thu, June 01: [Practice and Review](/calendar/practice-and-review-2.md)
 * Fri, June 02: Quiz 1
-* Mon, June 05: Number Theory + Applications
-* Tue, June 06: Proofs
-* Wed, June 07: Proofs
-* Thu, June 08: Practice and Review
+* Mon, June 05: [Number Theory and Applications]()
+* Tue, June 06: [Proofs]()
+* Wed, June 07: [Proofs Continued]()
+* Thu, June 08: [Practice and Review](/calendar/practice-and-review-3.md)
 * Fri, June 09: Quiz 2
-* Mon, June 12: Recursion
-* Tue, June 13: Induction
-* Wed, June 14: Analyzing Algorithms + Invariants
-* Thu, June 15: Proving Invariants
-* Fri, June 16: Practice and Review
-* Tue, June 20: Practice and Review
+* Mon, June 12: [Recursion]()
+* Tue, June 13: [Induction]()
+* Wed, June 14: [Analyzing Algorithms + Invariants]()
+* Thu, June 15: [Proving Invariants]()
+* Fri, June 16: [Practice and Review](/calendar/practice-and-review-4.md)
+* Tue, June 20: [Practice and Review](/calendar/practice-and-review-5.md)
 * ***Fri., June 23: FINAL EXAM***

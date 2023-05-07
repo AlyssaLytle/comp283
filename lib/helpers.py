@@ -23,6 +23,7 @@ def lesson_page(title: str, topics: list[dict]):
     page_info: str = _page_header(title)
     location = "../docs/calendar/"
     page_title = title.lower()
+    page_title = page_title.replace(",", "")
     page_title = page_title.replace(" ", "-") + ".md"
     for topic in topics:
         title = topic['title']
