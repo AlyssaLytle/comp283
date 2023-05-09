@@ -5,7 +5,7 @@ contributors: Alyssa Byrnes
 ---
 
 ## Quantifiers (Predicate Logic)
-### Chapter 4 in book
+<!-- ### Chapter 4 in book
 
 ## Predicate Definition
  A **predicate** is a
@@ -22,7 +22,7 @@ function that maps each possible input to either $$\texttt{True}$$ or $$\texttt{
 - We can combine these to write the statement "If it did not rain in the morning
 on day $$x$$, then I walked to campus on day $$x$$" as $$\neg p(x) \implies q(x)$$
 
-<!-- $$ \footnote{{In the textbook, $$\implies$$ is written as $$\rightarrow$$ and $$\neg x$$ is written as $$\bar{x}$$.}}  -->
+
 
 ## Motivation
  We are going to introduce the next concept with an example...
@@ -134,5 +134,5 @@ $$\neg(\exists x, p(x))$$ in English translates to "There does not exist $$x$$ s
 
 - $$\forall_{e \in P}$$ $$\exists_{s \in P}, loves(e,s)$$ translates to "Everybody loves somebody."
 
-- $$\exists_{s \in P}$$ $$\forall_{e \in P}, loves(e,s)$$ translates to "There is somebody that everybody loves."
+- $$\exists_{s \in P}$$ $$\forall_{e \in P}, loves(e,s)$$ translates to "There is somebody that everybody loves." -->
 
