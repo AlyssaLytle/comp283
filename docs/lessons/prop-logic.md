@@ -5,8 +5,8 @@ contributors: Alyssa Byrnes
 usemathjax: true
 ---
 
-## Propositional Logic
-Textbook Chapter 2
+# Propositional Logic
+
 
 ## Learning Objectives
 
