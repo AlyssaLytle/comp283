@@ -346,7 +346,7 @@ So, Alice is a knight, Bob is a knave, and Chris is a knight.
     -  $$ T \implies (\neg(F) \lor T) $$  evaluates to True!
 
 - Bob says: Alice is a knight if, and only if, Chris is a knave. 
-    -  $$ B \implies (A \iff \neg C) $$ 
+    -  $$ B \implies (A \iff \neg C) $$  
     plug in the truth values...
     -  $$ F \implies (T \iff \neg T) $$ evaluates to True!
 
