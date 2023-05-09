@@ -10,7 +10,7 @@ usemathjax: true
 
 ## Learning Objectives
 
--  Express statements in symbolic form, using the logic operations of negation, and, inclusive or, implies, if and only if (iff), and exclusive or (and their symbols: $\neg, \land, \lor, \implies, \iff,$ and $\oplus$) to express statements without ambiguity.
+-  Express statements in symbolic form, using the logic operations of negation, and, inclusive or, implies, if and only if (iff), and exclusive or (and their symbols: $$ \neg, \land, \lor, \implies, \iff, $$ and $\oplus$) to express statements without ambiguity.
 -  Distinguish between inclusive and exclusive 'or'.
 -  Create truth tables in order to recognize tautologies and logically equivalent expressions, including De Morgan’s rules and conditional expressions.
 -  Meet properties of logic operations and rules of logical inference, both of which help us rewrite expressions while preserving their truth values.
