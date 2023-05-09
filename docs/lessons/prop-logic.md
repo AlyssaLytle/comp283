@@ -13,7 +13,7 @@ Textbook Chapter 2
 -  Demonstrate how to use at least one of these methods to solve a logic puzzle.
 
 ## Propositions and Basic Operations
-A *proposition* is a sentence to which one and only one of the terms $\texttt{True}$ or $\texttt{False}$ can be applied. 
+A *proposition* is a sentence to which one and only one of the terms $$\texttt{True}$$ or $\texttt{False}$ can be applied. 
 
 Poll time...
 
