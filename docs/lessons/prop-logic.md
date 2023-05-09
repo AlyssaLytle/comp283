@@ -19,11 +19,6 @@ contributors: Alyssa Byrnes
 ## Propositions and Basic Operations
 A *proposition* is a sentence to which one and only one of the terms  $$ \texttt{True} $$   or  $$ \texttt{False} $$  can be applied. 
 
-Poll time...
-
-## Propositions and Basic Operations
-A *proposition* is a sentence to which one and only one of the terms  $$ \texttt{True} $$  or  $$ \texttt{False} $$  can be applied. 
-
 Which of the following are propositions?
 
 -  We are currently in Chapel Hill. - Yes
@@ -347,11 +342,13 @@ So, Alice is a knight, Bob is a knave, and Chris is a knight.
 
 - Alice says: Bob is a knave or Chris is a knight.
     -  $$ A \implies (\neg B \lor C) $$  
+    plug in the true values...
     -  $$ T \implies (\neg(F) \lor T) $$  evaluates to True!
 
 - Bob says: Alice is a knight if, and only if, Chris is a knave. 
-    -  $$ B \implies (A \iff \neg C) $$ 
-    -  $$ F \implies (T \iff \neg T) $$  evaluates to True!
+    -  $$ B \implies (A \iff \neg C) $$
+    plug in the true values...
+    -  $$ F \implies (T \iff \neg T) $$ evaluates to True!
 
 Both of our rules hold in this world with these assignments, so we know that this solution works!
 
