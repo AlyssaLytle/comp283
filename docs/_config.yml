@@ -61,4 +61,4 @@ plugins:
 
 show_downloads: false
 
-usemathjax: true
+#usemathjax: true
