@@ -20,7 +20,9 @@ function that maps each possible input to either $$\texttt{True}$$ or $$\texttt{
 >$$q(x) =$$ "I walked to campus on day $$x$$."
 
 >We can combine these to write the statement "If it did not rain in the morning
-on day $$x$$, then I walked to campus on day $$x$$" as $$\neg p(x) \implies q(x)$$ \footnote{{In the textbook, $$\implies$$ is written as $$\rightarrow$$ and $$\neg x$$ is written as $$\bar{x}$$.}} 
+on day $$x$$, then I walked to campus on day $$x$$" as $$\neg p(x) \implies q(x)
+
+<!-- $$ \footnote{{In the textbook, $$\implies$$ is written as $$\rightarrow$$ and $$\neg x$$ is written as $$\bar{x}$$.}}  -->
 
 ## Motivation
  We are going to introduce the next concept with an example...
