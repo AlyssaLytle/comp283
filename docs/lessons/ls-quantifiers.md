@@ -13,14 +13,14 @@ function that maps each possible input to either $$\texttt{True}$$ or $$\texttt{
  
 ### Example 
 
->Here are two predicates each taking their input $$x$$ from a set of days, $$D$$:
+- Here are two predicates each taking their input $$x$$ from a set of days, $$D$$:
 
->$$p(x) =$$ "It rained in the morning on day $$x$$," and
+- $$p(x) =$$ "It rained in the morning on day $$x$$," and
 
->$$q(x) =$$ "I walked to campus on day $$x$$."
+- $$q(x) =$$ "I walked to campus on day $$x$$."
 
->We can combine these to write the statement "If it did not rain in the morning
-on day $$x$$, then I walked to campus on day $$x$$" as $$\neg p(x) \implies q(x) $$
+- We can combine these to write the statement "If it did not rain in the morning
+on day $$x$$, then I walked to campus on day $$x$$" as $$\neg p(x) \implies q(x)$$
 
 <!-- $$ \footnote{{In the textbook, $$\implies$$ is written as $$\rightarrow$$ and $$\neg x$$ is written as $$\bar{x}$$.}}  -->
 
@@ -29,18 +29,18 @@ on day $$x$$, then I walked to campus on day $$x$$" as $$\neg p(x) \implies q(x)
 
 ### Example 
 
->Let's say that my previous statement only applies on Mondays, Wednesdays, and Fridays. 
+- Let's say that my previous statement only applies on Mondays, Wednesdays, and Fridays. 
 
->How can we say this using what we already learned?
+- How can we say this using what we already learned?
 
->$$(\neg p($$Mon$$) \implies q($$Mon$$)) \land (\neg p($$Wed$$) \implies q($$Wed$$)) \land (\neg p($$Fri$$) \implies q($$Fri$$))$$
+- $$(\neg p($$Mon$$) \implies q($$Mon$$)) \land (\neg p($$Wed$$) \implies q($$Wed$$)) \land (\neg p($$Fri$$) \implies q($$Fri$$))$$
 
->We can also express this using set notation.
->Say $$D= \{$$Mon, Wed, Fri$$\}$$.
+- We can also express this using set notation.
+- Say $$D= \{$$Mon, Wed, Fri$$\}$$.
 
->Similar to how you use a summation $$\sum$$ for a sequence of additions, we can use the big and $$\bigwedge$$ to represent a sequence of ands.
+- Similar to how you use a summation $$\sum$$ for a sequence of additions, we can use the big and $$\bigwedge$$ to represent a sequence of ands.
 
->$$\bigwedge\limits_{d \in D} (\neg p(d) \implies q(d))$$
+- $$\bigwedge\limits_{d \in D} (\neg p(d) \implies q(d))$$
 
 ## Motivation Continued - Universal Quantifier
 
@@ -69,15 +69,15 @@ The "there exists" quantifier, denoted $$\exists$$, is used to reason about at l
  
 ### Example 
 
->Now let's say that for at least one day of Monday, Wednesday and Friday, if it's not raining on day $$d$$, then I walk to campus on day $$d$$.
+- Now let's say that for at least one day of Monday, Wednesday and Friday, if it's not raining on day $$d$$, then I walk to campus on day $$d$$.
 
->This can be written using logical or, big or, or with the "there exists" quantifier.
+- This can be written using logical or, big or, or with the "there exists" quantifier.
 
->$$(\neg p(\textrm{Mon}) \implies q(\textrm{Mon})) \lor (\neg p(\textrm{Wed}) \implies q(\textrm{Wed})) \lor (\neg p(\textrm{Fri}) \implies q(\textrm{Fri}))$$
+- $$(\neg p(\textrm{Mon}) \implies q(\textrm{Mon})) \lor (\neg p(\textrm{Wed}) \implies q(\textrm{Wed})) \lor (\neg p(\textrm{Fri}) \implies q(\textrm{Fri}))$$
 
->$$\equiv \bigvee\limits_{d \in D} (\neg p(d) \implies q(d))$$
+- $$\equiv \bigvee\limits_{d \in D} (\neg p(d) \implies q(d))$$
 
->$$\equiv \exists d \in D, (\neg p(d) \implies q(d))$$
+- $$\equiv \exists d \in D, (\neg p(d) \implies q(d))$$
 
 ## Free and Bounded Variables
 
@@ -87,16 +87,16 @@ The "there exists" quantifier, denoted $$\exists$$, is used to reason about at l
  
 ### Example 
 
->In the preposition $$\forall x \in \mathbb{Z}, f(x,y)$$,
+- In the preposition $$\forall x \in \mathbb{Z}, f(x,y)$$,
 
->$$x$$ is a bounded variable and $$y$$ is a free variable.
+- $$x$$ is a bounded variable and $$y$$ is a free variable.
  
 ### Example 
 
->For
+- For
 $$\sum\limits_{k=0}^{10} (k+n)$$,
 
->$$k$$ is a bounded variable and $$n$$ is a free variable.
+- $$k$$ is a bounded variable and $$n$$ is a free variable.
 
 
 ## Negation and Inference
@@ -113,14 +113,14 @@ $$\neg(\exists x, p(x)) \equiv \forall x, \neg p(x)$$
 
 ### Example 
 
->$$\neg(\forall x, p(x))$$ in English translates to "$$p(x)$$ does not hold for all $$x$$".
+- $$\neg(\forall x, p(x))$$ in English translates to "$$p(x)$$ does not hold for all $$x$$".
 
->This is equivalent to saying, "There exists an $$x$$ where $$p(x)$$ does not hold", or $$\exists x, \neg p(x)$$.
+- This is equivalent to saying, "There exists an $$x$$ where $$p(x)$$ does not hold", or $$\exists x, \neg p(x)$$.
 
->Similarly, 
+- Similarly, 
 $$\neg(\exists x, p(x))$$ in English translates to "There does not exist $$x$$ such that $$p(x)$$ holds. 
 
->This is equivalent to saying "For all $$x$$, $$p(x)$$ does not hold", or $$\forall x, \neg p(x)$$.
+- This is equivalent to saying "For all $$x$$, $$p(x)$$ does not hold", or $$\forall x, \neg p(x)$$.
 
 
 
@@ -128,11 +128,11 @@ $$\neg(\exists x, p(x))$$ in English translates to "There does not exist $$x$$ s
 ## Nested Quantifiers
  
 ### Example 
->This example is to help you get some practice with nested quantifiers and to understand that the order of them matters.
+- This example is to help you get some practice with nested quantifiers and to understand that the order of them matters.
 
->Say that $$loves(x,y)$$ is true iff person $$x$$ loves person $$y$$.
+- Say that $$loves(x,y)$$ is true iff person $$x$$ loves person $$y$$.
 
->$$\forall_{e \in P}$$ $$\exists_{s \in P}, loves(e,s)$$ translates to "Everybody loves somebody."
+- $$\forall_{e \in P}$$ $$\exists_{s \in P}, loves(e,s)$$ translates to "Everybody loves somebody."
 
->$$\exists_{s \in P}$$ $$\forall_{e \in P}, loves(e,s)$$ translates to "There is somebody that everybody loves."
+- $$\exists_{s \in P}$$ $$\forall_{e \in P}, loves(e,s)$$ translates to "There is somebody that everybody loves."
 
