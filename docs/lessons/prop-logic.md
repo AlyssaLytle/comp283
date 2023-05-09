@@ -342,12 +342,12 @@ So, Alice is a knight, Bob is a knave, and Chris is a knight.
 
 - Alice says: Bob is a knave or Chris is a knight.
     -  $$ A \implies (\neg B \lor C) $$  
-    plug in the true values...
+    plug in the truth values...
     -  $$ T \implies (\neg(F) \lor T) $$  evaluates to True!
 
 - Bob says: Alice is a knight if, and only if, Chris is a knave. 
-    -  $$ B \implies (A \iff \neg C) $$
-    plug in the true values...
+    -  $$ B \implies (A \iff \neg C) $$ 
+    plug in the truth values...
     -  $$ F \implies (T \iff \neg T) $$ evaluates to True!
 
 Both of our rules hold in this world with these assignments, so we know that this solution works!
