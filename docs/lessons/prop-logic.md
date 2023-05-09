@@ -41,7 +41,7 @@ F & T \\
 \hline
 \end{array} $$ 
 
-What this is saying is: "When  $$ p $$  is  $$ \texttt{True} $$ ,  $$ \neg p $$  is  $$ \texttt{False} $$ , and when  $$ p $$  is  $$ \texttt{False} $$ ,  $$ \neg p $$  is  $$ \texttt{True} $$ .''
+What this is saying is: "When  $$ p $$  is  $$ \texttt{True} $$ ,  $$ \neg p $$  is  $$ \texttt{False} $$ , and when  $$ p $$  is  $$ \texttt{False} $$ ,  $$ \neg p $$  is  $$ \texttt{True}$$.''
 
 Here is an example of a negated proposition.
 
@@ -124,9 +124,9 @@ The *conditional statement*  $$ p \implies q $$  is False when  $$ p $$  is  $$ 
 
 Some English phrases for this would be:
 
--  If  $$ p $$ , then  $$ q $$ .
--   $$ p $$  implies  $$ q $$ .
--   $$ q $$  if  $$ p $$ .
+-  If  $$ p $$ , then  $$ q$$.
+-   $$ p $$  implies  $$ q$$.
+-   $$ q $$  if  $$ p$$.
 
 A Truth Table for implication would look like the following:
  $$ \begin{array}{|c|c|c|}
@@ -147,9 +147,9 @@ Here is an example of implication.
 -   $$ q $$ : "I walk to campus.''
 -   $$ p \implies q $$ : "If it is sunny, then I walk to campus.''
 
-The implication ( $$ p \implies q $$ ) is  $$ \texttt{False} $$  if it is sunny and I do NOT walk to campus. Otherwise, it is  $$ \texttt{True} $$ . 
+The implication ( $$ p \implies q $$ ) is  $$ \texttt{False} $$  if it is sunny and I do NOT walk to campus. Otherwise, it is  $$ \texttt{True}$$. 
 
-If it is not sunny ( $$ p $$  is  $$ \texttt{False} $$ ) and I still walk to campus ( $$ q $$  is  $$ \texttt{True} $$ ), this implication is still  $$ \texttt{True} $$ .
+If it is not sunny ( $$ p $$  is  $$ \texttt{False} $$ ) and I still walk to campus ( $$ q $$  is  $$ \texttt{True} $$ ), this implication is still  $$ \texttt{True}$$.
 
 
 ## Biconditionals
@@ -177,9 +177,9 @@ Here is an example of a biconditional.
 -   $$ q $$ : "I walk to campus.''
 -   $$ q \iff p $$ : "I walk to campus if and only if it is sunny.''
 
-The biconditional ( $$ p \iff q $$ ) is  $$ \texttt{True} $$  if it is sunny and I walk to campus or if it is not sunny and I don't walk to campus. Otherwise, it is  $$ \texttt{False} $$ . 
+The biconditional ( $$ p \iff q $$ ) is  $$ \texttt{True} $$  if it is sunny and I walk to campus or if it is not sunny and I don't walk to campus. Otherwise, it is  $$ \texttt{False}$$. 
 
-Unlike the previous example, if it is not sunny ( $$ p $$  is  $$ \texttt{False} $$ ) and I still walk to campus ( $$ q $$  is  $$ \texttt{True} $$ ), this biconditional is  $$ \texttt{False} $$ .
+Unlike the previous example, if it is not sunny ( $$ p $$  is  $$ \texttt{False} $$ ) and I still walk to campus ( $$ q $$  is  $$ \texttt{True} $$ ), this biconditional is  $$ \texttt{False}$$.
 
 
 ## Useful Logical Equivalences
@@ -213,7 +213,7 @@ F & F & T & T & F & T & T \\
 -  If two compound propositions have the same truth tables, they are considered *logically equivalent*.
     - For example, today we showed  $$ \neg (p \land q) $$  and  $$ \neg p \lor \neg q $$  are logically equivalent!
 -  A compound proposition with a truth table where all the values in the last column are  $$ \texttt{True} $$  is called a *tautology*. 
-    - An example of this is  $$ p \lor \neg p $$ . 
+    - An example of this is  $$ p \lor \neg p$$. 
 
  $$ \begin{array}{|c|c|c|}
 \hline
@@ -248,7 +248,7 @@ Then, you break your sentence to the smallest propositions possible.
 
  $$ b $$  = "you are under 4 feet tall''
 
-Now your sentence is: Not  $$ a $$  if  $$ b $$ .
+Now your sentence is: Not  $$ a $$  if  $$ b$$.
 
 
 Here's an example of breaking up an English language sentence.
@@ -261,9 +261,9 @@ Then, you break your sentence to the smallest propositions possible.
 
  $$ b $$  = "you are under 4 feet tall''
 
-Now your sentence is: Not  $$ a $$  if  $$ b $$ .
+Now your sentence is: Not  $$ a $$  if  $$ b$$.
 
-So you know you can write it as:  $$ b \implies \neg a $$ .
+So you know you can write it as:  $$ b \implies \neg a$$.
 
 
 
@@ -282,7 +282,7 @@ On an island, every inhabitant is a knight who always tells the truth, or a knav
 Can you determine uniquely what each of Alice, Bob, and Chris are?
 
 1. Define convenient variables for propositions.
-2. Transform what they say into statements that *always* should evaluate to  $$ \texttt{True} $$ . These are the rules of our world.
+2. Transform what they say into statements that *always* should evaluate to  $$ \texttt{True}$$. These are the rules of our world.
 3. Make a truth table – With 3 people, we have  $$ 2^3 $$  rows
 4. Check if a unique row makes both statements true. 
 
@@ -292,7 +292,7 @@ Can you determine uniquely what each of Alice, Bob, and Chris are?
 
  $$ \neg A = $$  "Alice is a knave",  $$ \neg B = $$  "Bob is a knave", $$ \neg C= $$  "Chris is a knave"
 
-### 2. Transform what they say into statements that *always* should evaluate to  $$ \texttt{True} $$ . These are the rules of our world.
+### 2. Transform what they say into statements that *always* should evaluate to  $$ \texttt{True}$$. These are the rules of our world.
 
 - Alice says: Bob is a knave or Chris is a knight.
 - Bob says: Alice is a knight if, and only if, Chris is a knave.
