@@ -1,10 +1,8 @@
-
 ---
 layout: default
 title: Propositional Logic
 contributors: Alyssa Byrnes
 ---
-
 usemathjax: true
 
 ## Propositional Logic
