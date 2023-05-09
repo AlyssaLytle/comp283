@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Propositional Logic
+title: PropLogic
 contributors: Alyssa Byrnes
 ---
 
-# Propositional Logic
-
+## Propositional Logic
+Textbook Chapter 2
 
 ## Learning Objectives
 
