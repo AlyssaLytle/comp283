@@ -14,7 +14,10 @@ def _link_dict_to_md(links: dict[str,str]) -> str:
     """Converts a dict of links to an md list"""
     link_str = ""
     for title in links:
-        link_str += f"[{title}]({links[title]}), "
+        if len(links[title]) > 0:
+            link_str += f"[{title}]({links[title]}), "
+        else: #not a link
+            link_str += f"{title}, "
     return link_str[:-2]
 
 def lesson_page(title: str, topics: list[dict]):

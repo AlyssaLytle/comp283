@@ -6,6 +6,6 @@ contributors: Alyssa Byrnes
 
 # LaTeX and Pseudocode
 
-* Welcome!: [Video](), [Slides](/comp283/static/slides/0-Intro.pdf)
-* LaTeX: [Assignment](https://www.gradescope.com/)
-* Pseudocode: [Video](), [Assignment](https://www.gradescope.com/)
+* Welcome!: Video *(Coming Soon)*, [Slides](/comp283/static/slides/0-Intro.pdf)
+* LaTeX: [Assignment](https://www.gradescope.com/), *(No Video for this lesson)*
+* Pseudocode: Video *(Coming Soon)*, [Assignment](https://www.gradescope.com/)
