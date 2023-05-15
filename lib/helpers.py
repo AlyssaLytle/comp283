@@ -49,10 +49,11 @@ def make_slides(slides_name: str) -> str:
     # Slide location should be /slides/
     slides_loc = f"slides/{slides_name}"
     # Store slide in ../docs/lessons/
-    html_name = '../docs/lessons/' + slides_name.lower()[:-2] + "html"
+    html_name = '../docs/lessons/' + slides_name[:-2] + "html"
+    ret_name = '/comp283/lessons/' + slides_name[:-2] + "html"
     print(html_name)
     command = f"pandoc --toc --mathjax -t slidy --include-in-header=leftalign.css " 
     command += f"{slides_loc} -o {html_name} -s"
     subprocess.run("cd ../", shell=True)
     subprocess.run(command, shell=True)
-    return html_name
+    return ret_name
