@@ -15,7 +15,7 @@ contributors: Alyssa Byrnes
 ## Calendar
 * Wed, May 17: [LaTeX + Pseudocode](/calendar/latex-and-pseudocode.md)
 * Thu, May 18: [Propositional Logic](/calendar/propositional-logic.md)
-* Fri, May 19: [Practice and Review](/calendar/practice-and-review-0.md)
+* Fri, May 19: [Practice and Review (11 AM!)](/calendar/practice-and-review-0.md)
 * Mon, May 22: [Sets, Tuples, and Counting](/calendar/sets-tuples-and-counting.md)
 * Tue, May 23: [Quantifiers](/calendar/quantifiers.md)
 * Wed, May 24: [Set Operations](/calendar/set-operations.md)
