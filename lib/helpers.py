@@ -1,6 +1,7 @@
 """Helper methods to generate webpage"""
 
 from datetime import date
+import subprocess
 
 def _page_header(title) -> str:
     """REturns the header for a .md page"""
@@ -41,3 +42,17 @@ def update_calendar(page_title: str, date):
     """Update a date on the calendar""" 
     #TODO
     return 0
+
+def make_slides(slides_name: str) -> str:
+    """Using Pandocs, make slides from a .md file.
+    Return path to new slide"""
+    # Slide location should be /slides/
+    slides_loc = f"slides/{slides_name}"
+    # Store slide in ../docs/lessons/
+    html_name = '../docs/lessons/' + slides_name.lower()[:-2] + "html"
+    print(html_name)
+    command = f"pandoc --toc --mathjax -t slidy --include-in-header=leftalign.css " 
+    command += f"{slides_loc} -o {html_name} -s"
+    subprocess.run("cd ../", shell=True)
+    subprocess.run(command, shell=True)
+    return html_name

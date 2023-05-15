@@ -1,0 +1,51 @@
+<style type="text/css">
+  .reveal .slides {
+    text-align: left;
+  }
+
+  .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+  .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+  .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+  .scrollable {
+     bottom: 0px;
+     overflow-y: auto !important;
+     overflow-x: hidden !important;
+  }
+
+  .ABCD ol { list-style-type: none }
+  
+  .ABCD li {
+      margin-left: 0;
+      position: relative;
+      margin-bottom: 0.5em;
+  }
+  .ABCD li:nth-child(1n):before {
+      display: inline-block;
+      width: 34px;
+      height: 26px;
+      content: "";
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin-right: 6px;
+  }
+  .ABCD li:nth-child(1):before {
+      background-image: url("https://i.imgur.com/RMwhb9V.png");
+  }
+  .ABCD li:nth-child(2):before {
+      background-image: url("https://i.imgur.com/ohacW4o.png");
+  }
+  .ABCD li:nth-child(3):before {
+      background-image: url("https://i.imgur.com/aLbKhim.png");
+  }
+  .ABCD li:nth-child(4):before {
+      background-image: url("https://i.imgur.com/rO9kNmA.png");
+  }
+  .ABCD li:nth-child(5):before {
+      background-image: url("https://i.imgur.com/UNRTmoP.png");
+  }
+  .ABCD li:nth-child(6):before {
+      background-image: url("https://i.imgur.com/Bbd0ByA.png");
+  }
+
+</style>
