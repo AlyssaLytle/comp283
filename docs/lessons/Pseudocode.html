@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Pseudocode</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    }
+
+  </style>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide" id="TOC">
+<ul>
+<li><a href="#pseudocode" id="toc-pseudocode">Pseudocode</a></li>
+<li><a href="#learning-objectives" id="toc-learning-objectives">Learning
+Objectives</a></li>
+<li><a href="#basics-of-coding" id="toc-basics-of-coding">Basics of
+Coding</a></li>
+<li><a href="#what-is-pseudocode" id="toc-what-is-pseudocode">What is
+Pseudocode?</a></li>
+<li><a href="#example" id="toc-example">Example</a></li>
+<li><a href="#example-1" id="toc-example-1">Example</a></li>
+<li><a href="#example-2" id="toc-example-2">Example 2</a></li>
+<li><a href="#example-2-1" id="toc-example-2-1">Example 2</a></li>
+<li><a href="#example-2-2" id="toc-example-2-2">Example 2</a></li>
+<li><a href="#example-2-by-index" id="toc-example-2-by-index">Example 2
+(By Index)</a></li>
+</ul>
+</div>
+<div id="pseudocode" class="slide section level2">
+<h1>Pseudocode</h1>
+</div>
+<div id="learning-objectives" class="slide section level2">
+<h1>Learning Objectives</h1>
+<ul>
+<li>Learn how to write and read Pseudocode</li>
+</ul>
+</div>
+<div id="basics-of-coding" class="slide section level2">
+<h1>Basics of Coding</h1>
+<ul>
+<li>For this course, you will need to know the fundamental concepts of
+coding: variables, operators, loops, and functions.</li>
+<li><em>If you do not have any experience coding please reach
+out!</em></li>
+</ul>
+</div>
+<div id="what-is-pseudocode" class="slide section level2">
+<h1>What is Pseudocode?</h1>
+<ul>
+<li>Pseudocode is a generalized way of writing text that
+<em>resembles</em> code.</li>
+<li>It can be written many different ways, but the main goal is for it
+to clearly express the <strong>input</strong>, <strong>return
+value</strong>, and <strong>functionality</strong> of your code.</li>
+</ul>
+</div>
+<div id="example" class="slide section level2">
+<h1>Example</h1>
+<ul>
+<li>A program that takes an integer as input, and returns that number
+plus one.</li>
+</ul>
+</div>
+<div id="example-1" class="slide section level2">
+<h1>Example</h1>
+<ul>
+<li>A program that takes an integer as input, and returns that number
+plus one.</li>
+</ul>
+<pre><code>INPUT x : integer
+x = x + 1
+RETURN x</code></pre>
+<p><em>(This syntax doesn’t have to be copied exactly! It just needs to
+be clear what your program is doing! If you feel more comfortable using
+other syntax like Python or Java, that is fine!)</em></p>
+</div>
+<div id="example-2" class="slide section level2">
+<h1>Example 2</h1>
+<ul>
+<li>A program that inputs a list and returns the <em>value</em> of the
+maximum element.</li>
+<li>E.g. Input: <code>[1,7,5,3,10,2]</code> Return: <code>10</code></li>
+</ul>
+</div>
+<div id="example-2-1" class="slide section level2">
+<h1>Example 2</h1>
+<ul>
+<li>A program that inputs a list and returns the <em>value</em> of the
+maximum element.</li>
+<li>E.g. Input: <code>[1,7,5,3,10,2]</code> Return: <code>10</code></li>
+<li>Start with English description:
+<ul>
+<li>Input a list</li>
+<li>Start by assuming the first element (index 0) is the max</li>
+<li>Loop through the list…</li>
+<li>…and any time I find a number larger than the believed max, make it
+the new max</li>
+<li>Return the value of max</li>
+</ul></li>
+</ul>
+</div>
+<div id="example-2-2" class="slide section level2">
+<h1>Example 2</h1>
+<ul>
+<li>A program that inputs a list and returns the <em>value</em> of the
+maximum element.</li>
+</ul>
+<pre><code>INPUT my_list: list
+max = list[0]
+FOR element in my_list:
+    IF element &gt; max:
+        max = element
+RETURN max</code></pre>
+</div>
+<div id="example-2-by-index" class="slide section level2">
+<h1>Example 2 (By Index)</h1>
+<ul>
+<li>A program that inputs a list and returns the <em>value</em> of the
+maximum element.</li>
+</ul>
+<pre><code>INPUT my_list: list
+n = LENGTH(my_list)
+max = list[0]
+FOR index in [0,n-1]:
+    element = my_list[index]
+    IF element &gt; max:
+        max = element
+RETURN max</code></pre>
+</div>
+</body>
+</html>
