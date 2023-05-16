@@ -55,6 +55,21 @@ RETURN x
     5. Return the value of max
 
 
+## Workspace
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 ## Example 2
 
 * A program that inputs a list and returns the *value* of the maximum element.
