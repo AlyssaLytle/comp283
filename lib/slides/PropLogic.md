@@ -1,6 +1,9 @@
-
-
-## Propositional Logic
+---
+title: Propositional Logic
+theme: dracula
+center: false
+transition: 'none'
+---
 
 
 ## Learning Objectives
@@ -30,8 +33,8 @@ Which of the following are propositions?
 -  It is hot outside. - No
 
 
-
 ## Negation
+<div id="left">
 
 A *Truth Table* for negation would look like the following:
 
@@ -44,17 +47,30 @@ F & T \\
 \hline
 \end{array}$
 
-What this is saying is: "When $p$ is $\texttt{True}$, $\neg p$ is $\texttt{False}$, and when $p$ is $\texttt{False}$, $\neg p$ is $\texttt{True}$.''
+What this is saying is: <br>
+"When $p$ is $\texttt{True}$, $\neg p$ is $\texttt{False}$, <br>
+and when $p$ is $\texttt{False}$, $\neg p$ is $\texttt{True}$.''
 
-Here is an example of a negated proposition.
+</div>
+
+<div id="right" class="incremental">
+
+Here is an example of a negated proposition:
 
 -  $p$: "Today is Monday.''
 -  $\neg p$: "Today is not Monday.'' 
 -  *ALTERNATIVELY:* $\neg p$: "It is not the case that today is Monday.''
 
+</div>
+
+
+
+
+
 
 ## Conjunction
 
+<div id="left">
 A Truth Table for conjunction would look like the following:
 $\begin{array}{|c|c|c|}
 \hline
@@ -67,17 +83,48 @@ F & F & F \\
 \hline
 \end{array}$
 
-Here is an example of conjunction.
+</div>
+
+<div id="right" class="incremental"> 
+
+Here is an example of conjunction:
+
+-  $p$: "It is sunny today.''
+-  $q$: "It is Monday.''
+-  $p \land q$: "It is sunny today and today is Monday.''
+
+</div>
+
+## Conjunction
+
+<div id="left">
+A Truth Table for conjunction would look like the following:
+$\begin{array}{|c|c|c|}
+\hline
+p  & q & p \land q  \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & F \\
+\hline
+\end{array}$
+
+</div>
+
+<div id="right"> 
+
+Here is an example of conjunction:
 
 -  $p$: "It is sunny today.''
 -  $q$: "It is Monday.''
 -  $p \land q$: "It is sunny today and today is Monday.''
 
 The conjunction ($p \land q$) is $\texttt{True}$ on sunny Mondays, but it is $\texttt{False}$ on any non-sunny day ($p$ is $\texttt{False}$), and it is $\texttt{False}$ on any day that is not Monday ($q$ is $\texttt{False}$).
-
+</div>
 
 ## Disjunction
-
+<div id="left">
 A Truth Table for disjunction would look like the following:
 $\begin{array}{|c|c|c|}
 \hline
@@ -89,7 +136,31 @@ F & T & T \\
 F & F & F \\
 \hline
 \end{array}$
+</div>
+<div id="right" class="incremental"> 
+Here is an example of disjunction.
 
+-  $p$: "It is sunny today.''
+-  $q$: "It is Monday.''
+-  $p \lor q$: "It is sunny today or today is Monday.''
+
+</div>
+
+## Disjunction
+<div id="left">
+A Truth Table for disjunction would look like the following:
+$\begin{array}{|c|c|c|}
+\hline
+p  & q & p \lor q  \\
+\hline
+T & T & T \\
+T & F & T \\
+F & T & T \\
+F & F & F \\
+\hline
+\end{array}$
+</div>
+<div id="right"> 
 Here is an example of disjunction.
 
 -  $p$: "It is sunny today.''
@@ -97,10 +168,10 @@ Here is an example of disjunction.
 -  $p \lor q$: "It is sunny today or today is Monday.''
 
 The disjunction ($p \lor q$) is $\texttt{True}$ on sunny Mondays, on any sunny day ($p$ is $\texttt{True}$), and on any Monday ($q$ is $\texttt{True}$). It is $\texttt{False}$ on any day where it is both not sunny and not Monday.
-
+</div>
 
 ## Exclusive Or
-
+<div id="left">
 A Truth Table for exclusive or would look like the following:
 $\begin{array}{|c|c|c|}
 \hline
@@ -112,7 +183,34 @@ F & T & T \\
 F & F & F \\
 \hline
 \end{array}$
+</div>
 
+<div id="right" class="incremental">
+Here is an example of exclusive or.
+
+-  $p$: "It is sunny today.''
+-  $q$: "It is Monday.''
+-  $p \oplus q$: "It is sunny today or today is Monday, but not both.''
+
+
+</div>
+
+## Exclusive Or
+<div id="left">
+A Truth Table for exclusive or would look like the following:
+$\begin{array}{|c|c|c|}
+\hline
+p  & q& p \oplus q  \\
+\hline
+T & T & F \\
+T & F & T \\
+F & T & T \\
+F & F & F \\
+\hline
+\end{array}$
+</div>
+
+<div id="right">
 Here is an example of exclusive or.
 
 -  $p$: "It is sunny today.''
@@ -120,9 +218,11 @@ Here is an example of exclusive or.
 -  $p \oplus q$: "It is sunny today or today is Monday, but not both.''
 
 The exclusive or ($p \oplus q$) is $\texttt{True}$ on any sunny day ($p$ is $\texttt{True}$) and on any Monday ($q$ is $\texttt{True}$), EXCEPT for on sunny Mondays (both $p$ and $q$ are $\texttt{True}$). Additionally, it is $\texttt{False}$ on any day where it is both not sunny and not Monday.
-
+</div>
 
 ## Conditionals
+<div id="left"> 
+
 The *conditional statement* $p \implies q$ is False when $p$ is $\texttt{True}$ and $q$ is $\texttt{False}$, and True otherwise. $p$ is called the hypothesis and $q$ the conclusion. This can also be called *implication*.
 
 Some English phrases for this would be:
@@ -130,7 +230,10 @@ Some English phrases for this would be:
 -  If $p$, then $q$.
 -  $p$ implies $q$.
 -  $q$ if $p$.
+</div>
 
+
+<div id="right" class="incremental"> 
 A Truth Table for implication would look like the following:
 $\begin{array}{|c|c|c|}
 \hline
@@ -142,8 +245,10 @@ F & T & T \\
 F & F & T \\
 \hline
 \end{array}$
+</div>
 
-## Conditionals Cont.
+## Conditionals Continued
+<div id="left"> 
 $\begin{array}{|c|c|c|}
 \hline
 p  & q & p \implies q  \\
@@ -154,18 +259,19 @@ F & T & T \\
 F & F & T \\
 \hline
 \end{array}$
+</div>
 
+<div id="right" class="incremental"> 
 Here is an example of implication.
 
 -  $p$: "It is sunny.''
 -  $q$: "I walk to campus.''
 -  $p \implies q$: "If it is sunny, then I walk to campus.''
 
-The implication ($p \implies q$) is $\texttt{False}$ if it is sunny and I do NOT walk to campus. Otherwise, it is $\texttt{True}$. 
+</div>
 
-
-
-## Conditionals Cont.
+## Conditionals Continued
+<div id="left"> 
 $\begin{array}{|c|c|c|}
 \hline
 p  & q & p \implies q  \\
@@ -176,7 +282,9 @@ F & T & T \\
 F & F & T \\
 \hline
 \end{array}$
+</div>
 
+<div id="right"> 
 Here is an example of implication.
 
 -  $p$: "It is sunny.''
@@ -186,9 +294,10 @@ Here is an example of implication.
 The implication ($p \implies q$) is $\texttt{False}$ if it is sunny and I do NOT walk to campus. Otherwise, it is $\texttt{True}$. 
 
 If it is not sunny ($p$ is $\texttt{False}$) and I still walk to campus ($q$ is $\texttt{True}$), this implication is still $\texttt{True}$.
-
+</div>
 
 ## Biconditionals
+<div id="left"> 
 The *biconditional statement* ("if and only if" or "iff") $p \iff q$ is $\texttt{True}$ when $p$ and $q$ have the same truth value, and $\texttt{False}$ otherwise.
 
 A Truth Table for implication would look like the following:
@@ -202,11 +311,22 @@ F & T & F \\
 F & F & T \\
 \hline
 \end{array}$
+</div>
 
+<div id="right" class="incremental"> 
+Here is an example of a biconditional.
 
+-  $p$: "It is sunny.''
+-  $q$: "I walk to campus.''
+-  $q \iff p$: "I walk to campus if and only if it is sunny.''
 
-## Biconditionals Cont.
+</div>
 
+## Biconditionals
+<div id="left"> 
+The *biconditional statement* ("if and only if" or "iff") $p \iff q$ is $\texttt{True}$ when $p$ and $q$ have the same truth value, and $\texttt{False}$ otherwise.
+
+A Truth Table for implication would look like the following:
 $\begin{array}{|c|c|c|}
 \hline
 p  & q & p \iff q  \\
@@ -217,7 +337,9 @@ F & T & F \\
 F & F & T \\
 \hline
 \end{array}$
+</div>
 
+<div id="right"> 
 Here is an example of a biconditional.
 
 -  $p$: "It is sunny.''
@@ -226,43 +348,24 @@ Here is an example of a biconditional.
 
 The biconditional ($p \iff q$) is $\texttt{True}$ if it is sunny and I walk to campus or if it is not sunny and I don't walk to campus. Otherwise, it is $\texttt{False}$. 
 
-
-
-## Biconditionals Cont.
-
-$\begin{array}{|c|c|c|}
-\hline
-p  & q & p \iff q  \\
-\hline
-T & T & T \\
-T & F & F \\
-F & T & F \\
-F & F & T \\
-\hline
-\end{array}$
-
-Here is an example of a biconditional.
-
--  $p$: "It is sunny.''
--  $q$: "I walk to campus.''
--  $q \iff p$: "I walk to campus if and only if it is sunny.''
-
-The biconditional ($p \iff q$) is $\texttt{True}$ if it is sunny and I walk to campus or if it is not sunny and I don't walk to campus. Otherwise, it is $\texttt{False}$. 
 
 Unlike the previous example, if it is not sunny ($p$ is $\texttt{False}$) and I still walk to campus ($q$ is $\texttt{True}$), this biconditional is $\texttt{False}$.
+</div>
 
+## Logical Equivalences
+<div class="incremental">
+Logical expressions that result in the same truth values are considered *logical equivalences*.
 
-## Useful Equivalences
-One useful equivalence is *DeMorgan's Law*. It states:
+- One useful equivalence is *DeMorgan's Law*. It states: <br>
 $$ \neg (p \land q) \equiv \neg p \lor \neg q $$
 $$ \neg (p \lor q) \equiv \neg p \land \neg q $$
-
-Another useful equivalence is:
-
+- Another useful equivalence is: <br>
 $$ p \implies q \equiv \neg p \lor q $$
 
+</div>
+
 ## Proving Equivalences
-We can prove the first part of DeMorgan's Law ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
+We can prove the first part of DeMorgan's Law <br> ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
 
 $\begin{array}{|c|c|c|c|c|c|c|}
 \hline
@@ -275,10 +378,9 @@ F & F  \\
 \hline
 \end{array}$
 
-
-
+<!-- 
 ## Proving Equivalences
-We can prove the first part of DeMorgan's Law ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
+We can prove the first part of DeMorgan's Law <br> ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
 
 $\begin{array}{|c|c|c|c|c|c|c|}
 \hline
@@ -292,7 +394,7 @@ F & F & T & T \\
 \end{array}$
 
 ## Proving Equivalences
-We can prove the first part of DeMorgan's Law ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
+We can prove the first part of DeMorgan's Law <br> ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
 
 $\begin{array}{|c|c|c|c|c|c|c|}
 \hline
@@ -306,7 +408,7 @@ F & F & T & T & F \\
 \end{array}$
 
 ## Proving Equivalences
-We can prove the first part of DeMorgan's Law ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
+We can prove the first part of DeMorgan's Law <br> ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
 
 $\begin{array}{|c|c|c|c|c|c|c|}
 \hline
@@ -317,10 +419,10 @@ T & F & F & T  & F & T\\
 F & T  & T & F & F & T\\
 F & F & T & T & F & T \\
 \hline
-\end{array}$
+\end{array}$ -->
 
 ## Proving Equivalences
-We can prove the first part of DeMorgan's Law ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
+We can prove the first part of DeMorgan's Law <br> ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
 
 $\begin{array}{|c|c|c|c|c|c|c|}
 \hline
@@ -333,7 +435,7 @@ F & F & T & T & F & T & T \\
 \hline
 \end{array}$
 
-The columns for $\neg(p \land q)$ and $\neg p \lor \neg q$ are equal, so this means $\neg(p \land q)$ and $\neg p \lor \neg q$ are logically equivalent!
+The columns for $\neg(p \land q)$ and $\neg p \lor \neg q$ are equal, so this means $\neg(p \land q)$ and $\neg p \lor \neg q$ are *logically equivalent*!
 
 ## Other Considerations
 
@@ -402,14 +504,11 @@ truth values = $\{\texttt{True}, \texttt{False}\}$
 $2^n$ rows!
 
 
-## Other considerations + Terminology
+## Tautologies
 -  Notice that a combination of propositions using operators (e.g. $p \land q$ makes a new proposition. These can also be called *compound propositions*. 
--  If two compound propositions have the same truth tables, they are considered *logically equivalent*.
-    - For example, today we showed $\neg (p \land q)$ and $\neg p \lor \neg q$ are logically equivalent!
 -  A compound proposition with a truth table where all the values in the last column are $\texttt{True}$ is called a *tautology*. 
-    - An example of this is $p \lor \neg p$. 
+- An example of this is $p \lor \neg p$. 
 
-## Tautologies Example
 $\begin{array}{|c|c|c|}
 \hline
 p  & \neg p & p \lor \neg p  \\
@@ -432,59 +531,21 @@ To translate logic to and from English sentences, it is important to know the co
 -  $p \iff q$ or $p$ iff $q$ (Biconditional): "$p$ if and only if $q$"
 
 ## Translating English Sentences
+
+<div id="text" class="incremental">
+
 Here's an example of breaking up an English language sentence.
 
-Start with the sentence: "You cannot ride the roller coaster if you are under 4 feet tall.''
-
-Then, you break your sentence to the smallest propositions possible.
-
-## Translating English Sentences
-Here's an example of breaking up an English language sentence.
-
-Start with the sentence: "You cannot ride the roller coaster if you are under 4 feet tall.''
-
-Then, you break your sentence to the smallest propositions possible.
-
-$a$ = "You can ride the roller coaster''
-
-$b$ = "you are under 4 feet tall''
-
-Now your sentence is: Not $a$ if $b$.
-
-## Translating English Sentences
-Here's an example of breaking up an English language sentence.
-
-Start with the sentence: "You cannot ride the roller coaster if you are under 4 feet tall.''
-
-Then, you break your sentence to the smallest propositions possible.
-
-$a$ = "You can ride the roller coaster''
-
-$b$ = "you are under 4 feet tall''
-
-Now your sentence is: Not $a$ if $b$.
-
-So you know you can write it as: $b \implies \neg a$.
-
-## Translating English Sentences
-Here's an example of breaking up an English language sentence.
-
-Start with the sentence: "You cannot ride the roller coaster if you are under 4 feet tall.''
-
-Then, you break your sentence to the smallest propositions possible.
-
-$a$ = "You can ride the roller coaster''
-
-$b$ = "you are under 4 feet tall''
-
-Now your sentence is: Not $a$ if $b$.
-
-So you know you can write it as: $b \implies \neg a$.
-
-Notes:
-
-- If it doesn't directly match any of the phrases listed, use truth tables to see what it matches.
-- Sometimes it takes a little experimenting/practice
+- Start with the sentence: "You cannot ride the roller coaster if you are under 4 feet tall.''
+- Then, you break your sentence to the smallest propositions possible.
+- $a$ = "You can ride the roller coaster''
+- $b$ = "you are under 4 feet tall''
+- Now your sentence is: Not $a$ if $b$.
+- So you know you can write it as: $b \implies \neg a$.
+- Notes:
+    - If it doesn't directly match any of the phrases listed, use truth tables to see what it matches.
+    - Sometimes it takes a little experimenting/practice
+</div>
 
 ## Using Logic For Problem Solving
 ### Knights and Knaves (Raymond Smullyan)
@@ -494,6 +555,9 @@ On an island, every inhabitant is a knight who always tells the truth, or a knav
 - Bob says: Alice is a knight if, and only if, Chris is a knave.
 
 Can you determine uniquely what each of Alice, Bob, and Chris are?
+
+## Using Logic For Problem Solving
+### Knights and Knaves (Raymond Smullyan)
 
 1. Define convenient variables for propositions.
 2. Transform what they say into statements that *always* should evaluate to $\texttt{True}$. These are the rules of our world.
@@ -502,42 +566,66 @@ Can you determine uniquely what each of Alice, Bob, and Chris are?
 
 ## Using Logic For Problem Solving
 ### Knights and Knaves (Raymond Smullyan)
-On an island, every inhabitant is a knight who always tells the truth, or a knave who always lies. You meet three inhabitants, Alice, Bob, and Chris.
 
-- Alice says: Bob is a knave or Chris is a knight.
-- Bob says: Alice is a knight if, and only if, Chris is a knave.
-
-Can you determine uniquely what each of Alice, Bob, and Chris are?
-
-1. Define convenient variables for propositions.
-
-$A =$ "Alice is a knight", $B =$ "Bob is a knight",$C=$ "Chris is a knight"
-
-$\neg A =$ "Alice is a knave", $\neg B =$ "Bob is a knave",$\neg C=$ "Chris is a knave"
+$1.$ Define convenient variables for propositions.
+<div id="left" class="incremental">
+- $A =$ "Alice is a knight" 
+- $B =$ "Bob is a knight"
+- $C=$ "Chris is a knight"
+</div>
+<div id="right" class="incremental">
+- $\neg A =$ "Alice is a knave" 
+- $\neg B =$ "Bob is a knave"
+- $\neg C=$ "Chris is a knave"
+</div>
 
 ## Using Logic For Problem Solving
 
-2. Transform what they say into statements that *always* should evaluate to $\texttt{True}$. These are the rules of our world.
+<div id="text">
+$2.$ Transform what they say into statements that *always* should evaluate to $\texttt{True}$. These are the rules of our world.
 
 - Alice says: Bob is a knave or Chris is a knight.
 - Bob says: Alice is a knight if, and only if, Chris is a knave.
 
-Propositions: $\{A =$ "Alice is a knight", $B =$ "Bob is a knight",$C=$ "Chris is a knight",
-$\neg A =$ "Alice is a knave", $\neg B =$ "Bob is a knave",$\neg C=$ "Chris is a knave"\}
+</div>
+
+## Using Logic For Problem Solving
+
+<div id="text">
+$2.$ Transform what they say into statements that *always* should evaluate to $\texttt{True}$. These are the rules of our world.
+
+- Alice says: Bob is a knave $\lor$ Chris is a knight
+- Bob says: Alice is a knight $\iff$ Chris is a knave
+
+(Propositions: 
+
+$\{A =$ "Alice is a knight", $B =$ "Bob is a knight",$C=$ "Chris is a knight",
+$\neg A =$ "Alice is a knave", $\neg B =$ "Bob is a knave",$\neg C=$ "Chris is a knave"\})
+
+</div>
+
+## Using Logic For Problem Solving
+
+<div id="text">
+$2.$ Transform what they say into statements that *always* should evaluate to $\texttt{True}$. These are the rules of our world.
 
 - Alice says: $\neg B \lor C$
 - Bob says: $A \iff \neg C$
 
-You might be inclined to make these statements your rules of the world, but these rules are only true if Alice and Bob are telling the truth (aka they are knights). 
+(Propositions: 
 
-- $A \implies (\neg B \lor C)$ $\leftarrow$ This holds whether or not Alice is a liar.
-- $B \implies (A \iff \neg C)$ $\leftarrow$ This holds whether or not Bob is a liar.
+$\{A =$ "Alice is a knight", $B =$ "Bob is a knight",$C=$ "Chris is a knight",
+$\neg A =$ "Alice is a knave", $\neg B =$ "Bob is a knave",$\neg C=$ "Chris is a knave"\})
+
+</div>
+
+
 
 ## Using Logic For Problem Solving
-3. Make a truth table
 
-Propositions: $\{A =$ "Alice is a knight", $B =$ "Bob is a knight",$C=$ "Chris is a knight",
-$\neg A =$ "Alice is a knave", $\neg B =$ "Bob is a knave",$\neg C=$ "Chris is a knave"\}
+
+<div id="text" class="incremental">
+$3.$ Make a truth table
 
 Rules of the World: $A \implies (\neg B \lor C)$ and $B \implies (A \iff \neg C)$ 
 
@@ -547,43 +635,60 @@ A & B & C &  A \implies (\neg B \lor C) & B \implies (A \iff \neg C) \\
 \hline
 T & T & T & T & F\\
 T & T & F & F & T\\
-\color{blue}T & \color{blue}F & \color{blue}T & \color{blue}T &\color{blue}T\\
-\color{blue}T & \color{blue}F & \color{blue}F &\color{blue} T &\color{blue}T\\ 
-\color{blue}F & \color{blue}T & \color{blue}T &  \color{blue}T &\color{blue}T\\
+\color{yellow}T & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
+\color{yellow}T & \color{yellow}F & \color{yellow}F &\color{yellow} T &\color{yellow}T\\ 
+\color{yellow}F & \color{yellow}T & \color{yellow}T &  \color{yellow}T &\color{yellow}T\\
 F & T & F & T &F\\
-\color{blue}F & \color{blue}F & \color{blue}T & \color{blue}T &\color{blue}T\\
-\color{blue}F & \color{blue}F & \color{blue}F & \color{blue}T &\color{blue}T\\
+\color{yellow}F & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
+\color{yellow}F & \color{yellow}F & \color{yellow}F & \color{yellow}T &\color{yellow}T\\
 \hline
 \end{array}$
 
-All of the values in blue are assignments that could work!
+
+</div>
 
 ## Using Logic For Problem Solving
-3. Make a truth table
 
-Propositions: $\{A =$ "Alice is a knight", $B =$ "Bob is a knight",$C=$ "Chris is a knight",
-$\neg A =$ "Alice is a knave", $\neg B =$ "Bob is a knave",$\neg C=$ "Chris is a knave"\}
+<div id="text">
+$4.$ Check if a unique row makes both statements true. 
 
-Rules of the World: $A \implies (\neg B \lor C)$ and $B \implies (A \iff \neg C)$ 
+<!-- Rules of the World: $A \implies (\neg B \lor C)$ and $B \implies (A \iff \neg C)$  -->
 
 $\begin{array}{|c|c|c|c|c|}
 \hline
 A & B & C &  A \implies (\neg B \lor C) & B \implies (A \iff \neg C) \\
 \hline
 T & T & T & T & F\\
+T & T & F & F & T\\
+\color{yellow}T & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
+\color{yellow}T & \color{yellow}F & \color{yellow}F &\color{yellow} T &\color{yellow}T\\ 
+\color{yellow}F & \color{yellow}T & \color{yellow}T &  \color{yellow}T &\color{yellow}T\\
+F & T & F & T &F\\
+\color{yellow}F & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
+\color{yellow}F & \color{yellow}F & \color{yellow}F & \color{yellow}T &\color{yellow}T\\
+\hline
+\end{array}$
+
+<!-- $\begin{array}{|c|c|c|c|c|}
+\hline
+A & B & C &  A \implies (\neg B \lor C) & B \implies (A \iff \neg C) \\
+\hline
+T & T & T & T & F\\
 T&T&F&F&T\\
-\color{blue}T & \color{blue}F & \color{blue}T & \color{blue}T &\color{blue}T\\
+\color{yellow}T & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
 T & F & F & T & T\\ 
 F & T & T &  T &T\\
 F & T & F & T &F\\
 F & F & T & T & T\\
 F & F & F & T &T\\
 \hline
-\end{array}$
+\end{array}$ -->
 
-**Let's test one of these!**
+**All of the values in yellow are assignments that could work! Let's test one of these!**
+</div> 
 
-## Testing Our Solution... 
+## Testing A Solution... 
+<div id="text">
 $A = T, B = F, C = T$
 
 So, Alice is a knight, Bob is a knave, and Chris is a knight.
@@ -597,9 +702,10 @@ So, Alice is a knight, Bob is a knave, and Chris is a knight.
     - $F \implies (T \iff \neg T)$ evaluates to True!
 
 Both of our rules hold in this world with these assignments, so we know that this solution works!
+</div>
 
 ## Why this isn't a good problem... 
-
+<div id="text">
 This problem isn't explicit enough, so we found ourselves making an assumption.
 
 When we solved it, we assumed that if someone is lying, they don't actually know whether or not what they are saying is the truth, so their claim could either be true or false. This is why we were able to use implication.
@@ -607,13 +713,18 @@ When we solved it, we assumed that if someone is lying, they don't actually know
 - Alice says: Bob is a knave or Chris is a knight.
     - $A \implies (\neg B \lor C)$ 
     
-However, what if we assumed that if someone is lying, they know their claim is false? Then we would have to explain our rules using a biconditional.
+However, what if we assumed that if someone is lying, they know their claim is false? 
+</div>
+
+## Why this isn't a good problem... 
+<div id="text">
+If we assume that if someone is lying, they know their claim is false, then we would have to explain our rules using a *biconditional*.
 
 - Alice says: Bob is a knave or Chris is a knight.
     - $A \iff (\neg B \lor C)$ 
 
 Therefore, our answer is correct for what we *assume* the rules of the world are, but that might not match the author of the puzzle's original intention. This shows the benefit of logic! We can use it to address these ambiguities!
-
+</div>
 
 
 

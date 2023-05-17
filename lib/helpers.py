@@ -43,7 +43,7 @@ def update_calendar(page_title: str, date):
     #TODO
     return 0
 
-def make_slides(slides_name: str) -> str:
+def make_slides(slides_name: str, incremental: bool = False) -> str:
     """Using Pandocs, make slides from a .md file.
     Return path to new slide"""
     # Slide location should be /slides/
@@ -52,8 +52,10 @@ def make_slides(slides_name: str) -> str:
     html_name = '../docs/lessons/' + slides_name[:-2] + "html"
     ret_name = '/comp283/lessons/' + slides_name[:-2] + "html"
     print(html_name)
-    command = f"pandoc --toc --mathjax -t revealjs "
-    #command += "--include-in-header=leftalign.css " 
+    command = f"pandoc --mathjax -t revealjs "
+    if incremental:
+       command += "--incremental "
+    command += "--include-in-header=leftalign.css " 
     command += f"{slides_loc} -o {html_name} -s"
     subprocess.run("cd ../", shell=True)
     subprocess.run(command, shell=True)
