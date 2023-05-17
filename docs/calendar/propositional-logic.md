@@ -6,4 +6,4 @@ contributors: Alyssa Byrnes
 
 # Propositional Logic
 
-* Propositional Logic: Video *(Coming Soon)*, [Slides](/comp283/lessons/PropLogic.html), [Assignment](https://www.gradescope.com/)
+* Propositional Logic: [Video](https://youtu.be/Jf7lZ_LQ5FM), [Slides](/comp283/lessons/PropLogic.html), [Assignment](https://www.gradescope.com/)
