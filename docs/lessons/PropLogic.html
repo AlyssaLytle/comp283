@@ -98,6 +98,10 @@
     #text {
       font-size: 75%;
     }
+
+    #smalltext {
+      font-size: 40%;
+    }
     
 
   </style>
@@ -486,8 +490,78 @@ class="math display">\[ p \rightarrow q \equiv \neg p \lor q
 </ul>
 </div>
 </section>
+<section id="common-logical-equivalences" class="slide level2">
+<h2>Common Logical Equivalences</h2>
+<div id="smalltext">
+<span class="math display">\[\begin{array}{l l}
+\textbf{Commutative Laws} &amp;
+p \lor q \equiv q \lor p \\
+&amp; p \land q\equiv q \land p \\
+\hline
+\textbf{Associative Laws} &amp;
+(p \lor  q) \lor r \equiv  p \lor  (q \lor  r) \\
+
+&amp; (p \land q) \land r\equiv p \land  (q \land  r)\\
+\hline
+\textbf{Distributive Laws}&amp;
+p \land  (q \lor  r) \equiv  (p \land  q ) \lor  (p \land  r)\\
+
+
+&amp; p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r) \\
+\hline
+\textbf{Identity Laws} &amp;
+
+p \lor  F\equiv p\\
+
+&amp; p \land  T \equiv p\\
+\hline
+\textbf{Negation Laws} &amp;
+p\land \neg p\equiv F\\
+
+&amp; p\lor \neg p\equiv T\\
+\hline
+\textbf{Idempotent Laws}&amp;
+
+p \lor  p \equiv p\\
+
+
+&amp; p\land p \equiv p\\
+\hline
+\textbf{Domination Laws}&amp;
+
+p \land F \equiv F\\
+
+&amp; p \lor  T \equiv T\\
+\hline
+\textbf{Absorption Laws} &amp;
+p \land (p\lor  q)\equiv p\\
+
+&amp; p \lor  (p \land  q) \equiv  p\\
+\hline
+\textbf{DeMorgan&#39;s Laws} &amp;
+
+\neg (p \lor  q) \equiv  (\neg p) \land  (\neg q)\\
+
+&amp; \neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)\\
+\hline
+\textbf{Double Negation Law} &amp;
+\neg (\neg p)\equiv p\\
+\hline
+\textbf{Implication} &amp;
+p \implies q \equiv \neg p \lor q\\
+\end{array}\]</span>
+</div>
+</section>
 <section id="proving-equivalences" class="slide level2">
 <h2>Proving Equivalences</h2>
+<p>Logical Equivalences can be proven two different ways:</p>
+<ol type="1">
+<li>Using Truth Tables</li>
+<li>Directly, using other logical equivalences</li>
+</ol>
+</section>
+<section id="proving-equivalences---example-1" class="slide level2">
+<h2>Proving Equivalences - Example 1</h2>
 <p>We can prove the first part of DeMorgan’s Law <br> (<span
 class="math inline">\(\neg (p \land q) \equiv \neg p \lor \neg
 q\)</span>) using a truth table.</p>
@@ -538,8 +612,8 @@ F & F & T & T & F & T \\
 \hline
 \end{array}$ -->
 </section>
-<section id="proving-equivalences-1" class="slide level2">
-<h2>Proving Equivalences</h2>
+<section id="proving-equivalences---example-1-1" class="slide level2">
+<h2>Proving Equivalences - Example 1</h2>
 <p>We can prove the first part of DeMorgan’s Law <br> (<span
 class="math inline">\(\neg (p \land q) \equiv \neg p \lor \neg
 q\)</span>) using a truth table.</p>
@@ -554,6 +628,57 @@ and <span class="math inline">\(\neg p \lor \neg q\)</span> are equal,
 so this means <span class="math inline">\(\neg(p \land q)\)</span> and
 <span class="math inline">\(\neg p \lor \neg q\)</span> are
 <em>logically equivalent</em>!</p>
+</section>
+<section id="proving-equivalences---example-2" class="slide level2">
+<h2>Proving Equivalences - Example 2</h2>
+Prove <span class="math inline">\((a \land \neg b) \rightarrow c \equiv
+\neg a \lor b \lor c\)</span> directly using existing logical
+equivalences.
+<span class="math display">\[\begin{array}{|c|c|}
+\hline
+\textbf{Equivalence} &amp; \textbf{Rule Used}\\
+\hline
+(a \land \neg b) \rightarrow c &amp; \textbf{Given} \\
+\ldots \\
+\equiv \neg a \lor b \lor c &amp; \\
+\hline
+\end{array}\]</span>
+</section>
+<section id="proving-equivalences---example-2-1" class="slide level2">
+<h2>Proving Equivalences - Example 2</h2>
+Prove <span class="math inline">\((a \land \neg b) \rightarrow c \equiv
+\neg a \lor b \lor c\)</span> directly using existing logical
+equivalences.
+<span class="math display">\[\begin{array}{|c|c|}
+\hline
+\textbf{Equivalence} &amp; \textbf{Rule Used}\\
+\hline
+(a \land \neg b) \rightarrow c &amp; \textbf{Given} \\
+\hline
+&amp; \\ \hline
+&amp; \\ \hline
+&amp; \\
+\hline
+\end{array}\]</span>
+</section>
+<section id="proving-equivalences---example-2-2" class="slide level2">
+<h2>Proving Equivalences - Example 2</h2>
+Prove <span class="math inline">\((a \land \neg b) \rightarrow c \equiv
+\neg a \lor b \lor c\)</span> directly using existing logical
+equivalences.
+<span class="math display">\[\begin{array}{|c|c|}
+\hline
+\textbf{Equivalence} &amp; \textbf{Rule Used}\\
+\hline
+(a \land \neg b) \rightarrow c &amp; \textbf{Given} \\
+\hline
+\equiv \neg (a \land \neg b) \lor c &amp; \textbf{Implication} \\
+\hline
+\equiv  \neg a \lor \neg \neg b \lor c &amp; \textbf{DeMorgan&#39;s} \\
+\hline
+\equiv \neg a \lor b \lor c &amp; \textbf{Double Negation}\\
+\hline
+\end{array}\]</span>
 </section>
 <section id="other-considerations" class="slide level2">
 <h2>Other Considerations</h2>
@@ -695,6 +820,11 @@ experimenting/practice</li>
 </section>
 <section id="using-logic-for-problem-solving" class="slide level2">
 <h2>Using Logic For Problem Solving</h2>
+<p>The rest of these slides are optional, but they demonstrate how logic
+can be used for problem solving!</p>
+</section>
+<section id="using-logic-for-problem-solving-1" class="slide level2">
+<h2>Using Logic For Problem Solving</h2>
 <h3 id="knights-and-knaves-raymond-smullyan">Knights and Knaves (Raymond
 Smullyan)</h3>
 <p>On an island, every inhabitant is a knight who always tells the
@@ -707,7 +837,7 @@ Bob, and Chris.</p>
 <p>Can you determine uniquely what each of Alice, Bob, and Chris
 are?</p>
 </section>
-<section id="using-logic-for-problem-solving-1" class="slide level2">
+<section id="using-logic-for-problem-solving-2" class="slide level2">
 <h2>Using Logic For Problem Solving</h2>
 <h3 id="knights-and-knaves-raymond-smullyan-1">Knights and Knaves
 (Raymond Smullyan)</h3>
@@ -721,7 +851,7 @@ class="math inline">\(2^3\)</span> rows</li>
 <li>Check if a unique row makes both statements true.</li>
 </ol>
 </section>
-<section id="using-logic-for-problem-solving-2" class="slide level2">
+<section id="using-logic-for-problem-solving-3" class="slide level2">
 <h2>Using Logic For Problem Solving</h2>
 <h3 id="knights-and-knaves-raymond-smullyan-2">Knights and Knaves
 (Raymond Smullyan)</h3>
@@ -748,7 +878,7 @@ is a knave”</li>
 </ul>
 </div>
 </section>
-<section id="using-logic-for-problem-solving-3" class="slide level2">
+<section id="using-logic-for-problem-solving-4" class="slide level2">
 <h2>Using Logic For Problem Solving</h2>
 <div id="text">
 <p><span class="math inline">\(2.\)</span> Transform what they say into
@@ -761,7 +891,7 @@ world.</p>
 </ul>
 </div>
 </section>
-<section id="using-logic-for-problem-solving-4" class="slide level2">
+<section id="using-logic-for-problem-solving-5" class="slide level2">
 <h2>Using Logic For Problem Solving</h2>
 <div id="text">
 <p><span class="math inline">\(2.\)</span> Transform what they say into
@@ -783,7 +913,7 @@ class="math inline">\(\neg B =\)</span> “Bob is a knave”,<span
 class="math inline">\(\neg C=\)</span> “Chris is a knave”})</p>
 </div>
 </section>
-<section id="using-logic-for-problem-solving-5" class="slide level2">
+<section id="using-logic-for-problem-solving-6" class="slide level2">
 <h2>Using Logic For Problem Solving</h2>
 <div id="text">
 <p><span class="math inline">\(2.\)</span> Transform what they say into
@@ -804,7 +934,7 @@ class="math inline">\(\neg B =\)</span> “Bob is a knave”,<span
 class="math inline">\(\neg C=\)</span> “Chris is a knave”})</p>
 </div>
 </section>
-<section id="using-logic-for-problem-solving-6" class="slide level2">
+<section id="using-logic-for-problem-solving-7" class="slide level2">
 <h2>Using Logic For Problem Solving</h2>
 <div id="text">
 <p><span class="math inline">\(3.\)</span> Make a truth table</p>
@@ -826,7 +956,7 @@ B &amp; C &amp; A \rightarrow (\neg B \lor C) &amp; B \rightarrow (A
 &amp;\color{yellow}T\\ \hline \end{array}\)</span></p>
 </div>
 </section>
-<section id="using-logic-for-problem-solving-7" class="slide level2">
+<section id="using-logic-for-problem-solving-8" class="slide level2">
 <h2>Using Logic For Problem Solving</h2>
 <div id="text">
 <p><span class="math inline">\(4.\)</span> Check if a unique row makes

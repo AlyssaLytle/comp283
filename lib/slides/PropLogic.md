@@ -371,7 +371,75 @@ $$ p \rightarrow q \equiv \neg p \lor q $$
 
 </div>
 
+## Common Logical Equivalences
+<div id="smalltext">
+\begin{array}{l l}
+\textbf{Commutative Laws} &
+p \lor q \equiv q \lor p \\
+ & p \land q\equiv q \land p \\
+\hline 
+\textbf{Associative Laws} &
+(p \lor  q) \lor r \equiv  p \lor  (q \lor  r) \\
+
+& (p \land q) \land r\equiv p \land  (q \land  r)\\
+\hline 
+\textbf{Distributive Laws}&
+p \land  (q \lor  r) \equiv  (p \land  q ) \lor  (p \land  r)\\
+
+
+ & p \lor  (q \land  r) \equiv  (p \lor  q) \land (p \lor r) \\
+\hline 
+\textbf{Identity Laws} &
+
+p \lor  F\equiv p\\
+
+& p \land  T \equiv p\\
+\hline 
+\textbf{Negation Laws} &
+p\land \neg p\equiv F\\
+
+& p\lor \neg p\equiv T\\
+\hline 
+\textbf{Idempotent Laws}&
+
+p \lor  p \equiv p\\
+
+
+& p\land p \equiv p\\
+\hline 
+\textbf{Domination Laws}&
+
+p \land F \equiv F\\
+
+& p \lor  T \equiv T\\
+\hline 
+\textbf{Absorption Laws} &
+p \land (p\lor  q)\equiv p\\
+
+& p \lor  (p \land  q) \equiv  p\\
+\hline 
+\textbf{DeMorgan's Laws} &
+
+ \neg (p \lor  q) \equiv  (\neg p) \land  (\neg q)\\
+
+& \neg (p \land  q) \equiv  (\neg p) \lor  (\neg q)\\
+\hline 
+\textbf{Double Negation Law} &
+\neg (\neg p)\equiv p\\
+\hline 
+\textbf{Implication} & 
+p \implies q \equiv \neg p \lor q\\
+\end{array}
+</div>
+
 ## Proving Equivalences
+
+Logical Equivalences can be proven two different ways:
+
+1. Using Truth Tables
+2. Directly, using other logical equivalences
+
+## Proving Equivalences - Example 1
 We can prove the first part of DeMorgan's Law <br> ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
 
 $\begin{array}{|c|c|c|c|c|c|c|}
@@ -428,7 +496,7 @@ F & F & T & T & F & T \\
 \hline
 \end{array}$ -->
 
-## Proving Equivalences
+## Proving Equivalences - Example 1
 We can prove the first part of DeMorgan's Law <br> ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
 
 $\begin{array}{|c|c|c|c|c|c|c|}
@@ -443,6 +511,47 @@ F & F & T & T & F & T & T \\
 \end{array}$
 
 The columns for $\neg(p \land q)$ and $\neg p \lor \neg q$ are equal, so this means $\neg(p \land q)$ and $\neg p \lor \neg q$ are *logically equivalent*!
+
+## Proving Equivalences - Example 2
+Prove $(a \land \neg b) \rightarrow c \equiv \neg a \lor b \lor c$ directly using existing logical equivalences.
+\begin{array}{|c|c|}
+\hline
+\textbf{Equivalence} & \textbf{Rule Used}\\
+\hline
+(a \land \neg b) \rightarrow c & \textbf{Given} \\
+\ldots \\
+\equiv \neg a \lor b \lor c & \\
+\hline
+\end{array}
+
+## Proving Equivalences - Example 2
+Prove $(a \land \neg b) \rightarrow c \equiv \neg a \lor b \lor c$ directly using existing logical equivalences.
+\begin{array}{|c|c|}
+\hline
+\textbf{Equivalence} & \textbf{Rule Used}\\
+\hline
+(a \land \neg b) \rightarrow c & \textbf{Given} \\
+\hline
+ & \\ \hline
+ & \\ \hline
+ & \\ 
+\hline
+\end{array}
+
+## Proving Equivalences - Example 2
+Prove $(a \land \neg b) \rightarrow c \equiv \neg a \lor b \lor c$ directly using existing logical equivalences.
+\begin{array}{|c|c|}
+\hline
+\textbf{Equivalence} & \textbf{Rule Used}\\
+\hline
+(a \land \neg b) \rightarrow c & \textbf{Given} \\
+\hline
+ \equiv \neg (a \land \neg b) \lor c & \textbf{Implication} \\
+ \hline
+ \equiv  \neg a \lor \neg \neg b \lor c & \textbf{DeMorgan's} \\ \hline
+\equiv \neg a \lor b \lor c & \textbf{Double Negation}\\
+\hline
+\end{array}
 
 ## Other Considerations
 
@@ -554,7 +663,10 @@ Here's an example of breaking up an English language sentence.
     - Sometimes it takes a little experimenting/practice
 </div>
 
-## Using Logic For Problem Solving
+## Using Logic For Problem Solving 
+The rest of these slides are optional, but they demonstrate how logic can be used for problem solving!
+
+## Using Logic For Problem Solving 
 ### Knights and Knaves (Raymond Smullyan)
 On an island, every inhabitant is a knight who always tells the truth, or a knave who always lies. You meet three inhabitants, Alice, Bob, and Chris.
 
