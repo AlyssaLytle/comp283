@@ -8,7 +8,7 @@ transition: 'none'
 
 ## Learning Objectives
 
--  Express statements in symbolic form, using the logic operations of negation, and, inclusive or, implies, if and only if (iff), and exclusive or (and their symbols: $\neg, \land, \lor, \implies, \iff,$ and $\oplus$) to express statements without ambiguity.
+-  Express statements in symbolic form, using the logic operations of negation, and, inclusive or, implies, if and only if (iff), and exclusive or (and their symbols: $\neg, \land, \lor, \rightarrow, \leftrightarrow,$ and $\oplus$) to express statements without ambiguity.
 -  Create truth tables in order to recognize *tautologies* and *logically equivalent* expressions, including De Morgan’s rules and conditional expressions.
 -  Demonstrate how to use these methods to solve a logic puzzle.
 
@@ -223,7 +223,7 @@ The exclusive or ($p \oplus q$) is $\texttt{True}$ on any sunny day ($p$ is $\te
 ## Conditionals
 <div id="left"> 
 
-The *conditional statement* $p \implies q$ is False when $p$ is $\texttt{True}$ and $q$ is $\texttt{False}$, and True otherwise. $p$ is called the hypothesis and $q$ the conclusion. This can also be called *implication*.
+The *conditional statement* $p \rightarrow q$ is False when $p$ is $\texttt{True}$ and $q$ is $\texttt{False}$, and True otherwise. $p$ is called the hypothesis and $q$ the conclusion. This can also be called *implication*.
 
 Some English phrases for this would be:
 
@@ -237,7 +237,7 @@ Some English phrases for this would be:
 A Truth Table for implication would look like the following:
 $\begin{array}{|c|c|c|}
 \hline
-p  & q & p \implies q  \\
+p  & q & p \rightarrow q  \\
 \hline
 T & T & T \\
 T & F & F \\
@@ -251,7 +251,7 @@ F & F & T \\
 <div id="left"> 
 $\begin{array}{|c|c|c|}
 \hline
-p  & q & p \implies q  \\
+p  & q & p \rightarrow q  \\
 \hline
 T & T & T \\
 T & F & F \\
@@ -266,7 +266,7 @@ Here is an example of implication.
 
 -  $p$: "It is sunny.''
 -  $q$: "I walk to campus.''
--  $p \implies q$: "If it is sunny, then I walk to campus.''
+-  $p \rightarrow q$: "If it is sunny, then I walk to campus.''
 
 </div>
 
@@ -274,7 +274,7 @@ Here is an example of implication.
 <div id="left"> 
 $\begin{array}{|c|c|c|}
 \hline
-p  & q & p \implies q  \\
+p  & q & p \rightarrow q  \\
 \hline
 T & T & T \\
 T & F & F \\
@@ -289,21 +289,21 @@ Here is an example of implication.
 
 -  $p$: "It is sunny.''
 -  $q$: "I walk to campus.''
--  $p \implies q$: "If it is sunny, then I walk to campus.''
+-  $p \rightarrow q$: "If it is sunny, then I walk to campus.''
 
-The implication ($p \implies q$) is $\texttt{False}$ if it is sunny and I do NOT walk to campus. Otherwise, it is $\texttt{True}$. 
+The implication ($p \rightarrow q$) is $\texttt{False}$ if it is sunny and I do NOT walk to campus. Otherwise, it is $\texttt{True}$. 
 
 If it is not sunny ($p$ is $\texttt{False}$) and I still walk to campus ($q$ is $\texttt{True}$), this implication is still $\texttt{True}$.
 </div>
 
 ## Biconditionals
 <div id="left"> 
-The *biconditional statement* ("if and only if" or "iff") $p \iff q$ is $\texttt{True}$ when $p$ and $q$ have the same truth value, and $\texttt{False}$ otherwise.
+The *biconditional statement* ("if and only if" or "iff") $p \leftrightarrow q$ is $\texttt{True}$ when $p$ and $q$ have the same truth value, and $\texttt{False}$ otherwise.
 
 A Truth Table for implication would look like the following:
 $\begin{array}{|c|c|c|}
 \hline
-p  & q & p \iff q  \\
+p  & q & p \leftrightarrow q  \\
 \hline
 T & T & T \\
 T & F & F \\
@@ -318,18 +318,18 @@ Here is an example of a biconditional.
 
 -  $p$: "It is sunny.''
 -  $q$: "I walk to campus.''
--  $q \iff p$: "I walk to campus if and only if it is sunny.''
+-  $q \leftrightarrow p$: "I walk to campus if and only if it is sunny.''
 
 </div>
 
 ## Biconditionals
 <div id="left"> 
-The *biconditional statement* ("if and only if" or "iff") $p \iff q$ is $\texttt{True}$ when $p$ and $q$ have the same truth value, and $\texttt{False}$ otherwise.
+The *biconditional statement* ("if and only if" or "iff") $p \leftrightarrow q$ is $\texttt{True}$ when $p$ and $q$ have the same truth value, and $\texttt{False}$ otherwise.
 
 A Truth Table for implication would look like the following:
 $\begin{array}{|c|c|c|}
 \hline
-p  & q & p \iff q  \\
+p  & q & p \leftrightarrow q  \\
 \hline
 T & T & T \\
 T & F & F \\
@@ -344,13 +344,20 @@ Here is an example of a biconditional.
 
 -  $p$: "It is sunny.''
 -  $q$: "I walk to campus.''
--  $q \iff p$: "I walk to campus if and only if it is sunny.''
+-  $q \leftrightarrow p$: "I walk to campus if and only if it is sunny.''
 
-The biconditional ($p \iff q$) is $\texttt{True}$ if it is sunny and I walk to campus or if it is not sunny and I don't walk to campus. Otherwise, it is $\texttt{False}$. 
+The biconditional ($p \leftrightarrow q$) is $\texttt{True}$ if it is sunny and I walk to campus or if it is not sunny and I don't walk to campus. Otherwise, it is $\texttt{False}$. 
 
 
 Unlike the previous example, if it is not sunny ($p$ is $\texttt{False}$) and I still walk to campus ($q$ is $\texttt{True}$), this biconditional is $\texttt{False}$.
 </div>
+
+## Order Of Operations
+- Negations: $\neg$
+- Conjunctions: $\land$
+- Disjunctions: $\lor$
+
+Everything else can be written as a combination of the above three, but in general, it's best to always clarify order of operations using parentheses!
 
 ## Logical Equivalences
 <div class="incremental">
@@ -360,7 +367,7 @@ Logical expressions that result in the same truth values are considered *logical
 $$ \neg (p \land q) \equiv \neg p \lor \neg q $$
 $$ \neg (p \lor q) \equiv \neg p \land \neg q $$
 - Another useful equivalence is: <br>
-$$ p \implies q \equiv \neg p \lor q $$
+$$ p \rightarrow q \equiv \neg p \lor q $$
 
 </div>
 
@@ -527,8 +534,8 @@ To translate logic to and from English sentences, it is important to know the co
 -  $p \land q$ (Conjunction): "$p$ and $q$"
 -  $p \lor q$ (Disjunction): "$p$ or $q$"
 -  $p \oplus q$ (Exclusive Or): "$p$ xor $q$"; "$p$ or $q$, but not both"
--  $p \implies q$ (Conditional/Implication): "$p$ implies $q$"; "if $p$ then $q$"; "$q$ if $p$"
--  $p \iff q$ or $p$ iff $q$ (Biconditional): "$p$ if and only if $q$"
+-  $p \rightarrow q$ (Conditional/Implication): "$p$ implies $q$"; "if $p$ then $q$"; "$q$ if $p$"
+-  $p \leftrightarrow q$ or $p$ iff $q$ (Biconditional): "$p$ if and only if $q$"
 
 ## Translating English Sentences
 
@@ -541,7 +548,7 @@ Here's an example of breaking up an English language sentence.
 - $a$ = "You can ride the roller coaster''
 - $b$ = "you are under 4 feet tall''
 - Now your sentence is: Not $a$ if $b$.
-- So you know you can write it as: $b \implies \neg a$.
+- So you know you can write it as: $b \rightarrow \neg a$.
 - Notes:
     - If it doesn't directly match any of the phrases listed, use truth tables to see what it matches.
     - Sometimes it takes a little experimenting/practice
@@ -595,7 +602,7 @@ $2.$ Transform what they say into statements that *always* should evaluate to $\
 $2.$ Transform what they say into statements that *always* should evaluate to $\texttt{True}$. These are the rules of our world.
 
 - Alice says: Bob is a knave $\lor$ Chris is a knight
-- Bob says: Alice is a knight $\iff$ Chris is a knave
+- Bob says: Alice is a knight $\leftrightarrow$ Chris is a knave
 
 (Propositions: 
 
@@ -610,7 +617,7 @@ $\neg A =$ "Alice is a knave", $\neg B =$ "Bob is a knave",$\neg C=$ "Chris is a
 $2.$ Transform what they say into statements that *always* should evaluate to $\texttt{True}$. These are the rules of our world.
 
 - Alice says: $\neg B \lor C$
-- Bob says: $A \iff \neg C$
+- Bob says: $A \leftrightarrow \neg C$
 
 (Propositions: 
 
@@ -627,11 +634,11 @@ $\neg A =$ "Alice is a knave", $\neg B =$ "Bob is a knave",$\neg C=$ "Chris is a
 <div id="text" class="incremental">
 $3.$ Make a truth table
 
-Rules of the World: $A \implies (\neg B \lor C)$ and $B \implies (A \iff \neg C)$ 
+Rules of the World: $A \rightarrow (\neg B \lor C)$ and $B \rightarrow (A \leftrightarrow \neg C)$ 
 
 $\begin{array}{|c|c|c|c|c|}
 \hline
-A & B & C &  A \implies (\neg B \lor C) & B \implies (A \iff \neg C) \\
+A & B & C &  A \rightarrow (\neg B \lor C) & B \rightarrow (A \leftrightarrow \neg C) \\
 \hline
 T & T & T & T & F\\
 T & T & F & F & T\\
@@ -652,11 +659,11 @@ F & T & F & T &F\\
 <div id="text">
 $4.$ Check if a unique row makes both statements true. 
 
-<!-- Rules of the World: $A \implies (\neg B \lor C)$ and $B \implies (A \iff \neg C)$  -->
+<!-- Rules of the World: $A \rightarrow (\neg B \lor C)$ and $B \rightarrow (A \leftrightarrow \neg C)$  -->
 
 $\begin{array}{|c|c|c|c|c|}
 \hline
-A & B & C &  A \implies (\neg B \lor C) & B \implies (A \iff \neg C) \\
+A & B & C &  A \rightarrow (\neg B \lor C) & B \rightarrow (A \leftrightarrow \neg C) \\
 \hline
 T & T & T & T & F\\
 T & T & F & F & T\\
@@ -671,7 +678,7 @@ F & T & F & T &F\\
 
 <!-- $\begin{array}{|c|c|c|c|c|}
 \hline
-A & B & C &  A \implies (\neg B \lor C) & B \implies (A \iff \neg C) \\
+A & B & C &  A \rightarrow (\neg B \lor C) & B \rightarrow (A \leftrightarrow \neg C) \\
 \hline
 T & T & T & T & F\\
 T&T&F&F&T\\
@@ -694,12 +701,12 @@ $A = T, B = F, C = T$
 So, Alice is a knight, Bob is a knave, and Chris is a knight.
 
 - Alice says: Bob is a knave or Chris is a knight.
-    - $A \implies (\neg B \lor C)$ 
-    - $T \implies (\neg(F) \lor T)$ evaluates to True!
+    - $A \rightarrow (\neg B \lor C)$ 
+    - $T \rightarrow (\neg(F) \lor T)$ evaluates to True!
 
 - Bob says: Alice is a knight if, and only if, Chris is a knave. 
-    - $B \implies (A \iff \neg C)$
-    - $F \implies (T \iff \neg T)$ evaluates to True!
+    - $B \rightarrow (A \leftrightarrow \neg C)$
+    - $F \rightarrow (T \leftrightarrow \neg T)$ evaluates to True!
 
 Both of our rules hold in this world with these assignments, so we know that this solution works!
 </div>
@@ -711,7 +718,7 @@ This problem isn't explicit enough, so we found ourselves making an assumption.
 When we solved it, we assumed that if someone is lying, they don't actually know whether or not what they are saying is the truth, so their claim could either be true or false. This is why we were able to use implication.
 
 - Alice says: Bob is a knave or Chris is a knight.
-    - $A \implies (\neg B \lor C)$ 
+    - $A \rightarrow (\neg B \lor C)$ 
     
 However, what if we assumed that if someone is lying, they know their claim is false? 
 </div>
@@ -721,7 +728,7 @@ However, what if we assumed that if someone is lying, they know their claim is f
 If we assume that if someone is lying, they know their claim is false, then we would have to explain our rules using a *biconditional*.
 
 - Alice says: Bob is a knave or Chris is a knight.
-    - $A \iff (\neg B \lor C)$ 
+    - $A \leftrightarrow (\neg B \lor C)$ 
 
 Therefore, our answer is correct for what we *assume* the rules of the world are, but that might not match the author of the puzzle's original intention. This shows the benefit of logic! We can use it to address these ambiguities!
 </div>

@@ -116,7 +116,7 @@
 <li>Express statements in symbolic form, using the logic operations of
 negation, and, inclusive or, implies, if and only if (iff), and
 exclusive or (and their symbols: <span class="math inline">\(\neg,
-\land, \lor, \implies, \iff,\)</span> and <span
+\land, \lor, \rightarrow, \leftrightarrow,\)</span> and <span
 class="math inline">\(\oplus\)</span>) to express statements without
 ambiguity.</li>
 <li>Create truth tables in order to recognize <em>tautologies</em> and
@@ -326,8 +326,9 @@ both not sunny and not Monday.</p>
 <h2>Conditionals</h2>
 <div id="left">
 <p>The <em>conditional statement</em> <span class="math inline">\(p
-\implies q\)</span> is False when <span class="math inline">\(p\)</span>
-is <span class="math inline">\(\texttt{True}\)</span> and <span
+\rightarrow q\)</span> is False when <span
+class="math inline">\(p\)</span> is <span
+class="math inline">\(\texttt{True}\)</span> and <span
 class="math inline">\(q\)</span> is <span
 class="math inline">\(\texttt{False}\)</span>, and True otherwise. <span
 class="math inline">\(p\)</span> is called the hypothesis and <span
@@ -346,16 +347,17 @@ class="math inline">\(p\)</span>.</li>
 <div id="right">
 <p>A Truth Table for implication would look like the following: <span
 class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
-\implies q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F &amp; T
-&amp; T \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
+\rightarrow q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F
+&amp; T &amp; T \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
 </div>
 </section>
 <section id="conditionals-continued" class="slide level2">
 <h2>Conditionals Continued</h2>
 <div id="left">
 <p><span class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q
-&amp; p \implies q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F
-&amp; T &amp; T \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
+&amp; p \rightarrow q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F
+\\ F &amp; T &amp; T \\ F &amp; F &amp; T \\ \hline
+\end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of implication.</p>
@@ -364,8 +366,8 @@ class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
 sunny.’’</li>
 <li class="fragment"><span class="math inline">\(q\)</span>: “I walk to
 campus.’’</li>
-<li class="fragment"><span class="math inline">\(p \implies q\)</span>:
-“If it is sunny, then I walk to campus.’’</li>
+<li class="fragment"><span class="math inline">\(p \rightarrow
+q\)</span>: “If it is sunny, then I walk to campus.’’</li>
 </ul>
 </div>
 </section>
@@ -373,20 +375,21 @@ campus.’’</li>
 <h2>Conditionals Continued</h2>
 <div id="left">
 <p><span class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q
-&amp; p \implies q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F
-&amp; T &amp; T \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
+&amp; p \rightarrow q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F
+\\ F &amp; T &amp; T \\ F &amp; F &amp; T \\ \hline
+\end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of implication.</p>
 <ul>
 <li><span class="math inline">\(p\)</span>: “It is sunny.’’</li>
 <li><span class="math inline">\(q\)</span>: “I walk to campus.’’</li>
-<li><span class="math inline">\(p \implies q\)</span>: “If it is sunny,
-then I walk to campus.’’</li>
+<li><span class="math inline">\(p \rightarrow q\)</span>: “If it is
+sunny, then I walk to campus.’’</li>
 </ul>
-<p>The implication (<span class="math inline">\(p \implies q\)</span>)
-is <span class="math inline">\(\texttt{False}\)</span> if it is sunny
-and I do NOT walk to campus. Otherwise, it is <span
+<p>The implication (<span class="math inline">\(p \rightarrow
+q\)</span>) is <span class="math inline">\(\texttt{False}\)</span> if it
+is sunny and I do NOT walk to campus. Otherwise, it is <span
 class="math inline">\(\texttt{True}\)</span>.</p>
 <p>If it is not sunny (<span class="math inline">\(p\)</span> is <span
 class="math inline">\(\texttt{False}\)</span>) and I still walk to
@@ -399,15 +402,15 @@ class="math inline">\(\texttt{True}\)</span>), this implication is still
 <h2>Biconditionals</h2>
 <div id="left">
 <p>The <em>biconditional statement</em> (“if and only if” or “iff”)
-<span class="math inline">\(p \iff q\)</span> is <span
+<span class="math inline">\(p \leftrightarrow q\)</span> is <span
 class="math inline">\(\texttt{True}\)</span> when <span
 class="math inline">\(p\)</span> and <span
 class="math inline">\(q\)</span> have the same truth value, and <span
 class="math inline">\(\texttt{False}\)</span> otherwise.</p>
 <p>A Truth Table for implication would look like the following: <span
 class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
-\iff q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F &amp; T
-&amp; F \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
+\leftrightarrow q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F
+&amp; T &amp; F \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of a biconditional.</p>
@@ -416,8 +419,8 @@ class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
 sunny.’’</li>
 <li class="fragment"><span class="math inline">\(q\)</span>: “I walk to
 campus.’’</li>
-<li class="fragment"><span class="math inline">\(q \iff p\)</span>: “I
-walk to campus if and only if it is sunny.’’</li>
+<li class="fragment"><span class="math inline">\(q \leftrightarrow
+p\)</span>: “I walk to campus if and only if it is sunny.’’</li>
 </ul>
 </div>
 </section>
@@ -425,28 +428,28 @@ walk to campus if and only if it is sunny.’’</li>
 <h2>Biconditionals</h2>
 <div id="left">
 <p>The <em>biconditional statement</em> (“if and only if” or “iff”)
-<span class="math inline">\(p \iff q\)</span> is <span
+<span class="math inline">\(p \leftrightarrow q\)</span> is <span
 class="math inline">\(\texttt{True}\)</span> when <span
 class="math inline">\(p\)</span> and <span
 class="math inline">\(q\)</span> have the same truth value, and <span
 class="math inline">\(\texttt{False}\)</span> otherwise.</p>
 <p>A Truth Table for implication would look like the following: <span
 class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
-\iff q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F &amp; T
-&amp; F \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
+\leftrightarrow q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F
+&amp; T &amp; F \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of a biconditional.</p>
 <ul>
 <li><span class="math inline">\(p\)</span>: “It is sunny.’’</li>
 <li><span class="math inline">\(q\)</span>: “I walk to campus.’’</li>
-<li><span class="math inline">\(q \iff p\)</span>: “I walk to campus if
-and only if it is sunny.’’</li>
+<li><span class="math inline">\(q \leftrightarrow p\)</span>: “I walk to
+campus if and only if it is sunny.’’</li>
 </ul>
-<p>The biconditional (<span class="math inline">\(p \iff q\)</span>) is
-<span class="math inline">\(\texttt{True}\)</span> if it is sunny and I
-walk to campus or if it is not sunny and I don’t walk to campus.
-Otherwise, it is <span
+<p>The biconditional (<span class="math inline">\(p \leftrightarrow
+q\)</span>) is <span class="math inline">\(\texttt{True}\)</span> if it
+is sunny and I walk to campus or if it is not sunny and I don’t walk to
+campus. Otherwise, it is <span
 class="math inline">\(\texttt{False}\)</span>.</p>
 <p>Unlike the previous example, if it is not sunny (<span
 class="math inline">\(p\)</span> is <span
@@ -455,6 +458,17 @@ campus (<span class="math inline">\(q\)</span> is <span
 class="math inline">\(\texttt{True}\)</span>), this biconditional is
 <span class="math inline">\(\texttt{False}\)</span>.</p>
 </div>
+</section>
+<section id="order-of-operations" class="slide level2">
+<h2>Order Of Operations</h2>
+<ul>
+<li>Negations: <span class="math inline">\(\neg\)</span></li>
+<li>Conjunctions: <span class="math inline">\(\land\)</span></li>
+<li>Disjunctions: <span class="math inline">\(\lor\)</span></li>
+</ul>
+<p>Everything else can be written as a combination of the above three,
+but in general, it’s best to always clarify order of operations using
+parentheses!</p>
 </section>
 <section id="logical-equivalences" class="slide level2">
 <h2>Logical Equivalences</h2>
@@ -467,7 +481,8 @@ It states: <br> <span class="math display">\[ \neg (p \land q) \equiv
 \neg p \lor \neg q \]</span> <span class="math display">\[ \neg (p \lor
 q) \equiv \neg p \land \neg q \]</span></li>
 <li class="fragment">Another useful equivalence is: <br> <span
-class="math display">\[ p \implies q \equiv \neg p \lor q \]</span></li>
+class="math display">\[ p \rightarrow q \equiv \neg p \lor q
+\]</span></li>
 </ul>
 </div>
 </section>
@@ -636,14 +651,14 @@ class="math inline">\(q\)</span>”</li>
 class="math inline">\(q\)</span>”; “<span
 class="math inline">\(p\)</span> or <span
 class="math inline">\(q\)</span>, but not both”</li>
-<li><span class="math inline">\(p \implies q\)</span>
+<li><span class="math inline">\(p \rightarrow q\)</span>
 (Conditional/Implication): “<span class="math inline">\(p\)</span>
 implies <span class="math inline">\(q\)</span>”; “if <span
 class="math inline">\(p\)</span> then <span
 class="math inline">\(q\)</span>”; “<span
 class="math inline">\(q\)</span> if <span
 class="math inline">\(p\)</span>”</li>
-<li><span class="math inline">\(p \iff q\)</span> or <span
+<li><span class="math inline">\(p \leftrightarrow q\)</span> or <span
 class="math inline">\(p\)</span> iff <span
 class="math inline">\(q\)</span> (Biconditional): “<span
 class="math inline">\(p\)</span> if and only if <span
@@ -667,7 +682,7 @@ under 4 feet tall’’</li>
 class="math inline">\(a\)</span> if <span
 class="math inline">\(b\)</span>.</li>
 <li class="fragment">So you know you can write it as: <span
-class="math inline">\(b \implies \neg a\)</span>.</li>
+class="math inline">\(b \rightarrow \neg a\)</span>.</li>
 <li class="fragment">Notes:
 <ul>
 <li class="fragment">If it doesn’t directly match any of the phrases
@@ -757,7 +772,7 @@ world.</p>
 <li>Alice says: Bob is a knave <span class="math inline">\(\lor\)</span>
 Chris is a knight</li>
 <li>Bob says: Alice is a knight <span
-class="math inline">\(\iff\)</span> Chris is a knave</li>
+class="math inline">\(\leftrightarrow\)</span> Chris is a knave</li>
 </ul>
 <p>(Propositions:</p>
 <p><span class="math inline">\(\{A =\)</span> “Alice is a knight”, <span
@@ -777,7 +792,8 @@ class="math inline">\(\texttt{True}\)</span>. These are the rules of our
 world.</p>
 <ul>
 <li>Alice says: <span class="math inline">\(\neg B \lor C\)</span></li>
-<li>Bob says: <span class="math inline">\(A \iff \neg C\)</span></li>
+<li>Bob says: <span class="math inline">\(A \leftrightarrow \neg
+C\)</span></li>
 </ul>
 <p>(Propositions:</p>
 <p><span class="math inline">\(\{A =\)</span> “Alice is a knight”, <span
@@ -792,21 +808,22 @@ class="math inline">\(\neg C=\)</span> “Chris is a knave”})</p>
 <h2>Using Logic For Problem Solving</h2>
 <div id="text">
 <p><span class="math inline">\(3.\)</span> Make a truth table</p>
-<p>Rules of the World: <span class="math inline">\(A \implies (\neg B
-\lor C)\)</span> and <span class="math inline">\(B \implies (A \iff \neg
-C)\)</span></p>
+<p>Rules of the World: <span class="math inline">\(A \rightarrow (\neg B
+\lor C)\)</span> and <span class="math inline">\(B \rightarrow (A
+\leftrightarrow \neg C)\)</span></p>
 <p><span class="math inline">\(\begin{array}{|c|c|c|c|c|} \hline A &amp;
-B &amp; C &amp; A \implies (\neg B \lor C) &amp; B \implies (A \iff \neg
-C) \\ \hline T &amp; T &amp; T &amp; T &amp; F\\ T &amp; T &amp; F &amp;
-F &amp; T\\ \color{yellow}T &amp; \color{yellow}F &amp; \color{yellow}T
-&amp; \color{yellow}T &amp;\color{yellow}T\\ \color{yellow}T &amp;
-\color{yellow}F &amp; \color{yellow}F &amp;\color{yellow} T
-&amp;\color{yellow}T\\ \color{yellow}F &amp; \color{yellow}T &amp;
-\color{yellow}T &amp; \color{yellow}T &amp;\color{yellow}T\\ F &amp; T
-&amp; F &amp; T &amp;F\\ \color{yellow}F &amp; \color{yellow}F &amp;
-\color{yellow}T &amp; \color{yellow}T &amp;\color{yellow}T\\
-\color{yellow}F &amp; \color{yellow}F &amp; \color{yellow}F &amp;
-\color{yellow}T &amp;\color{yellow}T\\ \hline \end{array}\)</span></p>
+B &amp; C &amp; A \rightarrow (\neg B \lor C) &amp; B \rightarrow (A
+\leftrightarrow \neg C) \\ \hline T &amp; T &amp; T &amp; T &amp; F\\ T
+&amp; T &amp; F &amp; F &amp; T\\ \color{yellow}T &amp; \color{yellow}F
+&amp; \color{yellow}T &amp; \color{yellow}T &amp;\color{yellow}T\\
+\color{yellow}T &amp; \color{yellow}F &amp; \color{yellow}F
+&amp;\color{yellow} T &amp;\color{yellow}T\\ \color{yellow}F &amp;
+\color{yellow}T &amp; \color{yellow}T &amp; \color{yellow}T
+&amp;\color{yellow}T\\ F &amp; T &amp; F &amp; T &amp;F\\
+\color{yellow}F &amp; \color{yellow}F &amp; \color{yellow}T &amp;
+\color{yellow}T &amp;\color{yellow}T\\ \color{yellow}F &amp;
+\color{yellow}F &amp; \color{yellow}F &amp; \color{yellow}T
+&amp;\color{yellow}T\\ \hline \end{array}\)</span></p>
 </div>
 </section>
 <section id="using-logic-for-problem-solving-7" class="slide level2">
@@ -814,22 +831,23 @@ F &amp; T\\ \color{yellow}T &amp; \color{yellow}F &amp; \color{yellow}T
 <div id="text">
 <p><span class="math inline">\(4.\)</span> Check if a unique row makes
 both statements true.</p>
-<!-- Rules of the World: $A \implies (\neg B \lor C)$ and $B \implies (A \iff \neg C)$  -->
+<!-- Rules of the World: $A \rightarrow (\neg B \lor C)$ and $B \rightarrow (A \leftrightarrow \neg C)$  -->
 <p><span class="math inline">\(\begin{array}{|c|c|c|c|c|} \hline A &amp;
-B &amp; C &amp; A \implies (\neg B \lor C) &amp; B \implies (A \iff \neg
-C) \\ \hline T &amp; T &amp; T &amp; T &amp; F\\ T &amp; T &amp; F &amp;
-F &amp; T\\ \color{yellow}T &amp; \color{yellow}F &amp; \color{yellow}T
-&amp; \color{yellow}T &amp;\color{yellow}T\\ \color{yellow}T &amp;
-\color{yellow}F &amp; \color{yellow}F &amp;\color{yellow} T
-&amp;\color{yellow}T\\ \color{yellow}F &amp; \color{yellow}T &amp;
-\color{yellow}T &amp; \color{yellow}T &amp;\color{yellow}T\\ F &amp; T
-&amp; F &amp; T &amp;F\\ \color{yellow}F &amp; \color{yellow}F &amp;
-\color{yellow}T &amp; \color{yellow}T &amp;\color{yellow}T\\
-\color{yellow}F &amp; \color{yellow}F &amp; \color{yellow}F &amp;
-\color{yellow}T &amp;\color{yellow}T\\ \hline \end{array}\)</span></p>
+B &amp; C &amp; A \rightarrow (\neg B \lor C) &amp; B \rightarrow (A
+\leftrightarrow \neg C) \\ \hline T &amp; T &amp; T &amp; T &amp; F\\ T
+&amp; T &amp; F &amp; F &amp; T\\ \color{yellow}T &amp; \color{yellow}F
+&amp; \color{yellow}T &amp; \color{yellow}T &amp;\color{yellow}T\\
+\color{yellow}T &amp; \color{yellow}F &amp; \color{yellow}F
+&amp;\color{yellow} T &amp;\color{yellow}T\\ \color{yellow}F &amp;
+\color{yellow}T &amp; \color{yellow}T &amp; \color{yellow}T
+&amp;\color{yellow}T\\ F &amp; T &amp; F &amp; T &amp;F\\
+\color{yellow}F &amp; \color{yellow}F &amp; \color{yellow}T &amp;
+\color{yellow}T &amp;\color{yellow}T\\ \color{yellow}F &amp;
+\color{yellow}F &amp; \color{yellow}F &amp; \color{yellow}T
+&amp;\color{yellow}T\\ \hline \end{array}\)</span></p>
 <!-- $\begin{array}{|c|c|c|c|c|}
 \hline
-A & B & C &  A \implies (\neg B \lor C) & B \implies (A \iff \neg C) \\
+A & B & C &  A \rightarrow (\neg B \lor C) & B \rightarrow (A \leftrightarrow \neg C) \\
 \hline
 T & T & T & T & F\\
 T&T&F&F&T\\
@@ -853,15 +871,17 @@ Let’s test one of these!</strong></p>
 <ul>
 <li>Alice says: Bob is a knave or Chris is a knight.
 <ul>
-<li><span class="math inline">\(A \implies (\neg B \lor C)\)</span></li>
-<li><span class="math inline">\(T \implies (\neg(F) \lor T)\)</span>
+<li><span class="math inline">\(A \rightarrow (\neg B \lor
+C)\)</span></li>
+<li><span class="math inline">\(T \rightarrow (\neg(F) \lor T)\)</span>
 evaluates to True!</li>
 </ul></li>
 <li>Bob says: Alice is a knight if, and only if, Chris is a knave.
 <ul>
-<li><span class="math inline">\(B \implies (A \iff \neg C)\)</span></li>
-<li><span class="math inline">\(F \implies (T \iff \neg T)\)</span>
-evaluates to True!</li>
+<li><span class="math inline">\(B \rightarrow (A \leftrightarrow \neg
+C)\)</span></li>
+<li><span class="math inline">\(F \rightarrow (T \leftrightarrow \neg
+T)\)</span> evaluates to True!</li>
 </ul></li>
 </ul>
 <p>Both of our rules hold in this world with these assignments, so we
@@ -880,7 +900,8 @@ implication.</p>
 <ul>
 <li>Alice says: Bob is a knave or Chris is a knight.
 <ul>
-<li><span class="math inline">\(A \implies (\neg B \lor C)\)</span></li>
+<li><span class="math inline">\(A \rightarrow (\neg B \lor
+C)\)</span></li>
 </ul></li>
 </ul>
 <p>However, what if we assumed that if someone is lying, they know their
@@ -896,7 +917,8 @@ false, then we would have to explain our rules using a
 <ul>
 <li>Alice says: Bob is a knave or Chris is a knight.
 <ul>
-<li><span class="math inline">\(A \iff (\neg B \lor C)\)</span></li>
+<li><span class="math inline">\(A \leftrightarrow (\neg B \lor
+C)\)</span></li>
 </ul></li>
 </ul>
 <p>Therefore, our answer is correct for what we <em>assume</em> the
