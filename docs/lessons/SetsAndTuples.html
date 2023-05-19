@@ -343,6 +343,7 @@ class="math inline">\(A=B\)</span></p>
 </section>
 <section id="intersection" class="slide level2">
 <h2>Intersection</h2>
+<div id="text">
 <p><span class="math inline">\(A \cap B\)</span> is the set of elements
 that are both in <span class="math inline">\(A\)</span>
 <strong>and</strong> in <span class="math inline">\(B\)</span>.</p>
@@ -353,7 +354,6 @@ class="math inline">\(\}\)</span> <br> <span class="math inline">\(B=
 \{\)</span>Bananas, Oranges<span class="math inline">\(\}\)</span> <br>
 <span class="math inline">\(A \cap B =\)</span> {Bananas}</p>
 </blockquote>
-<div>
 <ul>
 <li class="fragment">Note how this ties into logic… <span
 class="math inline">\(x \in A \cap B\)</span> iff <span
@@ -363,43 +363,53 @@ class="math inline">\(x \in A \land x \in B\)</span></li>
 </section>
 <section id="union" class="slide level2">
 <h2>Union</h2>
+<div id="text">
 <p><span class="math inline">\(A \cup B\)</span> is the set of elements
-that are in either <span class="math inline">\(A\)</span> or <span
-class="math inline">\(B\)</span>.</p>
+that are in either <span class="math inline">\(A\)</span>
+<strong>or</strong> <span class="math inline">\(B\)</span>.</p>
 <h3 id="example-4">Example</h3>
 <blockquote>
 <p><span class="math inline">\(A = \{\)</span>Apples, Bananas<span
-class="math inline">\(\}, B= \{\)</span>Bananas, Oranges<span
-class="math inline">\(\}\)</span> <span class="math inline">\(A \cup B
-=\)</span> {Apples, Bananas, Oranges}</p>
+class="math inline">\(\}\)</span> <br> <span class="math inline">\(B=
+\{\)</span>Bananas, Oranges<span class="math inline">\(\}\)</span> <br>
+<span class="math inline">\(A \cup B =\)</span> {Apples, Bananas,
+Oranges}</p>
 </blockquote>
-<p>Note how this ties into logic… <span class="math inline">\(x \in A
-\cup B\)</span> iff <span class="math inline">\(x \in A\)</span> or
-<span class="math inline">\(x \in B\)</span></p>
+<ul>
+<li class="fragment">Note how this ties into logic… <span
+class="math inline">\(x \in A \cup B\)</span> iff <span
+class="math inline">\(x \in A \lor x \in B\)</span></li>
+</ul>
+</div>
 </section>
 <section id="common-sets" class="slide level2">
 <h2>Common Sets</h2>
-<p>There are some standard symbols that represent specific sets you will
-see:</p>
-<p>The set of <strong>Natural Numbers</strong> <span
+<div id="text">
+<ul>
+<li class="fragment">There are some standard symbols that represent
+specific sets you will see:</li>
+<li class="fragment">The set of <strong>Natural Numbers</strong> <span
 class="math inline">\(\mathbb{N}\)</span> is the set of all whole
 numbers <span class="math inline">\(\geq 0\)</span>, <span
-class="math inline">\(\{0,1,2,3,4,\ldots\}\)</span>.*</p>
-<p>The set of <strong>Integers</strong> <span
+class="math inline">\(\{0,1,2,3,4,\ldots\}\)</span>.*</li>
+<li class="fragment">The set of <strong>Integers</strong> <span
 class="math inline">\(\mathbb{Z}\)</span> is the set of all whole
 numbers, <span class="math inline">\(\{\ldots, -3, -2, -1, 0, 1, 2, 3,
-\ldots\}\)</span>.</p>
-<p>The set of <strong>Rational Numbers</strong> <span
+\ldots\}\)</span>.</li>
+<li class="fragment">The set of <strong>Rational Numbers</strong> <span
 class="math inline">\(\mathbb{Q}\)</span> are numbers that can be
 represented as a quotient of whole numbers, <span
 class="math inline">\(\{\frac{p}{q} \mid p,q \in
-\mathbb{Z}\}\)</span></p>
-<p>The set of <strong>Real Numbers</strong> <span
+\mathbb{Z}\}\)</span></li>
+<li class="fragment">The set of <strong>Real Numbers</strong> <span
 class="math inline">\(\mathbb{R}\)</span> is all <em>real</em>
-numbers.</p>
+numbers.</li>
+</ul>
+</div>
 </section>
 <section id="tuples" class="slide level2">
 <h2>Tuples</h2>
+<div id="text">
 <p>A <span
 class="math inline">\(k\)</span>-<strong><em>tuple</em></strong> is an
 ordered sequence of <span class="math inline">\(k\)</span> elements,
@@ -417,9 +427,11 @@ elements are equal. <span
 class="math inline">\((a_1,a_2,\ldots,a_k)\)</span> iff for all <span
 class="math inline">\(i\in[1,\ldots,k]\)</span> we have <span
 class="math inline">\(a_i=b_i\)</span>.</p>
+</div>
 </section>
 <section id="tuples---cartesian-product" class="slide level2">
 <h2>Tuples - Cartesian Product</h2>
+<div id="text" class="incremental">
 <p>The basic operation to create tuples is the Cartesian Product of two
 sets.</p>
 <p>The of <span class="math inline">\(A\)</span> and <span
@@ -429,33 +441,20 @@ and for all <span class="math inline">\(b \in B\}\)</span></p>
 <h3 id="example-5">Example</h3>
 <blockquote>
 <p>Let <span class="math inline">\(L=\{a,b,c\}\)</span> and let <span
-class="math inline">\(D = \{0,1\}\)</span></p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p><span class="math inline">\(L \times D =
-\{(a,0),(a,1),(b,0),(b,1),(c,0),(c,1)\}\)</span></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p><span class="math inline">\(D \times L =
-\{(0,a),(0,b),(0,c),(1,a),(1, b),(1,c)\}\)</span></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p><span class="math inline">\(L \times L = L^2 =
+class="math inline">\(D = \{0,1\}\)</span> <span class="math inline">\(L
+\times D = \{(a,0),(a,1),(b,0),(b,1),(c,0),(c,1)\}\)</span> <span
+class="math inline">\(D \times L = \{(0,a),(0,b),(0,c),(1,a),(1,
+b),(1,c)\}\)</span> <span class="math inline">\(L \times L = L^2 =
 \{(a,a),(a,b),(a,c),(b,a),(b, b),(b,c),(c,a),(c, b),(c,c)\}\)</span></p>
-</blockquote>
 </blockquote>
 <p>The cartesian product is associative: <span class="math inline">\(D
 \times(L \times D) = (D \times L) \times D\)</span>.</p>
 <p>The cartesian product is not necessarily commutative: <span
-class="math inline">\(D\times L \neq L \times D\)</span>.</p>
+class="math inline">\(D\times L \neq L \times D\)</span>. </dov></p>
 </section>
 <section id="sequences-strings-and-series" class="slide level2">
 <h2>Sequences, Strings, and Series</h2>
+<div id="text" class="incremental">
 <p>Some other structures we may use:</p>
 <ul>
 <li><strong>list</strong>: tuples that may have arbitrary finite
@@ -465,7 +464,9 @@ length,</li>
 (e.g. addition, scalar multiplication, rotation, and calculating
 lengths)</li>
 <li><strong>matrices, arrays, and tables</strong>: tuples, displayed
-with a two-dimensional layout, and perhaps given extra operations.</li>
+with a two-dimensional layout, and perhaps given extra operations.
+<div id="text" class="incremental">
+</li>
 </ul>
 </section>
 <section id="concatenation" class="slide level2">
@@ -500,51 +501,58 @@ the number of elements is the product of the numbers of choices.</p>
 </section>
 <section id="counting-example-1" class="slide level2">
 <h2>Counting Example 1</h2>
-<p>You have a set of six different math books, five different philosophy
-books, and three different religion books. How many books do you
-have?</p>
-<p>The sum rule says, “Add them up. <span class="math inline">\(6 + 5 +
-3 = 14\)</span>.”</p>
+<div>
+<ul>
+<li class="fragment">You have a set of six different math books, five
+different philosophy books, and three different religion books. How many
+books do you have?</li>
+<li class="fragment">The sum rule says, “Add them up. <span
+class="math inline">\(6 + 5 + 3 = 14\)</span>.”</li>
+</ul>
+</div>
 </section>
 <section id="counting-example-2" class="slide level2">
 <h2>Counting Example 2</h2>
-<p>Now you want a set of three books, one of each type; how many sets of
-three are possible?</p>
-<p>You want to count all tuples of the form <span
+<div id="text" class="incremental">
+<ul>
+<li>Now you want a set of three books, one of each type; how many sets
+of three are possible?</li>
+<li>You want to count all tuples of the form <span
 class="math inline">\((m,p,r)\)</span>, where <span
 class="math inline">\(m\)</span> is a math book, <span
 class="math inline">\(p\)</span> is a philosophy book, and <span
 class="math inline">\(r\)</span> is a religion book. You choose one of
 six math books, one of five philosophy books, and one of three religion
-books, so the product rule says,</p>
-<p>“<span class="math inline">\(6 \cdot 5 \cdot 3 = 90\)</span> sets of
-three are possible.”</p>
-<p>Bringing this back to sets, you can think of <span
-class="math inline">\(M\)</span> as the set of math books, <span
-class="math inline">\(P\)</span> as the set of philosophy books, and
-<span class="math inline">\(R\)</span> as the set of religion books. You
-can get all possible sets of three using the cartesian product, and the
-cardinality of that is the number of possible sets, <span
-class="math inline">\(|M \times P \times R|\)</span>.</p>
-<p>Note that <span class="math inline">\(m = |M|, p = |P|, r =
-|R|\)</span>.</p>
-<p>From this, we can see that <span class="math inline">\(|M|\cdot |P|
-\cdot |R| = |M \times P \times R|\)</span>.</p>
-<p><em>This exactly what the product rule is saying!</em></p>
+books, so the product rule says,</li>
+<li>“<span class="math inline">\(6 \cdot 5 \cdot 3 = 90\)</span> sets of
+three are possible.”</li>
+<li>If <span class="math inline">\(M\)</span> is the set of math books,
+<span class="math inline">\(P\)</span> is the set of philosophy books,
+and <span class="math inline">\(R\)</span> is the set of religion books.
+You can get all possible sets of three using the <strong>cartesian
+product</strong>, and the <strong>cardinality</strong> of that is the
+number of possible sets, <span class="math inline">\(|M \times P \times
+R|\)</span>.</li>
+<li>We can see that <span class="math inline">\(|M|\cdot |P| \cdot |R| =
+|M \times P \times R|\)</span>.</li>
+<li><em>This exactly what the product rule is saying!</em></li>
+</ul>
 </section>
 <section id="permutations" class="slide level2">
 <h2>Permutations</h2>
 <p>The <strong>permutations</strong> of <span
 class="math inline">\(n\)</span> distinct items are the set of all <span
-class="math inline">\(n\)</span>-tuples that never repeat any item.</p>
+class="math inline">\(n\)</span>-tuples that <em>never repeat</em> any
+item.</p>
 <h3 id="example-7">Example</h3>
 <blockquote>
-<p>Let <span class="math inline">\(A =\)</span> {Bob, Alice, Chris}</p>
-</blockquote>
-<blockquote>
-<p>All permutations of <span class="math inline">\(A\)</span>: {{Bob,
-Alice, Chris}, {Bob, Chris, Alice}, {Alice, Chris, Bob}, {Alice, Bob,
-Chris}, {Chris, Bob, Alice}, {Chris, Alice, Bob}}</p>
+<p>Let <span class="math inline">\(A = \{Bob, Alice, Chris\}\)</span>
+<br> All permutations of <span class="math inline">\(A\)</span>: <br>
+<span class="math inline">\(\big\{\{Bob, Alice, Chris\}, \{Bob, Chris,
+Alice\},\)</span> <br> <span class="math inline">\(\{Alice, Chris,
+Bob\}, \{Alice, Bob, Chris\},\)</span> <br> <span
+class="math inline">\(\{Chris, Bob, Alice\}, \{Chris, Alice,
+Bob\}\big\}\)</span></p>
 </blockquote>
 </section>
 <section id="counting-permutations" class="slide level2">
@@ -556,10 +564,8 @@ class="math inline">\(n\)</span> factorial).</p>
 (n-2) \cdot \ldots \cdot 1\)</span>.</p>
 <h3 id="example-8">Example</h3>
 <blockquote>
-<p>Let <span class="math inline">\(A =\)</span> {Bob, Alice, Chris}</p>
-</blockquote>
-<blockquote>
-<p>The number of possible permutations of <span
+<p>Let <span class="math inline">\(A = \{Bob, Alice, Chris\}\)</span>
+<br> The number of possible permutations of <span
 class="math inline">\(A\)</span> is <span class="math inline">\(3! = 3
 \cdot 2 \cdot 1 = 6\)</span>.</p>
 </blockquote>
@@ -575,89 +581,72 @@ on the shelf and get one of each type.</p>
 </section>
 <section id="permutations-examples-1" class="slide level2">
 <h2>Permutations Examples</h2>
-<p>Let’s go back to our previous example.</p>
-<p>You have a set of six different math books, five different philosophy
-books, and three different religion books.</p>
-<p>We want to know the number of ways to arrange three of the 14 books
-on the shelf and get one of each type.</p>
-<p>Let’s break this down…</p>
-<p>Let’s say you just want three books, one of each type, from the
-shelf. How many possible combinations are there?</p>
-<p>Our product rule tells us there are <span class="math inline">\(6
-\cdot 5 \cdot 3\)</span> possible combinations.</p>
-</section>
-<section id="permutations-examples-2" class="slide level2">
-<h2>Permutations Examples</h2>
-<p>Let’s go back to our previous example.</p>
-<p>You have a set of six different math books, five different philosophy
-books, and three different religion books.</p>
-<p>We want to know the number of ways to arrange three of the 14 books
-on the shelf and get one of each type.</p>
-<p>Let’s break this down…</p>
-<p>Let’s say you just want three books, one of each type, from the
-shelf. How many possible combinations are there?</p>
-<p>Our product rule tells us there are <span class="math inline">\(6
-\cdot 5 \cdot 3\)</span> possible combinations.</p>
-<p>Let’s say you just want to know how many times you can arrange a set
-of <span class="math inline">\(3\)</span> books, regardless of type.
-This is the same as counting how many permutations there are of a set of
-size <span class="math inline">\(3\)</span>, so the answer is <span
-class="math inline">\(3!\)</span>.</p>
-</section>
-<section id="permutations-examples-3" class="slide level2">
-<h2>Permutations Examples</h2>
-<p>Let’s go back to our previous example.</p>
-<p>You have a set of 6 different math books, 5 different philosophy
-books, and 3 different religion books.</p>
-<p>We want to know the number of ways to arrange three of the 14 books
-on the shelf and get one of each type.</p>
-<p>Let’s break this down…</p>
-<p>Let’s say you just want three books, one of each type, from the
-shelf. How many possible combinations are there?</p>
-<p>Our product rule tells us there are <span class="math inline">\(6
-\cdot 5 \cdot 3\)</span> possible combinations.</p>
-<p>Let’s say you just want to know how many times you can arrange a set
-of <span class="math inline">\(3\)</span> books, regardless of type.
-This is the same as counting how many permutations there are of a set of
-size <span class="math inline">\(3\)</span>, so the answer is <span
-class="math inline">\(3!\)</span>.</p>
-<p>Now we can combine these two answers: <span class="math inline">\(3!
-\cdot 6 \cdot 5 \cdot 3\)</span></p>
+<div id="text">
+<ul>
+<li class="fragment">You have a set of 6 different math books, 5
+different philosophy books, and 3 different religion books. We want to
+know the number of ways to arrange three of the 14 books on the shelf
+and get one of each type.</li>
+<li class="fragment">Let’s break this down…</li>
+<li class="fragment">Let’s say you just want three books, one of each
+type, from the shelf. How many possible combinations are there?</li>
+<li class="fragment">Our product rule tells us there are <span
+class="math inline">\(6 \cdot 5 \cdot 3\)</span> possible
+combinations.</li>
+<li class="fragment">Let’s say you just want to know how many times you
+can arrange a set of <span class="math inline">\(3\)</span> books,
+regardless of type. This is the same as counting how many permutations
+there are of a set of size <span class="math inline">\(3\)</span>, so
+the answer is <span class="math inline">\(3!\)</span>.</li>
+<li class="fragment">Now we can combine these two answers: <span
+class="math inline">\(3! \cdot 6 \cdot 5 \cdot 3\)</span></li>
+</ul>
+</div>
 </section>
 <section id="permutations-examples-continued" class="slide level2">
 <h2>Permutations Examples Continued</h2>
-<p>Now let’s say you want to know how many different ways you can
-arrange your <span class="math inline">\(14\)</span> books. That’s
-pretty straightforward. You have <span
+<div id="text">
+<ul>
+<li class="fragment">Now let’s say you want to know how many different
+ways you can arrange your <span class="math inline">\(14\)</span> books.
+That’s pretty straightforward. You have <span
 class="math inline">\(14!\)</span> possible permutations of your set of
-books.</p>
-<p>Say you just wanted to know how many ways you can order any three of
-those fourteen books. We just stop our factorial early. <span
-class="math inline">\(14 \cdot 13 \cdot 12\)</span>.</p>
-<p>There’s actually a way we can mathematically express this. It can be
-written as <span class="math inline">\(\frac{14!}{(14-3)!}\)</span>.</p>
+books.</li>
+<li class="fragment">Say you just wanted to know how many ways you can
+order any three of those fourteen books. We just stop our factorial
+early. <span class="math inline">\(14 \cdot 13 \cdot 12\)</span>.</li>
+<li class="fragment">There’s actually a way we can mathematically
+express this. It can be written as <span
+class="math inline">\(\frac{14!}{(14-3)!}\)</span>.</li>
+</ul>
 <p>Let’s draw out why this works…</p>
+</div>
 </section>
 <section id="permutations-examples-continued-1" class="slide level2">
 <h2>Permutations Examples Continued</h2>
-<p>Now let’s say you want to know how many different ways you can
+<div id="text">
+<ul>
+<li>Now let’s say you want to know how many different ways you can
 arrange your <span class="math inline">\(14\)</span> books. That’s
 pretty straightforward. You have <span
 class="math inline">\(14!\)</span> possible permutations of your set of
-books.</p>
-<p>Say you just wanted to know how many ways you can order any three of
+books.</li>
+<li>Say you just wanted to know how many ways you can order any three of
 those fourteen books. We just stop our factorial early. <span
-class="math inline">\(14 \cdot 13 \cdot 12\)</span>.</p>
-<p>There’s actually a way we can mathematically express this. It can be
-written as <span class="math inline">\(\frac{14!}{(14-3)!}\)</span>.</p>
-<p>Let’s draw out why this works…</p>
-<p>If you want to stop <span class="math inline">\(n\)</span> factorial
+class="math inline">\(14 \cdot 13 \cdot 12\)</span>.</li>
+<li>There’s actually a way we can mathematically express this. It can be
+written as <span
+class="math inline">\(\frac{14!}{(14-3)!}\)</span>.</li>
+<li>If you want to stop <span class="math inline">\(n\)</span> factorial
 after <span class="math inline">\(k\)</span> terms (you can call this a
 <span class="math inline">\(k\)</span>-permutation), you can express
-this as <span class="math inline">\(\frac{n!}{(n-k)!}\)</span>.</p>
+this as <span class="math inline">\(\frac{n!}{(n-k)!}\)</span>.</li>
+</ul>
+</div>
 </section>
 <section id="combinations" class="slide level2">
 <h2>Combinations</h2>
+<div id="text">
 <p>A <span
 class="math inline">\(k\)</span>-<strong><em>combination</em></strong>
 is a set with <span class="math inline">\(k\)</span> elements chosen
@@ -667,10 +656,8 @@ no repeats.</p>
 <h3 id="example-9">Example</h3>
 <blockquote>
 <p>Compute all <span class="math inline">\(2\)</span>-combinations of
-<span class="math inline">\(\{a,b,c\}\)</span>.</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(\{a,b\},\{a,c\}, \{b,c\}\)</span></p>
+<span class="math inline">\(\{a,b,c\}\)</span>. <br> <span
+class="math inline">\(\{a,b\},\{a,c\}, \{b,c\}\)</span></p>
 </blockquote>
 <h3 id="permutations-vs.-combinations">Permutations
 vs. Combinations</h3>
@@ -680,9 +667,11 @@ class="math inline">\(\{a,b,c\}\)</span> would be <span
 class="math inline">\((a,b), (b,a), (a,c), (c,a), (b,c),
 (c,b)\)</span>.</p>
 </blockquote>
+</div>
 </section>
 <section id="number-of-combinations" class="slide level2">
 <h2>Number of Combinations</h2>
+<div id="text">
 <p>The number of <span class="math inline">\(k\)</span>-combinations of
 a set of size <span class="math inline">\(n\)</span> is <span
 class="math inline">\({n \choose k}\)</span>, read as “<span
@@ -700,51 +689,68 @@ class="math inline">\(k\)</span>”.</p>
 \frac{n!}{k!(n-k)!}\)</span></p>
 <p>Why does this formula work? Some reasoning behind this by
 example…</p>
+</div>
 </section>
 <section id="example-10" class="slide level2">
 <h2>Example</h2>
-<p>Compute the number of <span
+<div id="text">
+<ul>
+<li class="fragment">Compute the number of <span
 class="math inline">\(2\)</span>-permutations of <span
-class="math inline">\(\{a,b,c\}\)</span>.</p>
-<p>We’re going to do this the long way. Let’s consider all possible sets
-of size 2 we can make from <span
-class="math inline">\(\{a,b,c\}\)</span>.</p>
-<p>All sets of size 2 of <span class="math inline">\(\{a,b,c\}\)</span>:
-<span class="math inline">\(\{a,b\},\{a,c\}, \{b,c\}\)</span>.</p>
-<p>Now for permutations, order matters, so we have to consider all
-orderings of these new sets.</p>
-<p>All permutations of <span class="math inline">\(\{a,b\}\)</span>:
-<span class="math inline">\((a,b), (b,a)\)</span>.</p>
-<p>All permutations of <span class="math inline">\(\{a,c\}\)</span>:
-<span class="math inline">\((a,c), (c,a)\)</span>.</p>
-<p>All permutations of <span class="math inline">\(\{b,c\}\)</span>:
-<span class="math inline">\((b,c), (c,b)\)</span>.</p>
+class="math inline">\(\{a,b,c\}\)</span>.</li>
+<li class="fragment">We’re going to do this the long way. Let’s consider
+all possible sets of size 2 we can make from <span
+class="math inline">\(\{a,b,c\}\)</span>.</li>
+<li class="fragment">All sets of size 2 of <span
+class="math inline">\(\{a,b,c\}\)</span>: <span
+class="math inline">\(\{a,b\},\{a,c\}, \{b,c\}\)</span>.</li>
+<li class="fragment">Now for permutations, order matters, so we have to
+consider all orderings of these new sets.</li>
+<li class="fragment">All permutations of <span
+class="math inline">\(\{a,b\}\)</span>: <span
+class="math inline">\((a,b), (b,a)\)</span>.</li>
+<li class="fragment">All permutations of <span
+class="math inline">\(\{a,c\}\)</span>: <span
+class="math inline">\((a,c), (c,a)\)</span>.</li>
+<li class="fragment">All permutations of <span
+class="math inline">\(\{b,c\}\)</span>: <span
+class="math inline">\((b,c), (c,b)\)</span>.</li>
+</ul>
+</div>
 </section>
 <section id="example-continued" class="slide level2">
 <h2>Example Continued…</h2>
-<p>So, the number of <span class="math inline">\(k\)</span>-permutations
-is the number of all sets of size <span class="math inline">\(k\)</span>
-times the number of possible permutations for one of those sets of size
-<span class="math inline">\(k\)</span>.</p>
-<p>Notice the number of all sets of size <span
+<div id="text">
+<ul>
+<li class="fragment">So, the number of <span
+class="math inline">\(k\)</span>-permutations is the number of all sets
+of size <span class="math inline">\(k\)</span> times the number of
+possible permutations for one of those sets of size <span
+class="math inline">\(k.\)</span></li>
+<li class="fragment">Notice the number of all sets of size <span
 class="math inline">\(k\)</span> is the same thing as the number of
-<span class="math inline">\(k\)</span>-combinations.</p>
-<p>And we know that the number of possible permutations for one of those
-sets of size <span class="math inline">\(k\)</span> is <span
-class="math inline">\(k!\)</span>.</p>
-<p>So, the number of <span class="math inline">\(k\)</span>-permutations
-is equal to the number of <span
-class="math inline">\(k\)</span>-combinations times <span
-class="math inline">\(k!\)</span>.</p>
-<p>Equivalently, we can say that the number of <span
+<span class="math inline">\(k\)</span>-combinations.</li>
+<li class="fragment">And we know that the number of possible
+permutations for one of those sets of size <span
+class="math inline">\(k\)</span> is <span
+class="math inline">\(k!\)</span>.</li>
+<li class="fragment">So, the number of <span
+class="math inline">\(k\)</span>-permutations is equal to the number of
+<span class="math inline">\(k\)</span>-combinations times <span
+class="math inline">\(k!\)</span>.</li>
+<li class="fragment">Equivalently, we can say that the number of <span
 class="math inline">\(k\)</span>-combinations is equal to the number of
 <span class="math inline">\(k\)</span>-permutations divided by <span
-class="math inline">\(k!\)</span>.</p>
-<p>The number of <span class="math inline">\(k\)</span> permutations
-<span class="math inline">\(= \frac{n!}{(n-k)!}\)</span> The number of
-<span class="math inline">\(k\)</span> permutations <span
+class="math inline">\(k!\)</span>.</li>
+<li class="fragment">The number of <span
+class="math inline">\(k\)</span> permutations <span
+class="math inline">\(= \frac{n!}{(n-k)!}\)</span></li>
+<li class="fragment">The number of <span
+class="math inline">\(k\)</span> permutations <span
 class="math inline">\(= \frac{n!}{(n-k)!} \cdot \frac{1}{k!} =
-\frac{n!}{k!(n-k)!} = {n \choose k}\)</span></p>
+\frac{n!}{k!(n-k)!} = {n \choose k}\)</span></li>
+</ul>
+</div>
 </section>
     </div>
   </div>
