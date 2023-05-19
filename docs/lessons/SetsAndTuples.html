@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Sets and Tuples</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    /* .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    } */
+
+    #left {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:45%;
+      z-index:-10;
+      font-size: 75%;
+    }
+    
+    #right {
+      left:31.25%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:45%;
+      font-size: 75%;
+    }
+
+    #text {
+      font-size: 75%;
+    }
+
+    #smalltext {
+      font-size: 40%;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Sets and Tuples</h1>
+</section>
+
+<section id="sets-and-tuples" class="slide level2">
+<h2>Sets and Tuples</h2>
+<p>Textbook Chapter 3</p>
+</section>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning Objectives</h2>
+<div id="text">
+<p>To learn the language of sets and tuples:</p>
+<ul>
+<li>You will be able to define sets with braces, (<span
+class="math inline">\(\{\}\)</span>), tuples with parentheses, <span
+class="math inline">\(((\,))\)</span>, sets of tuples with Cartesian
+product, <span class="math inline">\((\times)\)</span>, and sets of
+strings with concatenation.</li>
+<li>You will be able to name common sets (including the natural numbers
+<span class="math inline">\((\mathbb{N})\)</span>, integers <span
+class="math inline">\((\mathbb{Z})\)</span>, and the empty set <span
+class="math inline">\((\emptyset=\{\})\)</span>), and use notation for
+testing element inclusion in a set <span class="math inline">\(( \in
+)\)</span>, and its negation <span
+class="math inline">\((\notin)\)</span>, and for testing whether a set
+is a subset of another, <span class="math inline">\((\subseteq
+)\)</span>.</li>
+<li>You will be able to count elements in sets using the sum and product
+rules</li>
+<li>You will meet several extensions (to lists, sequences, vectors,
+matrices, strings, and languages) that are common abstractions in
+computer science. These are just sets and tuples with special
+operations. (In fact, even tuples can be reduced to sets -Extension 3.14
+in the text.)</li>
+</ul>
+</div>
+</section>
+<section id="sets---definitions" class="slide level2">
+<h2>Sets - Definitions</h2>
+<p>A <strong><em>set</em></strong> is an unordered collection of
+objects.</p>
+<p>The following are sets:</p>
+<ul>
+<li><span class="math inline">\(\{1,2,3\}\)</span></li>
+<li>“all multiples of 7’’</li>
+<li>{apples, <span class="math inline">\(7\)</span>, <span
+class="math inline">\(\texttt{True}\)</span>}</li>
+</ul>
+<p>Sets don’t inherently have an order.</p>
+</section>
+<section id="sets---terminology" class="slide level2">
+<h2>Sets - Terminology</h2>
+<div id="text">
+<p>A set is a <strong><em>finite set</em></strong> if it has a finite
+number of elements.</p>
+<p>Any set that is not finite is an <strong><em>infinite
+set</em></strong>.</p>
+<p>Let <span class="math inline">\(A\)</span> be a finite set. The
+number of different elements in <span class="math inline">\(A\)</span>
+is called its <strong><em>cardinality</em></strong>.</p>
+<p>The cardinality of a finite set is denoted <span
+class="math inline">\(|A|\)</span>.</p>
+</div>
+</section>
+<section id="sets---terminology-1" class="slide level2">
+<h2>Sets - Terminology</h2>
+<div id="text">
+<p>A set is a <strong><em>finite set</em></strong> if it has a finite
+number of elements.</p>
+<p>Any set that is not finite is an <strong><em>infinite
+set</em></strong>.</p>
+<p>Let <span class="math inline">\(A\)</span> be a finite set. The
+number of different elements in <span class="math inline">\(A\)</span>
+is called its <strong><em>cardinality</em></strong>.</p>
+<p>The cardinality of a finite set is denoted <span
+class="math inline">\(|A|\)</span>.</p>
+<h3 id="examples">Examples</h3>
+<blockquote>
+<p><span class="math inline">\(\{1,2,3\}\)</span> is a finite set. Its
+cardinality is <span class="math inline">\(3\)</span>.</p>
+</blockquote>
+</div>
+</section>
+<section id="sets---terminology-2" class="slide level2">
+<h2>Sets - Terminology</h2>
+<div id="text">
+<p>A set is a <strong><em>finite set</em></strong> if it has a finite
+number of elements.</p>
+<p>Any set that is not finite is an <strong><em>infinite
+set</em></strong>.</p>
+<p>Let <span class="math inline">\(A\)</span> be a finite set. The
+number of different elements in <span class="math inline">\(A\)</span>
+is called its <strong><em>cardinality</em></strong>.</p>
+<p>The cardinality of a finite set is denoted <span
+class="math inline">\(|A|\)</span>.</p>
+<h3 id="examples-1">Examples</h3>
+<blockquote>
+<p><span class="math inline">\(\{1,2,3\}\)</span> is a finite set. Its
+cardinality is <span class="math inline">\(3\)</span>.</p>
+</blockquote>
+<blockquote>
+<p>“all multiples of 7” is an infinite set. Cardinality here is a little
+more complicated… We will get back to that!</p>
+</blockquote>
+</div>
+</section>
+<section id="sets---notation" class="slide level2">
+<h2>Sets - Notation</h2>
+<p><span class="math inline">\(a \in A\)</span> means <span
+class="math inline">\(a\)</span> is an element of <span
+class="math inline">\(A\)</span>.</p>
+<p><span class="math inline">\(a \notin A\)</span> means <span
+class="math inline">\(a\)</span> is <em>not</em> an element of <span
+class="math inline">\(A\)</span>.</p>
+</section>
+<section id="sets---notation-1" class="slide level2">
+<h2>Sets - Notation</h2>
+<p><span class="math inline">\(a \in A\)</span> means <span
+class="math inline">\(a\)</span> is an element of <span
+class="math inline">\(A\)</span>.</p>
+<p><span class="math inline">\(a \notin A\)</span> means <span
+class="math inline">\(a\)</span> is <em>not</em> an element of <span
+class="math inline">\(A\)</span>.</p>
+<h3 id="example">Example</h3>
+<div id="text">
+<blockquote>
+<p>Let <span class="math inline">\(A = \{\)</span>“apples”, “bananas”,
+“oranges”<span class="math inline">\(\}\)</span></p>
+</blockquote>
+<blockquote>
+<p>“apples” <span class="math inline">\(\in A\)</span></p>
+</blockquote>
+<blockquote>
+<p>“blueberries” <span class="math inline">\(\notin A\)</span></p>
+</blockquote>
+</div>
+</section>
+<section id="sets---notation-2" class="slide level2">
+<h2>Sets - Notation</h2>
+<p><span class="math inline">\([a,b]\)</span> is the set of whole
+numbers <span class="math inline">\(\geq a\)</span> and <span
+class="math inline">\(\leq b\)</span>.</p>
+<p><span class="math inline">\((a,b)\)</span> is the set of whole
+numbers <span class="math inline">\(&gt; a\)</span> and <span
+class="math inline">\(&lt; b\)</span>.</p>
+</section>
+<section id="sets---notation-3" class="slide level2">
+<h2>Sets - Notation</h2>
+<p><span class="math inline">\([a,b]\)</span> is the set of whole
+numbers <span class="math inline">\(\geq a\)</span> and <span
+class="math inline">\(\leq b\)</span>.</p>
+<p><span class="math inline">\((a,b)\)</span> is the set of whole
+numbers <span class="math inline">\(&gt; a\)</span> and <span
+class="math inline">\(&lt; b\)</span>.</p>
+<h3 id="examples-2">Examples</h3>
+<blockquote>
+<p><span class="math inline">\([1,5] = \{1,2,3,4,5\}\)</span></p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\((1,5) = \{2,3,4\}\)</span></p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\([1,5) = \{1,2,3,4\}\)</span></p>
+</blockquote>
+</section>
+<section id="sets---notation-4" class="slide level2">
+<h2>Sets - Notation</h2>
+<p>Sets are commonly expressed using <em>set notation</em>.</p>
+<p>Within braces, we can write a rule consisting of a function, a
+vertical bar, and a set to which the function is applied.</p>
+<p><img src="https://i.imgur.com/AG0hluA.png" width="700"/></p>
+</section>
+<section id="sets---notation-5" class="slide level2">
+<h2>Sets - Notation</h2>
+<h3 id="example-1">Example</h3>
+<blockquote>
+<p>We can express the set <span class="math inline">\(\{\frac{1}{2},
+\frac{1}{4}, \frac{1}{8} \}\)</span> as…</p>
+</blockquote>
+<blockquote>
+<p><img src="https://i.imgur.com/S8631Np.png" width="700"/></p>
+</blockquote>
+</section>
+<section id="subsets" class="slide level2">
+<h2>Subsets</h2>
+<p><span class="math inline">\(A\)</span> is a
+<strong><em>subset</em></strong> of <span
+class="math inline">\(B\)</span> if and only if every element of <span
+class="math inline">\(A\)</span> is an element of <span
+class="math inline">\(B\)</span>.</p>
+<p>Can also be written: <span class="math inline">\(A \subseteq
+B\)</span></p>
+<h3 id="examples-3">Examples</h3>
+<blockquote>
+<p>Let <span class="math inline">\(A = \{1,3,5\}\)</span> and <span
+class="math inline">\(B = \{1,2,3,4,5\}\)</span>.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><span class="math inline">\(A \subseteq B\)</span>.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>Let <span class="math inline">\(A = \{1,2,3\}\)</span> and <span
+class="math inline">\(B = \{3,2,1\}\)</span>.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><span class="math inline">\(A \subseteq B\)</span> and <span
+class="math inline">\(B \subseteq A\)</span>.</p>
+</blockquote>
+</blockquote>
+</section>
+<section id="equality" class="slide level2">
+<h2>Equality</h2>
+<p><span class="math inline">\(A = B\)</span> if and only if every
+element of <span class="math inline">\(A\)</span> is an element of <span
+class="math inline">\(B\)</span> and conversely every element of <span
+class="math inline">\(B\)</span> is an element of <span
+class="math inline">\(A\)</span>. That is, <span class="math inline">\(A
+\subseteq B\)</span> and <span class="math inline">\(B \subseteq
+A\)</span>.</p>
+<h3 id="example-2">Example</h3>
+<blockquote>
+<p>Let <span class="math inline">\(A = \{1,2,3\}\)</span> and <span
+class="math inline">\(B = \{3,2,1\}\)</span>. <br><br> <span
+class="math inline">\(A \subseteq B\)</span> and <span
+class="math inline">\(B \subseteq A\)</span>, so <span
+class="math inline">\(A=B\)</span></p>
+</blockquote>
+</section>
+<section id="intersection" class="slide level2">
+<h2>Intersection</h2>
+<p><span class="math inline">\(A \cap B\)</span> is the set of elements
+that are both in <span class="math inline">\(A\)</span>
+<strong>and</strong> in <span class="math inline">\(B\)</span>.</p>
+<h3 id="example-3">Example</h3>
+<blockquote>
+<p><span class="math inline">\(A = \{\)</span>Apples, Bananas<span
+class="math inline">\(\}\)</span> <br> <span class="math inline">\(B=
+\{\)</span>Bananas, Oranges<span class="math inline">\(\}\)</span> <br>
+<span class="math inline">\(A \cap B =\)</span> {Bananas}</p>
+</blockquote>
+<div>
+<ul>
+<li class="fragment">Note how this ties into logic… <span
+class="math inline">\(x \in A \cap B\)</span> iff <span
+class="math inline">\(x \in A \land x \in B\)</span></li>
+</ul>
+</div>
+</section>
+<section id="union" class="slide level2">
+<h2>Union</h2>
+<p><span class="math inline">\(A \cup B\)</span> is the set of elements
+that are in either <span class="math inline">\(A\)</span> or <span
+class="math inline">\(B\)</span>.</p>
+<h3 id="example-4">Example</h3>
+<blockquote>
+<p><span class="math inline">\(A = \{\)</span>Apples, Bananas<span
+class="math inline">\(\}, B= \{\)</span>Bananas, Oranges<span
+class="math inline">\(\}\)</span> <span class="math inline">\(A \cup B
+=\)</span> {Apples, Bananas, Oranges}</p>
+</blockquote>
+<p>Note how this ties into logic… <span class="math inline">\(x \in A
+\cup B\)</span> iff <span class="math inline">\(x \in A\)</span> or
+<span class="math inline">\(x \in B\)</span></p>
+</section>
+<section id="common-sets" class="slide level2">
+<h2>Common Sets</h2>
+<p>There are some standard symbols that represent specific sets you will
+see:</p>
+<p>The set of <strong>Natural Numbers</strong> <span
+class="math inline">\(\mathbb{N}\)</span> is the set of all whole
+numbers <span class="math inline">\(\geq 0\)</span>, <span
+class="math inline">\(\{0,1,2,3,4,\ldots\}\)</span>.*</p>
+<p>The set of <strong>Integers</strong> <span
+class="math inline">\(\mathbb{Z}\)</span> is the set of all whole
+numbers, <span class="math inline">\(\{\ldots, -3, -2, -1, 0, 1, 2, 3,
+\ldots\}\)</span>.</p>
+<p>The set of <strong>Rational Numbers</strong> <span
+class="math inline">\(\mathbb{Q}\)</span> are numbers that can be
+represented as a quotient of whole numbers, <span
+class="math inline">\(\{\frac{p}{q} \mid p,q \in
+\mathbb{Z}\}\)</span></p>
+<p>The set of <strong>Real Numbers</strong> <span
+class="math inline">\(\mathbb{R}\)</span> is all <em>real</em>
+numbers.</p>
+</section>
+<section id="tuples" class="slide level2">
+<h2>Tuples</h2>
+<p>A <span
+class="math inline">\(k\)</span>-<strong><em>tuple</em></strong> is an
+ordered sequence of <span class="math inline">\(k\)</span> elements,
+which we write down in parentheses, <span
+class="math inline">\((a_1,a_2,\ldots,a_k)\)</span>.</p>
+<blockquote>
+<p>The most common tuple seen in math is the coordinate pair <span
+class="math inline">\((x,y)\)</span> on a graph.</p>
+</blockquote>
+<blockquote>
+<p>A 2-tuple is commonly called an <em>ordered pair</em>.</p>
+</blockquote>
+<p>Two tuples are equal if and only if all of their corresponding
+elements are equal. <span
+class="math inline">\((a_1,a_2,\ldots,a_k)\)</span> iff for all <span
+class="math inline">\(i\in[1,\ldots,k]\)</span> we have <span
+class="math inline">\(a_i=b_i\)</span>.</p>
+</section>
+<section id="tuples---cartesian-product" class="slide level2">
+<h2>Tuples - Cartesian Product</h2>
+<p>The basic operation to create tuples is the Cartesian Product of two
+sets.</p>
+<p>The of <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span>, <span class="math inline">\(A \times B
+= \{(a,b)|\)</span> for all <span class="math inline">\(a \in A\)</span>
+and for all <span class="math inline">\(b \in B\}\)</span></p>
+<h3 id="example-5">Example</h3>
+<blockquote>
+<p>Let <span class="math inline">\(L=\{a,b,c\}\)</span> and let <span
+class="math inline">\(D = \{0,1\}\)</span></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><span class="math inline">\(L \times D =
+\{(a,0),(a,1),(b,0),(b,1),(c,0),(c,1)\}\)</span></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><span class="math inline">\(D \times L =
+\{(0,a),(0,b),(0,c),(1,a),(1, b),(1,c)\}\)</span></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><span class="math inline">\(L \times L = L^2 =
+\{(a,a),(a,b),(a,c),(b,a),(b, b),(b,c),(c,a),(c, b),(c,c)\}\)</span></p>
+</blockquote>
+</blockquote>
+<p>The cartesian product is associative: <span class="math inline">\(D
+\times(L \times D) = (D \times L) \times D\)</span>.</p>
+<p>The cartesian product is not necessarily commutative: <span
+class="math inline">\(D\times L \neq L \times D\)</span>.</p>
+</section>
+<section id="sequences-strings-and-series" class="slide level2">
+<h2>Sequences, Strings, and Series</h2>
+<p>Some other structures we may use:</p>
+<ul>
+<li><strong>list</strong>: tuples that may have arbitrary finite
+length,</li>
+<li><strong>sequence</strong>: lists that may be infinite</li>
+<li><strong>vectors</strong>: tuples with additional operations
+(e.g. addition, scalar multiplication, rotation, and calculating
+lengths)</li>
+<li><strong>matrices, arrays, and tables</strong>: tuples, displayed
+with a two-dimensional layout, and perhaps given extra operations.</li>
+</ul>
+</section>
+<section id="concatenation" class="slide level2">
+<h2>Concatenation</h2>
+<p><strong><em>Concatenation</em></strong> is used to join two strings
+or lists by putting all elements of the second string behind all
+elements of the first.</p>
+<h3 id="example-6">Example</h3>
+<blockquote>
+<p>The concatenation of “hello” and “world” is “helloworld”.</p>
+</blockquote>
+</section>
+<section id="series" class="slide level2">
+<h2>Series</h2>
+<p>A <strong><em>series</em></strong> is a sum of a sequence of numbers,
+replacing commas by plus signs.</p>
+<p>Any finite sequence, such as (<span class="math inline">\(x_1,
+x_2,\ldots, x_n\)</span>), has a series <span class="math inline">\(x_1
++ x_2 +\ldots+ x_n\)</span> with a well-defined value.</p>
+<p>This can also be written with summation notation: <span
+class="math inline">\(\sum_{i\in[1,n]}x_i\)</span>.</p>
+</section>
+<section id="counting-elements-in-sets" class="slide level2">
+<h2>Counting Elements in Sets</h2>
+<p>The <strong><em>Sum rule</em></strong> states: Suppose that each
+element of a set has an assigned type. Then the total number of elements
+is the sum of the numbers of elements of each type.</p>
+<p>The <strong><em>Product rule</em></strong> states: Suppose that
+elements of a set have features that can be chosen independently. Then
+the number of elements is the product of the numbers of choices.</p>
+<p>The best way to demonstrate what this means is by example…</p>
+</section>
+<section id="counting-example-1" class="slide level2">
+<h2>Counting Example 1</h2>
+<p>You have a set of six different math books, five different philosophy
+books, and three different religion books. How many books do you
+have?</p>
+<p>The sum rule says, “Add them up. <span class="math inline">\(6 + 5 +
+3 = 14\)</span>.”</p>
+</section>
+<section id="counting-example-2" class="slide level2">
+<h2>Counting Example 2</h2>
+<p>Now you want a set of three books, one of each type; how many sets of
+three are possible?</p>
+<p>You want to count all tuples of the form <span
+class="math inline">\((m,p,r)\)</span>, where <span
+class="math inline">\(m\)</span> is a math book, <span
+class="math inline">\(p\)</span> is a philosophy book, and <span
+class="math inline">\(r\)</span> is a religion book. You choose one of
+six math books, one of five philosophy books, and one of three religion
+books, so the product rule says,</p>
+<p>“<span class="math inline">\(6 \cdot 5 \cdot 3 = 90\)</span> sets of
+three are possible.”</p>
+<p>Bringing this back to sets, you can think of <span
+class="math inline">\(M\)</span> as the set of math books, <span
+class="math inline">\(P\)</span> as the set of philosophy books, and
+<span class="math inline">\(R\)</span> as the set of religion books. You
+can get all possible sets of three using the cartesian product, and the
+cardinality of that is the number of possible sets, <span
+class="math inline">\(|M \times P \times R|\)</span>.</p>
+<p>Note that <span class="math inline">\(m = |M|, p = |P|, r =
+|R|\)</span>.</p>
+<p>From this, we can see that <span class="math inline">\(|M|\cdot |P|
+\cdot |R| = |M \times P \times R|\)</span>.</p>
+<p><em>This exactly what the product rule is saying!</em></p>
+</section>
+<section id="permutations" class="slide level2">
+<h2>Permutations</h2>
+<p>The <strong>permutations</strong> of <span
+class="math inline">\(n\)</span> distinct items are the set of all <span
+class="math inline">\(n\)</span>-tuples that never repeat any item.</p>
+<h3 id="example-7">Example</h3>
+<blockquote>
+<p>Let <span class="math inline">\(A =\)</span> {Bob, Alice, Chris}</p>
+</blockquote>
+<blockquote>
+<p>All permutations of <span class="math inline">\(A\)</span>: {{Bob,
+Alice, Chris}, {Bob, Chris, Alice}, {Alice, Chris, Bob}, {Alice, Bob,
+Chris}, {Chris, Bob, Alice}, {Chris, Alice, Bob}}</p>
+</blockquote>
+</section>
+<section id="counting-permutations" class="slide level2">
+<h2>Counting Permutations</h2>
+<p>The number of permutations of <span class="math inline">\(n\)</span>
+items is <span class="math inline">\(n!\)</span> (<span
+class="math inline">\(n\)</span> factorial).</p>
+<p>As a reminder, <span class="math inline">\(n! = n \cdot (n-1) \cdot
+(n-2) \cdot \ldots \cdot 1\)</span>.</p>
+<h3 id="example-8">Example</h3>
+<blockquote>
+<p>Let <span class="math inline">\(A =\)</span> {Bob, Alice, Chris}</p>
+</blockquote>
+<blockquote>
+<p>The number of possible permutations of <span
+class="math inline">\(A\)</span> is <span class="math inline">\(3! = 3
+\cdot 2 \cdot 1 = 6\)</span>.</p>
+</blockquote>
+</section>
+<section id="permutations-examples" class="slide level2">
+<h2>Permutations Examples</h2>
+<p>Let’s go back to our previous example.</p>
+<p>You have a set of six different math books, five different philosophy
+books, and three different religion books.</p>
+<p>We want to know the number of ways to arrange three of the 14 books
+on the shelf and get one of each type.</p>
+<p>Let’s break this down…</p>
+</section>
+<section id="permutations-examples-1" class="slide level2">
+<h2>Permutations Examples</h2>
+<p>Let’s go back to our previous example.</p>
+<p>You have a set of six different math books, five different philosophy
+books, and three different religion books.</p>
+<p>We want to know the number of ways to arrange three of the 14 books
+on the shelf and get one of each type.</p>
+<p>Let’s break this down…</p>
+<p>Let’s say you just want three books, one of each type, from the
+shelf. How many possible combinations are there?</p>
+<p>Our product rule tells us there are <span class="math inline">\(6
+\cdot 5 \cdot 3\)</span> possible combinations.</p>
+</section>
+<section id="permutations-examples-2" class="slide level2">
+<h2>Permutations Examples</h2>
+<p>Let’s go back to our previous example.</p>
+<p>You have a set of six different math books, five different philosophy
+books, and three different religion books.</p>
+<p>We want to know the number of ways to arrange three of the 14 books
+on the shelf and get one of each type.</p>
+<p>Let’s break this down…</p>
+<p>Let’s say you just want three books, one of each type, from the
+shelf. How many possible combinations are there?</p>
+<p>Our product rule tells us there are <span class="math inline">\(6
+\cdot 5 \cdot 3\)</span> possible combinations.</p>
+<p>Let’s say you just want to know how many times you can arrange a set
+of <span class="math inline">\(3\)</span> books, regardless of type.
+This is the same as counting how many permutations there are of a set of
+size <span class="math inline">\(3\)</span>, so the answer is <span
+class="math inline">\(3!\)</span>.</p>
+</section>
+<section id="permutations-examples-3" class="slide level2">
+<h2>Permutations Examples</h2>
+<p>Let’s go back to our previous example.</p>
+<p>You have a set of 6 different math books, 5 different philosophy
+books, and 3 different religion books.</p>
+<p>We want to know the number of ways to arrange three of the 14 books
+on the shelf and get one of each type.</p>
+<p>Let’s break this down…</p>
+<p>Let’s say you just want three books, one of each type, from the
+shelf. How many possible combinations are there?</p>
+<p>Our product rule tells us there are <span class="math inline">\(6
+\cdot 5 \cdot 3\)</span> possible combinations.</p>
+<p>Let’s say you just want to know how many times you can arrange a set
+of <span class="math inline">\(3\)</span> books, regardless of type.
+This is the same as counting how many permutations there are of a set of
+size <span class="math inline">\(3\)</span>, so the answer is <span
+class="math inline">\(3!\)</span>.</p>
+<p>Now we can combine these two answers: <span class="math inline">\(3!
+\cdot 6 \cdot 5 \cdot 3\)</span></p>
+</section>
+<section id="permutations-examples-continued" class="slide level2">
+<h2>Permutations Examples Continued</h2>
+<p>Now let’s say you want to know how many different ways you can
+arrange your <span class="math inline">\(14\)</span> books. That’s
+pretty straightforward. You have <span
+class="math inline">\(14!\)</span> possible permutations of your set of
+books.</p>
+<p>Say you just wanted to know how many ways you can order any three of
+those fourteen books. We just stop our factorial early. <span
+class="math inline">\(14 \cdot 13 \cdot 12\)</span>.</p>
+<p>There’s actually a way we can mathematically express this. It can be
+written as <span class="math inline">\(\frac{14!}{(14-3)!}\)</span>.</p>
+<p>Let’s draw out why this works…</p>
+</section>
+<section id="permutations-examples-continued-1" class="slide level2">
+<h2>Permutations Examples Continued</h2>
+<p>Now let’s say you want to know how many different ways you can
+arrange your <span class="math inline">\(14\)</span> books. That’s
+pretty straightforward. You have <span
+class="math inline">\(14!\)</span> possible permutations of your set of
+books.</p>
+<p>Say you just wanted to know how many ways you can order any three of
+those fourteen books. We just stop our factorial early. <span
+class="math inline">\(14 \cdot 13 \cdot 12\)</span>.</p>
+<p>There’s actually a way we can mathematically express this. It can be
+written as <span class="math inline">\(\frac{14!}{(14-3)!}\)</span>.</p>
+<p>Let’s draw out why this works…</p>
+<p>If you want to stop <span class="math inline">\(n\)</span> factorial
+after <span class="math inline">\(k\)</span> terms (you can call this a
+<span class="math inline">\(k\)</span>-permutation), you can express
+this as <span class="math inline">\(\frac{n!}{(n-k)!}\)</span>.</p>
+</section>
+<section id="combinations" class="slide level2">
+<h2>Combinations</h2>
+<p>A <span
+class="math inline">\(k\)</span>-<strong><em>combination</em></strong>
+is a set with <span class="math inline">\(k\)</span> elements chosen
+from a set of <span class="math inline">\(n\)</span> possible items with
+no repeats.</p>
+<p>(Since these are sets, order does not matter!)</p>
+<h3 id="example-9">Example</h3>
+<blockquote>
+<p>Compute all <span class="math inline">\(2\)</span>-combinations of
+<span class="math inline">\(\{a,b,c\}\)</span>.</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(\{a,b\},\{a,c\}, \{b,c\}\)</span></p>
+</blockquote>
+<h3 id="permutations-vs.-combinations">Permutations
+vs. Combinations</h3>
+<blockquote>
+<p>The <span class="math inline">\(2\)</span>-permutations of <span
+class="math inline">\(\{a,b,c\}\)</span> would be <span
+class="math inline">\((a,b), (b,a), (a,c), (c,a), (b,c),
+(c,b)\)</span>.</p>
+</blockquote>
+</section>
+<section id="number-of-combinations" class="slide level2">
+<h2>Number of Combinations</h2>
+<p>The number of <span class="math inline">\(k\)</span>-combinations of
+a set of size <span class="math inline">\(n\)</span> is <span
+class="math inline">\({n \choose k}\)</span>, read as “<span
+class="math inline">\(n\)</span> choose <span
+class="math inline">\(k\)</span>”.</p>
+<p>Other ways you may see “<span class="math inline">\(n\)</span> choose
+<span class="math inline">\(k\)</span>” written:</p>
+<ul>
+<li><span class="math inline">\(C(n,k)\)</span></li>
+<li><span class="math inline">\(_nC_k\)</span></li>
+<li><span class="math inline">\(COMB(n,k)\)</span></li>
+</ul>
+<h3 id="how-to-compute-n-choose-k">How to Compute n choose k</h3>
+<p><span class="math inline">\({n \choose k} =
+\frac{n!}{k!(n-k)!}\)</span></p>
+<p>Why does this formula work? Some reasoning behind this by
+example…</p>
+</section>
+<section id="example-10" class="slide level2">
+<h2>Example</h2>
+<p>Compute the number of <span
+class="math inline">\(2\)</span>-permutations of <span
+class="math inline">\(\{a,b,c\}\)</span>.</p>
+<p>We’re going to do this the long way. Let’s consider all possible sets
+of size 2 we can make from <span
+class="math inline">\(\{a,b,c\}\)</span>.</p>
+<p>All sets of size 2 of <span class="math inline">\(\{a,b,c\}\)</span>:
+<span class="math inline">\(\{a,b\},\{a,c\}, \{b,c\}\)</span>.</p>
+<p>Now for permutations, order matters, so we have to consider all
+orderings of these new sets.</p>
+<p>All permutations of <span class="math inline">\(\{a,b\}\)</span>:
+<span class="math inline">\((a,b), (b,a)\)</span>.</p>
+<p>All permutations of <span class="math inline">\(\{a,c\}\)</span>:
+<span class="math inline">\((a,c), (c,a)\)</span>.</p>
+<p>All permutations of <span class="math inline">\(\{b,c\}\)</span>:
+<span class="math inline">\((b,c), (c,b)\)</span>.</p>
+</section>
+<section id="example-continued" class="slide level2">
+<h2>Example Continued…</h2>
+<p>So, the number of <span class="math inline">\(k\)</span>-permutations
+is the number of all sets of size <span class="math inline">\(k\)</span>
+times the number of possible permutations for one of those sets of size
+<span class="math inline">\(k\)</span>.</p>
+<p>Notice the number of all sets of size <span
+class="math inline">\(k\)</span> is the same thing as the number of
+<span class="math inline">\(k\)</span>-combinations.</p>
+<p>And we know that the number of possible permutations for one of those
+sets of size <span class="math inline">\(k\)</span> is <span
+class="math inline">\(k!\)</span>.</p>
+<p>So, the number of <span class="math inline">\(k\)</span>-permutations
+is equal to the number of <span
+class="math inline">\(k\)</span>-combinations times <span
+class="math inline">\(k!\)</span>.</p>
+<p>Equivalently, we can say that the number of <span
+class="math inline">\(k\)</span>-combinations is equal to the number of
+<span class="math inline">\(k\)</span>-permutations divided by <span
+class="math inline">\(k!\)</span>.</p>
+<p>The number of <span class="math inline">\(k\)</span> permutations
+<span class="math inline">\(= \frac{n!}{(n-k)!}\)</span> The number of
+<span class="math inline">\(k\)</span> permutations <span
+class="math inline">\(= \frac{n!}{(n-k)!} \cdot \frac{1}{k!} =
+\frac{n!}{k!(n-k)!} = {n \choose k}\)</span></p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

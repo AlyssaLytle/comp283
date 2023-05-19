@@ -1,19 +1,23 @@
-% Sets and Tuples
-% Alyssa Byrnes
-% August 24, 2021
+---
+title: Sets and Tuples
+theme: dracula
+center: false
+transition: 'none'
+---
 
 ## Sets and Tuples
 Textbook Chapter 3
 
 
 ## Learning Objectives
+<div id="text">
 To learn the language of sets and tuples:
 
 -  You will be able to define sets with braces, ($\{\}$), tuples with parentheses, $((\,))$, sets of tuples with Cartesian product, $(\times)$, and sets of strings with concatenation.
 -  You will be able to name common sets (including the natural numbers $(\mathbb{N})$, integers $(\mathbb{Z})$, and the empty set $(\emptyset=\{\})$), and use notation for testing element inclusion in a set $( \in )$, and its negation $(\notin)$, and for testing whether a set is a subset of another, $(\subseteq )$.
 -  You will be able to count elements in sets using the sum and product rules
 -  You will meet several extensions (to lists, sequences, vectors, matrices, strings, and languages) that are common abstractions in computer science. These are just sets and tuples with special operations. (In fact, even tuples can be reduced to sets -Extension 3.14 in the text.)
-
+</div>
 
 
 ## Sets - Definitions
@@ -28,40 +32,79 @@ The following are sets:
 
 Sets don't inherently have an order.
 
-Poll time... 
-
-
-
-
 ## Sets - Terminology
-
+<div id="text" class="incremental">
 A set is a ***finite set*** if it has a finite number of elements. 
 
 Any set that is not finite is an ***infinite set***.
 
 Let $A$ be a finite set. The number of different elements in $A$ is called its ***cardinality***. 
+
 The cardinality of a finite set  is denoted $|A|$.
 
+
+
+</div>
+
+## Sets - Terminology
+<div id="text" class="incremental">
+A set is a ***finite set*** if it has a finite number of elements. 
+
+Any set that is not finite is an ***infinite set***.
+
+Let $A$ be a finite set. The number of different elements in $A$ is called its ***cardinality***. 
+
+The cardinality of a finite set  is denoted $|A|$.
 
 ### Examples
 >$\{1,2,3\}$ is a finite set. Its cardinality is $3$.
 
 
+
+</div>
+
+## Sets - Terminology
+<div id="text" class="incremental">
+A set is a ***finite set*** if it has a finite number of elements. 
+
+Any set that is not finite is an ***infinite set***.
+
+Let $A$ be a finite set. The number of different elements in $A$ is called its ***cardinality***. 
+
+The cardinality of a finite set  is denoted $|A|$.
+
+### Examples
+>$\{1,2,3\}$ is a finite set. Its cardinality is $3$.
+
 >"all multiples of 7" is an infinite set. Cardinality here is a little more complicated... We will get back to that!
 
+</div>
 
 ## Sets - Notation
 $a \in A$ means $a$ is an element of $A$.
 
 $a \notin A$ means $a$ is *not* an element of $A$.
 
-### Example
+## Sets - Notation
+$a \in A$ means $a$ is an element of $A$.
 
+$a \notin A$ means $a$ is *not* an element of $A$.
+
+
+### Example
+<div id="text">
 >Let $A = \{$"apples", "bananas", "oranges"$\}$
 
 >"apples" $\in A$
 
 >"blueberries" $\notin A$
+</div>
+
+## Sets - Notation
+
+$[a,b]$ is the set of whole numbers $\geq a$  and $\leq b$.
+
+$(a,b)$ is the set of whole numbers $> a$  and $< b$.
 
 ## Sets - Notation
 
@@ -113,24 +156,26 @@ Can also be written: $A \subseteq B$
 
 ## Equality 
 
-$A = B$ if and only if every element of $A$ is an element of $B$ and conversely every element of $B$ is an element of $A$; that is, $A \subseteq B$ and $B \subseteq A$.
+$A = B$ if and only if every element of $A$ is an element of $B$ and conversely every element of $B$ is an element of $A$. 
+That is, $A \subseteq B$ and $B \subseteq A$.
 
 ### Example
->Let $A = \{1,2,3\}$ and $B = \{3,2,1\}$.
-
->>$A \subseteq B$ and $B \subseteq A$, so $A=B$
+>Let $A = \{1,2,3\}$ and $B = \{3,2,1\}$. <br><br>
+$A \subseteq B$ and $B \subseteq A$, so $A=B$
 
 ## Intersection
 
-$A \cap B$ is the set of elements that are both in $A$ and in $B$.
+$A \cap B$ is the set of elements that are both in $A$ **and** in $B$.
 
 ### Example
-> $A = \{$Apples, Bananas$\}, B= \{$Bananas, Oranges$\}$
->$A \cap B =$ {Bananas}
+> $A = \{$Apples, Bananas$\}$ <br> 
+$B= \{$Bananas, Oranges$\}$ <br>
+$A \cap B =$ {Bananas}
 
-Note how this ties into logic...
-$x \in A \cap B$ iff $x \in A$ and $x \in B$
-
+<div class="incremental">
+- Note how this ties into logic...
+$x \in A \cap B$ iff $x \in A \land x \in B$
+</div>
 ## Union
 $A \cup B$ is the set of elements that are in either $A$ or $B$.
 
