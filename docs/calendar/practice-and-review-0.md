@@ -9,3 +9,8 @@ contributors: Alyssa Byrnes
 * [Zoom Link](https://unc.zoom.us/j/97009190129)
 * [Recording Link *(Added afterwards)*]()
 
+## Problems
+1. Prove $$a \leftrightarrow b \equiv (a \rightarrow b) \land (b \rightarrow a)$$ using a truth table.
+
+2. True or False: You can prove compound propositions $$X$$ and $$Y$$ are logically equivalent by showing $$X \rightleftarrow Y$$ is a tautology? Explain your answer.
+(Hint, try this for the equivalence $$p \rightarrow q \equiv \neg p \lor q$$)
