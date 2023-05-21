@@ -5,8 +5,6 @@ center: false
 transition: 'none'
 ---
 
-## Sets and Tuples
-Textbook Chapter 3
 
 
 ## Learning Objectives
