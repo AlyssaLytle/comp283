@@ -1,8 +1,8 @@
 
 ## Back to Sets!
 ### We are going to apply some of the stuff we learned about prepositional logic to learn a little more about sets!
-### (This is also a good opportunity for us to practice our prepositional logic!)
-### Textbook Chapter 5
+### (This is also a good opportunity for us to practice our predicate logic!)
+
 
 ## From Last Time, Some Other Useful Notation to Know
  $\emptyset = \{\}$ is the empty set.
@@ -21,9 +21,9 @@
 <img src="https://i.imgur.com/0c94JPz.png" width="250"/>
 <img src="https://i.imgur.com/UwPfgSt.png" width="300"/>
 
--$a \in B$ means $a$ is an element of $B$.
+- $a \in B$ means $a$ is an element of $B$.
 
--$a \notin B$ means $a$ is *not* an element of $B$.
+- $a \notin B$ means $a$ is *not* an element of $B$.
 
 >Note that technically, $a \in B$ and $a \notin B$ are predicates! They take an element and a set as input and give True or False as an output.
 
