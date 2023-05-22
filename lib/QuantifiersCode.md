@@ -2,8 +2,7 @@
 title: QuantifiersCode
 theme: dracula
 center: false
-transition: 'none'
-contributors: Alyssa Byrnes
+transition: 'none'contributors: Alyssa Byrnes
 ---
 
 
@@ -18,7 +17,6 @@ contributors: Alyssa Byrnes
 </div>
 
 
-
 ## Python
 <div id="content">
 
@@ -28,7 +26,6 @@ Python is one of the most popular coding languages.
 
 
 </div>
-
 
 
 ## Methods
@@ -57,7 +54,6 @@ A method defines an algorithm.
 </div>
 
 
-
 ## Common Objects in Python
 <div id="content">
 - Integer: A Integer
@@ -70,7 +66,6 @@ A method defines an algorithm.
     
 
 </div>
-
 
 
 ## Pseudocode
@@ -91,7 +86,6 @@ Pseudocode is something that looks like code, but wouldn't actually run in any l
     
 
 </div>
-
 
 
 ## Conditionals
@@ -125,7 +119,6 @@ A **conditional** checks some condition (expressed as a boolean) and uses it to 
 </div>
 
 
-
 ## Loops
 <div id="content">
 
@@ -153,7 +146,6 @@ A **loop** lets you look at every element in a list and do something each time.
 </div>
 
 
-
 ## Coding Existentials
 <div id="content">
 
@@ -161,7 +153,6 @@ A **loop** lets you look at every element in a list and do something each time.
 
 
 </div>
-
 
 
 ## Exists
@@ -176,7 +167,6 @@ We want a method that returns $\texttt{True}$ if at least one element in $P$ is 
 
 
 </div>
-
 
 
 ## Exists
@@ -199,5 +189,23 @@ We want a method that returns $\texttt{True}$ if at least one element in $P$ is 
 
 </div>
 
+
+## Forall
+<div id="content">
+
+Let's say we have a list of booleans: $P = [p1,p2,p3,p4]$.
+
+We want to check $\forall p \in P, p$.
+
+We want a method that returns $\texttt{True}$ if every element in $P$ is $\texttt{True}$ and returns $\texttt{False}$ otherwise.
+
+Remember: $\forall p \in P, p \equiv \neg \exists p \in P, \neg P$.
+
+So, we can also think of it as a method that returns $\texttt{False}$ if at least one element in $P$ is $\texttt{False}$ and returns $\texttt{True}$ otherwise.
+
+
+
+
+</div>
 
 

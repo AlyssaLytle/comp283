@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Pseudocode</title>
+  <title>QuantifiersCode</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -115,110 +115,181 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Pseudocode</h1>
+  <h1 class="title">QuantifiersCode</h1>
 </section>
 
-<section id="learning-objectives" class="slide level2">
-<h2>Learning Objectives</h2>
-<ul>
-<li>Learn how to write and read Pseudocode</li>
-</ul>
+<section class="slide level2">
+
+<div id="content">
+
+</div>
 </section>
-<section id="basics-of-coding" class="slide level2">
-<h2>Basics of Coding</h2>
-<ul>
-<li>For this course, you will need to know the fundamental concepts of
-coding: variables, operators, loops, and functions.</li>
-<li><em>If you do not have any experience coding please reach
-out!</em></li>
-</ul>
+<section id="what-weve-learned-bringing-it-back-to-coding"
+class="slide level2">
+<h2>What We’ve Learned: Bringing It Back to Coding</h2>
+<div id="content">
+
+</div>
 </section>
-<section id="what-is-pseudocode" class="slide level2">
-<h2>What is Pseudocode?</h2>
-<ul>
-<li>Pseudocode is a generalized way of writing text that
-<em>resembles</em> code.</li>
-<li>It can be written many different ways, but the main goal is for it
-to clearly express the <strong>input</strong>, <strong>return
-value</strong>, and <strong>functionality</strong> of your code.</li>
-</ul>
+<section id="python" class="slide level2">
+<h2>Python</h2>
+<div id="content">
+<h3 id="what-is-python">What is Python?</h3>
+<p>Python is one of the most popular coding languages.</p>
+</div>
 </section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<ul>
-<li>A program that takes an integer as input, and returns that number
-plus one.</li>
-</ul>
+<section id="methods" class="slide level2">
+<h2>Methods</h2>
+<div id="content">
+<h3 id="what-is-a-method">What is a method?</h3>
+<p>Something that recieves and input, does something to it, and gives an
+output.</p>
+<blockquote>
+<p>A function is a type of method!</p>
+</blockquote>
+<h3 id="example">Example</h3>
+<blockquote>
+<p><span class="math inline">\(f(x) = x + 2\)</span> is a function</p>
+</blockquote>
+<p>In python it looks like:</p>
+<pre><code>def f(x):
+    return x + 2
+    </code></pre>
+<p>A method defines an algorithm.</p>
+<p>“return” exits the program and outputs <span
+class="math inline">\(x+2\)</span></p>
+</div>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example</h2>
+<section id="common-objects-in-python" class="slide level2">
+<h2>Common Objects in Python</h2>
+<div id="content">
 <ul>
-<li>A program that takes an integer as input, and returns that number
-plus one.</li>
-</ul>
-<pre><code>INPUT x : integer
-x = x + 1
-RETURN x</code></pre>
-<p><em>(This syntax doesn’t have to be copied exactly! It just needs to
-be clear what your program is doing! If you feel more comfortable using
-other syntax like Python or Java, that is fine!)</em></p>
-</section>
-<section id="example-2" class="slide level2">
-<h2>Example 2</h2>
+<li>Integer: A Integer</li>
+<li>List: An ordered list of objects
 <ul>
-<li>A program that inputs a list and returns the <em>value</em> of the
-maximum element.</li>
-<li>E.g. Input: <code>[1,7,5,3,10,2]</code> Return: <code>10</code></li>
-</ul>
-</section>
-<section id="example-2-1" class="slide level2">
-<h2>Example 2</h2>
+<li><span class="math inline">\([1,2,3]\)</span>, <span
+class="math inline">\([\textrm{``apples&#39;&#39;}, 1,
+\texttt{True}]\)</span></li>
+<li>This is a type of <em>tuple</em>!</li>
+</ul></li>
+<li>Boolean: Something that is either <span
+class="math inline">\(\texttt{True}\)</span> or <span
+class="math inline">\(\texttt{False}\)</span>
 <ul>
-<li>A program that inputs a list and returns the <em>value</em> of the
-maximum element.</li>
-<li>E.g. Input: <code>[1,7,5,3,10,2]</code> Return: <code>10</code></li>
-<li>Start with English description:
-<ol type="1">
-<li>Input a list</li>
-<li>Start by assuming the first element (index 0) is the max</li>
-<li>Loop through the list…</li>
-<li>…and any time I find a number larger than the believed max, make it
-the new max</li>
-<li>Return the value of max</li>
-</ol></li>
+<li>A <em>proposition</em> is a boolean.</li>
+<li>A <em>preposition</em> given an input is a boolean.</li>
+</ul></li>
 </ul>
+</div>
 </section>
-<section id="workspace" class="slide level2">
-<h2>Workspace</h2>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<section id="pseudocode" class="slide level2">
+<h2>Pseudocode</h2>
+<div id="content">
+<p>We sometimes use <strong>pseudocode</strong> to practice writing out
+methods/algorithms.</p>
+<p>Pseudocode is something that looks like code, but wouldn’t actually
+run in any language. It’s a good way to write out algorithms without
+having to worry about syntax.</p>
+<h3 id="example-1">Example</h3>
+<pre><code>f:
+    input: integer x
+    
+    #We can add comments this way. A comment doesn&#39;t execute. It&#39;s for you to read when you look at your code.
+    
+    return x + 2</code></pre>
+</div>
 </section>
-<section id="example-2-2" class="slide level2">
-<h2>Example 2</h2>
-<ul>
-<li>A program that inputs a list and returns the <em>value</em> of the
-maximum element.</li>
-</ul>
-<pre><code>INPUT my_list: list
-max = list[0]
-FOR element in my_list:
-    IF element &gt; max:
-        max = element
-RETURN max</code></pre>
+<section id="conditionals" class="slide level2">
+<h2>Conditionals</h2>
+<div id="content">
+<p>A <strong>conditional</strong> checks some condition (expressed as a
+boolean) and uses it to decide what the program should do.</p>
+<h3 id="example-2">Example</h3>
+<pre><code>example:
+    input: boolean x
+    
+    if x: #Checks if x == True
+        y = x + 1
+    else:
+        y = x + 2
+    return y
+    </code></pre>
+<h3 id="example-2-1">Example 2</h3>
+<pre><code>example:
+    input: boolean x
+
+    if !x: #Checks if x == False
+        y = x + 2
+    else:
+        y = x + 1
+    return y</code></pre>
+</div>
 </section>
-<section id="example-2-by-index" class="slide level2">
-<h2>Example 2 (By Index)</h2>
-<ul>
-<li>A program that inputs a list and returns the <em>value</em> of the
-maximum element.</li>
-</ul>
-<pre><code>INPUT my_list: list
-n = LENGTH(my_list)
-max = list[0]
-FOR index in [0,n-1]:
-    element = my_list[index]
-    IF element &gt; max:
-        max = element
-RETURN max</code></pre>
+<section id="loops" class="slide level2">
+<h2>Loops</h2>
+<div id="content">
+<p>A <strong>loop</strong> lets you look at every element in a list and
+do something each time.</p>
+<h3 id="example---for-loop">Example - For Loop</h3>
+<pre><code>example:
+    for x in [1,2,3,4]:
+        print x + 5</code></pre>
+<blockquote>
+<p>Prints out <span class="math inline">\(6,7,8,9\)</span></p>
+</blockquote>
+<h3 id="example---while-loop">Example - While Loop</h3>
+<pre><code>example:
+    x = 1
+    while x &lt; 5:
+        print x + 5
+        x = x + 1</code></pre>
+<blockquote>
+<p>Also prints out <span class="math inline">\(6,7,8,9\)</span></p>
+</blockquote>
+</div>
+</section>
+<section id="coding-existentials" class="slide level2">
+<h2>Coding Existentials</h2>
+<div id="content">
+<h3
+id="we-are-going-to-practice-writing-pseudocode-for-our-existentials">We
+are going to practice writing pseudocode for our existentials</h3>
+</div>
+</section>
+<section id="exists" class="slide level2">
+<h2>Exists</h2>
+<div id="content">
+<p>Let’s say we have a list of booleans: <span class="math inline">\(P =
+[p1,p2,p3,p4]\)</span>.</p>
+<p>We want to check <span class="math inline">\(\exists p \in P,
+p\)</span>.</p>
+<p>We want a method that returns <span
+class="math inline">\(\texttt{True}\)</span> if at least one element in
+<span class="math inline">\(P\)</span> is <span
+class="math inline">\(\texttt{True}\)</span> and returns <span
+class="math inline">\(\texttt{False}\)</span> otherwise.</p>
+</div>
+</section>
+<section id="exists-1" class="slide level2">
+<h2>Exists</h2>
+<div id="content">
+<p>Let’s say we have a list of booleans: <span class="math inline">\(P =
+[p1,p2,p3,p4]\)</span>.</p>
+<p>We want to check <span class="math inline">\(\exists p \in P,
+p\)</span>.</p>
+<p>We want a method that returns <span
+class="math inline">\(\texttt{True}\)</span> if at least one element in
+<span class="math inline">\(P\)</span> is <span
+class="math inline">\(\texttt{True}\)</span> and returns <span
+class="math inline">\(\texttt{False}\)</span> otherwise.</p>
+<pre><code>example:
+    input: list P
+    for x in P:
+        if x:
+            return True
+    #Loop exited
+    return False</code></pre>
+</div>
 </section>
     </div>
   </div>
@@ -283,7 +354,7 @@ RETURN max</code></pre>
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -359,7 +430,7 @@ RETURN max</code></pre>
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'slide',
+        transition: 'none',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',

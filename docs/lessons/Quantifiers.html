@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Pseudocode</title>
+  <title>Quantifiers (Predicate Logic)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -115,110 +115,193 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Pseudocode</h1>
+  <h1 class="title">Quantifiers (Predicate Logic)</h1>
 </section>
 
-<section id="learning-objectives" class="slide level2">
-<h2>Learning Objectives</h2>
-<ul>
-<li>Learn how to write and read Pseudocode</li>
-</ul>
+<section id="predicate-definition" class="slide level2">
+<h2>Predicate Definition</h2>
+<div id="content">
+<p>A <strong>predicate</strong> is a function that maps each possible
+input to either <span class="math inline">\(\texttt{True}\)</span> or
+<span class="math inline">\(\texttt{False}\)</span>.</p>
+<h3 id="example">Example</h3>
+<blockquote>
+<p>Here are two predicates each taking their input <span
+class="math inline">\(x\)</span> from a set of days, <span
+class="math inline">\(D\)</span>:</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(p(x) =\)</span> “It rained in the morning
+on day <span class="math inline">\(x\)</span>,” and</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(q(x) =\)</span> “I walked to campus on
+day <span class="math inline">\(x\)</span>.”</p>
+</blockquote>
+<blockquote>
+<p>We can combine these to write the statement “If it did not rain in
+the morning on day <span class="math inline">\(x\)</span>, then I walked
+to campus on day <span class="math inline">\(x\)</span>” as <span
+class="math inline">\(\neg p(x) \implies q(x)\)</span> </p>
+</blockquote>
+</div>
 </section>
-<section id="basics-of-coding" class="slide level2">
-<h2>Basics of Coding</h2>
-<ul>
-<li>For this course, you will need to know the fundamental concepts of
-coding: variables, operators, loops, and functions.</li>
-<li><em>If you do not have any experience coding please reach
-out!</em></li>
-</ul>
+<section id="motivation" class="slide level2">
+<h2>Motivation</h2>
+<div id="content">
+<p>We are going to introduce the next concept with an example…</p>
+<h3 id="example-1">Example</h3>
+<blockquote>
+<p>Let’s say that my previous statement only applies on Mondays,
+Wednesdays, and Fridays.</p>
+</blockquote>
+<blockquote>
+<p>How can we say this using what we already learned?</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\((\neg p(\)</span>Mon<span
+class="math inline">\() \implies q(\)</span>Mon<span
+class="math inline">\()) \land (\neg p(\)</span>Wed<span
+class="math inline">\() \implies q(\)</span>Wed<span
+class="math inline">\()) \land (\neg p(\)</span>Fri<span
+class="math inline">\() \implies q(\)</span>Fri<span
+class="math inline">\())\)</span></p>
+</blockquote>
+<blockquote>
+<p>We can also express this using set notation. Say <span
+class="math inline">\(D= \{\)</span>Mon, Wed, Fri<span
+class="math inline">\(\}\)</span>.</p>
+</blockquote>
+<blockquote>
+<p>Similar to how you use a summation <span
+class="math inline">\(\sum\)</span> for a sequence of additions, we can
+use the big and <span class="math inline">\(\bigwedge\)</span> to
+represent a sequence of ands.</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(\bigwedge\limits_{d \in D} (\neg p(d)
+\implies q(d))\)</span></p>
+</blockquote>
+</div>
 </section>
-<section id="what-is-pseudocode" class="slide level2">
-<h2>What is Pseudocode?</h2>
-<ul>
-<li>Pseudocode is a generalized way of writing text that
-<em>resembles</em> code.</li>
-<li>It can be written many different ways, but the main goal is for it
-to clearly express the <strong>input</strong>, <strong>return
-value</strong>, and <strong>functionality</strong> of your code.</li>
-</ul>
+<section id="motivation-continued---universal-quantifier"
+class="slide level2">
+<h2>Motivation Continued - Universal Quantifier</h2>
+<div id="content">
+<p>We can also write this using a <strong>quantifier</strong>.</p>
+<p>The “for all” quantifier, denoted <span
+class="math inline">\(\forall\)</span>, is used to reason about all
+elements of a set.</p>
+<h3 id="example-continued">Example Continued</h3>
+<p>We already showed that for <span class="math inline">\(D=
+\{\)</span>Mon, Wed, Fri<span class="math inline">\(\}\)</span>,</p>
+<p><span class="math inline">\((\neg p(\textrm{Mon}) \implies
+q(\textrm{Mon})) \land (\neg p(\textrm{Wed}) \implies q(\textrm{Wed}))
+\land (\neg p(\textrm{Fri}) \implies q(\textrm{Fri}))\)</span></p>
+<p><span class="math inline">\(\equiv \bigwedge\limits_{d \in D} (\neg
+p(d) \implies q(d))\)</span></p>
+<p>There is another way we can say this.</p>
+<p><span class="math inline">\(\forall d \in D, (\neg p(d) \implies
+q(d))\)</span>.</p>
+</div>
 </section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<ul>
-<li>A program that takes an integer as input, and returns that number
-plus one.</li>
-</ul>
+<section id="existential-quantifier" class="slide level2">
+<h2>Existential Quantifier</h2>
+<div id="content">
+<p>We can do something similar with “or” statements. For this we will
+introduce another quantifier.</p>
+<p>The “there exists” quantifier, denoted <span
+class="math inline">\(\exists\)</span>, is used to reason about at least
+one element of a set.</p>
+<h3 id="example-2">Example</h3>
+<blockquote>
+<p>Now let’s say that for at least one day of Monday, Wednesday and
+Friday, if it’s not raining on day <span
+class="math inline">\(d\)</span>, then I walk to campus on day <span
+class="math inline">\(d\)</span>.</p>
+</blockquote>
+<blockquote>
+<p>This can be written using logical or, big or, or with the “there
+exists” quantifier.</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\((\neg p(\textrm{Mon}) \implies
+q(\textrm{Mon})) \lor (\neg p(\textrm{Wed}) \implies q(\textrm{Wed}))
+\lor (\neg p(\textrm{Fri}) \implies q(\textrm{Fri}))\)</span></p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(\equiv \bigvee\limits_{d \in D} (\neg
+p(d) \implies q(d))\)</span></p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(\equiv \exists d \in D, (\neg p(d)
+\implies q(d))\)</span></p>
+</blockquote>
+</div>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example</h2>
-<ul>
-<li>A program that takes an integer as input, and returns that number
-plus one.</li>
-</ul>
-<pre><code>INPUT x : integer
-x = x + 1
-RETURN x</code></pre>
-<p><em>(This syntax doesn’t have to be copied exactly! It just needs to
-be clear what your program is doing! If you feel more comfortable using
-other syntax like Python or Java, that is fine!)</em></p>
+<section id="free-and-bounded-variables" class="slide level2">
+<h2>Free and Bounded Variables</h2>
+<div id="content">
+<p>A variable specified with a specified domain is a <strong>bounded
+variable</strong>.</p>
+<p>A variable without a specified domain is a <strong>free
+variable</strong>.</p>
+<h3 id="example-3">Example</h3>
+<blockquote>
+<p>In the preposition <span class="math inline">\(\forall x \in
+\mathbb{Z}, f(x,y)\)</span>,</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(x\)</span> is a bounded variable and
+<span class="math inline">\(y\)</span> is a free variable.</p>
+</blockquote>
+<h3 id="example-4">Example</h3>
+<blockquote>
+<p>For <span class="math inline">\(\sum\limits_{k=0}^{10}
+(k+n)\)</span>,</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(k\)</span> is a bounded variable and
+<span class="math inline">\(n\)</span> is a free variable.</p>
+</blockquote>
+</div>
 </section>
-<section id="example-2" class="slide level2">
-<h2>Example 2</h2>
-<ul>
-<li>A program that inputs a list and returns the <em>value</em> of the
-maximum element.</li>
-<li>E.g. Input: <code>[1,7,5,3,10,2]</code> Return: <code>10</code></li>
-</ul>
-</section>
-<section id="example-2-1" class="slide level2">
-<h2>Example 2</h2>
-<ul>
-<li>A program that inputs a list and returns the <em>value</em> of the
-maximum element.</li>
-<li>E.g. Input: <code>[1,7,5,3,10,2]</code> Return: <code>10</code></li>
-<li>Start with English description:
-<ol type="1">
-<li>Input a list</li>
-<li>Start by assuming the first element (index 0) is the max</li>
-<li>Loop through the list…</li>
-<li>…and any time I find a number larger than the believed max, make it
-the new max</li>
-<li>Return the value of max</li>
-</ol></li>
-</ul>
-</section>
-<section id="workspace" class="slide level2">
-<h2>Workspace</h2>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
-</section>
-<section id="example-2-2" class="slide level2">
-<h2>Example 2</h2>
-<ul>
-<li>A program that inputs a list and returns the <em>value</em> of the
-maximum element.</li>
-</ul>
-<pre><code>INPUT my_list: list
-max = list[0]
-FOR element in my_list:
-    IF element &gt; max:
-        max = element
-RETURN max</code></pre>
-</section>
-<section id="example-2-by-index" class="slide level2">
-<h2>Example 2 (By Index)</h2>
-<ul>
-<li>A program that inputs a list and returns the <em>value</em> of the
-maximum element.</li>
-</ul>
-<pre><code>INPUT my_list: list
-n = LENGTH(my_list)
-max = list[0]
-FOR index in [0,n-1]:
-    element = my_list[index]
-    IF element &gt; max:
-        max = element
-RETURN max</code></pre>
+<section id="negation-and-inference" class="slide level2">
+<h2>Negation and Inference</h2>
+<div id="content">
+<p>Since ‘for all’ is a big ‘and,’ and ‘exists’ is a big ‘or,’ de
+Morgan’s laws say that the negation of one is the other (with its
+statement negated.) That is:</p>
+<p><span class="math inline">\(\neg(\forall x, p(x)) \equiv \exists x,
+\neg p(x)\)</span> and</p>
+<p><span class="math inline">\(\neg(\exists x, p(x)) \equiv \forall x,
+\neg p(x)\)</span></p>
+<p>Why are these true?</p>
+<h3 id="example-5">Example</h3>
+<blockquote>
+<p><span class="math inline">\(\neg(\forall x, p(x))\)</span> in English
+translates to “<span class="math inline">\(p(x)\)</span> does not hold
+for all <span class="math inline">\(x\)</span>”.</p>
+</blockquote>
+<blockquote>
+<p>This is equivalent to saying, “There exists an <span
+class="math inline">\(x\)</span> where <span
+class="math inline">\(p(x)\)</span> does not hold”, or <span
+class="math inline">\(\exists x, \neg p(x)\)</span>.</p>
+</blockquote>
+<blockquote>
+<p>Similarly, <span class="math inline">\(\neg(\exists x, p(x))\)</span>
+in English translates to “There does not exist <span
+class="math inline">\(x\)</span> such that <span
+class="math inline">\(p(x)\)</span> holds.</p>
+</blockquote>
+<blockquote>
+<p>This is equivalent to saying “For all <span
+class="math inline">\(x\)</span>, <span
+class="math inline">\(p(x)\)</span> does not hold”, or <span
+class="math inline">\(\forall x, \neg p(x)\)</span>.</p>
+</blockquote>
+</div>
 </section>
     </div>
   </div>
@@ -283,7 +366,7 @@ RETURN max</code></pre>
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -359,7 +442,7 @@ RETURN max</code></pre>
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'slide',
+        transition: 'none',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',

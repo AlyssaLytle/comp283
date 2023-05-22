@@ -2,6 +2,7 @@
 
 from datetime import date
 import subprocess
+from slide_format_helpers import format
 
 def _page_header(title) -> str:
     """REturns the header for a .md page"""
@@ -43,9 +44,11 @@ def update_calendar(page_title: str, date):
     #TODO
     return 0
 
-def make_slides(slides_name: str, incremental: bool = False) -> str:
+def make_slides(slides_name: str, divify: bool = True) -> str:
     """Using Pandocs, make slides from a .md file.
     Return path to new slide"""
+    if divify:
+        format(slides_name)
     # Slide location should be /slides/
     slides_loc = f"slides/{slides_name}"
     # Store slide in ../docs/lessons/
@@ -53,8 +56,8 @@ def make_slides(slides_name: str, incremental: bool = False) -> str:
     ret_name = '/comp283/lessons/' + slides_name[:-2] + "html"
     print(html_name)
     command = f"pandoc --mathjax -t revealjs "
-    if incremental:
-       command += "--incremental "
+    # if incremental:
+    #    command += "--incremental "
     command += "--include-in-header=leftalign.css " 
     command += f"{slides_loc} -o {html_name} -s"
     subprocess.run("cd ../", shell=True)
