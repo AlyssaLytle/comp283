@@ -106,6 +106,10 @@
     #smalltext {
       font-size: 40%;
     }
+
+    #medtext {
+      font-size: 60%;
+    }
     
 
   </style>
@@ -118,18 +122,6 @@
   <h1 class="title">Quantifiers</h1>
 </section>
 
-<section class="slide level2">
-
-<div id="content">
-
-</div>
-</section>
-<section id="quantifiers-predicate-logic" class="slide level2">
-<h2>Quantifiers (Predicate Logic)</h2>
-<div id="content">
-<h3 id="chapter-4-in-book">Chapter 4 in book</h3>
-</div>
-</section>
 <section id="predicate-definition" class="slide level2">
 <h2>Predicate Definition</h2>
 <div id="content">
@@ -140,66 +132,52 @@ input to either <span class="math inline">\(\texttt{True}\)</span> or
 <blockquote>
 <p>Here are two predicates each taking their input <span
 class="math inline">\(x\)</span> from a set of days, <span
-class="math inline">\(D\)</span>:</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(p(x) =\)</span> “It rained in the morning
-on day <span class="math inline">\(x\)</span>,” and</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(q(x) =\)</span> “I walked to campus on
-day <span class="math inline">\(x\)</span>.”</p>
-</blockquote>
-<blockquote>
-<p>We can combine these to write the statement “If it did not rain in
-the morning on day <span class="math inline">\(x\)</span>, then I walked
-to campus on day <span class="math inline">\(x\)</span>” as <span
-class="math inline">\(\neg p(x) \implies q(x)\)</span> </p>
+class="math inline">\(D\)</span>:<br> <br><span
+class="math inline">\(p(x) =\)</span> “It rained in the morning on day
+<span class="math inline">\(x\)</span>,” and <br> <span
+class="math inline">\(q(x) =\)</span> “I walked to campus on day <span
+class="math inline">\(x\)</span>.” <br><br> We can combine these to
+write the statement “If it did not rain in the morning on day <span
+class="math inline">\(x\)</span>, then I walked to campus on day <span
+class="math inline">\(x\)</span>” as <span class="math inline">\(\neg
+p(x) \implies q(x)\)</span> </p>
 </blockquote>
 </div>
 </section>
 <section id="motivation" class="slide level2">
 <h2>Motivation</h2>
-<div id="content">
+<div id="medtext">
 <p>We are going to introduce the next concept with an example…</p>
 <h3 id="example-1">Example</h3>
-<blockquote>
-<p>Let’s say that my previous statement only applies on Mondays,
-Wednesdays, and Fridays.</p>
-</blockquote>
-<blockquote>
-<p>How can we say this using what we already learned?</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\((\neg p(\)</span>Mon<span
-class="math inline">\() \implies q(\)</span>Mon<span
+<ul>
+<li class="fragment">Let’s say that my previous statement only applies
+on Mondays, Wednesdays, and Fridays. <br></li>
+<li class="fragment">How can we say this using what we already
+learned?<br></li>
+<li class="fragment"><span class="math inline">\((\neg
+p(\)</span>Mon<span class="math inline">\() \implies q(\)</span>Mon<span
 class="math inline">\()) \land (\neg p(\)</span>Wed<span
 class="math inline">\() \implies q(\)</span>Wed<span
 class="math inline">\()) \land (\neg p(\)</span>Fri<span
 class="math inline">\() \implies q(\)</span>Fri<span
-class="math inline">\())\)</span></p>
-</blockquote>
-<blockquote>
-<p>We can also express this using set notation. Say <span
-class="math inline">\(D= \{\)</span>Mon, Wed, Fri<span
-class="math inline">\(\}\)</span>.</p>
-</blockquote>
-<blockquote>
-<p>Similar to how you use a summation <span
+class="math inline">\())\)</span> <br></li>
+<li class="fragment">We can also express this using set notation.
+<br></li>
+<li class="fragment">Say <span class="math inline">\(D= \{\)</span>Mon,
+Wed, Fri<span class="math inline">\(\}\)</span>. <br></li>
+<li class="fragment">Similar to how you use a summation <span
 class="math inline">\(\sum\)</span> for a sequence of additions, we can
 use the big and <span class="math inline">\(\bigwedge\)</span> to
-represent a sequence of ands.</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(\bigwedge\limits_{d \in D} (\neg p(d)
-\implies q(d))\)</span></p>
-</blockquote>
+represent a sequence of ands. <br></li>
+<li class="fragment"><span class="math inline">\(\bigwedge\limits_{d \in
+D} (\neg p(d) \implies q(d))\)</span></li>
+</ul>
 </div>
 </section>
 <section id="motivation-continued---universal-quantifier"
 class="slide level2">
 <h2>Motivation Continued - Universal Quantifier</h2>
-<div id="content">
+<div id="medtext">
 <p>We can also write this using a <strong>quantifier</strong>.</p>
 <p>The “for all” quantifier, denoted <span
 class="math inline">\(\forall\)</span>, is used to reason about all
@@ -207,80 +185,72 @@ elements of a set.</p>
 <h3 id="example-continued">Example Continued</h3>
 <p>We already showed that for <span class="math inline">\(D=
 \{\)</span>Mon, Wed, Fri<span class="math inline">\(\}\)</span>,</p>
-<p><span class="math inline">\((\neg p(\textrm{Mon}) \implies
-q(\textrm{Mon})) \land (\neg p(\textrm{Wed}) \implies q(\textrm{Wed}))
-\land (\neg p(\textrm{Fri}) \implies q(\textrm{Fri}))\)</span></p>
-<p><span class="math inline">\(\equiv \bigwedge\limits_{d \in D} (\neg
-p(d) \implies q(d))\)</span></p>
-<p>There is another way we can say this.</p>
-<p><span class="math inline">\(\forall d \in D, (\neg p(d) \implies
-q(d))\)</span>.</p>
+<ul>
+<li class="fragment"><span class="math inline">\((\neg p(\textrm{Mon})
+\implies q(\textrm{Mon})) \land (\neg p(\textrm{Wed}) \implies
+q(\textrm{Wed})) \land (\neg p(\textrm{Fri}) \implies
+q(\textrm{Fri}))\)</span></li>
+<li class="fragment"><span class="math inline">\(\equiv
+\bigwedge\limits_{d \in D} (\neg p(d) \implies q(d))\)</span></li>
+<li class="fragment">There is another way we can say this.</li>
+<li class="fragment"><span class="math inline">\(\forall d \in D, (\neg
+p(d) \implies q(d))\)</span>.</li>
+</ul>
 </div>
 </section>
 <section id="existential-quantifier" class="slide level2">
 <h2>Existential Quantifier</h2>
-<div id="content">
+<div id="medtext">
 <p>We can do something similar with “or” statements. For this we will
 introduce another quantifier.</p>
 <p>The “there exists” quantifier, denoted <span
 class="math inline">\(\exists\)</span>, is used to reason about at least
 one element of a set.</p>
 <h3 id="example-2">Example</h3>
-<blockquote>
-<p>Now let’s say that for at least one day of Monday, Wednesday and
-Friday, if it’s not raining on day <span
+<ul>
+<li class="fragment">Now let’s say that for at least one day of Monday,
+Wednesday and Friday, if it’s not raining on day <span
 class="math inline">\(d\)</span>, then I walk to campus on day <span
-class="math inline">\(d\)</span>.</p>
-</blockquote>
-<blockquote>
-<p>This can be written using logical or, big or, or with the “there
-exists” quantifier.</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\((\neg p(\textrm{Mon}) \implies
-q(\textrm{Mon})) \lor (\neg p(\textrm{Wed}) \implies q(\textrm{Wed}))
-\lor (\neg p(\textrm{Fri}) \implies q(\textrm{Fri}))\)</span></p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(\equiv \bigvee\limits_{d \in D} (\neg
-p(d) \implies q(d))\)</span></p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(\equiv \exists d \in D, (\neg p(d)
-\implies q(d))\)</span></p>
-</blockquote>
+class="math inline">\(d\)</span>.</li>
+<li class="fragment">This can be written using logical or, big or, or
+with the “there exists” quantifier.</li>
+<li class="fragment"><span class="math inline">\((\neg p(\textrm{Mon})
+\implies q(\textrm{Mon})) \lor (\neg p(\textrm{Wed}) \implies
+q(\textrm{Wed})) \lor (\neg p(\textrm{Fri}) \implies
+q(\textrm{Fri}))\)</span></li>
+<li class="fragment"><span class="math inline">\(\equiv
+\bigvee\limits_{d \in D} (\neg p(d) \implies q(d))\)</span></li>
+<li class="fragment"><span class="math inline">\(\equiv \exists d \in D,
+(\neg p(d) \implies q(d))\)</span></li>
+</ul>
 </div>
 </section>
 <section id="free-and-bounded-variables" class="slide level2">
 <h2>Free and Bounded Variables</h2>
-<div id="content">
+<div id="medtext">
 <p>A variable specified with a specified domain is a <strong>bounded
 variable</strong>.</p>
 <p>A variable without a specified domain is a <strong>free
 variable</strong>.</p>
 <h3 id="example-3">Example</h3>
 <blockquote>
-<p>In the preposition <span class="math inline">\(\forall x \in
-\mathbb{Z}, f(x,y)\)</span>,</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(x\)</span> is a bounded variable and
-<span class="math inline">\(y\)</span> is a free variable.</p>
+<p>In the expression <span class="math inline">\(\forall x \in
+\mathbb{Z}, f(x,y)\)</span>, <br> <span class="math inline">\(x\)</span>
+is a bounded variable and <span class="math inline">\(y\)</span> is a
+free variable.</p>
 </blockquote>
 <h3 id="example-4">Example</h3>
 <blockquote>
 <p>For <span class="math inline">\(\sum\limits_{k=0}^{10}
-(k+n)\)</span>,</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(k\)</span> is a bounded variable and
-<span class="math inline">\(n\)</span> is a free variable.</p>
+(k+n)\)</span>, <br> <span class="math inline">\(k\)</span> is a bounded
+variable and <span class="math inline">\(n\)</span> is a free
+variable.</p>
 </blockquote>
 </div>
 </section>
 <section id="negation-and-inference" class="slide level2">
 <h2>Negation and Inference</h2>
-<div id="content">
+<div id="medtext">
 <p>Since ‘for all’ is a big ‘and,’ and ‘exists’ is a big ‘or,’ de
 Morgan’s laws say that the negation of one is the other (with its
 statement negated.) That is:</p>
@@ -290,86 +260,64 @@ statement negated.) That is:</p>
 \neg p(x)\)</span></p>
 <p>Why are these true?</p>
 <h3 id="example-5">Example</h3>
-<blockquote>
-<p><span class="math inline">\(\neg(\forall x, p(x))\)</span> in English
-translates to “<span class="math inline">\(p(x)\)</span> does not hold
-for all <span class="math inline">\(x\)</span>”.</p>
-</blockquote>
-<blockquote>
-<p>This is equivalent to saying, “There exists an <span
-class="math inline">\(x\)</span> where <span
+<ul>
+<li class="fragment"><span class="math inline">\(\neg(\forall x,
+p(x))\)</span> in English translates to “<span
+class="math inline">\(p(x)\)</span> does not hold for all <span
+class="math inline">\(x\)</span>”. <br></li>
+<li class="fragment">This is equivalent to saying, “There exists an
+<span class="math inline">\(x\)</span> where <span
 class="math inline">\(p(x)\)</span> does not hold”, or <span
-class="math inline">\(\exists x, \neg p(x)\)</span>.</p>
-</blockquote>
-<blockquote>
-<p>Similarly, <span class="math inline">\(\neg(\exists x, p(x))\)</span>
-in English translates to “There does not exist <span
+class="math inline">\(\exists x, \neg p(x)\)</span>. <br></li>
+<li class="fragment">Similarly, <span class="math inline">\(\neg(\exists
+x, p(x))\)</span> in English translates to “There does not exist <span
 class="math inline">\(x\)</span> such that <span
-class="math inline">\(p(x)\)</span> holds.</p>
-</blockquote>
-<blockquote>
-<p>This is equivalent to saying “For all <span
+class="math inline">\(p(x)\)</span> holds. <br></li>
+<li class="fragment">This is equivalent to saying “For all <span
 class="math inline">\(x\)</span>, <span
 class="math inline">\(p(x)\)</span> does not hold”, or <span
-class="math inline">\(\forall x, \neg p(x)\)</span>.</p>
-</blockquote>
+class="math inline">\(\forall x, \neg p(x)\)</span>.</li>
+</ul>
 </div>
 </section>
 <section id="nested-quantifiers" class="slide level2">
 <h2>Nested Quantifiers</h2>
 <div id="content">
 <h3 id="example-6">Example</h3>
-<blockquote>
-<p>This example is to help you get some practice with nested quantifiers
-and to understand that the order of them matters.</p>
-</blockquote>
-<blockquote>
-<p>Say that <span class="math inline">\(loves(x,y)\)</span> is true iff
-person <span class="math inline">\(x\)</span> loves person <span
-class="math inline">\(y\)</span>.</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(\forall_{e \in P}\)</span> <span
-class="math inline">\(\exists_{s \in P}, loves(e,s)\)</span> translates
-to “Everybody loves somebody.”</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(\exists_{s \in P}\)</span> <span
-class="math inline">\(\forall_{e \in P}, loves(e,s)\)</span> translates
-to “There is somebody that everybody loves.”</p>
-</blockquote>
+<ul>
+<li class="fragment">This example is to help you get some practice with
+nested quantifiers and to understand that the order of them matters.
+<br></li>
+<li class="fragment">Say that <span
+class="math inline">\(loves(x,y)\)</span> is true iff person <span
+class="math inline">\(x\)</span> loves person <span
+class="math inline">\(y\)</span>. <br></li>
+<li class="fragment"><span class="math inline">\(\forall_{e \in
+P}\)</span> <span class="math inline">\(\exists_{s \in P},
+loves(e,s)\)</span> translates to “Everybody loves somebody.” <br></li>
+<li class="fragment"><span class="math inline">\(\exists_{s \in
+P}\)</span> <span class="math inline">\(\forall_{e \in P},
+loves(e,s)\)</span> translates to “There is somebody that everybody
+loves.” <br></li>
+</ul>
 </div>
 </section>
 <section id="other-notation" class="slide level2">
 <h2>Other Notation</h2>
 <div id="content">
 <p>Here are some other ways we can write things.</p>
-<p>If we are talking about pairs of distinct integers, <span
-class="math inline">\(i, j \in [1..n]\)</span> with <span
+<ul>
+<li class="fragment">If we are talking about pairs of distinct integers,
+<span class="math inline">\(i, j \in [1..n]\)</span> with <span
 class="math inline">\(i &lt; j\)</span>, we may even write <span
 class="math inline">\(\forall_{1\leq i &lt; j \leq n}\)</span> or <span
-class="math inline">\(\exists_{1\leq i &lt; j \leq n}\)</span>.</p>
-<p>If we are talking about elements <span
+class="math inline">\(\exists_{1\leq i &lt; j \leq n}\)</span>.</li>
+<li class="fragment">If we are talking about elements <span
 class="math inline">\(x\)</span> and <span
 class="math inline">\(y\)</span> that are members of the same set <span
 class="math inline">\(S\)</span>, we can write <span
 class="math inline">\(\forall_{x,y \in S}\)</span> or <span
-class="math inline">\(\exists_{x,y \in S}\)</span>.</p>
-</div>
-</section>
-<section id="in-class-assignment" class="slide level2">
-<h2>In Class Assignment</h2>
-<div id="content">
-<ul>
-<li>I will pass out papers explaining the assignment.</li>
-<li>Everyone should take <strong><em>two</em></strong> copies.</li>
-<li>Fill out one copy of this worksheet. Write your name on the top and
-bring it to the front.</li>
-<li>You can work in groups/pairs!</li>
-<li><strong>You will not be graded for correctness–just
-participation!!!</strong></li>
-<li>We will then go over the answers. The second copy is for you to fill
-out and keep.</li>
+class="math inline">\(\exists_{x,y \in S}\)</span>.</li>
 </ul>
 </div>
 </section>

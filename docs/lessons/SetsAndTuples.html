@@ -106,6 +106,10 @@
     #smalltext {
       font-size: 40%;
     }
+
+    #medtext {
+      font-size: 60%;
+    }
     
 
   </style>
@@ -123,27 +127,27 @@
 <div id="text">
 <p>To learn the language of sets and tuples:</p>
 <ul>
-<li>You will be able to define sets with braces, (<span
+<li class="fragment">You will be able to define sets with braces, (<span
 class="math inline">\(\{\}\)</span>), tuples with parentheses, <span
 class="math inline">\(((\,))\)</span>, sets of tuples with Cartesian
 product, <span class="math inline">\((\times)\)</span>, and sets of
 strings with concatenation.</li>
-<li>You will be able to name common sets (including the natural numbers
-<span class="math inline">\((\mathbb{N})\)</span>, integers <span
-class="math inline">\((\mathbb{Z})\)</span>, and the empty set <span
-class="math inline">\((\emptyset=\{\})\)</span>), and use notation for
-testing element inclusion in a set <span class="math inline">\(( \in
-)\)</span>, and its negation <span
+<li class="fragment">You will be able to name common sets (including the
+natural numbers <span class="math inline">\((\mathbb{N})\)</span>,
+integers <span class="math inline">\((\mathbb{Z})\)</span>, and the
+empty set <span class="math inline">\((\emptyset=\{\})\)</span>), and
+use notation for testing element inclusion in a set <span
+class="math inline">\(( \in )\)</span>, and its negation <span
 class="math inline">\((\notin)\)</span>, and for testing whether a set
 is a subset of another, <span class="math inline">\((\subseteq
 )\)</span>.</li>
-<li>You will be able to count elements in sets using the sum and product
-rules</li>
-<li>You will meet several extensions (to lists, sequences, vectors,
-matrices, strings, and languages) that are common abstractions in
-computer science. These are just sets and tuples with special
-operations. (In fact, even tuples can be reduced to sets -Extension 3.14
-in the text.)</li>
+<li class="fragment">You will be able to count elements in sets using
+the sum and product rules</li>
+<li class="fragment">You will meet several extensions (to lists,
+sequences, vectors, matrices, strings, and languages) that are common
+abstractions in computer science. These are just sets and tuples with
+special operations. (In fact, even tuples can be reduced to sets
+-Extension 3.14 in the text.)</li>
 </ul>
 </div>
 </section>
@@ -153,10 +157,10 @@ in the text.)</li>
 objects.</p>
 <p>The following are sets:</p>
 <ul>
-<li><span class="math inline">\(\{1,2,3\}\)</span></li>
-<li>“all multiples of 7’’</li>
-<li>{apples, <span class="math inline">\(7\)</span>, <span
-class="math inline">\(\texttt{True}\)</span>}</li>
+<li class="fragment"><span class="math inline">\(\{1,2,3\}\)</span></li>
+<li class="fragment">“all multiples of 7’’</li>
+<li class="fragment">{apples, <span class="math inline">\(7\)</span>,
+<span class="math inline">\(\texttt{True}\)</span>}</li>
 </ul>
 <p>Sets don’t inherently have an order.</p>
 </section>
@@ -457,14 +461,16 @@ class="math inline">\(D\times L \neq L \times D\)</span>. </dov></p>
 <div id="text" class="incremental">
 <p>Some other structures we may use:</p>
 <ul>
-<li><strong>list</strong>: tuples that may have arbitrary finite
-length,</li>
-<li><strong>sequence</strong>: lists that may be infinite</li>
-<li><strong>vectors</strong>: tuples with additional operations
-(e.g. addition, scalar multiplication, rotation, and calculating
-lengths)</li>
-<li><strong>matrices, arrays, and tables</strong>: tuples, displayed
-with a two-dimensional layout, and perhaps given extra operations.
+<li class="fragment"><strong>list</strong>: tuples that may have
+arbitrary finite length,</li>
+<li class="fragment"><strong>sequence</strong>: lists that may be
+infinite</li>
+<li class="fragment"><strong>vectors</strong>: tuples with additional
+operations (e.g. addition, scalar multiplication, rotation, and
+calculating lengths)</li>
+<li class="fragment"><strong>matrices, arrays, and tables</strong>:
+tuples, displayed with a two-dimensional layout, and perhaps given extra
+operations.
 <div id="text" class="incremental">
 </li>
 </ul>
@@ -515,27 +521,29 @@ class="math inline">\(6 + 5 + 3 = 14\)</span>.”</li>
 <h2>Counting Example 2</h2>
 <div id="text" class="incremental">
 <ul>
-<li>Now you want a set of three books, one of each type; how many sets
-of three are possible?</li>
-<li>You want to count all tuples of the form <span
+<li class="fragment">Now you want a set of three books, one of each
+type; how many sets of three are possible?</li>
+<li class="fragment">You want to count all tuples of the form <span
 class="math inline">\((m,p,r)\)</span>, where <span
 class="math inline">\(m\)</span> is a math book, <span
 class="math inline">\(p\)</span> is a philosophy book, and <span
 class="math inline">\(r\)</span> is a religion book. You choose one of
 six math books, one of five philosophy books, and one of three religion
 books, so the product rule says,</li>
-<li>“<span class="math inline">\(6 \cdot 5 \cdot 3 = 90\)</span> sets of
-three are possible.”</li>
-<li>If <span class="math inline">\(M\)</span> is the set of math books,
-<span class="math inline">\(P\)</span> is the set of philosophy books,
-and <span class="math inline">\(R\)</span> is the set of religion books.
-You can get all possible sets of three using the <strong>cartesian
-product</strong>, and the <strong>cardinality</strong> of that is the
-number of possible sets, <span class="math inline">\(|M \times P \times
+<li class="fragment">“<span class="math inline">\(6 \cdot 5 \cdot 3 =
+90\)</span> sets of three are possible.”</li>
+<li class="fragment">If <span class="math inline">\(M\)</span> is the
+set of math books, <span class="math inline">\(P\)</span> is the set of
+philosophy books, and <span class="math inline">\(R\)</span> is the set
+of religion books. You can get all possible sets of three using the
+<strong>cartesian product</strong>, and the <strong>cardinality</strong>
+of that is the number of possible sets, <span class="math inline">\(|M
+\times P \times R|\)</span>.</li>
+<li class="fragment">We can see that <span
+class="math inline">\(|M|\cdot |P| \cdot |R| = |M \times P \times
 R|\)</span>.</li>
-<li>We can see that <span class="math inline">\(|M|\cdot |P| \cdot |R| =
-|M \times P \times R|\)</span>.</li>
-<li><em>This exactly what the product rule is saying!</em></li>
+<li class="fragment"><em>This exactly what the product rule is
+saying!</em></li>
 </ul>
 </section>
 <section id="permutations" class="slide level2">
@@ -626,21 +634,22 @@ class="math inline">\(\frac{14!}{(14-3)!}\)</span>.</li>
 <h2>Permutations Examples Continued</h2>
 <div id="text">
 <ul>
-<li>Now let’s say you want to know how many different ways you can
-arrange your <span class="math inline">\(14\)</span> books. That’s
-pretty straightforward. You have <span
+<li class="fragment">Now let’s say you want to know how many different
+ways you can arrange your <span class="math inline">\(14\)</span> books.
+That’s pretty straightforward. You have <span
 class="math inline">\(14!\)</span> possible permutations of your set of
 books.</li>
-<li>Say you just wanted to know how many ways you can order any three of
-those fourteen books. We just stop our factorial early. <span
-class="math inline">\(14 \cdot 13 \cdot 12\)</span>.</li>
-<li>There’s actually a way we can mathematically express this. It can be
-written as <span
+<li class="fragment">Say you just wanted to know how many ways you can
+order any three of those fourteen books. We just stop our factorial
+early. <span class="math inline">\(14 \cdot 13 \cdot 12\)</span>.</li>
+<li class="fragment">There’s actually a way we can mathematically
+express this. It can be written as <span
 class="math inline">\(\frac{14!}{(14-3)!}\)</span>.</li>
-<li>If you want to stop <span class="math inline">\(n\)</span> factorial
-after <span class="math inline">\(k\)</span> terms (you can call this a
-<span class="math inline">\(k\)</span>-permutation), you can express
-this as <span class="math inline">\(\frac{n!}{(n-k)!}\)</span>.</li>
+<li class="fragment">If you want to stop <span
+class="math inline">\(n\)</span> factorial after <span
+class="math inline">\(k\)</span> terms (you can call this a <span
+class="math inline">\(k\)</span>-permutation), you can express this as
+<span class="math inline">\(\frac{n!}{(n-k)!}\)</span>.</li>
 </ul>
 </div>
 </section>
@@ -680,9 +689,9 @@ class="math inline">\(k\)</span>”.</p>
 <p>Other ways you may see “<span class="math inline">\(n\)</span> choose
 <span class="math inline">\(k\)</span>” written:</p>
 <ul>
-<li><span class="math inline">\(C(n,k)\)</span></li>
-<li><span class="math inline">\(_nC_k\)</span></li>
-<li><span class="math inline">\(COMB(n,k)\)</span></li>
+<li class="fragment"><span class="math inline">\(C(n,k)\)</span></li>
+<li class="fragment"><span class="math inline">\(_nC_k\)</span></li>
+<li class="fragment"><span class="math inline">\(COMB(n,k)\)</span></li>
 </ul>
 <h3 id="how-to-compute-n-choose-k">How to Compute n choose k</h3>
 <p><span class="math inline">\({n \choose k} =

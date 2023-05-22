@@ -106,6 +106,10 @@
     #smalltext {
       font-size: 40%;
     }
+
+    #medtext {
+      font-size: 60%;
+    }
     
 
   </style>
@@ -121,16 +125,18 @@
 <section id="learning-objectives" class="slide level2">
 <h2>Learning Objectives</h2>
 <ul>
-<li>Express statements in symbolic form, using the logic operations of
-negation, and, inclusive or, implies, if and only if (iff), and
-exclusive or (and their symbols: <span class="math inline">\(\neg,
-\land, \lor, \rightarrow, \leftrightarrow,\)</span> and <span
+<li class="fragment">Express statements in symbolic form, using the
+logic operations of negation, and, inclusive or, implies, if and only if
+(iff), and exclusive or (and their symbols: <span
+class="math inline">\(\neg, \land, \lor, \rightarrow,
+\leftrightarrow,\)</span> and <span
 class="math inline">\(\oplus\)</span>) to express statements without
 ambiguity.</li>
-<li>Create truth tables in order to recognize <em>tautologies</em> and
-<em>logically equivalent</em> expressions, including De Morgan’s rules
-and conditional expressions.</li>
-<li>Demonstrate how to use these methods to solve a logic puzzle.</li>
+<li class="fragment">Create truth tables in order to recognize
+<em>tautologies</em> and <em>logically equivalent</em> expressions,
+including De Morgan’s rules and conditional expressions.</li>
+<li class="fragment">Demonstrate how to use these methods to solve a
+logic puzzle.</li>
 </ul>
 </section>
 <section id="propositions-and-basic-operations" class="slide level2">
@@ -140,10 +146,10 @@ terms <span class="math inline">\(\texttt{True}\)</span> or <span
 class="math inline">\(\texttt{False}\)</span> can be applied.</p>
 <p>Which of the following are propositions?</p>
 <ul>
-<li>We are currently in Chapel Hill.</li>
-<li><span class="math inline">\(1 + 1 = 2\)</span></li>
-<li><span class="math inline">\(2 + x = 4\)</span></li>
-<li>It is hot outside.</li>
+<li class="fragment">We are currently in Chapel Hill.</li>
+<li class="fragment"><span class="math inline">\(1 + 1 = 2\)</span></li>
+<li class="fragment"><span class="math inline">\(2 + x = 4\)</span></li>
+<li class="fragment">It is hot outside.</li>
 </ul>
 </section>
 <section id="propositions-and-basic-operations-1" class="slide level2">
@@ -153,10 +159,12 @@ terms <span class="math inline">\(\texttt{True}\)</span> or <span
 class="math inline">\(\texttt{False}\)</span> can be applied.</p>
 <p>Which of the following are propositions?</p>
 <ul>
-<li>We are currently in Chapel Hill. - Yes</li>
-<li><span class="math inline">\(1 + 1 = 2\)</span> - Yes</li>
-<li><span class="math inline">\(2 + x = 4\)</span> - No</li>
-<li>It is hot outside. - No</li>
+<li class="fragment">We are currently in Chapel Hill. - Yes</li>
+<li class="fragment"><span class="math inline">\(1 + 1 = 2\)</span> -
+Yes</li>
+<li class="fragment"><span class="math inline">\(2 + x = 4\)</span> -
+No</li>
+<li class="fragment">It is hot outside. - No</li>
 </ul>
 </section>
 <section id="negation" class="slide level2">
@@ -220,10 +228,12 @@ class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
 <div id="right">
 <p>Here is an example of conjunction:</p>
 <ul>
-<li><span class="math inline">\(p\)</span>: “It is sunny today.’’</li>
-<li><span class="math inline">\(q\)</span>: “It is Monday.’’</li>
-<li><span class="math inline">\(p \land q\)</span>: “It is sunny today
-and today is Monday.’’</li>
+<li class="fragment"><span class="math inline">\(p\)</span>: “It is
+sunny today.’’</li>
+<li class="fragment"><span class="math inline">\(q\)</span>: “It is
+Monday.’’</li>
+<li class="fragment"><span class="math inline">\(p \land q\)</span>: “It
+is sunny today and today is Monday.’’</li>
 </ul>
 <p>The conjunction (<span class="math inline">\(p \land q\)</span>) is
 <span class="math inline">\(\texttt{True}\)</span> on sunny Mondays, but
@@ -266,10 +276,12 @@ class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
 <div id="right">
 <p>Here is an example of disjunction.</p>
 <ul>
-<li><span class="math inline">\(p\)</span>: “It is sunny today.’’</li>
-<li><span class="math inline">\(q\)</span>: “It is Monday.’’</li>
-<li><span class="math inline">\(p \lor q\)</span>: “It is sunny today or
-today is Monday.’’</li>
+<li class="fragment"><span class="math inline">\(p\)</span>: “It is
+sunny today.’’</li>
+<li class="fragment"><span class="math inline">\(q\)</span>: “It is
+Monday.’’</li>
+<li class="fragment"><span class="math inline">\(p \lor q\)</span>: “It
+is sunny today or today is Monday.’’</li>
 </ul>
 <p>The disjunction (<span class="math inline">\(p \lor q\)</span>) is
 <span class="math inline">\(\texttt{True}\)</span> on sunny Mondays, on
@@ -312,10 +324,12 @@ class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q&amp; p
 <div id="right">
 <p>Here is an example of exclusive or.</p>
 <ul>
-<li><span class="math inline">\(p\)</span>: “It is sunny today.’’</li>
-<li><span class="math inline">\(q\)</span>: “It is Monday.’’</li>
-<li><span class="math inline">\(p \oplus q\)</span>: “It is sunny today
-or today is Monday, but not both.’’</li>
+<li class="fragment"><span class="math inline">\(p\)</span>: “It is
+sunny today.’’</li>
+<li class="fragment"><span class="math inline">\(q\)</span>: “It is
+Monday.’’</li>
+<li class="fragment"><span class="math inline">\(p \oplus q\)</span>:
+“It is sunny today or today is Monday, but not both.’’</li>
 </ul>
 <p>The exclusive or (<span class="math inline">\(p \oplus q\)</span>) is
 <span class="math inline">\(\texttt{True}\)</span> on any sunny day
@@ -344,11 +358,11 @@ class="math inline">\(q\)</span> the conclusion. This can also be called
 <em>implication</em>.</p>
 <p>Some English phrases for this would be:</p>
 <ul>
-<li>If <span class="math inline">\(p\)</span>, then <span
-class="math inline">\(q\)</span>.</li>
-<li><span class="math inline">\(p\)</span> implies <span
-class="math inline">\(q\)</span>.</li>
-<li><span class="math inline">\(q\)</span> if <span
+<li class="fragment">If <span class="math inline">\(p\)</span>, then
+<span class="math inline">\(q\)</span>.</li>
+<li class="fragment"><span class="math inline">\(p\)</span> implies
+<span class="math inline">\(q\)</span>.</li>
+<li class="fragment"><span class="math inline">\(q\)</span> if <span
 class="math inline">\(p\)</span>.</li>
 </ul>
 </div>
@@ -390,10 +404,12 @@ q\)</span>: “If it is sunny, then I walk to campus.’’</li>
 <div id="right">
 <p>Here is an example of implication.</p>
 <ul>
-<li><span class="math inline">\(p\)</span>: “It is sunny.’’</li>
-<li><span class="math inline">\(q\)</span>: “I walk to campus.’’</li>
-<li><span class="math inline">\(p \rightarrow q\)</span>: “If it is
-sunny, then I walk to campus.’’</li>
+<li class="fragment"><span class="math inline">\(p\)</span>: “It is
+sunny.’’</li>
+<li class="fragment"><span class="math inline">\(q\)</span>: “I walk to
+campus.’’</li>
+<li class="fragment"><span class="math inline">\(p \rightarrow
+q\)</span>: “If it is sunny, then I walk to campus.’’</li>
 </ul>
 <p>The implication (<span class="math inline">\(p \rightarrow
 q\)</span>) is <span class="math inline">\(\texttt{False}\)</span> if it
@@ -449,10 +465,12 @@ class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
 <div id="right">
 <p>Here is an example of a biconditional.</p>
 <ul>
-<li><span class="math inline">\(p\)</span>: “It is sunny.’’</li>
-<li><span class="math inline">\(q\)</span>: “I walk to campus.’’</li>
-<li><span class="math inline">\(q \leftrightarrow p\)</span>: “I walk to
-campus if and only if it is sunny.’’</li>
+<li class="fragment"><span class="math inline">\(p\)</span>: “It is
+sunny.’’</li>
+<li class="fragment"><span class="math inline">\(q\)</span>: “I walk to
+campus.’’</li>
+<li class="fragment"><span class="math inline">\(q \leftrightarrow
+p\)</span>: “I walk to campus if and only if it is sunny.’’</li>
 </ul>
 <p>The biconditional (<span class="math inline">\(p \leftrightarrow
 q\)</span>) is <span class="math inline">\(\texttt{True}\)</span> if it
@@ -470,9 +488,12 @@ class="math inline">\(\texttt{True}\)</span>), this biconditional is
 <section id="order-of-operations" class="slide level2">
 <h2>Order Of Operations</h2>
 <ul>
-<li>Negations: <span class="math inline">\(\neg\)</span></li>
-<li>Conjunctions: <span class="math inline">\(\land\)</span></li>
-<li>Disjunctions: <span class="math inline">\(\lor\)</span></li>
+<li class="fragment">Negations: <span
+class="math inline">\(\neg\)</span></li>
+<li class="fragment">Conjunctions: <span
+class="math inline">\(\land\)</span></li>
+<li class="fragment">Disjunctions: <span
+class="math inline">\(\lor\)</span></li>
 </ul>
 <p>Everything else can be written as a combination of the above three,
 but in general, it’s best to always clarify order of operations using
@@ -560,8 +581,8 @@ p \implies q \equiv \neg p \lor q\\
 <h2>Proving Equivalences</h2>
 <p>Logical Equivalences can be proven two different ways:</p>
 <ol type="1">
-<li>Using Truth Tables</li>
-<li>Directly, using other logical equivalences</li>
+<li class="fragment">Using Truth Tables</li>
+<li class="fragment">Directly, using other logical equivalences</li>
 </ol>
 </section>
 <section id="proving-equivalences---example-1" class="slide level2">
@@ -687,9 +708,9 @@ equivalences.
 <section id="other-considerations" class="slide level2">
 <h2>Other Considerations</h2>
 <ul>
-<li>A truth table computes all possible combinations of <span
-class="math inline">\(n\)</span> propositions, so a truth table always
-has how many rows?</li>
+<li class="fragment">A truth table computes all possible combinations of
+<span class="math inline">\(n\)</span> propositions, so a truth table
+always has how many rows?</li>
 </ul>
 <p>propositions = <span class="math inline">\(\{p\}\)</span></p>
 <p>truth values = <span class="math inline">\(\{\texttt{True},
@@ -702,9 +723,9 @@ has how many rows?</li>
 <section id="other-considerations-1" class="slide level2">
 <h2>Other Considerations</h2>
 <ul>
-<li>A truth table computes all possible combinations of <span
-class="math inline">\(n\)</span> propositions, so a truth table always
-has how many rows?</li>
+<li class="fragment">A truth table computes all possible combinations of
+<span class="math inline">\(n\)</span> propositions, so a truth table
+always has how many rows?</li>
 </ul>
 <p>propositions = <span class="math inline">\(\{p, q\}\)</span></p>
 <p>truth values = <span class="math inline">\(\{\texttt{True},
@@ -718,9 +739,9 @@ has how many rows?</li>
 <section id="other-considerations-2" class="slide level2">
 <h2>Other Considerations</h2>
 <ul>
-<li>A truth table computes all possible combinations of <span
-class="math inline">\(n\)</span> propositions, so a truth table always
-has how many rows?</li>
+<li class="fragment">A truth table computes all possible combinations of
+<span class="math inline">\(n\)</span> propositions, so a truth table
+always has how many rows?</li>
 </ul>
 <p>propositions = <span class="math inline">\(\{p,q,...\}\)</span> <span
 class="math inline">\(\leftarrow\)</span> <span
@@ -732,9 +753,9 @@ class="math inline">\(n\)</span> propositions</p>
 <section id="other-considerations-3" class="slide level2">
 <h2>Other Considerations</h2>
 <ul>
-<li>A truth table computes all possible combinations of <span
-class="math inline">\(n\)</span> propositions, so a truth table always
-has how many rows?</li>
+<li class="fragment">A truth table computes all possible combinations of
+<span class="math inline">\(n\)</span> propositions, so a truth table
+always has how many rows?</li>
 </ul>
 <p>propositions = <span class="math inline">\(\{p,q,...\}\)</span> <span
 class="math inline">\(\leftarrow\)</span> <span
@@ -746,15 +767,16 @@ class="math inline">\(n\)</span> propositions</p>
 <section id="tautologies" class="slide level2">
 <h2>Tautologies</h2>
 <ul>
-<li>Notice that a combination of propositions using operators
-(e.g. <span class="math inline">\(p \land q\)</span> makes a new
-proposition. These can also be called <em>compound
+<li class="fragment">Notice that a combination of propositions using
+operators (e.g. <span class="math inline">\(p \land q\)</span> makes a
+new proposition. These can also be called <em>compound
 propositions</em>.</li>
-<li>A compound proposition with a truth table where all the values in
-the last column are <span class="math inline">\(\texttt{True}\)</span>
-is called a <em>tautology</em>.</li>
-<li>An example of this is <span class="math inline">\(p \lor \neg
-p\)</span>.</li>
+<li class="fragment">A compound proposition with a truth table where all
+the values in the last column are <span
+class="math inline">\(\texttt{True}\)</span> is called a
+<em>tautology</em>.</li>
+<li class="fragment">An example of this is <span class="math inline">\(p
+\lor \neg p\)</span>.</li>
 </ul>
 <p><span class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp;
 \neg p &amp; p \lor \neg p \\ \hline T &amp; F &amp; T \\ F &amp; T
@@ -767,28 +789,29 @@ evaluates to <span class="math inline">\(\texttt{True}\)</span>!</p>
 <p>To translate logic to and from English sentences, it is important to
 know the common phrases for the operators.</p>
 <ul>
-<li><span class="math inline">\(\neg p\)</span> (Negation): “not <span
-class="math inline">\(p\)</span>”</li>
-<li><span class="math inline">\(p \land q\)</span> (Conjunction): “<span
-class="math inline">\(p\)</span> and <span
+<li class="fragment"><span class="math inline">\(\neg p\)</span>
+(Negation): “not <span class="math inline">\(p\)</span>”</li>
+<li class="fragment"><span class="math inline">\(p \land q\)</span>
+(Conjunction): “<span class="math inline">\(p\)</span> and <span
 class="math inline">\(q\)</span>”</li>
-<li><span class="math inline">\(p \lor q\)</span> (Disjunction): “<span
-class="math inline">\(p\)</span> or <span
+<li class="fragment"><span class="math inline">\(p \lor q\)</span>
+(Disjunction): “<span class="math inline">\(p\)</span> or <span
 class="math inline">\(q\)</span>”</li>
-<li><span class="math inline">\(p \oplus q\)</span> (Exclusive Or):
-“<span class="math inline">\(p\)</span> xor <span
+<li class="fragment"><span class="math inline">\(p \oplus q\)</span>
+(Exclusive Or): “<span class="math inline">\(p\)</span> xor <span
 class="math inline">\(q\)</span>”; “<span
 class="math inline">\(p\)</span> or <span
 class="math inline">\(q\)</span>, but not both”</li>
-<li><span class="math inline">\(p \rightarrow q\)</span>
-(Conditional/Implication): “<span class="math inline">\(p\)</span>
-implies <span class="math inline">\(q\)</span>”; “if <span
+<li class="fragment"><span class="math inline">\(p \rightarrow
+q\)</span> (Conditional/Implication): “<span
+class="math inline">\(p\)</span> implies <span
+class="math inline">\(q\)</span>”; “if <span
 class="math inline">\(p\)</span> then <span
 class="math inline">\(q\)</span>”; “<span
 class="math inline">\(q\)</span> if <span
 class="math inline">\(p\)</span>”</li>
-<li><span class="math inline">\(p \leftrightarrow q\)</span> or <span
-class="math inline">\(p\)</span> iff <span
+<li class="fragment"><span class="math inline">\(p \leftrightarrow
+q\)</span> or <span class="math inline">\(p\)</span> iff <span
 class="math inline">\(q\)</span> (Biconditional): “<span
 class="math inline">\(p\)</span> if and only if <span
 class="math inline">\(q\)</span>”</li>
@@ -835,8 +858,10 @@ Smullyan)</h3>
 truth, or a knave who always lies. You meet three inhabitants, Alice,
 Bob, and Chris.</p>
 <ul>
-<li>Alice says: Bob is a knave or Chris is a knight.</li>
-<li>Bob says: Alice is a knight if, and only if, Chris is a knave.</li>
+<li class="fragment">Alice says: Bob is a knave or Chris is a
+knight.</li>
+<li class="fragment">Bob says: Alice is a knight if, and only if, Chris
+is a knave.</li>
 </ul>
 <p>Can you determine uniquely what each of Alice, Bob, and Chris
 are?</p>
@@ -846,13 +871,15 @@ are?</p>
 <h3 id="knights-and-knaves-raymond-smullyan-1">Knights and Knaves
 (Raymond Smullyan)</h3>
 <ol type="1">
-<li>Define convenient variables for propositions.</li>
-<li>Transform what they say into statements that <em>always</em> should
-evaluate to <span class="math inline">\(\texttt{True}\)</span>. These
-are the rules of our world.</li>
-<li>Make a truth table – With 3 people, we have <span
+<li class="fragment">Define convenient variables for propositions.</li>
+<li class="fragment">Transform what they say into statements that
+<em>always</em> should evaluate to <span
+class="math inline">\(\texttt{True}\)</span>. These are the rules of our
+world.</li>
+<li class="fragment">Make a truth table – With 3 people, we have <span
 class="math inline">\(2^3\)</span> rows</li>
-<li>Check if a unique row makes both statements true.</li>
+<li class="fragment">Check if a unique row makes both statements
+true.</li>
 </ol>
 </section>
 <section id="using-logic-for-problem-solving-3" class="slide level2">
@@ -890,8 +917,10 @@ statements that <em>always</em> should evaluate to <span
 class="math inline">\(\texttt{True}\)</span>. These are the rules of our
 world.</p>
 <ul>
-<li>Alice says: Bob is a knave or Chris is a knight.</li>
-<li>Bob says: Alice is a knight if, and only if, Chris is a knave.</li>
+<li class="fragment">Alice says: Bob is a knave or Chris is a
+knight.</li>
+<li class="fragment">Bob says: Alice is a knight if, and only if, Chris
+is a knave.</li>
 </ul>
 </div>
 </section>
@@ -903,9 +932,9 @@ statements that <em>always</em> should evaluate to <span
 class="math inline">\(\texttt{True}\)</span>. These are the rules of our
 world.</p>
 <ul>
-<li>Alice says: Bob is a knave <span class="math inline">\(\lor\)</span>
-Chris is a knight</li>
-<li>Bob says: Alice is a knight <span
+<li class="fragment">Alice says: Bob is a knave <span
+class="math inline">\(\lor\)</span> Chris is a knight</li>
+<li class="fragment">Bob says: Alice is a knight <span
 class="math inline">\(\leftrightarrow\)</span> Chris is a knave</li>
 </ul>
 <p>(Propositions:</p>
@@ -925,9 +954,10 @@ statements that <em>always</em> should evaluate to <span
 class="math inline">\(\texttt{True}\)</span>. These are the rules of our
 world.</p>
 <ul>
-<li>Alice says: <span class="math inline">\(\neg B \lor C\)</span></li>
-<li>Bob says: <span class="math inline">\(A \leftrightarrow \neg
+<li class="fragment">Alice says: <span class="math inline">\(\neg B \lor
 C\)</span></li>
+<li class="fragment">Bob says: <span class="math inline">\(A
+\leftrightarrow \neg C\)</span></li>
 </ul>
 <p>(Propositions:</p>
 <p><span class="math inline">\(\{A =\)</span> “Alice is a knight”, <span
@@ -1003,19 +1033,20 @@ Let’s test one of these!</strong></p>
 <p><span class="math inline">\(A = T, B = F, C = T\)</span></p>
 <p>So, Alice is a knight, Bob is a knave, and Chris is a knight.</p>
 <ul>
-<li>Alice says: Bob is a knave or Chris is a knight.
+<li class="fragment">Alice says: Bob is a knave or Chris is a knight.
 <ul>
-<li><span class="math inline">\(A \rightarrow (\neg B \lor
-C)\)</span></li>
-<li><span class="math inline">\(T \rightarrow (\neg(F) \lor T)\)</span>
-evaluates to True!</li>
+<li class="fragment"><span class="math inline">\(A \rightarrow (\neg B
+\lor C)\)</span></li>
+<li class="fragment"><span class="math inline">\(T \rightarrow (\neg(F)
+\lor T)\)</span> evaluates to True!</li>
 </ul></li>
-<li>Bob says: Alice is a knight if, and only if, Chris is a knave.
+<li class="fragment">Bob says: Alice is a knight if, and only if, Chris
+is a knave.
 <ul>
-<li><span class="math inline">\(B \rightarrow (A \leftrightarrow \neg
-C)\)</span></li>
-<li><span class="math inline">\(F \rightarrow (T \leftrightarrow \neg
-T)\)</span> evaluates to True!</li>
+<li class="fragment"><span class="math inline">\(B \rightarrow (A
+\leftrightarrow \neg C)\)</span></li>
+<li class="fragment"><span class="math inline">\(F \rightarrow (T
+\leftrightarrow \neg T)\)</span> evaluates to True!</li>
 </ul></li>
 </ul>
 <p>Both of our rules hold in this world with these assignments, so we
@@ -1032,10 +1063,10 @@ actually know whether or not what they are saying is the truth, so their
 claim could either be true or false. This is why we were able to use
 implication.</p>
 <ul>
-<li>Alice says: Bob is a knave or Chris is a knight.
+<li class="fragment">Alice says: Bob is a knave or Chris is a knight.
 <ul>
-<li><span class="math inline">\(A \rightarrow (\neg B \lor
-C)\)</span></li>
+<li class="fragment"><span class="math inline">\(A \rightarrow (\neg B
+\lor C)\)</span></li>
 </ul></li>
 </ul>
 <p>However, what if we assumed that if someone is lying, they know their
@@ -1049,10 +1080,10 @@ claim is false?</p>
 false, then we would have to explain our rules using a
 <em>biconditional</em>.</p>
 <ul>
-<li>Alice says: Bob is a knave or Chris is a knight.
+<li class="fragment">Alice says: Bob is a knave or Chris is a knight.
 <ul>
-<li><span class="math inline">\(A \leftrightarrow (\neg B \lor
-C)\)</span></li>
+<li class="fragment"><span class="math inline">\(A \leftrightarrow (\neg
+B \lor C)\)</span></li>
 </ul></li>
 </ul>
 <p>Therefore, our answer is correct for what we <em>assume</em> the

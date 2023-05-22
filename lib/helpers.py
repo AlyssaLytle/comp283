@@ -56,8 +56,7 @@ def make_slides(slides_name: str, divify: bool = True) -> str:
     ret_name = '/comp283/lessons/' + slides_name[:-2] + "html"
     print(html_name)
     command = f"pandoc --mathjax -t revealjs "
-    # if incremental:
-    #    command += "--incremental "
+    command += "--incremental "
     command += "--include-in-header=leftalign.css " 
     command += f"{slides_loc} -o {html_name} -s"
     subprocess.run("cd ../", shell=True)

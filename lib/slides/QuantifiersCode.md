@@ -1,5 +1,5 @@
 ---
-title: QuantifiersCode
+title: Coding with Quantifiers
 theme: dracula
 center: false
 transition: 'none'
@@ -7,49 +7,25 @@ contributors: Alyssa Byrnes
 ---
 
 
-<div id="content">
-</div>
+## Basic Concepts of Coding
 
-
-## What We've Learned: Bringing It Back to Coding
+## Functions
 <div id="content">
 
-
-</div>
-
-
-
-## Python
-<div id="content">
-
-### What is Python?
-
-Python is one of the most popular coding languages.
-
-
-</div>
-
-
-
-## Methods
-<div id="content">
-
-### What is a method?
+### What is a function?
 
 Something that recieves and input, does something to it, and gives an output.
 
->A function is a type of method!
 
 ### Example
 
 >$f(x) = x + 2$ is a function
 
-In python it looks like:
+In Python it looks like:
 
     def f(x):
         return x + 2
-        
-A method defines an algorithm.
+
 
 "return" exits the program and outputs $x+2$
 
@@ -57,38 +33,14 @@ A method defines an algorithm.
 </div>
 
 
-
 ## Common Objects in Python
 <div id="content">
-- Integer: A Integer
-- List: An ordered list of objects
+- Integer: A Integer ($\mathbb{Z}$)
+- List: An *ordered* set of objects
     - $[1,2,3]$, $[\textrm{``apples''}, 1, \texttt{True}]$
-    - This is a type of *tuple*!
 - Boolean: Something that is either $\texttt{True}$ or $\texttt{False}$
     - A *proposition* is a boolean.
-    - A *preposition* given an input is a boolean.
-    
-
-</div>
-
-
-
-## Pseudocode
-<div id="content">
-
-We sometimes use **pseudocode** to practice writing out methods/algorithms.
-
-Pseudocode is something that looks like code, but wouldn't actually run in any language. It's a good way to write out algorithms without having to worry about syntax.
-
-### Example
-
-    f:
-        input: integer x
-        
-        #We can add comments this way. A comment doesn't execute. It's for you to read when you look at your code.
-        
-        return x + 2
-    
+    - A *predicate* given an input is a boolean.
 
 </div>
 
@@ -104,18 +56,23 @@ A **conditional** checks some condition (expressed as a boolean) and uses it to 
     example:
         input: boolean x
         
-        if x: #Checks if x == True
+        if x: 
             y = x + 1
         else:
             y = x + 2
         return y
-        
+
+</div>
+
+## Conditionals
+<div id="content">
+
 ### Example 2
 
     example:
         input: boolean x
     
-        if !x: #Checks if x == False
+        if not x: 
             y = x + 2
         else:
             y = x + 1
@@ -123,6 +80,9 @@ A **conditional** checks some condition (expressed as a boolean) and uses it to 
 
 
 </div>
+
+
+
 
 
 
@@ -138,6 +98,11 @@ A **loop** lets you look at every element in a list and do something each time.
             print x + 5
 
 >Prints out $6,7,8,9$
+
+</div>
+
+## Loops
+<div id="content">
 
 ### Example - While Loop
 
@@ -161,6 +126,9 @@ A **loop** lets you look at every element in a list and do something each time.
 
 
 </div>
+
+
+<!-- 
 
 
 
@@ -201,6 +169,9 @@ We want a method that returns $\texttt{True}$ if at least one element in $P$ is 
 
 
 
+
+
+
 ## Forall
 <div id="content">
 
@@ -221,10 +192,13 @@ So, we can also think of it as a method that returns $\texttt{False}$ if at leas
 
 
 
+
+
+
 ## Forall
 <div id="content">
 
-Let's say we have a list of booleans: $P = [p1,p2,p3,p4]$.
+Let's say we have a list of booleans: `P = [p1,p2,p3,p4]`.
 
 We want to check $\forall p \in P, p$.
 
@@ -234,17 +208,11 @@ Remember: $\forall p \in P, p \equiv \neg \exists p \in P, \neg P$.
 
 So, we can also think of it as a method that returns $\texttt{False}$ if at least one element in $P$ is $\texttt{False}$ and returns $\texttt{True}$ otherwise.
 
-    example:
-        input: list P
-        for x in P:
-            if !x:
-                return False
-        #Loop exited
-        return True
+
+</div> -->
 
 
 
-</div>
 
 
 
