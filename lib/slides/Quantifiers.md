@@ -194,3 +194,16 @@ $\forall_{x,y \in S}$ or $\exists_{x,y \in S}$.
 </div>
 
 
+## In Class Assignment
+<div id="content">
+- I will pass out papers explaining the assignment. 
+- Everyone should take ***two*** copies. 
+- Fill out one copy of this worksheet. Write your name on the top and bring it to the front.
+- You can work in groups/pairs!
+- **You will not be graded for correctness--just participation!!!**
+- We will then go over the answers. The second copy is for you to fill out and keep.
+
+
+</div>
+
+

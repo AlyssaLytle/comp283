@@ -1,12 +1,38 @@
+---
+title: QuantifiersCode
+theme: dracula
+center: false
+transition: 'none'
+contributors: Alyssa Byrnes
+---
+
+
+<div id="content">
+</div>
+
+
 ## What We've Learned: Bringing It Back to Coding
+<div id="content">
+
+
+</div>
+
+
 
 ## Python
+<div id="content">
 
 ### What is Python?
 
 Python is one of the most popular coding languages.
 
+
+</div>
+
+
+
 ## Methods
+<div id="content">
 
 ### What is a method?
 
@@ -27,7 +53,13 @@ A method defines an algorithm.
 
 "return" exits the program and outputs $x+2$
 
+
+</div>
+
+
+
 ## Common Objects in Python
+<div id="content">
 - Integer: A Integer
 - List: An ordered list of objects
     - $[1,2,3]$, $[\textrm{``apples''}, 1, \texttt{True}]$
@@ -36,7 +68,13 @@ A method defines an algorithm.
     - A *proposition* is a boolean.
     - A *preposition* given an input is a boolean.
     
+
+</div>
+
+
+
 ## Pseudocode
+<div id="content">
 
 We sometimes use **pseudocode** to practice writing out methods/algorithms.
 
@@ -51,7 +89,13 @@ Pseudocode is something that looks like code, but wouldn't actually run in any l
         
         return x + 2
     
+
+</div>
+
+
+
 ## Conditionals
+<div id="content">
 
 A **conditional** checks some condition (expressed as a boolean) and uses it to decide what the program should do.
 
@@ -77,7 +121,13 @@ A **conditional** checks some condition (expressed as a boolean) and uses it to 
             y = x + 1
         return y
 
+
+</div>
+
+
+
 ## Loops
+<div id="content">
 
 A **loop** lets you look at every element in a list and do something each time.
 
@@ -99,11 +149,23 @@ A **loop** lets you look at every element in a list and do something each time.
 
 >Also prints out $6,7,8,9$
 
+
+</div>
+
+
+
 ## Coding Existentials
+<div id="content">
 
 ### We are going to practice writing pseudocode for our existentials
 
+
+</div>
+
+
+
 ## Exists
+<div id="content">
 
 Let's say we have a list of booleans: $P = [p1,p2,p3,p4]$.
 
@@ -112,7 +174,13 @@ We want to check $\exists p \in P, p$.
 We want a method that returns $\texttt{True}$ if at least one element in $P$ is $\texttt{True}$ and returns $\texttt{False}$ otherwise.
 
 
+
+</div>
+
+
+
 ## Exists
+<div id="content">
 
 Let's say we have a list of booleans: $P = [p1,p2,p3,p4]$.
 
@@ -128,7 +196,13 @@ We want a method that returns $\texttt{True}$ if at least one element in $P$ is 
         #Loop exited
         return False
 
+
+</div>
+
+
+
 ## Forall
+<div id="content">
 
 Let's say we have a list of booleans: $P = [p1,p2,p3,p4]$.
 
@@ -142,7 +216,13 @@ So, we can also think of it as a method that returns $\texttt{False}$ if at leas
 
 
 
+
+</div>
+
+
+
 ## Forall
+<div id="content">
 
 Let's say we have a list of booleans: $P = [p1,p2,p3,p4]$.
 
@@ -161,5 +241,10 @@ So, we can also think of it as a method that returns $\texttt{False}$ if at leas
                 return False
         #Loop exited
         return True
+
+
+
+</div>
+
 
 

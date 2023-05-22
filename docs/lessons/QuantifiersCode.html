@@ -312,6 +312,34 @@ class="math inline">\(\texttt{False}\)</span> and returns <span
 class="math inline">\(\texttt{True}\)</span> otherwise.</p>
 </div>
 </section>
+<section id="forall-1" class="slide level2">
+<h2>Forall</h2>
+<div id="content">
+<p>Let’s say we have a list of booleans: <span class="math inline">\(P =
+[p1,p2,p3,p4]\)</span>.</p>
+<p>We want to check <span class="math inline">\(\forall p \in P,
+p\)</span>.</p>
+<p>We want a method that returns <span
+class="math inline">\(\texttt{True}\)</span> if every element in <span
+class="math inline">\(P\)</span> is <span
+class="math inline">\(\texttt{True}\)</span> and returns <span
+class="math inline">\(\texttt{False}\)</span> otherwise.</p>
+<p>Remember: <span class="math inline">\(\forall p \in P, p \equiv \neg
+\exists p \in P, \neg P\)</span>.</p>
+<p>So, we can also think of it as a method that returns <span
+class="math inline">\(\texttt{False}\)</span> if at least one element in
+<span class="math inline">\(P\)</span> is <span
+class="math inline">\(\texttt{False}\)</span> and returns <span
+class="math inline">\(\texttt{True}\)</span> otherwise.</p>
+<pre><code>example:
+    input: list P
+    for x in P:
+        if !x:
+            return False
+    #Loop exited
+    return True</code></pre>
+</div>
+</section>
     </div>
   </div>
 

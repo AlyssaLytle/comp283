@@ -42,6 +42,7 @@ def _make_slide_list(file_name: str) -> list[str]:
             curr_slide = line
         else:
             curr_slide += line
+    slides.append(curr_slide)
     return slides
 
 def _make_header(file_name) -> str:
