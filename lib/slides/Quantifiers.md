@@ -1,15 +1,27 @@
 ---
-title: Quantifiers (Predicate Logic)
+title: Quantifiers
 theme: dracula
 center: false
 transition: 'none'
+contributors: Alyssa Byrnes
 ---
 
+
+<div id="content">
+
+</div>
+
+
+## Quantifiers (Predicate Logic)
+<div id="content">
+### Chapter 4 in book
+
+
+</div>
 
 
 ## Predicate Definition
 <div id="content">
-
  A **predicate** is a
 function that maps each possible input to either $\texttt{True}$ or $\texttt{False}$. 
  
@@ -26,8 +38,6 @@ on day $x$, then I walked to campus on day $x$" as $\neg p(x) \implies q(x)$ \fo
 
 
 </div>
-
-
 
 
 ## Motivation
@@ -51,8 +61,6 @@ on day $x$, then I walked to campus on day $x$" as $\neg p(x) \implies q(x)$ \fo
 
 
 </div>
-
-
 
 
 ## Motivation Continued - Universal Quantifier
@@ -79,8 +87,6 @@ $\forall d \in D, (\neg p(d) \implies q(d))$.
 </div>
 
 
-
-
 ## Existential Quantifier
 <div id="content">
 
@@ -102,8 +108,6 @@ The "there exists" quantifier, denoted $\exists$, is used to reason about at lea
 
 
 </div>
-
-
 
 
 ## Free and Bounded Variables
@@ -129,8 +133,6 @@ $\sum\limits_{k=0}^{10} (k+n)$,
 
 
 </div>
-
-
 
 
 ## Negation and Inference
@@ -162,5 +164,33 @@ $\neg(\exists x, p(x))$ in English translates to "There does not exist $x$ such 
 </div>
 
 
+## Nested Quantifiers
+<div id="content">
+ 
+### Example 
+>This example is to help you get some practice with nested quantifiers and to understand that the order of them matters.
+
+>Say that $loves(x,y)$ is true iff person $x$ loves person $y$.
+
+>$\forall_{e \in P}$ $\exists_{s \in P}, loves(e,s)$ translates to "Everybody loves somebody."
+
+>$\exists_{s \in P}$ $\forall_{e \in P}, loves(e,s)$ translates to "There is somebody that everybody loves."
+
+
+</div>
+
+
+## Other Notation
+<div id="content">
+Here are some other ways we can write things.
+
+If we are talking about pairs of distinct integers, $i, j \in [1..n]$ with $i < j$,
+we may even write $\forall_{1\leq i < j \leq n}$ or $\exists_{1\leq i < j \leq n}$.
+
+If we are talking about elements $x$ and $y$ that are members of the same set $S$, we can write
+$\forall_{x,y \in S}$ or $\exists_{x,y \in S}$. 
+
+
+</div>
 
 

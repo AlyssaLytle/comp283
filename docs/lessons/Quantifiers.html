@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Quantifiers (Predicate Logic)</title>
+  <title>Quantifiers</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -115,9 +115,21 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Quantifiers (Predicate Logic)</h1>
+  <h1 class="title">Quantifiers</h1>
 </section>
 
+<section class="slide level2">
+
+<div id="content">
+
+</div>
+</section>
+<section id="quantifiers-predicate-logic" class="slide level2">
+<h2>Quantifiers (Predicate Logic)</h2>
+<div id="content">
+<h3 id="chapter-4-in-book">Chapter 4 in book</h3>
+</div>
+</section>
 <section id="predicate-definition" class="slide level2">
 <h2>Predicate Definition</h2>
 <div id="content">
@@ -301,6 +313,48 @@ class="math inline">\(x\)</span>, <span
 class="math inline">\(p(x)\)</span> does not hold”, or <span
 class="math inline">\(\forall x, \neg p(x)\)</span>.</p>
 </blockquote>
+</div>
+</section>
+<section id="nested-quantifiers" class="slide level2">
+<h2>Nested Quantifiers</h2>
+<div id="content">
+<h3 id="example-6">Example</h3>
+<blockquote>
+<p>This example is to help you get some practice with nested quantifiers
+and to understand that the order of them matters.</p>
+</blockquote>
+<blockquote>
+<p>Say that <span class="math inline">\(loves(x,y)\)</span> is true iff
+person <span class="math inline">\(x\)</span> loves person <span
+class="math inline">\(y\)</span>.</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(\forall_{e \in P}\)</span> <span
+class="math inline">\(\exists_{s \in P}, loves(e,s)\)</span> translates
+to “Everybody loves somebody.”</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(\exists_{s \in P}\)</span> <span
+class="math inline">\(\forall_{e \in P}, loves(e,s)\)</span> translates
+to “There is somebody that everybody loves.”</p>
+</blockquote>
+</div>
+</section>
+<section id="other-notation" class="slide level2">
+<h2>Other Notation</h2>
+<div id="content">
+<p>Here are some other ways we can write things.</p>
+<p>If we are talking about pairs of distinct integers, <span
+class="math inline">\(i, j \in [1..n]\)</span> with <span
+class="math inline">\(i &lt; j\)</span>, we may even write <span
+class="math inline">\(\forall_{1\leq i &lt; j \leq n}\)</span> or <span
+class="math inline">\(\exists_{1\leq i &lt; j \leq n}\)</span>.</p>
+<p>If we are talking about elements <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> that are members of the same set <span
+class="math inline">\(S\)</span>, we can write <span
+class="math inline">\(\forall_{x,y \in S}\)</span> or <span
+class="math inline">\(\exists_{x,y \in S}\)</span>.</p>
 </div>
 </section>
     </div>
