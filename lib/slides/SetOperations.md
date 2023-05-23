@@ -73,7 +73,7 @@ We write $A \subseteq B$ to denote the fact that $A$ is a subset of $B$.
 
 ### Using Predicate Logic 
 
-- $\forall A,B, ~ A \subseteq B \iff \forall x \in A, ~ x \in A \implies x \in B$
+- $\forall A,B, ~ A \subseteq B \leftrightarrow \forall x \in A, ~ x \in A \rightarrow x \in B$
 - Technically, we didn't define the domains for $A$ and $B$, but given the context, we know they are sets, so we'll let it slide... 
 - We *could* say that all sets exist in some universe of sets $S$. 
 - Then our quantifier would say $\forall A,B \in S \ldots$ 
@@ -89,8 +89,8 @@ We write $A \subseteq B$ to denote the fact that $A$ is a subset of $B$.
 
 - Remember this?
 - For all sets $A$ and $B$, $A = B$  if and only if every element of $A$ is an element of $B$ and every element of $B$ is an element of $A$
-- $\forall A,B, ~ A = B \iff (A \subseteq B$ and $B \subseteq A)$
-<!-- - $\forall A,B, ~ A = B \iff (\forall x, ~ (x \in A \iff x \in B))$ -->
+- $\forall A,B, ~ A = B \leftrightarrow (A \subseteq B$ and $B \subseteq A)$
+<!-- - $\forall A,B, ~ A = B \leftrightarrow (\forall x, ~ (x \in A \leftrightarrow x \in B))$ -->
 
 </div>
 
@@ -112,9 +112,9 @@ The complement of a set $A$, denoted $\bar{A}$ is the set of all elements in the
 
 ### Using Predicate Logic
 
->$\forall a, ~ a \in \bar{A} \iff a \notin A$
+>$\forall a, ~ a \in \bar{A} \leftrightarrow a \notin A$
 
->or, equivalently, $\forall a \in U, ~ a \notin \bar{A} \iff a \in A$
+>or, equivalently, $\forall a \in U, ~ a \notin \bar{A} \leftrightarrow a \in A$
 
 </div>
 
@@ -133,7 +133,7 @@ $A \cap B$ are the elements that are both in $A$ and $B$.
 
 ### Using Predicate Logic
 
->$\forall A, B, x, ~ x \in A \cap B \iff (x \in A \land x \in B)$
+>$\forall A, B, x, ~ x \in A \cap B \leftrightarrow (x \in A \land x \in B)$
 
 
 
@@ -156,7 +156,7 @@ $A \cup B$ are the elements that are either in $A$ or $B$.
 
 ### Using Predicate Logic
 
->$\forall A, B, x, ~ x \in A \cup B \iff (x \in A \lor x \in B)$
+>$\forall A, B, x, ~ x \in A \cup B \leftrightarrow (x \in A \lor x \in B)$
 
 
 
@@ -180,7 +180,7 @@ The **difference** of sets $A$ and $B$ is the set that contains all elements in 
 
 ### Using Predicate Logic
 
->$\forall A, B, x, ~ x \in A \backslash B \iff x \in A \land x \notin B$
+>$\forall A, B, x, ~ x \in A \backslash B \leftrightarrow x \in A \land x \notin B$
  
 
 </div>
@@ -219,7 +219,7 @@ The **difference** of sets $A$ and $B$ is the set that contains all elements in 
 
 ### Using Predicate Logic
 
-> $\forall A,B,x, ~ x \in A \oplus B \iff x \in A \oplus x \in B$
+> $\forall A,B,x, ~ x \in A \oplus B \leftrightarrow x \in A \oplus x \in B$
 
 
 </div>
@@ -230,9 +230,9 @@ The **difference** of sets $A$ and $B$ is the set that contains all elements in 
 
 Two sets are **disjoint** if they share no elements.
 
->$\forall A,B,$ $A$ and $B$ are disjoint $\iff A \cap B = \emptyset$ 
+>$\forall A,B,$ $A$ and $B$ are disjoint $\leftrightarrow A \cap B = \emptyset$ 
 
->$\forall A,B,$ $A$ and $B$ are disjoint $\iff \forall x,~ (x \in B \implies x \notin A) \land (x \in A \implies x \notin B)$
+>$\forall A,B,$ $A$ and $B$ are disjoint $\leftrightarrow \forall x,~ (x \in B \rightarrow x \notin A) \land (x \in A \rightarrow x \notin B)$
 
 
 </div>
@@ -256,7 +256,7 @@ If $A$ and $B$ share elements, then $A \uplus B = ERROR$
 
 ### Using Predicate Logic
 
->$\forall A,B,~ A \uplus B = A \cup B \iff A \cap B = \emptyset$
+>$\forall A,B,~ A \uplus B = A \cup B \leftrightarrow A \cap B = \emptyset$
 
 
 </div>
@@ -279,7 +279,7 @@ The **cartesian product** of $A$ and $B$,
 
 ### Using Predicate Logic
 
-> $\forall A,B, a,b, ~ ((a,b) \in A \times B) \iff (a \in A \land b \in B)$  
+> $\forall A,B, a,b, ~ ((a,b) \in A \times B) \leftrightarrow (a \in A \land b \in B)$  
 
 
 
