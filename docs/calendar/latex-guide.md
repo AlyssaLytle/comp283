@@ -7,9 +7,10 @@ contributors: Alyssa Byrnes
 # LaTeX Guide
 
 ## Basic
-* $$\neq$$ : `\neq`
-* $$\times : `times`
-* $$\frac{a}{b}$$ : `\frac{a}{b}`
+| ----------- | ----------- |
+| $$\neq$$  | `\neq` |
+| $$\times | `times`|
+| $$\frac{a}{b}$$ | `\frac{a}{b}`|
 
 ## Propositional Logic
 * $$\neg$$ : `\neg`
