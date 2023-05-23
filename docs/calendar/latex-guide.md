@@ -7,13 +7,14 @@ contributors: Alyssa Byrnes
 # LaTeX Guide
 
 ## Basic
-| $$\neq$$  | `\neq` |
+| Symbol  | Command |
 | ----------- | ----------- |
+| $$\neq$$  | `\neq` |
 | $$\times | `times`|
 | $$\frac{a}{b}$$ | `\frac{a}{b}`|
 
 ## Propositional Logic
-| $$\neg$$             | `\neg`            |
+| Symbol        | Command          |
 |----------------------|-------------------|
 | $$\neg$$             | `\neg`            |
 | $$\land$$            | `\land`           |
