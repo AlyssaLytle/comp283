@@ -13,10 +13,12 @@ contributors: Alyssa Byrnes
 | $$\frac{a}{b}$$ | `\frac{a}{b}`|
 
 ## Propositional Logic
-| $$\neg$$ | `\neg` |
-| $$\land$$ | `\land`|
-| $$\lor$$ | `\lor`|
-| $$\oplus$$ | `\oplus`|
-| $$\rightarrow$$ | `\rightarrow`|
-| $$\leftrightarrow$$ | `\leftrightarrow`|
+| $$\neg$$             | `\neg`            |
+|----------------------|-------------------|
+| $$\neg$$             | `\neg`            |
+| $$\land$$            | `\land`           |
+| $$\lor$$             | `\lor`            |
+| $$\oplus$$           | `\oplus`          |
+| $$\rightarrow$$      | `\rightarrow`     |
+| $$\leftrightarrow$$  | `\leftrightarrow` |
 
