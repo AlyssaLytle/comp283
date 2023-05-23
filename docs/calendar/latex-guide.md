@@ -14,7 +14,7 @@ contributors: Alyssa Byrnes
     </tr>
     <tr>
         <td> $$\times$$</td>
-        <td> <code>times</code></td>
+        <td> <code>\times</code></td>
     </tr>
     <tr>
         <td> $$\frac{a}{b}$$</td>

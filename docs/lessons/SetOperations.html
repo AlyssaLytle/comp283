@@ -220,7 +220,7 @@ the fact that <span class="math inline">\(A\)</span> is a subset of
 <h3 id="using-predicate-logic">Using Predicate Logic</h3>
 <ul>
 <li class="fragment"><span class="math inline">\(\forall A,B, ~ A
-\subseteq B \iff \forall x \in A, ~ x \in A \implies x \in
+\subseteq B \leftrightarrow \forall x \in A, ~ x \in A \rightarrow x \in
 B\)</span></li>
 <li class="fragment">Technically, we didn’t define the domains for <span
 class="math inline">\(A\)</span> and <span
@@ -250,9 +250,9 @@ class="math inline">\(B\)</span> and every element of <span
 class="math inline">\(B\)</span> is an element of <span
 class="math inline">\(A\)</span></li>
 <li class="fragment"><span class="math inline">\(\forall A,B, ~ A = B
-\iff (A \subseteq B\)</span> and <span class="math inline">\(B \subseteq
-A)\)</span>
-<!-- - $\forall A,B, ~ A = B \iff (\forall x, ~ (x \in A \iff x \in B))$ --></li>
+\leftrightarrow (A \subseteq B\)</span> and <span
+class="math inline">\(B \subseteq A)\)</span>
+<!-- - $\forall A,B, ~ A = B \leftrightarrow (\forall x, ~ (x \in A \leftrightarrow x \in B))$ --></li>
 </ul>
 </div>
 </section>
@@ -273,12 +273,12 @@ A\}\)</span></p>
 </blockquote>
 <h3 id="using-predicate-logic-2">Using Predicate Logic</h3>
 <blockquote>
-<p><span class="math inline">\(\forall a, ~ a \in \bar{A} \iff a \notin
-A\)</span></p>
+<p><span class="math inline">\(\forall a, ~ a \in \bar{A}
+\leftrightarrow a \notin A\)</span></p>
 </blockquote>
 <blockquote>
 <p>or, equivalently, <span class="math inline">\(\forall a \in U, ~ a
-\notin \bar{A} \iff a \in A\)</span></p>
+\notin \bar{A} \leftrightarrow a \in A\)</span></p>
 </blockquote>
 </div>
 </section>
@@ -298,8 +298,8 @@ B \}\)</span></p>
 </blockquote>
 <h3 id="using-predicate-logic-3">Using Predicate Logic</h3>
 <blockquote>
-<p><span class="math inline">\(\forall A, B, x, ~ x \in A \cap B \iff (x
-\in A \land x \in B)\)</span></p>
+<p><span class="math inline">\(\forall A, B, x, ~ x \in A \cap B
+\leftrightarrow (x \in A \land x \in B)\)</span></p>
 </blockquote>
 </div>
 </section>
@@ -319,8 +319,8 @@ B \}\)</span></p>
 </blockquote>
 <h3 id="using-predicate-logic-4">Using Predicate Logic</h3>
 <blockquote>
-<p><span class="math inline">\(\forall A, B, x, ~ x \in A \cup B \iff (x
-\in A \lor x \in B)\)</span></p>
+<p><span class="math inline">\(\forall A, B, x, ~ x \in A \cup B
+\leftrightarrow (x \in A \lor x \in B)\)</span></p>
 </blockquote>
 </div>
 </section>
@@ -343,7 +343,7 @@ A \land x \notin B \}\)</span></p>
 <h3 id="using-predicate-logic-5">Using Predicate Logic</h3>
 <blockquote>
 <p><span class="math inline">\(\forall A, B, x, ~ x \in A \backslash B
-\iff x \in A \land x \notin B\)</span></p>
+\leftrightarrow x \in A \land x \notin B\)</span></p>
 </blockquote>
 </div>
 </section>
@@ -383,8 +383,8 @@ and <span class="math inline">\(e = \heartsuit\)</span>.</p>
 </blockquote>
 <h3 id="using-predicate-logic-6">Using Predicate Logic</h3>
 <blockquote>
-<p><span class="math inline">\(\forall A,B,x, ~ x \in A \oplus B \iff x
-\in A \oplus x \in B\)</span></p>
+<p><span class="math inline">\(\forall A,B,x, ~ x \in A \oplus B
+\leftrightarrow x \in A \oplus x \in B\)</span></p>
 </blockquote>
 </div>
 </section>
@@ -396,14 +396,14 @@ and <span class="math inline">\(e = \heartsuit\)</span>.</p>
 <p><span class="math inline">\(\forall A,B,\)</span> <span
 class="math inline">\(A\)</span> and <span
 class="math inline">\(B\)</span> are disjoint <span
-class="math inline">\(\iff A \cap B = \emptyset\)</span></p>
+class="math inline">\(\leftrightarrow A \cap B = \emptyset\)</span></p>
 </blockquote>
 <blockquote>
 <p><span class="math inline">\(\forall A,B,\)</span> <span
 class="math inline">\(A\)</span> and <span
 class="math inline">\(B\)</span> are disjoint <span
-class="math inline">\(\iff \forall x,~ (x \in B \implies x \notin A)
-\land (x \in A \implies x \notin B)\)</span></p>
+class="math inline">\(\leftrightarrow \forall x,~ (x \in B \rightarrow x
+\notin A) \land (x \in A \rightarrow x \notin B)\)</span></p>
 </blockquote>
 </div>
 </section>
@@ -423,8 +423,8 @@ class="math inline">\(B\)</span> share elements, then <span
 class="math inline">\(A \uplus B = ERROR\)</span></p>
 <h3 id="using-predicate-logic-7">Using Predicate Logic</h3>
 <blockquote>
-<p><span class="math inline">\(\forall A,B,~ A \uplus B = A \cup B \iff
-A \cap B = \emptyset\)</span></p>
+<p><span class="math inline">\(\forall A,B,~ A \uplus B = A \cup B
+\leftrightarrow A \cap B = \emptyset\)</span></p>
 </blockquote>
 </div>
 </section>
@@ -445,7 +445,7 @@ A\)</span>, <span class="math inline">\(\forall b \in B\}\)</span></p>
 <h3 id="using-predicate-logic-8">Using Predicate Logic</h3>
 <blockquote>
 <p><span class="math inline">\(\forall A,B, a,b, ~ ((a,b) \in A \times
-B) \iff (a \in A \land b \in B)\)</span></p>
+B) \leftrightarrow (a \in A \land b \in B)\)</span></p>
 </blockquote>
 </div>
 </section>

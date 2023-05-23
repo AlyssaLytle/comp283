@@ -1,6 +1,6 @@
 ## Basic
 $$\neq$$ ,`\neq` 
-$$\times$$,`times`
+$$\times$$,`\times`
 $$\frac{a}{b}$$,`\frac{a}{b}`
 ## Propositional Logic
 $$\neg$$,`\neg`
@@ -16,7 +16,7 @@ $$\subset$$,`\subset`
 $$\cup$$,`\cup`
 $$\cap$$,`\cap`
 $$\times$$,`\times`
-$$\emptyset$$ (Empty set),`\empty`
+$$\emptyset$$,`\empty`
 $$A \backslash B$$,`A \backslash B`
 $$\oplus$$,`\oplus`
 $$\uplus$$,`\uplus`
