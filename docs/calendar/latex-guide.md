@@ -3,49 +3,56 @@ layout: default
 title: LaTeX Guide
 contributors: Alyssa Byrnes
 ---
-
-# LaTeX Guide
-
-<table style="width:100%">
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
+<table>    <tr>
+        <td> ## Basic
+</td>
+    </tr>
+    <tr>
+        <td> $$\neq$$ </td>
+        <td> `\neq` 
+</td>
+    </tr>
+    <tr>
+        <td> $$\times</td>
+        <td> `times`
+</td>
+    </tr>
+    <tr>
+        <td> $$\frac{a}{b}$$</td>
+        <td> `\frac{a}{b}`
+</td>
+    </tr>
+    <tr>
+        <td> ## Propositional Logic
+</td>
+    </tr>
+    <tr>
+        <td> $$\neg$$</td>
+        <td> `\neg`
+</td>
+    </tr>
+    <tr>
+        <td> $$\land$$</td>
+        <td> `\land`
+</td>
+    </tr>
+    <tr>
+        <td> $$\lor$$</td>
+        <td> `\lor`
+</td>
+    </tr>
+    <tr>
+        <td> $$\oplus$$</td>
+        <td> `\oplus`
+</td>
+    </tr>
+    <tr>
+        <td> $$\rightarrow$$</td>
+        <td> `\rightarrow`
+</td>
+    </tr>
+    <tr>
+        <td> $$\leftrightarrow$$</td>
+        <td> `\leftrightarrow`</td>
+    </tr>
 </table>
-
-## Basic
-<table>
-<tr>
-<td>Symbol</td>
-<td>Command</td>
-</tr>
-<tr>
-<td>$\neq$</td>
-<td>`\neq`</td>
-</tr>
-</table>
-
-| $$\neq$$  | `\neq` |
-| $$\times | `times`|
-| $$\frac{a}{b}$$ | `\frac{a}{b}`|
-## Propositional Logic
-| Symbol        | Command          |
-|----------------------|-------------------|
-| $$\neg$$             | `\neg`            |
-| $$\land$$            | `\land`           |
-| $$\lor$$             | `\lor`            |
-| $$\oplus$$           | `\oplus`          |
-| $$\rightarrow$$      | `\rightarrow`     |
-| $$\leftrightarrow$$  | `\leftrightarrow` |
-
