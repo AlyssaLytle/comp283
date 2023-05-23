@@ -9,3 +9,20 @@ $$\lor$$,`\lor`
 $$\oplus$$,`\oplus`
 $$\rightarrow$$,`\rightarrow`
 $$\leftrightarrow$$,`\leftrightarrow`
+## Sets
+$$\in$$,`\in`
+$$\subseteq$$,`\subseteq`
+$$\subset$$,`\subset`
+$$\cup$$,`\cup`
+$$\cap$$,`\cap`
+$$\times$$,`\times`
+$$\empty$$ (Empty set),`\empty`
+$$A \backslash B$$,`A \backslash B`
+$$\oplus$$,`\oplus`
+$$\uplus$$,`\uplus`
+$$\mathscr{P}(A)$$,`\mathscr{P}(A)`
+## Counting
+$${A \choose k}$$,`{A \choose k}`
+## Quantifiers
+$$\forall$$,`\forall`
+$$\exists$$,`\exists`
