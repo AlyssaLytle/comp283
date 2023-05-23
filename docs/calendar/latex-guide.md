@@ -31,7 +31,7 @@ contributors: Alyssa Byrnes
 <td>Command</td>
 </tr>
 <tr>
-<td>$$\neq$$</td>
+<td>$\neq$</td>
 <td>`\neq`</td>
 </tr>
 </table>
