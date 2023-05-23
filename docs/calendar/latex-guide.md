@@ -7,16 +7,16 @@ contributors: Alyssa Byrnes
 # LaTeX Guide
 
 ## Basic
-| ----------- | ----------- |
 | $$\neq$$  | `\neq` |
+| ----------- | ----------- |
 | $$\times | `times`|
 | $$\frac{a}{b}$$ | `\frac{a}{b}`|
 
 ## Propositional Logic
-* $$\neg$$ : `\neg`
-* $$\land$$ : `\land`
-* $$\lor$$ : `\lor`
-* $$\oplus$$ : `\oplus`
-* $$\rightarrow$$ : `\rightarrow`
-* $$\leftrightarrow$$ : `\leftrightarrow`
+| $$\neg$$ | `\neg` |
+| $$\land$$ | `\land`|
+| $$\lor$$ | `\lor`|
+| $$\oplus$$ | `\oplus`|
+| $$\rightarrow$$ | `\rightarrow`|
+| $$\leftrightarrow$$ | `\leftrightarrow`|
 
