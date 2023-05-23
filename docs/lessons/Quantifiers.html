@@ -159,7 +159,7 @@ class="math inline">\(x\)</span>.” <br><br> We can combine these to
 write the statement “If it did not rain in the morning on day <span
 class="math inline">\(x\)</span>, then I walked to campus on day <span
 class="math inline">\(x\)</span>” as <span class="math inline">\(\neg
-p(x) \implies q(x)\)</span> </p>
+p(x) \rightarrow q(x)\)</span> </p>
 </blockquote>
 </div>
 </section>
@@ -174,12 +174,12 @@ on Mondays, Wednesdays, and Fridays. <br></li>
 <li class="fragment">How can we say this using what we already
 learned?<br></li>
 <li class="fragment"><span class="math inline">\((\neg
-p(\)</span>Mon<span class="math inline">\() \implies q(\)</span>Mon<span
-class="math inline">\()) \land (\neg p(\)</span>Wed<span
-class="math inline">\() \implies q(\)</span>Wed<span
-class="math inline">\()) \land (\neg p(\)</span>Fri<span
-class="math inline">\() \implies q(\)</span>Fri<span
-class="math inline">\())\)</span> <br></li>
+p(\)</span>Mon<span class="math inline">\() \rightarrow
+q(\)</span>Mon<span class="math inline">\()) \land (\neg
+p(\)</span>Wed<span class="math inline">\() \rightarrow
+q(\)</span>Wed<span class="math inline">\()) \land (\neg
+p(\)</span>Fri<span class="math inline">\() \rightarrow
+q(\)</span>Fri<span class="math inline">\())\)</span> <br></li>
 <li class="fragment">We can also express this using set notation.
 <br></li>
 <li class="fragment">Say <span class="math inline">\(D= \{\)</span>Mon,
@@ -189,7 +189,7 @@ class="math inline">\(\sum\)</span> for a sequence of additions, we can
 use the big and <span class="math inline">\(\bigwedge\)</span> to
 represent a sequence of ands. <br></li>
 <li class="fragment"><span class="math inline">\(\bigwedge\limits_{d \in
-D} (\neg p(d) \implies q(d))\)</span></li>
+D} (\neg p(d) \rightarrow q(d))\)</span></li>
 </ul>
 </div>
 </section>
@@ -206,14 +206,14 @@ elements of a set.</p>
 \{\)</span>Mon, Wed, Fri<span class="math inline">\(\}\)</span>,</p>
 <ul>
 <li class="fragment"><span class="math inline">\((\neg p(\textrm{Mon})
-\implies q(\textrm{Mon})) \land (\neg p(\textrm{Wed}) \implies
-q(\textrm{Wed})) \land (\neg p(\textrm{Fri}) \implies
+\rightarrow q(\textrm{Mon})) \land (\neg p(\textrm{Wed}) \rightarrow
+q(\textrm{Wed})) \land (\neg p(\textrm{Fri}) \rightarrow
 q(\textrm{Fri}))\)</span></li>
 <li class="fragment"><span class="math inline">\(\equiv
-\bigwedge\limits_{d \in D} (\neg p(d) \implies q(d))\)</span></li>
+\bigwedge\limits_{d \in D} (\neg p(d) \rightarrow q(d))\)</span></li>
 <li class="fragment">There is another way we can say this.</li>
 <li class="fragment"><span class="math inline">\(\forall d \in D, (\neg
-p(d) \implies q(d))\)</span>.</li>
+p(d) \rightarrow q(d))\)</span>.</li>
 </ul>
 </div>
 </section>
@@ -234,13 +234,13 @@ class="math inline">\(d\)</span>.</li>
 <li class="fragment">This can be written using logical or, big or, or
 with the “there exists” quantifier.</li>
 <li class="fragment"><span class="math inline">\((\neg p(\textrm{Mon})
-\implies q(\textrm{Mon})) \lor (\neg p(\textrm{Wed}) \implies
-q(\textrm{Wed})) \lor (\neg p(\textrm{Fri}) \implies
+\rightarrow q(\textrm{Mon})) \lor (\neg p(\textrm{Wed}) \rightarrow
+q(\textrm{Wed})) \lor (\neg p(\textrm{Fri}) \rightarrow
 q(\textrm{Fri}))\)</span></li>
 <li class="fragment"><span class="math inline">\(\equiv
-\bigvee\limits_{d \in D} (\neg p(d) \implies q(d))\)</span></li>
+\bigvee\limits_{d \in D} (\neg p(d) \rightarrow q(d))\)</span></li>
 <li class="fragment"><span class="math inline">\(\equiv \exists d \in D,
-(\neg p(d) \implies q(d))\)</span></li>
+(\neg p(d) \rightarrow q(d))\)</span></li>
 </ul>
 </div>
 </section>
