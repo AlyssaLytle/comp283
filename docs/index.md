@@ -12,6 +12,7 @@ contributors: Alyssa Byrnes
 * Friday will be **quiz day** where you are quizzed on previously learned concepts.
 * I will be available throughout the week to answer questions on our [class social media site](https://edstem.org/).
 * Office hours: [Schedule](/calendar/office-hours.md) and [Zoom link](https://unc.zoom.us/j/97009190129) 
+* [LaTeX Guide](/calendar/latex-guide.md)
 
 ## Calendar
 * Wed, May 17: [LaTeX + Pseudocode](/calendar/latex-and-pseudocode.md)
