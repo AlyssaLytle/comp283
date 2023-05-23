@@ -3,6 +3,9 @@ layout: default
 title: LaTeX Guide
 contributors: Alyssa Byrnes
 ---
+
+# LaTeX Guide
+
 ## Basic
 <table>
     <tr>
@@ -10,7 +13,7 @@ contributors: Alyssa Byrnes
         <td> `\neq` </td>
     </tr>
     <tr>
-        <td> $$\times</td>
+        <td> $$\times$$</td>
         <td> `times`</td>
     </tr>
     <tr>
@@ -74,7 +77,7 @@ contributors: Alyssa Byrnes
         <td> `\times`</td>
     </tr>
     <tr>
-        <td> $$\empty$$ (Empty set)</td>
+        <td> $$\emptyset$$ (Empty set)</td>
         <td> `\empty`</td>
     </tr>
     <tr>
