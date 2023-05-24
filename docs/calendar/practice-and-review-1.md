@@ -18,3 +18,5 @@ For these problems, let:
 * $$S$$ be the set of all coins
 * $$C$$ be the set of coin purses (Coins go IN these)
 * Let $$p(x)$$ be a predicate:  $$\forall x \in S$$, $$p(x)$$ is True $$\leftrightarrow x$$ is a penny. 
+* Let $$e(x)$$ be a predicate:  $$\forall x \in S$$, $$e(x)$$ is True $$\leftrightarrow x$$ is a euro. 
+* Let $$IN(x,c)$$ be a predicate:  $$\forall x \in S, \forall c \in C$$, $$In(x,c)$$ is True $$\leftrightarrow$$ coin $$x$$ is in coin purse $$c$$. 
