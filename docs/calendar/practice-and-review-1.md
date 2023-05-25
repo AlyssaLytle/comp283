@@ -7,7 +7,8 @@ contributors: Alyssa Byrnes
 # Practice and Review 1
 ## Date and Time: Thursday, May 25 at 9:30 am
 * [Zoom Link](https://unc.zoom.us/j/97009190129)
-* [Recording Link *(Passcode: TBD )*]()
+* [Recording Link *(Passcode: ik@q.u7u)*](https://unc.zoom.us/rec/share/1yKpGf_V9_2wN6aBoUu-B-Rp7FDzpK0nLW5u8nT46AkTAB5R9TNIo4XSS_EVRe5I.tPeiurZOE8Bvr7k8)
+**(Zoom Crashed in the last part of the review session, so the end got cut off unfortunately. :( )**
 
 ## Problems
 
