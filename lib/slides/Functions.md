@@ -1,6 +1,20 @@
+---
+title: Functions
+theme: dracula
+center: false
+transition: 'none'
+contributors: Alyssa Byrnes
+---
+
+
+<div id="content">
+
+
+</div>
 
 
 ## Functions
+<div id="content">
 A  **function**  $f$ is a relation on $A$ and $B$ that maps
 each $a$ from  $A$ 
 to exactly one element $b=f(a)$ from $B$. 
@@ -21,7 +35,12 @@ b_1}) \bigr)$ <br />
 This is saying that if we find a $b_2$ such that $f(a)=b_2$, then $b_1 = b_2$ 
 (aka $f(a)$ can only have one result)
 
+
+</div>
+
+
 ## Some Things to Note...
+<div id="content">
 
 - A function is a relation $f \subseteq A \times B$, 
 which we can write as $f: A \to B$ <br /> This can be said as "$f$ maps $A$ to $B$"
@@ -33,7 +52,12 @@ which we can write as $f: A \to B$ <br /> This can be said as "$f$ maps $A$ to $
 
 - $A$ is called the **domain** and $B$ is the **range**.
 
+
+</div>
+
+
 ## Composition
+<div id="content">
 
 For, $f: A \to B$ and $g: B \to C$, 
 
@@ -44,6 +68,10 @@ which can also be written as $h(a) = g(f(a))$
 Note that the output of $f$ has to be in the same set as the input for $g$! 
 
 We will demonstrate this with an example...
+
+
+</div>
+
 
 ## Composition Example
 
@@ -67,7 +95,9 @@ $f(0) = 0$, and $0 \notin \mathbb{Z}^{+}$, so you can't compute $g(f(0))$
 
 
 
+
 ## Applying Functions to Tuples
+<div id="content">
 
 We can apply functions to tuples. 
 
@@ -77,7 +107,12 @@ $$ f(x,y) = \sqrt{x^2 + y^2}$$
 
 Note that $f: \mathbb{R} \times \mathbb{R} \to \mathbb{R}$
 
+
+</div>
+
+
 ## Applying Functions to Sets
+<div id="content">
 
 We can also apply functions to sets.
 
@@ -93,7 +128,12 @@ $$f^{-1}(Y) = \{ x \in X | f(x) \in Y \}$$
 
 This is called the *pre-image* of $Y$ under $f$.
 
+
+</div>
+
+
 ## Applying Functions to Sets - Example
+<div id="content">
 
 <img src="https://i.imgur.com/c7xFWjN.png" width="450"/>
 
@@ -103,7 +143,12 @@ This is called the *pre-image* of $Y$ under $f$.
 
 - $f^{-1}(\{g,k\}) = \{\}$
 
+
+</div>
+
+
 ## Thinking about square roots...
+<div id="content">
 
 Reminder: A  function  $f$ is a relation on $A$ and $B$ that maps
 each $a$ from  $A$ 
@@ -125,7 +170,12 @@ So, is $f(x) = \sqrt{x}$ a function?
 
     - Yes!
 
+
+</div>
+
+
 ## Conditions to be a function
+<div id="content">
 Say if $f$ is a relation on $A$ and $B$,
 
 $f(x)$ is a function iff
@@ -137,7 +187,12 @@ $f(x)$ is a function iff
 1.  For every $x \in A$, there exists *only one* $f(x) \in B$
 
 
+
+</div>
+
+
 ## Common Function: Minimum
+<div id="content">
 
  **Minimum**: The element in a set with the lowest value.
 
@@ -159,7 +214,12 @@ Note that if we can't explicitly define an $x$, then the minimum is undefined.
 
     - It's undefined.
     
+
+</div>
+
+
 ## Demonstrating Minimum
+<div id="content">
 
 Say we want to write code that checks if an element $x$ is the minimum element in set $A$.
 
@@ -167,7 +227,12 @@ First in English, let's write down what we want it to do:
 
 Check each element $y$ in $A$ and see if $x \leq y$. If this is true for all $y$, then return True. If there is one $y$ where this is not true, return False. $\leftarrow$ (On assignments, when I tell you "explain to me in English how you would demonstrate this", this is what I mean!)
 
+
+</div>
+
+
 ## Demonstrating Minimum
+<div id="content">
 
 Say we want to write code that checks if an element $x$ is the minimum element in set $A$.
 
@@ -188,7 +253,12 @@ For line $7$, we only need to find one instance of y such that y<x to disprove t
 
 If we've made it to line $8$, we've exited the for loop. This means we've checked every element in $A$, and none returned "False", so we can return "True"
 
+
+</div>
+
+
 ## Common Function: Argmin
+<div id="content">
 
 **Argmin**: the index of the minimum element in tuple A. (If the minimum element appears twice, use the index of where it appears first.)
 
@@ -206,7 +276,12 @@ What is $\textrm{argmin}(A)$?
 
 - $2$ because $A[2]$ is the smallest element in $A$.
 
+
+</div>
+
+
 ## Common Function: Iverson Bracket
+<div id="content">
 
  **Iverson Bracket**: A proposition (usually in the form of a mathematical expression) in brackets, like $[p]$ that evaluates to $1$ if $p$ is True and $0$ if $p$ is False.
 
@@ -217,7 +292,12 @@ $[x>2] = \begin{cases}
       1 & x > 2 
    \end{cases}$
 
+
+</div>
+
+
 ## Common Function: Signum
+<div id="content">
 **signum**: returns the sign of a number
 
 $sgn(x) = \begin{cases}
@@ -226,7 +306,12 @@ $sgn(x) = \begin{cases}
     1 & x>0
     \end{cases}$
     
+
+</div>
+
+
 ## Common Function: Absolute Value
+<div id="content">
 
 **absolute value**: changes the sign of a value if the value is negative.
 
@@ -238,7 +323,12 @@ Can we define this using signum?
 
 - Yes! $|x| = sgn(x) \cdot x$
 
+
+</div>
+
+
 ## Example: Proof by Cases
+<div id="content">
 
 WTS: $|x| = sgn(x) \cdot x$
 
@@ -256,7 +346,12 @@ There are three cases: $x>0$, $x = 0$, $x<0$
 
     - $sgn(x) \cdot x  = -1 \cdot x = -x$ and $|x| = -x$, so $|x| = sgn(x) \cdot x$
 
+
+</div>
+
+
 ## Types of Functions
+<div id="content">
 Recall...
 
 A  **function**  $f$ is a relation on $A$ and $B$ that maps each $a$ from  $A$ 
@@ -268,7 +363,12 @@ b_1}) \bigr).$
 
 Actually, the full term for this definition is a **total function**.
 
+
+</div>
+
+
 ## Types of Functions
+<div id="content">
 Recall...
 
 A  **function**  $f$ is a relation on $A$ and $B$ that maps each $a$ from  $A$ 
@@ -294,7 +394,12 @@ In other words, If $x \in A$, $f(x)$ doesn't *necessarily* evaluate.
 >A common example of this is a computer program that only accepts certain inputs, and returns ERROR (or crashes) if it's not an acceptable input.
 
 
+
+</div>
+
+
 ## Types of Functions: Injection
+<div id="content">
 
 A function $f: A \to B$ is an **injection** iff each element of $B$ is hit by at most one element in $A$.
 
@@ -308,7 +413,12 @@ This logical definition inspires the other term for an injection which is **one-
 
 This term doesn't quite capture the full meaning though because, by definition, all functions map one input to one output. 
 
+
+</div>
+
+
 ## Types of Functions: surjection
+<div id="content">
 
 A function $f: A\to B$ is a **surjection**,
 or  **onto**, if and only if every element of $B$ is hit by at least one element in $A$.
@@ -318,7 +428,12 @@ $\forall y \in B ~ \exists x \in A, ~   f(x)=y$.
 In other words, $f(A)=B$. 
 
 
+
+</div>
+
+
 ## Types of Functions: bijection
+<div id="content">
 A function $f: A\to B$ is a **bijection**
 if and only if it is an injection and a surjection.
 
@@ -326,7 +441,12 @@ $\forall b\in B, ~  \exists a_1 \in A, ~  \bigl(f(a_1)=b
 \bigr)\land \bigl(\forall_{a_2\in A}\  ({f(a_2)= b}) \implies ({a_2 =
 a_1}) \bigr).$
 
+
+</div>
+
+
 ## Showing a Function is a Bijection
+<div id="content">
 
 We are going to demonstrate how to prove a function is a bijection. We are also going to demonstrate how we can use what we've learned to prove other things!
 
@@ -350,12 +470,22 @@ We are going to demonstrate how to prove a function is a bijection. We are also 
 
 - > Use the fact that $f(f(a)) = a$ to simplify: $x_1 = x_2$
 
+
+</div>
+
+
 ## Pigeonhole Principle
+<div id="content">
 <img src="http://2.bp.blogspot.com/-QEkXJPPdp04/U35B0uOl38I/AAAAAAAACDk/NqGdEWt5T3A/s1600/pigeonhole-principle1.gif" width="400"/>
 
 The pigeonhole principle states: You can not fit $n+1$ pigeons into $n$ holes without having two pigeons share a hole.
 
+
+</div>
+
+
 ## Pigeonhole Principle
+<div id="content">
 Bringing it back to functions...
 
 <img src="https://i.imgur.com/GizItRg.png"  width="400"/>
@@ -363,14 +493,24 @@ Bringing it back to functions...
 If you are mapping $f: A \to B$ and $|A|>|B|$, then there is no way to map from every element in $A$ without two of them hitting the same element in $B$. 
 
 
+
+</div>
+
+
 ## How we can use it...
+<div id="content">
 
 An airport with 1,500 landings a day must be able to accommodate
 two planes landing in the same minute.
 
 >- Why? There are $1440$ minutes in a day so, by the pigeonhole principle, if there are greater than $1440$ planes coming in, some planes will have to land in the same minute.
 
+
+</div>
+
+
 ## How we can use it...
+<div id="content">
 
 In a class of $35$ students, if a majority are women and a majority are
 majoring in computer science, then at least one is both.
@@ -396,7 +536,12 @@ majoring in computer science, then at least one is both.
 - $|M \cup W| = 36$ and $|S| = 35$, but $|M \cup W| \leq |S|$. $\rightarrow \leftarrow$
 
 
+
+</div>
+
+
 ## Applying Pigeonhole Principle to Functions
+<div id="content">
 
 - Recall: If you are mapping $f: A \to B$ and $|A|>|B|$, then there is no way to map from every element in $A$ without two of them hitting the same element in $B$. 
 
@@ -410,7 +555,12 @@ majoring in computer science, then at least one is both.
 
 - From this follows: $f: A \to B$ is a bijection $\iff |A| = |B|$ 
 
+
+</div>
+
+
 ## Implications of Pigeonhole Principle
+<div id="content">
 
 - $f: A \to B$ is a bijection $\iff |A| = |B|$
 
@@ -427,7 +577,12 @@ $|\mathbb{N}| = |\mathbb{Z}|$!
 
 - A set is called **countable** if it is either finite or countably infinite.
 
+
+</div>
+
+
 ## Measuring Size of Inputs
+<div id="content">
 
 - Computers have size and memory limits, so it's important that we can analyze our algorithms so that we know they are something the computer can handle.
 
@@ -446,5 +601,9 @@ $|\mathbb{N}| = |\mathbb{Z}|$!
 - $f \in \Theta(g(n)) \iff \exists c_L, c_H \in \mathbb{R}^{+}, \exists N \in \mathbb{N}, \forall n < N, 0 \leq c_L \cdot g(n) \leq f(n) \leq c_H \cdot g(n)$ 
 
 
+
+
+
+</div>
 
 

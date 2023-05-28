@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Functions</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    /* .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    } */
+
+    #left {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:45%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #left14 {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:30%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #right34 {
+      left:50%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:60%;
+      font-size: 65%;
+    }
+    
+    #right {
+      left:31.25%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:45%;
+      font-size: 75%;
+    }
+
+    #text {
+      font-size: 75%;
+    }
+
+    #content {
+      font-size: 75%;
+    }
+
+    #smalltext {
+      font-size: 40%;
+    }
+
+    #medtext {
+      font-size: 60%;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Functions</h1>
+</section>
+
+<section class="slide level2">
+
+<div id="content">
+
+</div>
+</section>
+<section id="functions" class="slide level2">
+<h2>Functions</h2>
+<div id="content">
+<p>A <strong>function</strong> <span class="math inline">\(f\)</span> is
+a relation on <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> that maps each <span
+class="math inline">\(a\)</span> from <span
+class="math inline">\(A\)</span> to exactly one element <span
+class="math inline">\(b=f(a)\)</span> from <span
+class="math inline">\(B\)</span>.</p>
+<p>Relation <span class="math inline">\(f\subseteq A\times B\)</span> is
+a function iff<br />
+<span class="math display">\[\forall a\in A\  \exists b_1\in
+B\  \bigl((a,b_1)\in f
+\bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \implies {b_2 =
+b_1}) \bigr).\]</span></p>
+<p>Let’s break this down…</p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(\forall a\in
+A\  \exists b_1\in B\  \bigl((a,b_1)\in f \bigr)\)</span> <br /> This is
+saying that for all <span class="math inline">\(a\)</span>, there exists
+<span class="math inline">\(b_1\)</span> such that <span
+class="math inline">\(f(a)=b_1\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\bigl(\forall b_2\in
+B\  ({(a,b_2)\in f} \implies {b_2 = b_1}) \bigr)\)</span> <br /> This is
+saying that if we find a <span class="math inline">\(b_2\)</span> such
+that <span class="math inline">\(f(a)=b_2\)</span>, then <span
+class="math inline">\(b_1 = b_2\)</span> (aka <span
+class="math inline">\(f(a)\)</span> can only have one result)</p></li>
+</ul>
+</div>
+</section>
+<section id="some-things-to-note" class="slide level2">
+<h2>Some Things to Note…</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p>A function is a relation <span
+class="math inline">\(f \subseteq A \times B\)</span>, which we can
+write as <span class="math inline">\(f: A \to B\)</span> <br /> This can
+be said as “<span class="math inline">\(f\)</span> maps <span
+class="math inline">\(A\)</span> to <span
+class="math inline">\(B\)</span>”</p></li>
+<li class="fragment"><p>Using notation we’ve learned, <span
+class="math inline">\(\forall a\in A\ b\in B,\ \bigl((a,b)\in f \implies
+(b=f(a))\bigr)\)</span></p></li>
+<li class="fragment"><p>Writing <span
+class="math inline">\(y=f(x)\)</span> rather than <span
+class="math inline">\((x,y)\in f\)</span> makes sense if and only if
+<span class="math inline">\(x\)</span> pairs with only one <span
+class="math inline">\(y\)</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(A\)</span> is called
+the <strong>domain</strong> and <span class="math inline">\(B\)</span>
+is the <strong>range</strong>.</p></li>
+</ul>
+</div>
+</section>
+<section id="composition" class="slide level2">
+<h2>Composition</h2>
+<div id="content">
+<p>For, <span class="math inline">\(f: A \to B\)</span> and <span
+class="math inline">\(g: B \to C\)</span>,</p>
+<p><span class="math inline">\(h = g \circ f\)</span> is the
+<strong>composition</strong> of <span class="math inline">\(g\)</span>
+and <span class="math inline">\(f\)</span></p>
+<p>which can also be written as <span class="math inline">\(h(a) =
+g(f(a))\)</span></p>
+<p>Note that the output of <span class="math inline">\(f\)</span> has to
+be in the same set as the input for <span
+class="math inline">\(g\)</span>!</p>
+<p>We will demonstrate this with an example…</p>
+</div>
+</section>
+<section id="composition-example" class="slide level2">
+<h2>Composition Example</h2>
+<p><span class="math inline">\(f(x) = x\)</span> and <span
+class="math inline">\(g(x) = \frac{1}{x}\)</span></p>
+<p>Say we define both the <em>domain</em> and <em>range</em> of <span
+class="math inline">\(f\)</span> as the integers, <span
+class="math inline">\(\mathbb{Z}\)</span>, so <span
+class="math inline">\(f: \mathbb{Z} \to \mathbb{Z}\)</span></p>
+<p>And we define the <em>domain</em> of <span
+class="math inline">\(g\)</span> to be <span
+class="math inline">\(\mathbb{Z}^{+}\)</span> (aka the positive
+integers)</p>
+<p>(Note the domain can’t be <span
+class="math inline">\(\mathbb{Z}\)</span> because <span
+class="math inline">\(0 \in \mathbb{Z}\)</span>, and you can’t divide by
+zero!)</p>
+<p>And we can define the <em>range</em> of <em>g</em> as the rational
+numbers, <span class="math inline">\(\mathbb{Q}\)</span>, because it
+returns a fraction</p>
+<p>so <span class="math inline">\(g: \mathbb{Z}^{+} \to
+\mathbb{Q}\)</span></p>
+<p>Can you make a composition <span class="math inline">\(h = g \circ
+f\)</span>?</p>
+<ul>
+<li class="fragment">No, because <span class="math inline">\(f\)</span>
+could return something that can’t be input into <span
+class="math inline">\(g\)</span> <br /> For example, <br /> <span
+class="math inline">\(f(0) = 0\)</span>, and <span
+class="math inline">\(0 \notin \mathbb{Z}^{+}\)</span>, so you can’t
+compute <span class="math inline">\(g(f(0))\)</span></li>
+</ul>
+</section>
+<section id="applying-functions-to-tuples" class="slide level2">
+<h2>Applying Functions to Tuples</h2>
+<div id="content">
+<p>We can apply functions to tuples.</p>
+<p>A common example is the Pythagorean Theorem.</p>
+<p><span class="math display">\[ f(x,y) = \sqrt{x^2 + y^2}\]</span></p>
+<p>Note that <span class="math inline">\(f: \mathbb{R} \times \mathbb{R}
+\to \mathbb{R}\)</span></p>
+</div>
+</section>
+<section id="applying-functions-to-sets" class="slide level2">
+<h2>Applying Functions to Sets</h2>
+<div id="content">
+<p>We can also apply functions to sets.</p>
+<p>Say that we have <span class="math inline">\(f: X \to Y\)</span></p>
+<p><span class="math display">\[f(X) = \{f(x) | x \in X \}\]</span></p>
+<p>This is called the <em>image</em> of <span
+class="math inline">\(X\)</span> under <span
+class="math inline">\(f\)</span>.</p>
+<p>We can also say,</p>
+<p><span class="math display">\[f^{-1}(Y) = \{ x \in X | f(x) \in Y
+\}\]</span></p>
+<p>This is called the <em>pre-image</em> of <span
+class="math inline">\(Y\)</span> under <span
+class="math inline">\(f\)</span>.</p>
+</div>
+</section>
+<section id="applying-functions-to-sets---example" class="slide level2">
+<h2>Applying Functions to Sets - Example</h2>
+<div id="content">
+<p><img src="https://i.imgur.com/c7xFWjN.png" width="450"/></p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(f(\{a,b,c,d\}) =
+\{h, i, j\}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(f^{-1}(\{h,i,j\}) =
+\{a,b,c,d\}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(f^{-1}(\{g,k\}) =
+\{\}\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="thinking-about-square-roots" class="slide level2">
+<h2>Thinking about square roots…</h2>
+<div id="content">
+<p>Reminder: A function <span class="math inline">\(f\)</span> is a
+relation on <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> that maps each <span
+class="math inline">\(a\)</span> from <span
+class="math inline">\(A\)</span> to exactly one element <span
+class="math inline">\(b=f(a)\)</span> from <span
+class="math inline">\(B\)</span>.</p>
+<p>So, is <span class="math inline">\(f(x) = \sqrt{x}\)</span> a
+function?</p>
+<ul>
+<li class="fragment"><p>Answer: It depends!</p></li>
+<li class="fragment"><p>When <span class="math inline">\(A =
+\mathbb{R}\)</span> and <span class="math inline">\(B =
+\mathbb{R}\)</span>?</p>
+<ul>
+<li class="fragment">No, because <span
+class="math inline">\(f(-1)\)</span> gives an answer that’s not in the
+real numbers. (<span class="math inline">\(\sqrt{-1} \notin
+\mathbb{R}\)</span>)</li>
+</ul></li>
+<li class="fragment"><p>When <span class="math inline">\(A =
+\mathbb{R}^+\)</span> and <span class="math inline">\(B =
+\mathbb{R}\)</span>?</p>
+<ul>
+<li class="fragment">No, because <span class="math inline">\(\sqrt{4} =
+\pm 2\)</span>. A function must map an input to only one answer.</li>
+</ul></li>
+<li class="fragment"><p>When <span class="math inline">\(A =
+\mathbb{R}^+\)</span> and <span class="math inline">\(B =
+\mathbb{R}^+\)</span>?</p>
+<ul>
+<li class="fragment">Yes!</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="conditions-to-be-a-function" class="slide level2">
+<h2>Conditions to be a function</h2>
+<div id="content">
+<p>Say if <span class="math inline">\(f\)</span> is a relation on <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span>,</p>
+<p><span class="math inline">\(f(x)\)</span> is a function iff</p>
+<ol type="1">
+<li class="fragment"><p>For every <span class="math inline">\(x \in
+A\)</span>, <span class="math inline">\(f(x) \in B\)</span></p></li>
+<li class="fragment"><p>For every <span class="math inline">\(x \in
+A\)</span>, there exists <span class="math inline">\(f(x) \in
+B\)</span></p></li>
+<li class="fragment"><p>For every <span class="math inline">\(x \in
+A\)</span>, there exists <em>only one</em> <span
+class="math inline">\(f(x) \in B\)</span></p></li>
+</ol>
+</div>
+</section>
+<section id="common-function-minimum" class="slide level2">
+<h2>Common Function: Minimum</h2>
+<div id="content">
+<p><strong>Minimum</strong>: The element in a set with the lowest
+value.</p>
+<p><span class="math inline">\(x = \textrm{min}(A) \iff \forall y \in A,
+x \leq y\)</span></p>
+<p>Note that if we can’t explicitly define an <span
+class="math inline">\(x\)</span>, then the minimum is undefined.</p>
+<h3 id="example">Example</h3>
+<ul>
+<li class="fragment"><p>What is the minimum of <span
+class="math inline">\(\mathbb{Z}\)</span>?</p>
+<ul>
+<li class="fragment">It’s undefined, because the lowest element of <span
+class="math inline">\(\mathbb{Z}\)</span> can’t be explicitly
+stated.</li>
+</ul></li>
+<li class="fragment"><p>What is the minimum of <span
+class="math inline">\(\{x \mid x \in [0,10]\}\)</span>?</p>
+<ul>
+<li class="fragment"><span class="math inline">\(0\)</span></li>
+</ul></li>
+<li class="fragment"><p>What is the minimum of <span
+class="math inline">\(\{x \mid x \in (0,10)\}\)</span>?</p>
+<ul>
+<li class="fragment">It’s undefined.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="demonstrating-minimum" class="slide level2">
+<h2>Demonstrating Minimum</h2>
+<div id="content">
+<p>Say we want to write code that checks if an element <span
+class="math inline">\(x\)</span> is the minimum element in set <span
+class="math inline">\(A\)</span>.</p>
+<p>First in English, let’s write down what we want it to do:</p>
+<p>Check each element <span class="math inline">\(y\)</span> in <span
+class="math inline">\(A\)</span> and see if <span
+class="math inline">\(x \leq y\)</span>. If this is true for all <span
+class="math inline">\(y\)</span>, then return True. If there is one
+<span class="math inline">\(y\)</span> where this is not true, return
+False. <span class="math inline">\(\leftarrow\)</span> (On assignments,
+when I tell you “explain to me in English how you would demonstrate
+this”, this is what I mean!)</p>
+</div>
+</section>
+<section id="demonstrating-minimum-1" class="slide level2">
+<h2>Demonstrating Minimum</h2>
+<div id="content">
+<p>Say we want to write code that checks if an element <span
+class="math inline">\(x\)</span> is the minimum element in set <span
+class="math inline">\(A\)</span>.</p>
+<p>First in English, let’s write down what we want it to do:</p>
+<p>Check each element <span class="math inline">\(y\)</span> in <span
+class="math inline">\(A\)</span> and see if <span
+class="math inline">\(x \leq y\)</span>. If this is true for all <span
+class="math inline">\(y\)</span>, then return True. If there is one
+<span class="math inline">\(y\)</span> where this is not true, return
+False. <span class="math inline">\(\leftarrow\)</span> (On assignments,
+when I tell you “explain to me in English how you would demonstrate
+this”, this is what I mean!)</p>
+<pre><code>1 check_min:
+2    input: integer x, set A
+3    
+4    #check each element in A
+5    for y in A:
+6        if y &lt; x:
+7            return False 
+8    return True </code></pre>
+<p>For line <span class="math inline">\(7\)</span>, we only need to find
+one instance of y such that y&lt;x to disprove that x is minimum, so we
+can return “False” here which exits the program</p>
+<p>If we’ve made it to line <span class="math inline">\(8\)</span>,
+we’ve exited the for loop. This means we’ve checked every element in
+<span class="math inline">\(A\)</span>, and none returned “False”, so we
+can return “True”</p>
+</div>
+</section>
+<section id="common-function-argmin" class="slide level2">
+<h2>Common Function: Argmin</h2>
+<div id="content">
+<p><strong>Argmin</strong>: the index of the minimum element in tuple A.
+(If the minimum element appears twice, use the index of where it appears
+first.)</p>
+<p>For tuple <span class="math inline">\(A =
+(a_1,a_2,\ldots,a_n)\)</span>,</p>
+<p><span class="math inline">\(\textrm{argmin}(A) = i \iff \forall j \in
+[1,\ldots,n], (a_i &lt; a_j) \lor (a_i \leq a_j \land i \leq
+j)\)</span></p>
+<h3 id="example-1">Example:</h3>
+<p><span class="math inline">\(A = [10,12,7,13]\)</span></p>
+<p><span class="math inline">\(A[0] = 10, A[1] = 12, A[2] = 7, A[3] =
+13\)</span></p>
+<p>What is <span class="math inline">\(\textrm{argmin}(A)\)</span>?</p>
+<ul>
+<li class="fragment"><span class="math inline">\(2\)</span> because
+<span class="math inline">\(A[2]\)</span> is the smallest element in
+<span class="math inline">\(A\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="common-function-iverson-bracket" class="slide level2">
+<h2>Common Function: Iverson Bracket</h2>
+<div id="content">
+<p><strong>Iverson Bracket</strong>: A proposition (usually in the form
+of a mathematical expression) in brackets, like <span
+class="math inline">\([p]\)</span> that evaluates to <span
+class="math inline">\(1\)</span> if <span
+class="math inline">\(p\)</span> is True and <span
+class="math inline">\(0\)</span> if <span
+class="math inline">\(p\)</span> is False.</p>
+<h3 id="example-2">Example:</h3>
+<p><span class="math inline">\([x&gt;2] = \begin{cases}  0 &amp; x\leq 2
+\\  1 &amp; x &gt; 2  \end{cases}\)</span></p>
+</div>
+</section>
+<section id="common-function-signum" class="slide level2">
+<h2>Common Function: Signum</h2>
+<div id="content">
+<p><strong>signum</strong>: returns the sign of a number</p>
+<p><span class="math inline">\(sgn(x) = \begin{cases}  -1 &amp;
+x&lt;0\\  0 &amp; x =0\\  1 &amp; x&gt;0  \end{cases}\)</span></p>
+</div>
+</section>
+<section id="common-function-absolute-value" class="slide level2">
+<h2>Common Function: Absolute Value</h2>
+<div id="content">
+<p><strong>absolute value</strong>: changes the sign of a value if the
+value is negative.</p>
+<p><span class="math inline">\(|x| = x\)</span></p>
+<p><span class="math inline">\(|-x| = x\)</span></p>
+<p>Can we define this using signum?</p>
+<ul>
+<li class="fragment">Yes! <span class="math inline">\(|x| = sgn(x) \cdot
+x\)</span></li>
+</ul>
+</div>
+</section>
+<section id="example-proof-by-cases" class="slide level2">
+<h2>Example: Proof by Cases</h2>
+<div id="content">
+<p>WTS: <span class="math inline">\(|x| = sgn(x) \cdot x\)</span></p>
+<p>There are three cases: <span class="math inline">\(x&gt;0\)</span>,
+<span class="math inline">\(x = 0\)</span>, <span
+class="math inline">\(x&lt;0\)</span></p>
+<ul>
+<li class="fragment"><p>Case 1: <span class="math inline">\(x &gt;
+0\)</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\(sgn(x) \cdot x = 1
+\cdot x = x\)</span> and <span class="math inline">\(|x| = x\)</span>,
+so <span class="math inline">\(|x| = sgn(x) \cdot x\)</span></li>
+</ul></li>
+<li class="fragment"><p>Case 2: <span class="math inline">\(x =
+0\)</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\(sgn(0) \cdot 0 =
+0\)</span> and <span class="math inline">\(|0| = 0\)</span>, so <span
+class="math inline">\(|x| = sgn(x) \cdot x\)</span></li>
+</ul></li>
+<li class="fragment"><p>Case 3: <span class="math inline">\(x &lt;
+0\)</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\(sgn(x) \cdot x = -1
+\cdot x = -x\)</span> and <span class="math inline">\(|x| = -x\)</span>,
+so <span class="math inline">\(|x| = sgn(x) \cdot x\)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="types-of-functions" class="slide level2">
+<h2>Types of Functions</h2>
+<div id="content">
+<p>Recall…</p>
+<p>A <strong>function</strong> <span class="math inline">\(f\)</span> is
+a relation on <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> that maps each <span
+class="math inline">\(a\)</span> from <span
+class="math inline">\(A\)</span> to exactly one element <span
+class="math inline">\(b=f(a)\)</span> from <span
+class="math inline">\(B\)</span>.</p>
+<p><span class="math inline">\(\forall a\in A\  \exists b_1\in
+B\  \bigl((a,b_1)\in f \bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in
+f} \implies {b_2 = b_1}) \bigr).\)</span></p>
+<p>Actually, the full term for this definition is a <strong>total
+function</strong>.</p>
+</div>
+</section>
+<section id="types-of-functions-1" class="slide level2">
+<h2>Types of Functions</h2>
+<div id="content">
+<p>Recall…</p>
+<p>A <strong>function</strong> <span class="math inline">\(f\)</span> is
+a relation on <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> that maps each <span
+class="math inline">\(a\)</span> from <span
+class="math inline">\(A\)</span> to exactly one element <span
+class="math inline">\(b=f(a)\)</span> from <span
+class="math inline">\(B\)</span>.</p>
+<p><span class="math inline">\(\forall a\in A\  \exists b_1\in
+B\  \bigl((a,b_1)\in f \bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in
+f} \implies {b_2 = b_1}) \bigr).\)</span></p>
+<p>Actually, the full term for this definition is a <strong>total
+function</strong>.</p>
+<p>A <strong>partial function</strong> <span
+class="math inline">\(f\)</span> is a relation on <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> that maps each <span
+class="math inline">\(a\)</span> from <span
+class="math inline">\(A\)</span> to <em>at most</em> one element <span
+class="math inline">\(b=f(a)\)</span> from <span
+class="math inline">\(B\)</span>.</p>
+<p><span class="math inline">\(\forall a\in A\  \exists b_1\in B
+\cancel{\bigl((a,b_1)\in f \bigr)\land} \bigl(\forall b_2\in B
+({(a,b_2)\in f} \implies {b_2 = b_1}) \bigr).\)</span></p>
+<p>In other words, If <span class="math inline">\(x \in A\)</span>,
+<span class="math inline">\(f(x)\)</span> doesn’t <em>necessarily</em>
+evaluate.</p>
+<h3 id="example-3">Example</h3>
+<blockquote>
+<p>A common example of this is a computer program that only accepts
+certain inputs, and returns ERROR (or crashes) if it’s not an acceptable
+input.</p>
+</blockquote>
+</div>
+</section>
+<section id="types-of-functions-injection" class="slide level2">
+<h2>Types of Functions: Injection</h2>
+<div id="content">
+<p>A function <span class="math inline">\(f: A \to B\)</span> is an
+<strong>injection</strong> iff each element of <span
+class="math inline">\(B\)</span> is hit by at most one element in <span
+class="math inline">\(A\)</span>.</p>
+<p><span class="math inline">\(\forall x_1,x_2\in A, ~
+\bigl(f(x_1)=f(x_2)\bigr) \implies (x_1=x_2).\)</span></p>
+<p>Another logically equivalent way to state this is:</p>
+<p><span class="math inline">\(\forall x_1,x_2\in A, ~
+(x_1{\neq}x_2)\implies \bigl(f(x_1){\ne}f(x_2)\bigr).\)</span></p>
+<p>This logical definition inspires the other term for an injection
+which is <strong>one-to-one</strong> because one input maps to one
+output.</p>
+<p>This term doesn’t quite capture the full meaning though because, by
+definition, all functions map one input to one output.</p>
+</div>
+</section>
+<section id="types-of-functions-surjection" class="slide level2">
+<h2>Types of Functions: surjection</h2>
+<div id="content">
+<p>A function <span class="math inline">\(f: A\to B\)</span> is a
+<strong>surjection</strong>, or <strong>onto</strong>, if and only if
+every element of <span class="math inline">\(B\)</span> is hit by at
+least one element in <span class="math inline">\(A\)</span>.</p>
+<p><span class="math inline">\(\forall y \in B ~ \exists x \in A, ~
+f(x)=y\)</span>.</p>
+<p>In other words, <span class="math inline">\(f(A)=B\)</span>.</p>
+</div>
+</section>
+<section id="types-of-functions-bijection" class="slide level2">
+<h2>Types of Functions: bijection</h2>
+<div id="content">
+<p>A function <span class="math inline">\(f: A\to B\)</span> is a
+<strong>bijection</strong> if and only if it is an injection and a
+surjection.</p>
+<p><span class="math inline">\(\forall b\in B, ~ \exists a_1 \in A, ~
+\bigl(f(a_1)=b \bigr)\land \bigl(\forall_{a_2\in A}\  ({f(a_2)= b})
+\implies ({a_2 = a_1}) \bigr).\)</span></p>
+</div>
+</section>
+<section id="showing-a-function-is-a-bijection" class="slide level2">
+<h2>Showing a Function is a Bijection</h2>
+<div id="content">
+<p>We are going to demonstrate how to prove a function is a bijection.
+We are also going to demonstrate how we can use what we’ve learned to
+prove other things!</p>
+<ul>
+<li class="fragment"><p><strong>Lemma</strong>: If <span
+class="math inline">\(f\)</span> is its own inverse, then it is a
+bijection</p></li>
+<li class="fragment"><p><span class="math inline">\(f: A \to A\)</span>
+is its own inverse means <span class="math inline">\(\forall a \in A,
+f(f(a)) = a\)</span></p></li>
+<li class="fragment"><p>WTS: <span class="math inline">\(f\)</span> is
+surjective and injective</p></li>
+<li class="fragment"><p>Surjective: <span class="math inline">\(\forall
+y \in A, \exists x \in A f(x)=y\)</span></p></li>
+<li class="fragment"><blockquote>
+<p>Let <span class="math inline">\(x = f(y), y \in A\)</span></p>
+</blockquote></li>
+<li class="fragment"><blockquote>
+<p><span class="math inline">\(f(x) = f(f(y)) = y \in A\)</span></p>
+</blockquote></li>
+<li class="fragment"><p>Injective: <span class="math inline">\(\forall
+x_1, x_2 \in A, (f(x_1) = f(x_2)) \implies x_1 = x_2\)</span></p></li>
+<li class="fragment"><blockquote>
+<p><span class="math inline">\(\forall x_1, x_2 \in A, (f(x_1) =
+f(x_2))\)</span></p>
+</blockquote></li>
+<li class="fragment"><blockquote>
+<p>Apply <span class="math inline">\(f\)</span> to both sides: <span
+class="math inline">\(f(f(x_1)) = f(f(x_2))\)</span></p>
+</blockquote></li>
+<li class="fragment"><blockquote>
+<p>Use the fact that <span class="math inline">\(f(f(a)) = a\)</span> to
+simplify: <span class="math inline">\(x_1 = x_2\)</span></p>
+</blockquote></li>
+</ul>
+</div>
+</section>
+<section id="pigeonhole-principle" class="slide level2">
+<h2>Pigeonhole Principle</h2>
+<div id="content">
+<p><img src="http://2.bp.blogspot.com/-QEkXJPPdp04/U35B0uOl38I/AAAAAAAACDk/NqGdEWt5T3A/s1600/pigeonhole-principle1.gif" width="400"/></p>
+<p>The pigeonhole principle states: You can not fit <span
+class="math inline">\(n+1\)</span> pigeons into <span
+class="math inline">\(n\)</span> holes without having two pigeons share
+a hole.</p>
+</div>
+</section>
+<section id="pigeonhole-principle-1" class="slide level2">
+<h2>Pigeonhole Principle</h2>
+<div id="content">
+<p>Bringing it back to functions…</p>
+<p><img src="https://i.imgur.com/GizItRg.png"  width="400"/></p>
+<p>If you are mapping <span class="math inline">\(f: A \to B\)</span>
+and <span class="math inline">\(|A|&gt;|B|\)</span>, then there is no
+way to map from every element in <span class="math inline">\(A\)</span>
+without two of them hitting the same element in <span
+class="math inline">\(B\)</span>.</p>
+</div>
+</section>
+<section id="how-we-can-use-it" class="slide level2">
+<h2>How we can use it…</h2>
+<div id="content">
+<p>An airport with 1,500 landings a day must be able to accommodate two
+planes landing in the same minute.</p>
+<ul>
+<li>Why? There are <span class="math inline">\(1440\)</span> minutes in
+a day so, by the pigeonhole principle, if there are greater than <span
+class="math inline">\(1440\)</span> planes coming in, some planes will
+have to land in the same minute.</li>
+</ul>
+</div>
+</section>
+<section id="how-we-can-use-it-1" class="slide level2">
+<h2>How we can use it…</h2>
+<div id="content">
+<p>In a class of <span class="math inline">\(35\)</span> students, if a
+majority are women and a majority are majoring in computer science, then
+at least one is both.</p>
+<ul>
+<li class="fragment"><p>Why? (Informal proof by contradiction. Start
+with false statement, and show that it leads to a contradiction. Aka
+show the negation is NOT true.)</p></li>
+<li class="fragment"><p>Let <span class="math inline">\(S=\)</span> set
+of all students, <span class="math inline">\(M=\)</span> set of all CS
+majors, <span class="math inline">\(W=\)</span> set of all women. <span
+class="math inline">\(M \subseteq S\)</span> and <span
+class="math inline">\(W \subseteq S\)</span>.</p></li>
+<li class="fragment"><p>“Majority are women” means <span
+class="math inline">\(|W| &gt; \frac{35}{2}\)</span> or <span
+class="math inline">\(|W| \geq 18\)</span></p></li>
+<li class="fragment"><p>“Majority are majoring in computer science”
+means <span class="math inline">\(|M| &gt; \frac{35}{2}\)</span> or
+<span class="math inline">\(|M| \geq 18\)</span></p></li>
+<li class="fragment"><p>If <span class="math inline">\(M \subseteq
+S\)</span> and <span class="math inline">\(W \subseteq S\)</span>, then
+<span class="math inline">\(M \cup W \subseteq S\)</span></p></li>
+<li class="fragment"><p>If <span class="math inline">\(M \cup W
+\subseteq S\)</span>, then <span class="math inline">\(|M \cup W| \leq
+|S|\)</span></p></li>
+<li class="fragment"><p>Negation: Assume no one is both a computer
+science major and a woman. (<span class="math inline">\(M \cap W =
+\{\}\)</span>)</p></li>
+<li class="fragment"><p>Since <span class="math inline">\(M \cap W =
+\{\}\)</span>, <span class="math inline">\(|M \cup W| = |M| + |W| \geq
+18 + 18 = 36\)</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(|M \cup W| =
+36\)</span> and <span class="math inline">\(|S| = 35\)</span>, but <span
+class="math inline">\(|M \cup W| \leq |S|\)</span>. <span
+class="math inline">\(\rightarrow \leftarrow\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="applying-pigeonhole-principle-to-functions"
+class="slide level2">
+<h2>Applying Pigeonhole Principle to Functions</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p>Recall: If you are mapping <span
+class="math inline">\(f: A \to B\)</span> and <span
+class="math inline">\(|A|&gt;|B|\)</span>, then there is no way to map
+from every element in <span class="math inline">\(A\)</span> without two
+of them hitting the same element in <span
+class="math inline">\(B\)</span>.</p></li>
+<li class="fragment"><p>Injection: each element of <span
+class="math inline">\(B\)</span> is hit by at most one element in <span
+class="math inline">\(A\)</span></p></li>
+<li class="fragment"><blockquote>
+<p>So if <span class="math inline">\(|A| &gt; |B|\)</span>, by
+definition <span class="math inline">\(f\)</span> is not an injection.
+(Aka there are too many arrows coming from <span
+class="math inline">\(A\)</span>.)</p>
+</blockquote></li>
+<li class="fragment"><p>Surjection: each element of <span
+class="math inline">\(B\)</span> is hit by at least one element in <span
+class="math inline">\(A\)</span></p></li>
+<li class="fragment"><blockquote>
+<p>So if <span class="math inline">\(|A| &lt; |B|\)</span>, by
+definition <span class="math inline">\(f\)</span> is not a surjection.
+(Aka there are not enough arrows coming from <span
+class="math inline">\(A\)</span>.)</p>
+</blockquote></li>
+<li class="fragment"><p>From this follows: <span
+class="math inline">\(f: A \to B\)</span> is a bijection <span
+class="math inline">\(\iff |A| = |B|\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="implications-of-pigeonhole-principle" class="slide level2">
+<h2>Implications of Pigeonhole Principle</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p><span class="math inline">\(f: A \to B\)</span>
+is a bijection <span class="math inline">\(\iff |A| =
+|B|\)</span></p></li>
+<li class="fragment"><p>Think about what this means if <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> are infinite sets…</p></li>
+<li class="fragment"><p>Lets <span class="math inline">\(A =
+\mathbb{N}\)</span> and <span class="math inline">\(B =
+\mathbb{Z}\)</span></p></li>
+<li class="fragment"><p>If we can show there exists a bijection <span
+class="math inline">\(f: \mathbb{N} \to \mathbb{Z}\)</span>, then <span
+class="math inline">\(|\mathbb{N}| = |\mathbb{Z}|\)</span>!</p></li>
+<li class="fragment"><p>(We can! Try it at home!)</p></li>
+<li class="fragment"><p>A set is called <strong>countably
+infinite</strong> (or denumerable) if it can be put in bijective
+correspondence with the set of natural numbers.</p></li>
+<li class="fragment"><p>A set is called <strong>countable</strong> if it
+is either finite or countably infinite.</p></li>
+</ul>
+</div>
+</section>
+<section id="measuring-size-of-inputs" class="slide level2">
+<h2>Measuring Size of Inputs</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p>Computers have size and memory limits, so it’s
+important that we can analyze our algorithms so that we know they are
+something the computer can handle.</p></li>
+<li class="fragment"><p>Commonly, we use <strong>asymptotic
+notation</strong> to describe runtime.</p></li>
+<li class="fragment"><p>“Big O”: <span class="math inline">\(O\)</span>
+is used to measure the worst case scenario of an input. (In other words,
+it is an upper bound.)</p></li>
+<li class="fragment"><p><span class="math inline">\(f \in O(g(n)) \iff
+\exists c \in \mathbb{R}^{+}, \exists N \in \mathbb{N}, \forall n &lt;
+N, 0 \leq f(n) \leq c \cdot g(n)\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\Omega\)</span> is
+used to measure the best case scenario of an input. (In other words, it
+is an lower bound.)</p></li>
+<li class="fragment"><p><span class="math inline">\(f \in \Omega(g(n))
+\iff \exists c \in \mathbb{R}^{+}, \exists N \in \mathbb{N}, \forall n
+&lt; N, 0 \leq c \cdot g(n) \leq f(n)\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\Theta\)</span> is
+used to describe a function that is both in <span
+class="math inline">\(O\)</span> and <span
+class="math inline">\(\Omega\)</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(f \in \Theta(g(n))
+\iff \exists c_L, c_H \in \mathbb{R}^{+}, \exists N \in \mathbb{N},
+\forall n &lt; N, 0 \leq c_L \cdot g(n) \leq f(n) \leq c_H \cdot
+g(n)\)</span></p></li>
+</ul>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

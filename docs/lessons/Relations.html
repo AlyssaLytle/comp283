@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Relations</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    /* .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    } */
+
+    #left {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:45%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #left14 {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:30%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #right34 {
+      left:50%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:60%;
+      font-size: 65%;
+    }
+    
+    #right {
+      left:31.25%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:45%;
+      font-size: 75%;
+    }
+
+    #text {
+      font-size: 75%;
+    }
+
+    #content {
+      font-size: 75%;
+    }
+
+    #smalltext {
+      font-size: 40%;
+    }
+
+    #medtext {
+      font-size: 60%;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Relations</h1>
+</section>
+
+<section id="relations" class="slide level2">
+<h2>Relations</h2>
+<div id="content">
+<p>A <strong>relation</strong> on two sets, <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> is a subset of pair <span
+class="math inline">\(A \times B\)</span>.</p>
+<h3 id="example-1">Example 1</h3>
+<blockquote>
+<p>Let’s look at the following relation: <br> <br> <span
+class="math inline">\(R = \{(m,n) \mid m, n \in \mathbb{Z} \land m &lt;
+n\}\)</span> <br><br> In English: “All pairs of integers <span
+class="math inline">\((m,n)\)</span> such that <span
+class="math inline">\(m&lt;n\)</span>.” <br><br> What are our two
+sets?</p>
+</blockquote>
+</div>
+</section>
+<section id="relations-1" class="slide level2">
+<h2>Relations</h2>
+<div id="content">
+<p>A <strong>relation</strong> on two sets, <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> is a subset of pair <span
+class="math inline">\(A \times B\)</span>.</p>
+<h3 id="example-1-1">Example 1</h3>
+<blockquote>
+<p>Let’s look at the following relation: <br> <br> <span
+class="math inline">\(R = \{(m,n) \mid m, n \in \mathbb{Z} \land m &lt;
+n\}\)</span> <br><br> In English: “All pairs of integers <span
+class="math inline">\((m,n)\)</span> such that <span
+class="math inline">\(m&lt;n\)</span>.” <br><br> What are our two sets?
+<br> <strong>Answer:</strong> We’re looking at the Integers! <br> In
+other words, <span class="math inline">\(A = \mathbb{Z}\)</span> and
+<span class="math inline">\(B = \mathbb{Z}\)</span> <br> so <span
+class="math inline">\(R\)</span> contains elements in <span
+class="math inline">\(\mathbb{Z} \times \mathbb{Z} =
+\mathbb{Z}^2\)</span></p>
+</blockquote>
+</div>
+</section>
+<section id="example-continued" class="slide level2">
+<h2>Example Continued</h2>
+<div id="content">
+<h3 id="example-2">Example 2</h3>
+<blockquote>
+<p>Let’s look at the following relation: <br> <span
+class="math inline">\(R = \{(m,n) \mid m, n \in \mathbb{Z} \land m &lt;
+n\}\)</span> <br> In English: “All pairs of integers <span
+class="math inline">\((m,n)\)</span> such that <span
+class="math inline">\(m&lt;n\)</span>.” <br> Is <span
+class="math inline">\((2,3) \in R\)</span>? <br></p>
+</blockquote>
+</div>
+</section>
+<section id="example-continued-1" class="slide level2">
+<h2>Example Continued</h2>
+<div id="content">
+<h3 id="example-2-1">Example 2</h3>
+<blockquote>
+<p>Let’s look at the following relation: <br> <span
+class="math inline">\(R = \{(m,n) \mid m, n \in \mathbb{Z} \land m &lt;
+n\}\)</span> <br> In English: “All pairs of integers <span
+class="math inline">\((m,n)\)</span> such that <span
+class="math inline">\(m&lt;n\)</span>.” <br> Is <span
+class="math inline">\((2,3) \in R\)</span>? <br><br> Yes! Because <span
+class="math inline">\(2 \in Z, 3 \in Z,\)</span> and <span
+class="math inline">\(2&lt;3\)</span>.</p>
+</blockquote>
+</div>
+</section>
+<section id="example-continued-2" class="slide level2">
+<h2>Example Continued</h2>
+<div id="content">
+<h3 id="example-3">Example 3</h3>
+<blockquote>
+<p>Let’s look at the following relation:<br> <span
+class="math inline">\(R = \{(m,n) \mid m, n \in \mathbb{Z} \land m &lt;
+n\}\)</span><br> In English: “All pairs of integers <span
+class="math inline">\((m,n)\)</span> such that <span
+class="math inline">\(m&lt;n\)</span>.” <br> Is <span
+class="math inline">\((3,2) \in R\)</span>?</p>
+</blockquote>
+</div>
+</section>
+<section id="example-continued-3" class="slide level2">
+<h2>Example Continued</h2>
+<div id="content">
+<h3 id="example-3-1">Example 3</h3>
+<blockquote>
+<p>Let’s look at the following relation:<br> <span
+class="math inline">\(R = \{(m,n) \mid m, n \in \mathbb{Z} \land m &lt;
+n\}\)</span><br> In English: “All pairs of integers <span
+class="math inline">\((m,n)\)</span> such that <span
+class="math inline">\(m&lt;n\)</span>.” <br> Is <span
+class="math inline">\((3,2) \in R\)</span>?<br><br> No! Because <span
+class="math inline">\(3 \cancel{&lt;} 2\)</span>.</p>
+</blockquote>
+</div>
+</section>
+<section id="other-types-of-relations" class="slide level2">
+<h2>Other Types of Relations</h2>
+<div id="content">
+<p>We can use relations to describe many types of relationships!</p>
+<h3 id="example-4">Example 4</h3>
+<ul>
+<li class="fragment">Back to our coin purse example… <br></li>
+<li class="fragment">Say <span class="math inline">\(C\)</span> is a set
+of coin purses and <span class="math inline">\(X\)</span> is a set of
+coins. <br></li>
+<li class="fragment"><span class="math inline">\(In(x,c) = True
+\iff\)</span> coin <span class="math inline">\(x\)</span> is in coin
+purse <span class="math inline">\(c\)</span>. <br></li>
+<li class="fragment">Say we want to see all coins that have a coin
+purse. We could look at the relation: <br></li>
+<li class="fragment"><span class="math inline">\(R = \{(x,c) \mid x \in
+X \land c \in C \land In(x,c) \}\)</span> <br></li>
+<li class="fragment">This would give us the pairs <span
+class="math inline">\((x,c)\)</span> of each coin <span
+class="math inline">\(x\)</span> and its corresponding coin purse <span
+class="math inline">\(c\)</span>. <br></li>
+</ul>
+</div>
+</section>
+<section id="some-considerations" class="slide level2">
+<h2>Some Considerations</h2>
+<div id="content">
+<h3 id="binary-relations">Binary Relations</h3>
+<p>Most of the relations we will talk about will be <strong>binary
+relations</strong>.</p>
+<p>This is simply a relation with tuples of size <span
+class="math inline">\(2\)</span> (e.g. <span class="math inline">\(R
+\subseteq A \times B\)</span>). However, relations can be over many sets
+(e.g. <span class="math inline">\(R \subseteq A \times B \times
+C\)</span>).</p>
+<h3 id="notation">Notation</h3>
+<p>Another way we could write about elements of relation <span
+class="math inline">\(R \subseteq A \times B\)</span> is:</p>
+<p><span class="math inline">\(\forall (x,y) \in R, x R y\)</span></p>
+</div>
+</section>
+<section id="other-ways-we-can-write-relations---graphs"
+class="slide level2">
+<h2>Other ways we can write relations - Graphs</h2>
+<div id="content">
+<p>You may see relations represented in other ways, too.</p>
+<p>You can represent relation <span class="math inline">\(R \subseteq A
+\times B\)</span> using a <strong>graph</strong> by making each element
+of <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> a dot or <em>vertex</em>, and draw an
+<strong>edge</strong> with an arrow for each <span
+class="math inline">\((a,b) \in R\)</span>.</p>
+</div>
+<div id="left">
+<h3 id="example---flow-charts">Example - Flow Charts</h3>
+<blockquote>
+<p>Flowcharts are relations of the form:</p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(R = \{(m,n) \mid\)</span> “do <span
+class="math inline">\(m\)</span> before <span
+class="math inline">\(n\)</span>” <span
+class="math inline">\(\}\)</span></p>
+</blockquote>
+</div>
+<div id="right">
+<p><img src="https://i.imgur.com/PiEWWky.png" width="400"/></p>
+</div>
+</section>
+<section id="other-ways-we-can-write-relations---tf-matrix"
+class="slide level2">
+<h2>Other ways we can write relations - T/F Matrix</h2>
+<div id="content">
+<p>You can represent relation <span class="math inline">\(R \subseteq A
+\times B\)</span> as a <span class="math inline">\(|A| \times
+|B|\)</span> matrix <span class="math inline">\(M\)</span>.</p>
+<p>If <span class="math inline">\((a,b) \in R\)</span>, then on the
+matrix <span class="math inline">\(M[a,b] = T\)</span>, otherwise <span
+class="math inline">\(M[a,b] = F\)</span>.</p>
+</div>
+<div id="left">
+<h3 id="example---equality">Example - Equality</h3>
+<p><span class="math inline">\(R = \{(x,y) \in [1,2,3,4] \mid x = y
+\}\)</span></p>
+</div>
+<div id="right">
+<p><img src="https://i.imgur.com/Ofg8ewV.png" width="400"/></p>
+</div>
+</section>
+<section id="complement-and-inverse" class="slide level2">
+<h2>Complement and Inverse</h2>
+<div id="content">
+<p>Every relations <span class="math inline">\(R \subseteq A \times
+B\)</span> has a <strong>complement</strong> and an
+<strong>inverse</strong>.</p>
+<h3 id="complement-definition">Complement Definition</h3>
+<p>The <em>complement</em> of <span class="math inline">\(R\)</span>,
+denoted <span class="math inline">\(\bar{R}\)</span>, consists of all
+pairs from <span class="math inline">\(A \times B\)</span> that are not
+in R.</p>
+<p><span class="math inline">\(\bar{R} = \{ (x,y) \mid x \in A \land y
+\in B \land (x,y) \notin R \}\)</span></p>
+<h3 id="inverse-definition">Inverse Definition</h3>
+<p>The <em>inverse</em> of <span class="math inline">\(R\)</span>,
+denoted <span class="math inline">\(R^{-1}\)</span>, is obtained by
+simply swapping the order of every pair.</p>
+<p><span class="math inline">\(R^{-1} = \{ (y,x) \mid (x,y) \in
+R\}\)</span></p>
+</div>
+</section>
+<section id="complement-and-inverse-example" class="slide level2">
+<h2>Complement and Inverse Example</h2>
+<div id="content">
+<ul>
+<li class="fragment">Let <span class="math inline">\(P\)</span> be a
+group of coworkers:</li>
+<li class="fragment"><span class="math inline">\(P = \{Alice, Bob, Chris
+\}\)</span></li>
+<li class="fragment">Say Alice sends an email to everyone else. Say
+Chris replies to her email.</li>
+<li class="fragment"><span class="math inline">\(R = \{ (a,b) \mid a,b
+\in P \land a \textrm{ sent an email to } b \}\)</span></li>
+<li class="fragment">So, <span class="math inline">\(R = \{(Alice, Bob),
+(Alice, Chris), (Chris, Alice) \}\)</span></li>
+<li class="fragment">The complement, <span
+class="math inline">\(\bar{R}\)</span>, is the set <span
+class="math inline">\((a,b)\)</span> where <span
+class="math inline">\(a\)</span> did not send an email to <span
+class="math inline">\(b\)</span>.</li>
+<li class="fragment"><span class="math inline">\(\bar{R} = \{(Bob,
+Alice), (Bob, Chris), (Chris, Bob) \}\)</span></li>
+<li class="fragment">The inverse, <span
+class="math inline">\(R^{-1}\)</span>, is the set of <span
+class="math inline">\((b,a)\)</span> where <span
+class="math inline">\(b\)</span> received an email from <span
+class="math inline">\(a\)</span>.</li>
+<li class="fragment"><span class="math inline">\(R^{-1} = \{(Bob,Alice),
+(Chris, Alice), (Alice, Chris)\}\)</span></li>
+</ul>
+</div>
+</section>
+<section id="binary-relations-over-a-single-set" class="slide level2">
+<h2>Binary Relations over a Single Set</h2>
+<div id="content">
+<p>We are going to discuss some properties of binary relation <span
+class="math inline">\(R \subseteq A \times A\)</span></p>
+</div>
+</section>
+<section id="reflexive-relations" class="slide level2">
+<h2>Reflexive Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R \subseteq A \times A\)</span></p>
+<p><span class="math inline">\(R\)</span> is <strong>reflexive</strong>
+iff <span class="math inline">\(\forall x \in A, x R x\)</span>.</p>
+<p>Another way to say this is <span class="math inline">\(\forall x \in
+A, (x R x)\)</span> holds.</p>
+<h3 id="example">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span> <br> Is this reflexive?</p>
+</blockquote>
+</div>
+</section>
+<section id="reflexive-relations-1" class="slide level2">
+<h2>Reflexive Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R \subseteq A \times A\)</span></p>
+<p><span class="math inline">\(R\)</span> is <strong>reflexive</strong>
+iff <span class="math inline">\(\forall x \in A, x R x\)</span>.</p>
+<p>Another way to say this is <span class="math inline">\(\forall x \in
+A, (x R x)\)</span> holds.</p>
+<h3 id="example-5">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span><br> Is this reflexive? <br> Yes!
+Because every integer equals itself! (<span
+class="math inline">\(x=x\)</span>)</p>
+</blockquote>
+</div>
+</section>
+<section id="reflexive-relations-2" class="slide level2">
+<h2>Reflexive Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R \subseteq A \times A\)</span></p>
+<p><span class="math inline">\(R\)</span> is <strong>reflexive</strong>
+iff <span class="math inline">\(\forall x \in A, x R x\)</span>.</p>
+<p>Another way to say this is <span class="math inline">\(\forall x \in
+A, (x R x)\)</span> holds.</p>
+<h3 id="example-6">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span><br> Is this reflexive? <br> Yes!
+Because every integer equals itself! (<span
+class="math inline">\(x=x\)</span>) <br> <span
+class="math inline">\(R_{\textrm{nequal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x \neq y \}\)</span> <br> Is this reflexive? <br></p>
+</blockquote>
+</div>
+</section>
+<section id="reflexive-relations-3" class="slide level2">
+<h2>Reflexive Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R \subseteq A \times A\)</span></p>
+<p><span class="math inline">\(R\)</span> is <strong>reflexive</strong>
+iff <span class="math inline">\(\forall x \in A, x R x\)</span>.</p>
+<p>Another way to say this is <span class="math inline">\(\forall x \in
+A, (x R x)\)</span> holds.</p>
+<h3 id="example-7">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span><br> Is this reflexive? <br> Yes!
+Because every integer equals itself! (<span
+class="math inline">\(x=x\)</span>) <br> <span
+class="math inline">\(R_{\textrm{nequal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x \neq y \}\)</span> <br> Is this reflexive? <br> No!
+Because for every integer, <span class="math inline">\(x\neq x\)</span>
+does not hold.</p>
+</blockquote>
+</div>
+</section>
+<section id="irreflexive-relations" class="slide level2">
+<h2>Irreflexive Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is
+<strong>irreflexive</strong> iff <span class="math inline">\(\forall x
+\in A, (x \cancel{R} x)\)</span></p>
+<p>Another way to say this is <span class="math inline">\(\forall x \in
+A, (x R x)\)</span> does not hold.</p>
+<h3 id="example-8">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span> <br> Is this irreflexive?</p>
+</blockquote>
+</div>
+</section>
+<section id="irreflexive-relations-1" class="slide level2">
+<h2>Irreflexive Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is
+<strong>irreflexive</strong> iff <span class="math inline">\(\forall x
+\in A, (x \cancel{R} x)\)</span></p>
+<p>Another way to say this is <span class="math inline">\(\forall x \in
+A, (x R x)\)</span> does not hold.</p>
+<h3 id="example-9">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span> <br> Is this irreflexive? <br> No!
+Because for all integers, <span class="math inline">\(x = x\)</span>
+holds.</p>
+</blockquote>
+</div>
+</section>
+<section id="irreflexive-relations-2" class="slide level2">
+<h2>Irreflexive Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is
+<strong>irreflexive</strong> iff <span class="math inline">\(\forall x
+\in A, (x \cancel{R} x)\)</span></p>
+<p>Another way to say this is <span class="math inline">\(\forall x \in
+A, (x R x)\)</span> does not hold.</p>
+<h3 id="example-10">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span> <br> Is this irreflexive? <br> No!
+Because for all integers, <span class="math inline">\(x = x\)</span>
+holds. <br> <span class="math inline">\(R_{\textrm{nequal}} = \{(x,y)
+\mid x,y \in \mathbb{Z} \land x \neq y \}\)</span> <br> Is this
+irreflexive?</p>
+</blockquote>
+</div>
+</section>
+<section id="irreflexive-relations-3" class="slide level2">
+<h2>Irreflexive Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is
+<strong>irreflexive</strong> iff <span class="math inline">\(\forall x
+\in A, (x \cancel{R} x)\)</span></p>
+<p>Another way to say this is <span class="math inline">\(\forall x \in
+A, (x R x)\)</span> does not hold.</p>
+<h3 id="example-11">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span> <br> Is this irreflexive? <br> No!
+Because for all integers, <span class="math inline">\(x = x\)</span>
+holds. <br> <span class="math inline">\(R_{\textrm{nequal}} = \{(x,y)
+\mid x,y \in \mathbb{Z} \land x \neq y \}\)</span> <br> Is this
+irreflexive? <br> Yes! Because for all integers, <span
+class="math inline">\(x \neq x\)</span> does not hold.</p>
+</blockquote>
+</div>
+</section>
+<section id="symmetric-relations" class="slide level2">
+<h2>Symmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is <strong>symmetric</strong>
+iff <span class="math inline">\(\forall x,y \in A, (x R y \implies y R
+x)\)</span></p>
+<h3 id="example-12">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span> <br> Is this symmetric?</p>
+</blockquote>
+</div>
+</section>
+<section id="symmetric-relations-1" class="slide level2">
+<h2>Symmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is <strong>symmetric</strong>
+iff <span class="math inline">\(\forall x,y \in A, (x R y \implies y R
+x)\)</span></p>
+<h3 id="example-13">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span><br> Is this symmetric? <br> Yes,
+because if <span class="math inline">\(x=y\)</span>, then <span
+class="math inline">\(y=x\)</span></p>
+</blockquote>
+</div>
+</section>
+<section id="symmetric-relations-2" class="slide level2">
+<h2>Symmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is <strong>symmetric</strong>
+iff <span class="math inline">\(\forall x,y \in A, (x R y \implies y R
+x)\)</span></p>
+<h3 id="example-14">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span><br> Is this symmetric? <br> Yes,
+because if <span class="math inline">\(x=y\)</span>, then <span
+class="math inline">\(y=x\)</span> <br> <span
+class="math inline">\(R_{\textrm{nequal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x \neq y \}\)</span> <br> Is this symmetric?</p>
+</blockquote>
+</div>
+</section>
+<section id="symmetric-relations-3" class="slide level2">
+<h2>Symmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is <strong>symmetric</strong>
+iff <span class="math inline">\(\forall x,y \in A, (x R y \implies y R
+x)\)</span></p>
+<h3 id="example-15">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span><br> Is this symmetric? <br> Yes,
+because if <span class="math inline">\(x=y\)</span>, then <span
+class="math inline">\(y=x\)</span> <br> <span
+class="math inline">\(R_{\textrm{nequal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x \neq y \}\)</span> <br> Is this symmetric? <br> Yes,
+because if <span class="math inline">\(x\neq y\)</span>, then <span
+class="math inline">\(y \neq x\)</span></p>
+</blockquote>
+</div>
+</section>
+<section id="symmetric-relations-4" class="slide level2">
+<h2>Symmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is <strong>symmetric</strong>
+iff <span class="math inline">\(\forall x,y \in A, (x R y \implies y R
+x)\)</span></p>
+<h3 id="example-16">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span><br> Is this symmetric? <br> Yes,
+because if <span class="math inline">\(x=y\)</span>, then <span
+class="math inline">\(y=x\)</span> <br> <span
+class="math inline">\(R_{\textrm{nequal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x \neq y \}\)</span> <br> Is this symmetric? <br> Yes,
+because if <span class="math inline">\(x\neq y\)</span>, then <span
+class="math inline">\(y \neq x\)</span> <br> <span
+class="math inline">\(R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x &lt; y \}\)</span> <br> Is this symmetric?</p>
+</blockquote>
+</div>
+</section>
+<section id="symmetric-relations-5" class="slide level2">
+<h2>Symmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is <strong>symmetric</strong>
+iff <span class="math inline">\(\forall x,y \in A, (x R y \implies y R
+x)\)</span></p>
+<h3 id="example-17">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span><br> Is this symmetric? <br> Yes,
+because if <span class="math inline">\(x=y\)</span>, then <span
+class="math inline">\(y=x\)</span> <br> <span
+class="math inline">\(R_{\textrm{nequal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x \neq y \}\)</span> <br> Is this symmetric? <br> Yes,
+because if <span class="math inline">\(x\neq y\)</span>, then <span
+class="math inline">\(y \neq x\)</span> <br> <span
+class="math inline">\(R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x &lt; y \}\)</span> <br> Is this symmetric? <br> No,
+because if <span class="math inline">\(x&lt;y\)</span>, it is not true
+that <span class="math inline">\(y&lt;x\)</span>.</p>
+</blockquote>
+</div>
+</section>
+<section id="antisymmetric-relations" class="slide level2">
+<h2>Antisymmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is
+<strong>antisymmetric</strong> iff <span class="math inline">\(\forall x
+\neq y \in A, (x R y \implies y \cancel{R} x)\)</span></p>
+<p>You can also say, if <span class="math inline">\(x R y\)</span>
+holds, then <span class="math inline">\(y R x\)</span> does not
+hold.</p>
+<h3 id="example-18">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{lessthan}} = \{(x,y) \mid x,y
+\in \mathbb{Z} \land x &lt; y \}\)</span> <br> Is this
+antisymmetric?</p>
+</blockquote>
+</div>
+</section>
+<section id="antisymmetric-relations-1" class="slide level2">
+<h2>Antisymmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is
+<strong>antisymmetric</strong> iff <span class="math inline">\(\forall x
+\neq y \in A, (x R y \implies y \cancel{R} x)\)</span></p>
+<p>You can also say, if <span class="math inline">\(x R y\)</span>
+holds, then <span class="math inline">\(y R x\)</span> does not
+hold.</p>
+<h3 id="example-19">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{lessthan}} = \{(x,y) \mid x,y
+\in \mathbb{Z} \land x &lt; y \}\)</span> <br> Is this antisymmetric?
+<br> Yes! Because if <span class="math inline">\(x&lt;y\)</span>, then
+<span class="math inline">\(y \cancel{&lt;} x\)</span></p>
+</blockquote>
+</div>
+</section>
+<section id="antisymmetric-relations-2" class="slide level2">
+<h2>Antisymmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is
+<strong>antisymmetric</strong> iff <span class="math inline">\(\forall x
+\neq y \in A, (x R y \implies y \cancel{R} x)\)</span></p>
+<p>You can also say, if <span class="math inline">\(x R y\)</span>
+holds, then <span class="math inline">\(y R x\)</span> does not
+hold.</p>
+<h3 id="example-20">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{lessthan}} = \{(x,y) \mid x,y
+\in \mathbb{Z} \land x &lt; y \}\)</span> <br> Is this antisymmetric?
+<br> Yes! Because if <span class="math inline">\(x&lt;y\)</span>, then
+<span class="math inline">\(y \cancel{&lt;} x\)</span> <br> <span
+class="math inline">\(R_{\textrm{lessthaneq}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x \leq y \}\)</span> <br> Is this antisymmetric?</p>
+</blockquote>
+</div>
+</section>
+<section id="antisymmetric-relations-3" class="slide level2">
+<h2>Antisymmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is
+<strong>antisymmetric</strong> iff <span class="math inline">\(\forall x
+\neq y \in A, (x R y \implies y \cancel{R} x)\)</span></p>
+<p>You can also say, if <span class="math inline">\(x R y\)</span>
+holds, then <span class="math inline">\(y R x\)</span> does not
+hold.</p>
+<h3 id="example-21">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{lessthan}} = \{(x,y) \mid x,y
+\in \mathbb{Z} \land x &lt; y \}\)</span> <br> Is this antisymmetric?
+<br> Yes! Because if <span class="math inline">\(x&lt;y\)</span>, then
+<span class="math inline">\(y \cancel{&lt;} x\)</span> <br> <span
+class="math inline">\(R_{\textrm{lessthaneq}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x \leq y \}\)</span> <br> Is this antisymmetric? <br>
+Yes! Because if <span class="math inline">\(x \leq y\)</span>, then
+<span class="math inline">\(y \cancel{\leq} x\)</span> <br> Wait… but
+what about if <span class="math inline">\(x=2\)</span> and <span
+class="math inline">\(y=2\)</span>? <span class="math inline">\(x \leq
+y\)</span> and <span class="math inline">\(y \leq x\)</span></p>
+</blockquote>
+</div>
+</section>
+<section id="antisymmetric-relations-4" class="slide level2">
+<h2>Antisymmetric Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is
+<strong>antisymmetric</strong> iff <span class="math inline">\(\forall x
+\neq y \in A, (x R y \implies y \cancel{R} x)\)</span></p>
+<p>You can also say, if <span class="math inline">\(x R y\)</span>
+holds, then <span class="math inline">\(y R x\)</span> does not
+hold.</p>
+<h3 id="example-22">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{lessthan}} = \{(x,y) \mid x,y
+\in \mathbb{Z} \land x &lt; y \}\)</span> <br> Is this antisymmetric?
+<br> Yes! Because if <span class="math inline">\(x&lt;y\)</span>, then
+<span class="math inline">\(y \cancel{&lt;} x\)</span> <br> <span
+class="math inline">\(R_{\textrm{lessthaneq}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x \leq y \}\)</span> <br> Is this antisymmetric? <br>
+Yes! Because if <span class="math inline">\(x \leq y\)</span>, then
+<span class="math inline">\(y \cancel{\leq} x\)</span> <br> Wait… but
+what about if <span class="math inline">\(x=2\)</span> and <span
+class="math inline">\(y=2\)</span>? <span class="math inline">\(x \leq
+y\)</span> and <span class="math inline">\(y \leq x\)</span> <br> That’s
+okay, because as we say in the definition, this only has to apply for
+<span class="math inline">\(x \neq y\)</span>.</p>
+</blockquote>
+</div>
+</section>
+<section id="transitive-relations" class="slide level2">
+<h2>Transitive Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is <strong>transitive</strong>
+iff <span class="math inline">\(\forall x,y,z \in A, (x R y \land y R z)
+\implies x R z\)</span></p>
+<h3 id="example-23">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span> <br> Is this transitive?</p>
+</blockquote>
+</div>
+</section>
+<section id="transitive-relations-1" class="slide level2">
+<h2>Transitive Relations</h2>
+<div id="content">
+<p><span class="math inline">\(R\)</span> is <strong>transitive</strong>
+iff <span class="math inline">\(\forall x,y,z \in A, (x R y \land y R z)
+\implies x R z\)</span></p>
+<h3 id="example-24">Example</h3>
+<blockquote>
+<p><span class="math inline">\(R_{\textrm{equal}} = \{(x,y) \mid x,y \in
+\mathbb{Z} \land x = y \}\)</span> <br> Is this transitive? <br> Yes!
+Because if <span class="math inline">\(x=y \land y = z\)</span>, then
+<span class="math inline">\(x = z\)</span></p>
+</blockquote>
+</div>
+<!-- ## Something to Think About...
+<div id="content">
+
+Let's look at two relations:
+
+$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$
+
+As we already discussed, $R_{\textrm{equal}}$ is reflexive, symmetric, and transitive.
+
+$R_{\textrm{iff}} = \{(x,y) \mid x,y \in \{T,F\} \land x \iff y \}$
+
+$R_{\textrm{iff}}$ is also
+
+reflexive: $x \iff x$ holds
+
+symmetric: If $x \iff y$, then $y \iff x$
+
+transitive: If $x \iff y$ and $y \iff z$, then $x \iff z$
+
+Is it a coincidence that $R_{\textrm{equal}}$ and $R_{\textrm{iff}}$ have the same properties? 
+
+No! We've discussed before that $\iff$ is measure of equivalence!
+
+
+</div> -->
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
