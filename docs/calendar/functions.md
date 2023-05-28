@@ -6,4 +6,4 @@ contributors: Alyssa Byrnes
 
 # Functions
 
-* Functions: Video, Slides, [Assignment](https://www.gradescope.com/)
+* Functions: Video, [Slides](/comp283/lessons/Functions.html), [Assignment](https://www.gradescope.com/)

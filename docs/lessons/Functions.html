@@ -163,43 +163,39 @@ a function iff<br />
 B\  \bigl((a,b_1)\in f
 \bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \implies {b_2 =
 b_1}) \bigr).\]</span></p>
-<p>Let’s break this down…</p>
-<ul>
-<li class="fragment"><p><span class="math inline">\(\forall a\in
+<p>Let’s break this down… - <span class="math inline">\(\forall a\in
 A\  \exists b_1\in B\  \bigl((a,b_1)\in f \bigr)\)</span> <br /> This is
 saying that for all <span class="math inline">\(a\)</span>, there exists
 <span class="math inline">\(b_1\)</span> such that <span
-class="math inline">\(f(a)=b_1\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\bigl(\forall b_2\in
-B\  ({(a,b_2)\in f} \implies {b_2 = b_1}) \bigr)\)</span> <br /> This is
-saying that if we find a <span class="math inline">\(b_2\)</span> such
-that <span class="math inline">\(f(a)=b_2\)</span>, then <span
+class="math inline">\(f(a)=b_1\)</span> - <span
+class="math inline">\(\bigl(\forall b_2\in B\  ({(a,b_2)\in f} \implies
+{b_2 = b_1}) \bigr)\)</span> <br /> This is saying that if we find a
+<span class="math inline">\(b_2\)</span> such that <span
+class="math inline">\(f(a)=b_2\)</span>, then <span
 class="math inline">\(b_1 = b_2\)</span> (aka <span
-class="math inline">\(f(a)\)</span> can only have one result)</p></li>
-</ul>
+class="math inline">\(f(a)\)</span> can only have one result)</p>
 </div>
 </section>
 <section id="some-things-to-note" class="slide level2">
 <h2>Some Things to Note…</h2>
 <div id="content">
 <ul>
-<li class="fragment"><p>A function is a relation <span
+<li class="fragment">A function is a relation <span
 class="math inline">\(f \subseteq A \times B\)</span>, which we can
 write as <span class="math inline">\(f: A \to B\)</span> <br /> This can
 be said as “<span class="math inline">\(f\)</span> maps <span
 class="math inline">\(A\)</span> to <span
-class="math inline">\(B\)</span>”</p></li>
-<li class="fragment"><p>Using notation we’ve learned, <span
+class="math inline">\(B\)</span>”</li>
+<li class="fragment">Using notation we’ve learned, <span
 class="math inline">\(\forall a\in A\ b\in B,\ \bigl((a,b)\in f \implies
-(b=f(a))\bigr)\)</span></p></li>
-<li class="fragment"><p>Writing <span
-class="math inline">\(y=f(x)\)</span> rather than <span
-class="math inline">\((x,y)\in f\)</span> makes sense if and only if
-<span class="math inline">\(x\)</span> pairs with only one <span
-class="math inline">\(y\)</span>.</p></li>
-<li class="fragment"><p><span class="math inline">\(A\)</span> is called
+(b=f(a))\bigr)\)</span></li>
+<li class="fragment">Writing <span class="math inline">\(y=f(x)\)</span>
+rather than <span class="math inline">\((x,y)\in f\)</span> makes sense
+if and only if <span class="math inline">\(x\)</span> pairs with only
+one <span class="math inline">\(y\)</span>.</li>
+<li class="fragment"><span class="math inline">\(A\)</span> is called
 the <strong>domain</strong> and <span class="math inline">\(B\)</span>
-is the <strong>range</strong>.</p></li>
+is the <strong>range</strong>.</li>
 </ul>
 </div>
 </section>
@@ -221,6 +217,7 @@ class="math inline">\(g\)</span>!</p>
 </section>
 <section id="composition-example" class="slide level2">
 <h2>Composition Example</h2>
+<div id="content">
 <p><span class="math inline">\(f(x) = x\)</span> and <span
 class="math inline">\(g(x) = \frac{1}{x}\)</span></p>
 <p>Say we define both the <em>domain</em> and <em>range</em> of <span
@@ -250,6 +247,7 @@ class="math inline">\(f(0) = 0\)</span>, and <span
 class="math inline">\(0 \notin \mathbb{Z}^{+}\)</span>, so you can’t
 compute <span class="math inline">\(g(f(0))\)</span></li>
 </ul>
+</div>
 </section>
 <section id="applying-functions-to-tuples" class="slide level2">
 <h2>Applying Functions to Tuples</h2>
@@ -280,15 +278,17 @@ class="math inline">\(f\)</span>.</p>
 </section>
 <section id="applying-functions-to-sets---example" class="slide level2">
 <h2>Applying Functions to Sets - Example</h2>
-<div id="content">
-<p><img src="https://i.imgur.com/c7xFWjN.png" width="450"/></p>
+<div id="left">
+<p><img src="https://i.imgur.com/c7xFWjN.png" width="400"/></p>
+</div>
+<div id="right">
 <ul>
-<li class="fragment"><p><span class="math inline">\(f(\{a,b,c,d\}) =
-\{h, i, j\}\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(f^{-1}(\{h,i,j\}) =
-\{a,b,c,d\}\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(f^{-1}(\{g,k\}) =
-\{\}\)</span></p></li>
+<li class="fragment"><span class="math inline">\(f(\{a,b,c,d\}) = \{h,
+i, j\}\)</span></li>
+<li class="fragment"><span class="math inline">\(f^{-1}(\{h,i,j\}) =
+\{a,b,c,d\}\)</span></li>
+<li class="fragment"><span class="math inline">\(f^{-1}(\{g,k\}) =
+\{\}\)</span></li>
 </ul>
 </div>
 </section>
@@ -302,29 +302,32 @@ class="math inline">\(a\)</span> from <span
 class="math inline">\(A\)</span> to exactly one element <span
 class="math inline">\(b=f(a)\)</span> from <span
 class="math inline">\(B\)</span>.</p>
-<p>So, is <span class="math inline">\(f(x) = \sqrt{x}\)</span> a
-function?</p>
 <ul>
-<li class="fragment"><p>Answer: It depends!</p></li>
-<li class="fragment"><p>When <span class="math inline">\(A =
+<li class="fragment">So, is <span class="math inline">\(f(x) =
+\sqrt{x}\)</span> a function? <br>
+<ul>
+<li class="fragment">Answer: It depends! <br></li>
+</ul></li>
+<li class="fragment">When <span class="math inline">\(A =
 \mathbb{R}\)</span> and <span class="math inline">\(B =
-\mathbb{R}\)</span>?</p>
+\mathbb{R}\)</span>? <br>
 <ul>
 <li class="fragment">No, because <span
 class="math inline">\(f(-1)\)</span> gives an answer that’s not in the
-real numbers. (<span class="math inline">\(\sqrt{-1} \notin
-\mathbb{R}\)</span>)</li>
+real numbers. <br>(<span class="math inline">\(\sqrt{-1} \notin
+\mathbb{R}\)</span>)<br></li>
 </ul></li>
-<li class="fragment"><p>When <span class="math inline">\(A =
+<li class="fragment">When <span class="math inline">\(A =
 \mathbb{R}^+\)</span> and <span class="math inline">\(B =
-\mathbb{R}\)</span>?</p>
+\mathbb{R}\)</span>?<br>
 <ul>
 <li class="fragment">No, because <span class="math inline">\(\sqrt{4} =
-\pm 2\)</span>. A function must map an input to only one answer.</li>
+\pm 2\)</span>. A function must map an input to only one
+answer.<br></li>
 </ul></li>
-<li class="fragment"><p>When <span class="math inline">\(A =
+<li class="fragment">When <span class="math inline">\(A =
 \mathbb{R}^+\)</span> and <span class="math inline">\(B =
-\mathbb{R}^+\)</span>?</p>
+\mathbb{R}^+\)</span>? <br>
 <ul>
 <li class="fragment">Yes!</li>
 </ul></li>
@@ -337,16 +340,18 @@ real numbers. (<span class="math inline">\(\sqrt{-1} \notin
 <p>Say if <span class="math inline">\(f\)</span> is a relation on <span
 class="math inline">\(A\)</span> and <span
 class="math inline">\(B\)</span>,</p>
-<p><span class="math inline">\(f(x)\)</span> is a function iff</p>
+<p><span class="math inline">\(f(x)\)</span> is a function iff
+<br><br></p>
 <ol type="1">
-<li class="fragment"><p>For every <span class="math inline">\(x \in
-A\)</span>, <span class="math inline">\(f(x) \in B\)</span></p></li>
-<li class="fragment"><p>For every <span class="math inline">\(x \in
-A\)</span>, there exists <span class="math inline">\(f(x) \in
-B\)</span></p></li>
-<li class="fragment"><p>For every <span class="math inline">\(x \in
+<li class="fragment">For every <span class="math inline">\(x \in
+A\)</span>, <span class="math inline">\(f(x) \in B\)</span>
+<br><br></li>
+<li class="fragment">For every <span class="math inline">\(x \in
+A\)</span>, there exists <span class="math inline">\(f(x) \in B\)</span>
+<br><br></li>
+<li class="fragment">For every <span class="math inline">\(x \in
 A\)</span>, there exists <em>only one</em> <span
-class="math inline">\(f(x) \in B\)</span></p></li>
+class="math inline">\(f(x) \in B\)</span></li>
 </ol>
 </div>
 </section>
@@ -361,22 +366,22 @@ x \leq y\)</span></p>
 class="math inline">\(x\)</span>, then the minimum is undefined.</p>
 <h3 id="example">Example</h3>
 <ul>
-<li class="fragment"><p>What is the minimum of <span
-class="math inline">\(\mathbb{Z}\)</span>?</p>
+<li class="fragment">What is the minimum of <span
+class="math inline">\(\mathbb{Z}\)</span>? <br>
 <ul>
 <li class="fragment">It’s undefined, because the lowest element of <span
-class="math inline">\(\mathbb{Z}\)</span> can’t be explicitly
-stated.</li>
+class="math inline">\(\mathbb{Z}\)</span> can’t be explicitly stated.
+<br></li>
 </ul></li>
-<li class="fragment"><p>What is the minimum of <span
-class="math inline">\(\{x \mid x \in [0,10]\}\)</span>?</p>
+<li class="fragment">What is the minimum of <span
+class="math inline">\(\{x \mid x \in [0,10]\}\)</span>? <br>
 <ul>
-<li class="fragment"><span class="math inline">\(0\)</span></li>
+<li class="fragment"><span class="math inline">\(0\)</span> <br></li>
 </ul></li>
-<li class="fragment"><p>What is the minimum of <span
-class="math inline">\(\{x \mid x \in (0,10)\}\)</span>?</p>
+<li class="fragment">What is the minimum of <span
+class="math inline">\(\{x \mid x \in (0,10)\}\)</span>? <br>
 <ul>
-<li class="fragment">It’s undefined.</li>
+<li class="fragment">It’s undefined. <br></li>
 </ul></li>
 </ul>
 </div>
@@ -498,33 +503,33 @@ x\)</span></li>
 <span class="math inline">\(x = 0\)</span>, <span
 class="math inline">\(x&lt;0\)</span></p>
 <ul>
-<li class="fragment"><p>Case 1: <span class="math inline">\(x &gt;
-0\)</span></p>
+<li class="fragment">Case 1: <span class="math inline">\(x &gt;
+0\)</span><br>
 <ul>
 <li class="fragment"><span class="math inline">\(sgn(x) \cdot x = 1
 \cdot x = x\)</span> and <span class="math inline">\(|x| = x\)</span>,
-so <span class="math inline">\(|x| = sgn(x) \cdot x\)</span></li>
+so <span class="math inline">\(|x| = sgn(x) \cdot x\)</span><br></li>
 </ul></li>
-<li class="fragment"><p>Case 2: <span class="math inline">\(x =
-0\)</span></p>
+<li class="fragment">Case 2: <span class="math inline">\(x =
+0\)</span><br>
 <ul>
 <li class="fragment"><span class="math inline">\(sgn(0) \cdot 0 =
 0\)</span> and <span class="math inline">\(|0| = 0\)</span>, so <span
-class="math inline">\(|x| = sgn(x) \cdot x\)</span></li>
+class="math inline">\(|x| = sgn(x) \cdot x\)</span><br></li>
 </ul></li>
-<li class="fragment"><p>Case 3: <span class="math inline">\(x &lt;
-0\)</span></p>
+<li class="fragment">Case 3: <span class="math inline">\(x &lt;
+0\)</span> <br>
 <ul>
 <li class="fragment"><span class="math inline">\(sgn(x) \cdot x = -1
 \cdot x = -x\)</span> and <span class="math inline">\(|x| = -x\)</span>,
-so <span class="math inline">\(|x| = sgn(x) \cdot x\)</span></li>
+so <span class="math inline">\(|x| = sgn(x) \cdot x\)</span> <br></li>
 </ul></li>
 </ul>
 </div>
 </section>
 <section id="types-of-functions" class="slide level2">
 <h2>Types of Functions</h2>
-<div id="content">
+<div id="smalltext">
 <p>Recall…</p>
 <p>A <strong>function</strong> <span class="math inline">\(f\)</span> is
 a relation on <span class="math inline">\(A\)</span> and <span
@@ -542,7 +547,7 @@ function</strong>.</p>
 </section>
 <section id="types-of-functions-1" class="slide level2">
 <h2>Types of Functions</h2>
-<div id="content">
+<div id="smalltext">
 <p>Recall…</p>
 <p>A <strong>function</strong> <span class="math inline">\(f\)</span> is
 a relation on <span class="math inline">\(A\)</span> and <span
@@ -627,36 +632,34 @@ surjection.</p>
 We are also going to demonstrate how we can use what we’ve learned to
 prove other things!</p>
 <ul>
-<li class="fragment"><p><strong>Lemma</strong>: If <span
+<li class="fragment"><strong>Lemma</strong>: If <span
 class="math inline">\(f\)</span> is its own inverse, then it is a
-bijection</p></li>
-<li class="fragment"><p><span class="math inline">\(f: A \to A\)</span>
-is its own inverse means <span class="math inline">\(\forall a \in A,
-f(f(a)) = a\)</span></p></li>
-<li class="fragment"><p>WTS: <span class="math inline">\(f\)</span> is
-surjective and injective</p></li>
-<li class="fragment"><p>Surjective: <span class="math inline">\(\forall
-y \in A, \exists x \in A f(x)=y\)</span></p></li>
-<li class="fragment"><blockquote>
-<p>Let <span class="math inline">\(x = f(y), y \in A\)</span></p>
-</blockquote></li>
-<li class="fragment"><blockquote>
-<p><span class="math inline">\(f(x) = f(f(y)) = y \in A\)</span></p>
-</blockquote></li>
-<li class="fragment"><p>Injective: <span class="math inline">\(\forall
-x_1, x_2 \in A, (f(x_1) = f(x_2)) \implies x_1 = x_2\)</span></p></li>
-<li class="fragment"><blockquote>
-<p><span class="math inline">\(\forall x_1, x_2 \in A, (f(x_1) =
-f(x_2))\)</span></p>
-</blockquote></li>
-<li class="fragment"><blockquote>
-<p>Apply <span class="math inline">\(f\)</span> to both sides: <span
-class="math inline">\(f(f(x_1)) = f(f(x_2))\)</span></p>
-</blockquote></li>
-<li class="fragment"><blockquote>
-<p>Use the fact that <span class="math inline">\(f(f(a)) = a\)</span> to
-simplify: <span class="math inline">\(x_1 = x_2\)</span></p>
-</blockquote></li>
+bijection <br></li>
+<li class="fragment"><span class="math inline">\(f: A \to A\)</span> is
+its own inverse means <span class="math inline">\(\forall a \in A,
+f(f(a)) = a\)</span> <br></li>
+<li class="fragment">WTS: <span class="math inline">\(f\)</span> is
+surjective and injective <br></li>
+<li class="fragment">Surjective: <span class="math inline">\(\forall y
+\in A, \exists x \in A f(x)=y\)</span><br>
+<ul>
+<li class="fragment">Let <span class="math inline">\(x = f(y), y \in
+A\)</span> <br></li>
+<li class="fragment"><span class="math inline">\(f(x) = f(f(y)) = y \in
+A\)</span> <br></li>
+</ul></li>
+<li class="fragment">Injective: <span class="math inline">\(\forall x_1,
+x_2 \in A, (f(x_1) = f(x_2)) \implies x_1 = x_2\)</span> <br>
+<ul>
+<li class="fragment"><span class="math inline">\(\forall x_1, x_2 \in A,
+(f(x_1) = f(x_2))\)</span> <br></li>
+<li class="fragment">Apply <span class="math inline">\(f\)</span> to
+both sides: <span class="math inline">\(f(f(x_1)) = f(f(x_2))\)</span>
+<br></li>
+<li class="fragment">Use the fact that <span
+class="math inline">\(f(f(a)) = a\)</span> to simplify: <span
+class="math inline">\(x_1 = x_2\)</span></li>
+</ul></li>
 </ul>
 </div>
 </section>
@@ -688,8 +691,9 @@ class="math inline">\(B\)</span>.</p>
 <p>An airport with 1,500 landings a day must be able to accommodate two
 planes landing in the same minute.</p>
 <ul>
-<li>Why? There are <span class="math inline">\(1440\)</span> minutes in
-a day so, by the pigeonhole principle, if there are greater than <span
+<li class="fragment">Why? There are <span
+class="math inline">\(1440\)</span> minutes in a day so, by the
+pigeonhole principle, if there are greater than <span
 class="math inline">\(1440\)</span> planes coming in, some planes will
 have to land in the same minute.</li>
 </ul>
@@ -702,36 +706,36 @@ have to land in the same minute.</li>
 majority are women and a majority are majoring in computer science, then
 at least one is both.</p>
 <ul>
-<li class="fragment"><p>Why? (Informal proof by contradiction. Start
-with false statement, and show that it leads to a contradiction. Aka
-show the negation is NOT true.)</p></li>
-<li class="fragment"><p>Let <span class="math inline">\(S=\)</span> set
-of all students, <span class="math inline">\(M=\)</span> set of all CS
+<li class="fragment">Why? (Informal proof by contradiction. Start with
+false statement, and show that it leads to a contradiction. Aka show the
+negation is NOT true.)</li>
+<li class="fragment">Let <span class="math inline">\(S=\)</span> set of
+all students, <span class="math inline">\(M=\)</span> set of all CS
 majors, <span class="math inline">\(W=\)</span> set of all women. <span
 class="math inline">\(M \subseteq S\)</span> and <span
-class="math inline">\(W \subseteq S\)</span>.</p></li>
-<li class="fragment"><p>“Majority are women” means <span
+class="math inline">\(W \subseteq S\)</span>.</li>
+<li class="fragment">“Majority are women” means <span
 class="math inline">\(|W| &gt; \frac{35}{2}\)</span> or <span
-class="math inline">\(|W| \geq 18\)</span></p></li>
-<li class="fragment"><p>“Majority are majoring in computer science”
-means <span class="math inline">\(|M| &gt; \frac{35}{2}\)</span> or
-<span class="math inline">\(|M| \geq 18\)</span></p></li>
-<li class="fragment"><p>If <span class="math inline">\(M \subseteq
+class="math inline">\(|W| \geq 18\)</span></li>
+<li class="fragment">“Majority are majoring in computer science” means
+<span class="math inline">\(|M| &gt; \frac{35}{2}\)</span> or <span
+class="math inline">\(|M| \geq 18\)</span></li>
+<li class="fragment">If <span class="math inline">\(M \subseteq
 S\)</span> and <span class="math inline">\(W \subseteq S\)</span>, then
-<span class="math inline">\(M \cup W \subseteq S\)</span></p></li>
-<li class="fragment"><p>If <span class="math inline">\(M \cup W
-\subseteq S\)</span>, then <span class="math inline">\(|M \cup W| \leq
-|S|\)</span></p></li>
-<li class="fragment"><p>Negation: Assume no one is both a computer
-science major and a woman. (<span class="math inline">\(M \cap W =
-\{\}\)</span>)</p></li>
-<li class="fragment"><p>Since <span class="math inline">\(M \cap W =
+<span class="math inline">\(M \cup W \subseteq S\)</span></li>
+<li class="fragment">If <span class="math inline">\(M \cup W \subseteq
+S\)</span>, then <span class="math inline">\(|M \cup W| \leq
+|S|\)</span></li>
+<li class="fragment">Negation: Assume no one is both a computer science
+major and a woman. (<span class="math inline">\(M \cap W =
+\{\}\)</span>)</li>
+<li class="fragment">Since <span class="math inline">\(M \cap W =
 \{\}\)</span>, <span class="math inline">\(|M \cup W| = |M| + |W| \geq
-18 + 18 = 36\)</span>.</p></li>
-<li class="fragment"><p><span class="math inline">\(|M \cup W| =
+18 + 18 = 36\)</span>.</li>
+<li class="fragment"><span class="math inline">\(|M \cup W| =
 36\)</span> and <span class="math inline">\(|S| = 35\)</span>, but <span
 class="math inline">\(|M \cup W| \leq |S|\)</span>. <span
-class="math inline">\(\rightarrow \leftarrow\)</span></p></li>
+class="math inline">\(\rightarrow \leftarrow\)</span></li>
 </ul>
 </div>
 </section>
@@ -740,33 +744,29 @@ class="slide level2">
 <h2>Applying Pigeonhole Principle to Functions</h2>
 <div id="content">
 <ul>
-<li class="fragment"><p>Recall: If you are mapping <span
+<li class="fragment">Recall: If you are mapping <span
 class="math inline">\(f: A \to B\)</span> and <span
 class="math inline">\(|A|&gt;|B|\)</span>, then there is no way to map
 from every element in <span class="math inline">\(A\)</span> without two
 of them hitting the same element in <span
-class="math inline">\(B\)</span>.</p></li>
-<li class="fragment"><p>Injection: each element of <span
+class="math inline">\(B\)</span>.</li>
+<li class="fragment">Injection: each element of <span
 class="math inline">\(B\)</span> is hit by at most one element in <span
-class="math inline">\(A\)</span></p></li>
-<li class="fragment"><blockquote>
-<p>So if <span class="math inline">\(|A| &gt; |B|\)</span>, by
-definition <span class="math inline">\(f\)</span> is not an injection.
-(Aka there are too many arrows coming from <span
-class="math inline">\(A\)</span>.)</p>
-</blockquote></li>
-<li class="fragment"><p>Surjection: each element of <span
+class="math inline">\(A\)</span></li>
+<li class="fragment">So if <span class="math inline">\(|A| &gt;
+|B|\)</span>, by definition <span class="math inline">\(f\)</span> is
+not an injection. (Aka there are too many arrows coming from <span
+class="math inline">\(A\)</span>.)</li>
+<li class="fragment">Surjection: each element of <span
 class="math inline">\(B\)</span> is hit by at least one element in <span
-class="math inline">\(A\)</span></p></li>
-<li class="fragment"><blockquote>
-<p>So if <span class="math inline">\(|A| &lt; |B|\)</span>, by
-definition <span class="math inline">\(f\)</span> is not a surjection.
-(Aka there are not enough arrows coming from <span
-class="math inline">\(A\)</span>.)</p>
-</blockquote></li>
-<li class="fragment"><p>From this follows: <span
-class="math inline">\(f: A \to B\)</span> is a bijection <span
-class="math inline">\(\iff |A| = |B|\)</span></p></li>
+class="math inline">\(A\)</span></li>
+<li class="fragment">So if <span class="math inline">\(|A| &lt;
+|B|\)</span>, by definition <span class="math inline">\(f\)</span> is
+not a surjection. (Aka there are not enough arrows coming from <span
+class="math inline">\(A\)</span>.)</li>
+<li class="fragment">From this follows: <span class="math inline">\(f: A
+\to B\)</span> is a bijection <span class="math inline">\(\iff |A| =
+|B|\)</span></li>
 </ul>
 </div>
 </section>
@@ -774,24 +774,23 @@ class="math inline">\(\iff |A| = |B|\)</span></p></li>
 <h2>Implications of Pigeonhole Principle</h2>
 <div id="content">
 <ul>
-<li class="fragment"><p><span class="math inline">\(f: A \to B\)</span>
-is a bijection <span class="math inline">\(\iff |A| =
-|B|\)</span></p></li>
-<li class="fragment"><p>Think about what this means if <span
+<li class="fragment"><span class="math inline">\(f: A \to B\)</span> is
+a bijection <span class="math inline">\(\iff |A| = |B|\)</span></li>
+<li class="fragment">Think about what this means if <span
 class="math inline">\(A\)</span> and <span
-class="math inline">\(B\)</span> are infinite sets…</p></li>
-<li class="fragment"><p>Lets <span class="math inline">\(A =
+class="math inline">\(B\)</span> are infinite sets…</li>
+<li class="fragment">Lets <span class="math inline">\(A =
 \mathbb{N}\)</span> and <span class="math inline">\(B =
-\mathbb{Z}\)</span></p></li>
-<li class="fragment"><p>If we can show there exists a bijection <span
+\mathbb{Z}\)</span></li>
+<li class="fragment">If we can show there exists a bijection <span
 class="math inline">\(f: \mathbb{N} \to \mathbb{Z}\)</span>, then <span
-class="math inline">\(|\mathbb{N}| = |\mathbb{Z}|\)</span>!</p></li>
-<li class="fragment"><p>(We can! Try it at home!)</p></li>
-<li class="fragment"><p>A set is called <strong>countably
-infinite</strong> (or denumerable) if it can be put in bijective
-correspondence with the set of natural numbers.</p></li>
-<li class="fragment"><p>A set is called <strong>countable</strong> if it
-is either finite or countably infinite.</p></li>
+class="math inline">\(|\mathbb{N}| = |\mathbb{Z}|\)</span>!</li>
+<li class="fragment">(We can! Try it at home!)</li>
+<li class="fragment">A set is called <strong>countably infinite</strong>
+(or denumerable) if it can be put in bijective correspondence with the
+set of natural numbers.</li>
+<li class="fragment">A set is called <strong>countable</strong> if it is
+either finite or countably infinite.</li>
 </ul>
 </div>
 </section>
@@ -799,31 +798,31 @@ is either finite or countably infinite.</p></li>
 <h2>Measuring Size of Inputs</h2>
 <div id="content">
 <ul>
-<li class="fragment"><p>Computers have size and memory limits, so it’s
+<li class="fragment">Computers have size and memory limits, so it’s
 important that we can analyze our algorithms so that we know they are
-something the computer can handle.</p></li>
-<li class="fragment"><p>Commonly, we use <strong>asymptotic
-notation</strong> to describe runtime.</p></li>
-<li class="fragment"><p>“Big O”: <span class="math inline">\(O\)</span>
-is used to measure the worst case scenario of an input. (In other words,
-it is an upper bound.)</p></li>
-<li class="fragment"><p><span class="math inline">\(f \in O(g(n)) \iff
+something the computer can handle.</li>
+<li class="fragment">Commonly, we use <strong>asymptotic
+notation</strong> to describe runtime.</li>
+<li class="fragment">“Big O”: <span class="math inline">\(O\)</span> is
+used to measure the worst case scenario of an input.<br>(In other words,
+it is an upper bound.)</li>
+<li class="fragment"><span class="math inline">\(f \in O(g(n)) \iff
 \exists c \in \mathbb{R}^{+}, \exists N \in \mathbb{N}, \forall n &lt;
-N, 0 \leq f(n) \leq c \cdot g(n)\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\Omega\)</span> is
-used to measure the best case scenario of an input. (In other words, it
-is an lower bound.)</p></li>
-<li class="fragment"><p><span class="math inline">\(f \in \Omega(g(n))
-\iff \exists c \in \mathbb{R}^{+}, \exists N \in \mathbb{N}, \forall n
-&lt; N, 0 \leq c \cdot g(n) \leq f(n)\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\Theta\)</span> is
-used to describe a function that is both in <span
+N, 0 \leq f(n) \leq c \cdot g(n)\)</span></li>
+<li class="fragment"><span class="math inline">\(\Omega\)</span> is used
+to measure the best case scenario of an input. (In other words, it is an
+lower bound.)</li>
+<li class="fragment"><span class="math inline">\(f \in \Omega(g(n)) \iff
+\exists c \in \mathbb{R}^{+}, \exists N \in \mathbb{N}, \forall n &lt;
+N, 0 \leq c \cdot g(n) \leq f(n)\)</span></li>
+<li class="fragment"><span class="math inline">\(\Theta\)</span> is used
+to describe a function that is both in <span
 class="math inline">\(O\)</span> and <span
-class="math inline">\(\Omega\)</span>.</p></li>
-<li class="fragment"><p><span class="math inline">\(f \in \Theta(g(n))
-\iff \exists c_L, c_H \in \mathbb{R}^{+}, \exists N \in \mathbb{N},
-\forall n &lt; N, 0 \leq c_L \cdot g(n) \leq f(n) \leq c_H \cdot
-g(n)\)</span></p></li>
+class="math inline">\(\Omega\)</span>.</li>
+<li class="fragment"><span class="math inline">\(f \in
+\Theta(g(n))\)</span><br> <span class="math inline">\(\iff \exists c_L,
+c_H \in \mathbb{R}^{+}, \exists N \in \mathbb{N}, \forall n &lt; N, 0
+\leq c_L \cdot g(n) \leq f(n) \leq c_H \cdot g(n)\)</span></li>
 </ul>
 </div>
 </section>
