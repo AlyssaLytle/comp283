@@ -53,6 +53,14 @@ contributors: Alyssa Byrnes
 ## Sets
 <table>
     <tr>
+        <td> $$\{$$</td>
+        <td> <code>\{</code></td>
+    </tr>
+    <tr>
+        <td> $$\}$$</td>
+        <td> <code>\}</code></td>
+    </tr>
+    <tr>
         <td> $$\in$$</td>
         <td> <code>\in</code></td>
     </tr>

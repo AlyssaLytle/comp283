@@ -10,6 +10,8 @@ $$\oplus$$,`\oplus`
 $$\rightarrow$$,`\rightarrow`
 $$\leftrightarrow$$,`\leftrightarrow`
 ## Sets
+$$\{$$,`\{`
+$$\}$$,`\}`
 $$\in$$,`\in`
 $$\subseteq$$,`\subseteq`
 $$\subset$$,`\subset`
