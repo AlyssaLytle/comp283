@@ -7,4 +7,4 @@ contributors: Alyssa Byrnes
 # Practice and Review 2
 
 For the practice problems, we will be discussing this figure:
-<img src="/static/figs/fn-fig.png" alt="Trulli" style="width:100%">
+<img src="comp283/static/figs/fn-fig.png" style="width:100%">
