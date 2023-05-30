@@ -26,3 +26,6 @@ $${A \choose k}$$,`{A \choose k}`
 ## Quantifiers
 $$\forall$$,`\forall`
 $$\exists$$,`\exists`
+## Relations and Functions
+$$\circ$$,`\circ`
+$$\to$$,`\to`

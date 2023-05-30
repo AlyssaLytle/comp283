@@ -77,7 +77,7 @@ contributors: Alyssa Byrnes
         <td> <code>\times</code></td>
     </tr>
     <tr>
-        <td> $$\emptyset$$ (Empty set)</td>
+        <td> $$\emptyset$$</td>
         <td> <code>\empty</code></td>
     </tr>
     <tr>
@@ -115,5 +115,17 @@ contributors: Alyssa Byrnes
     <tr>
         <td> $$\exists$$</td>
         <td> <code>\exists</code></td>
+    </tr>
+</table>
+
+## Relations and Functions
+<table>
+    <tr>
+        <td> $$\circ$$</td>
+        <td> <code>\circ</code></td>
+    </tr>
+    <tr>
+        <td> $$\to$$</td>
+        <td> <code>\to</code></td>
     </tr>
 </table>
