@@ -158,18 +158,7 @@ to exactly one element $b=f(a)$ from $B$.
 </div>
 
 
-## Conditions to be a function
-<div id="content" class="incremental">
-Say if $f$ is a relation on $A$ and $B$,
 
-$f(x)$ is a function iff <br><br>
-
-1. For every $x \in A$, $f(x) \in B$ <br><br>
-2. For every $x \in A$, there exists $f(x) \in B$ <br><br>
-3.  For every $x \in A$, there exists *only one* $f(x) \in B$
-
-
-</div>
 
 
 ## Common Function: Minimum
