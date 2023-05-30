@@ -11,3 +11,5 @@ For the practice problems, we will be discussing this figure:
 
 1. Is $$f$$ a total function?
 2. Is $$g$$ a total function?
+3. Is $$g$$ a bijection?
+4. Let $$h=g\circ f$$. Is $$h$$ is a function?
