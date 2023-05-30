@@ -26,7 +26,8 @@ $$\forall a\in A\  \exists b_1\in B\  \bigl((a,b_1)\in f
 b_1}) \bigr).$$ 
 
 Let's break this down...
-- $\forall a\in A\  \exists b_1\in B\  \bigl((a,b_1)\in f \bigr)$ <br /> 
+
+- $\forall a\in A\  \exists b_1\in B\  \bigl((a,b_1)\in f \bigr)$ <br> 
 This is saying that for all $a$, there exists $b_1$ such that $f(a)=b_1$
 - $\bigl(\forall b_2\in B\  ({(a,b_2)\in f} \implies {b_2 =
 b_1}) \bigr)$ <br />
