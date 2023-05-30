@@ -22,14 +22,14 @@ to exactly one element $b=f(a)$ from $B$.
 Relation $f\subseteq
 A\times B$ is a  function  iff  
 $$\forall a\in A\  \exists b_1\in B\  \bigl((a,b_1)\in f
-\bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \implies {b_2 =
+\bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \rightarrow {b_2 =
 b_1}) \bigr).$$ 
 
 Let's break this down...
 
 - $\forall a\in A\  \exists b_1\in B\  \bigl((a,b_1)\in f \bigr)$ <br> 
 This is saying that for all $a$, there exists $b_1$ such that $f(a)=b_1$
-- $\bigl(\forall b_2\in B\  ({(a,b_2)\in f} \implies {b_2 =
+- $\bigl(\forall b_2\in B\  ({(a,b_2)\in f} \rightarrow {b_2 =
 b_1}) \bigr)$ <br />
 This is saying that if we find a $b_2$ such that $f(a)=b_2$, then $b_1 = b_2$ 
 (aka $f(a)$ can only have one result)
@@ -42,7 +42,7 @@ This is saying that if we find a $b_2$ such that $f(a)=b_2$, then $b_1 = b_2$
 
 - A function is a relation $f \subseteq A \times B$, 
 which we can write as $f: A \to B$ <br /> This can be said as "$f$ maps $A$ to $B$"
-- Using notation we've learned, $\forall a\in A\ b\in B,\ \bigl((a,b)\in f \implies
+- Using notation we've learned, $\forall a\in A\ b\in B,\ \bigl((a,b)\in f \rightarrow
 (b=f(a))\bigr)$
 - Writing $y=f(x)$ rather than   $(x,y)\in f$ makes sense if and only if $x$ pairs with only one $y$.
 - $A$ is called the **domain** and $B$ is the **range**.
@@ -317,7 +317,7 @@ A  **function**  $f$ is a relation on $A$ and $B$ that maps each $a$ from  $A$
 to exactly one element $b=f(a)$ from $B$.
 
 $\forall a\in A\  \exists b_1\in B\  \bigl((a,b_1)\in f
-\bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \implies {b_2 =
+\bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \rightarrow {b_2 =
 b_1}) \bigr).$ 
 
 Actually, the full term for this definition is a **total function**.
@@ -333,7 +333,7 @@ A  **function**  $f$ is a relation on $A$ and $B$ that maps each $a$ from  $A$
 to exactly one element $b=f(a)$ from $B$.
 
 $\forall a\in A\  \exists b_1\in B\  \bigl((a,b_1)\in f
-\bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \implies {b_2 =
+\bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \rightarrow {b_2 =
 b_1}) \bigr).$ 
 
 Actually, the full term for this definition is a **total function**.
@@ -342,7 +342,7 @@ A  **partial function**  $f$ is a relation on $A$ and $B$ that maps each $a$ fro
 to *at most* one element $b=f(a)$ from $B$.
 
 $\forall a\in A\  \exists b_1\in B  \cancel{\bigl((a,b_1)\in f
-\bigr)\land} \bigl(\forall b_2\in B  ({(a,b_2)\in f} \implies {b_2 =
+\bigr)\land} \bigl(\forall b_2\in B  ({(a,b_2)\in f} \rightarrow {b_2 =
 b_1}) \bigr).$ 
 
 In other words, If $x \in A$, $f(x)$ doesn't *necessarily* evaluate.
@@ -361,11 +361,11 @@ In other words, If $x \in A$, $f(x)$ doesn't *necessarily* evaluate.
 
 A function $f: A \to B$ is an **injection** iff each element of $B$ is hit by at most one element in $A$.
 
-$\forall x_1,x_2\in A, ~  \bigl(f(x_1)=f(x_2)\bigr) \implies (x_1=x_2).$
+$\forall x_1,x_2\in A, ~  \bigl(f(x_1)=f(x_2)\bigr) \rightarrow (x_1=x_2).$
 
 Another logically equivalent way to state this is:
 
-$\forall x_1,x_2\in A, ~   (x_1{\neq}x_2)\implies \bigl(f(x_1){\ne}f(x_2)\bigr).$
+$\forall x_1,x_2\in A, ~   (x_1{\neq}x_2)\rightarrow \bigl(f(x_1){\ne}f(x_2)\bigr).$
 
 This logical definition inspires the other term for an injection which is **one-to-one** because one input maps to one output. 
 
@@ -396,7 +396,7 @@ A function $f: A\to B$ is a **bijection**
 if and only if it is an injection and a surjection.
 
 $\forall b\in B, ~  \exists a_1 \in A, ~  \bigl(f(a_1)=b
-\bigr)\land \bigl(\forall_{a_2\in A}\  ({f(a_2)= b}) \implies ({a_2 =
+\bigr)\land \bigl(\forall_{a_2\in A}\  ({f(a_2)= b}) \rightarrow ({a_2 =
 a_1}) \bigr).$
 
 
@@ -414,7 +414,7 @@ We are going to demonstrate how to prove a function is a bijection. We are also 
 - Surjective: $\forall y \in A, \exists x \in A f(x)=y$<br>
     - Let $x = f(y), y \in A$ <br>
     - $f(x) = f(f(y)) = y \in A$ <br>
-- Injective: $\forall x_1, x_2 \in A, (f(x_1) = f(x_2)) \implies x_1 = x_2$ <br>
+- Injective: $\forall x_1, x_2 \in A, (f(x_1) = f(x_2)) \rightarrow x_1 = x_2$ <br>
     - $\forall x_1, x_2 \in A, (f(x_1) = f(x_2))$ <br>
     - Apply $f$ to both sides: $f(f(x_1)) = f(f(x_2))$ <br>
     - Use the fact that $f(f(a)) = a$ to simplify: $x_1 = x_2$

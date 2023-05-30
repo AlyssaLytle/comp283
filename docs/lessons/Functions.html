@@ -161,7 +161,7 @@ class="math inline">\(B\)</span>.</p>
 a function iff<br />
 <span class="math display">\[\forall a\in A\  \exists b_1\in
 B\  \bigl((a,b_1)\in f
-\bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \implies {b_2 =
+\bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \rightarrow {b_2 =
 b_1}) \bigr).\]</span></p>
 <p>Let’s break this down…</p>
 <ul>
@@ -171,9 +171,9 @@ saying that for all <span class="math inline">\(a\)</span>, there exists
 <span class="math inline">\(b_1\)</span> such that <span
 class="math inline">\(f(a)=b_1\)</span></li>
 <li class="fragment"><span class="math inline">\(\bigl(\forall b_2\in
-B\  ({(a,b_2)\in f} \implies {b_2 = b_1}) \bigr)\)</span> <br /> This is
-saying that if we find a <span class="math inline">\(b_2\)</span> such
-that <span class="math inline">\(f(a)=b_2\)</span>, then <span
+B\  ({(a,b_2)\in f} \rightarrow {b_2 = b_1}) \bigr)\)</span> <br /> This
+is saying that if we find a <span class="math inline">\(b_2\)</span>
+such that <span class="math inline">\(f(a)=b_2\)</span>, then <span
 class="math inline">\(b_1 = b_2\)</span> (aka <span
 class="math inline">\(f(a)\)</span> can only have one result)</li>
 </ul>
@@ -190,8 +190,8 @@ be said as “<span class="math inline">\(f\)</span> maps <span
 class="math inline">\(A\)</span> to <span
 class="math inline">\(B\)</span>”</li>
 <li class="fragment">Using notation we’ve learned, <span
-class="math inline">\(\forall a\in A\ b\in B,\ \bigl((a,b)\in f \implies
-(b=f(a))\bigr)\)</span></li>
+class="math inline">\(\forall a\in A\ b\in B,\ \bigl((a,b)\in f
+\rightarrow (b=f(a))\bigr)\)</span></li>
 <li class="fragment">Writing <span class="math inline">\(y=f(x)\)</span>
 rather than <span class="math inline">\((x,y)\in f\)</span> makes sense
 if and only if <span class="math inline">\(x\)</span> pairs with only
@@ -522,7 +522,7 @@ class="math inline">\(b=f(a)\)</span> from <span
 class="math inline">\(B\)</span>.</p>
 <p><span class="math inline">\(\forall a\in A\  \exists b_1\in
 B\  \bigl((a,b_1)\in f \bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in
-f} \implies {b_2 = b_1}) \bigr).\)</span></p>
+f} \rightarrow {b_2 = b_1}) \bigr).\)</span></p>
 <p>Actually, the full term for this definition is a <strong>total
 function</strong>.</p>
 </div>
@@ -540,7 +540,7 @@ class="math inline">\(b=f(a)\)</span> from <span
 class="math inline">\(B\)</span>.</p>
 <p><span class="math inline">\(\forall a\in A\  \exists b_1\in
 B\  \bigl((a,b_1)\in f \bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in
-f} \implies {b_2 = b_1}) \bigr).\)</span></p>
+f} \rightarrow {b_2 = b_1}) \bigr).\)</span></p>
 <p>Actually, the full term for this definition is a <strong>total
 function</strong>.</p>
 <p>A <strong>partial function</strong> <span
@@ -553,7 +553,7 @@ class="math inline">\(b=f(a)\)</span> from <span
 class="math inline">\(B\)</span>.</p>
 <p><span class="math inline">\(\forall a\in A\  \exists b_1\in B
 \cancel{\bigl((a,b_1)\in f \bigr)\land} \bigl(\forall b_2\in B
-({(a,b_2)\in f} \implies {b_2 = b_1}) \bigr).\)</span></p>
+({(a,b_2)\in f} \rightarrow {b_2 = b_1}) \bigr).\)</span></p>
 <p>In other words, If <span class="math inline">\(x \in A\)</span>,
 <span class="math inline">\(f(x)\)</span> doesn’t <em>necessarily</em>
 evaluate.</p>
@@ -573,10 +573,10 @@ input.</p>
 class="math inline">\(B\)</span> is hit by at most one element in <span
 class="math inline">\(A\)</span>.</p>
 <p><span class="math inline">\(\forall x_1,x_2\in A, ~
-\bigl(f(x_1)=f(x_2)\bigr) \implies (x_1=x_2).\)</span></p>
+\bigl(f(x_1)=f(x_2)\bigr) \rightarrow (x_1=x_2).\)</span></p>
 <p>Another logically equivalent way to state this is:</p>
 <p><span class="math inline">\(\forall x_1,x_2\in A, ~
-(x_1{\neq}x_2)\implies \bigl(f(x_1){\ne}f(x_2)\bigr).\)</span></p>
+(x_1{\neq}x_2)\rightarrow \bigl(f(x_1){\ne}f(x_2)\bigr).\)</span></p>
 <p>This logical definition inspires the other term for an injection
 which is <strong>one-to-one</strong> because one input maps to one
 output.</p>
@@ -604,7 +604,7 @@ f(x)=y\)</span>.</p>
 surjection.</p>
 <p><span class="math inline">\(\forall b\in B, ~ \exists a_1 \in A, ~
 \bigl(f(a_1)=b \bigr)\land \bigl(\forall_{a_2\in A}\  ({f(a_2)= b})
-\implies ({a_2 = a_1}) \bigr).\)</span></p>
+\rightarrow ({a_2 = a_1}) \bigr).\)</span></p>
 </div>
 </section>
 <section id="showing-a-function-is-a-bijection" class="slide level2">
@@ -631,7 +631,7 @@ A\)</span> <br></li>
 A\)</span> <br></li>
 </ul></li>
 <li class="fragment">Injective: <span class="math inline">\(\forall x_1,
-x_2 \in A, (f(x_1) = f(x_2)) \implies x_1 = x_2\)</span> <br>
+x_2 \in A, (f(x_1) = f(x_2)) \rightarrow x_1 = x_2\)</span> <br>
 <ul>
 <li class="fragment"><span class="math inline">\(\forall x_1, x_2 \in A,
 (f(x_1) = f(x_2))\)</span> <br></li>
