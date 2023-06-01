@@ -1,5 +1,5 @@
 ---
-title: PrimesRSA
+title: Primes + RSA
 theme: dracula
 center: false
 transition: 'none'

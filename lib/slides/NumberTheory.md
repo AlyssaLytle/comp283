@@ -1,15 +1,10 @@
 ---
-title: NumberTheory
+title: Number Theory
 theme: dracula
 center: false
 transition: 'none'
 contributors: Alyssa Byrnes
 ---
-
-
-<div id="content">
-</div>
-
 
 
 ## Useful Operators - Floor and Ceiling
@@ -196,14 +191,3 @@ The **greatest common divisor** of two integers $x$ and $y$, denoted $GCD(x,y)$ 
 
 If $GCD(x,y) = 1$, then $x$ and $y$ are **relatively prime** (also called coprime).
 </div>
-
-
-
-
-
-
-
-
-
-
-
