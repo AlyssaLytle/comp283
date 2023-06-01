@@ -1,6 +1,20 @@
+---
+title: ProofsCont
+theme: dracula
+center: false
+transition: 'none'
+contributors: Alyssa Byrnes
+---
+
 # More on Proofs
+<div id="content">
+
+
+</div>
+
 
 ## Review
+<div id="content">
 
 - Statements you want to prove are usually of the form $P \implies Q$. 
 
@@ -12,7 +26,12 @@
 
 - What's difficult about this is that it's harder to know where to start (aka what to put on line $1$) because you don't have an obvious $P$.
 
+
+</div>
+
+
 ## Finding P and Q
+<div id="content">
 
 ### Example
 
@@ -29,6 +48,10 @@
 - $P:$ Everything you know about math is true 
 - $Q:$ $x-1 < \left \lfloor{x}\right \rfloor$
     
+
+</div>
+
+
 ## Rewrites
 
 Here are some common rewrites you might see when constructing your proofs:
@@ -41,7 +64,9 @@ Here are some common rewrites you might see when constructing your proofs:
 - $n = a \bmod b$ converts to $n = bt + a$ for some integer $t$.
 
     
+
 ## Main Types of Proofs
+<div id="content">
 
 The four typical ways we show $P \implies Q$ are the following:
 
@@ -53,14 +78,24 @@ The four typical ways we show $P \implies Q$ are the following:
 
 - Proof By Counterexample
 
+
+</div>
+
+
 ## Direct Proofs
+<div id="content">
 
 These are the proofs we did last class. 
 
 To show $P \implies Q$, you start with $P$ and you reason to get to $Q$.
 
 
+
+</div>
+
+
 ## Proof By Contradiction
+<div id="content">
 
 > - $P \implies Q \equiv \neg(P \land \neg Q)$. 
 
@@ -82,7 +117,12 @@ To show $P \implies Q$, you start with $P$ and you reason to get to $Q$.
 
 - So we say: Everything I know about math is true and $\sqrt{2}$ is *rational*.
 
+
+</div>
+
+
 ## Contradiction Example:
+<div id="content">
 
 For this proof we are going to use the following statement: 
 
@@ -92,7 +132,12 @@ Additionally, recall the definition of a rational number:
 
 A rational number can be written as $\frac{a}{b}$ such that $a, b \in \mathbb{Z}$ and $GCD(a,b)=1$.
 
+
+</div>
+
+
 ## Contradiction Example
+<div id="content">
 
 \begin{equation*}
 \begin{array}{l l l}
@@ -114,7 +159,12 @@ A rational number can be written as $\frac{a}{b}$ such that $a, b \in \mathbb{Z}
 \end{array}
 \end{equation*}
 
+
+</div>
+
+
 ## Proof by Contrapositive
+<div id="content">
 
 For a proof of contrapositive, you're going to use the equality we proved last class: 
 
@@ -136,7 +186,12 @@ In other words, instead of proving $P \implies Q$, we are going to assume $\neg 
 - If $x$ is not odd, then $x^2$ is not odd. Or, equivalently, If $x$ is even, then $x^2$ is even. We've actually already proved this!$\square$
 
 
+
+</div>
+
+
 ## Proof by Counterexample
+<div id="content">
 
 If you want to disprove something, the easiest way is usually by counter example. 
 
@@ -150,7 +205,12 @@ You don't have to do this in the typical two column format as long as you make y
 
 - $2$ is even, and $2^2= 4$ is even. $\square$
 
+
+</div>
+
+
 ## Other Types of Proofs
+<div id="content">
 
 You may see some other types of proofs that follow from the types of proofs we've already discussed. We will discuss a few.
 
@@ -162,7 +222,12 @@ You may see some other types of proofs that follow from the types of proofs we'v
     - Constructive
     
     
+
+</div>
+
+
 ## Biconditional Proofs
+<div id="content">
 
 - For our proofs, we are basically writing a $\implies$ to get from line to line.
 
@@ -172,7 +237,12 @@ You may see some other types of proofs that follow from the types of proofs we'v
 
 - The added requirement is that you have to use $\iff$ rules to get from line to line. Thankfully, most definitions are actually defined using $\iff$.
 
+
+</div>
+
+
 ## Biconditional Proofs
+<div id="content">
 
 
 ### Example
@@ -190,7 +260,12 @@ We want to prove $x \in \overline{A \cap B} \iff x \in \bar{A} \cup \bar{B}$
 \end{equation*}
 
 
+
+</div>
+
+
 ## Logical Equivalence
+<div id="content">
 Proofs of logical equivalence are of the form $P \iff Q$. 
 
 Why? Remember that if $P \equiv Q$, then $P \iff Q$ is always true!
@@ -213,7 +288,12 @@ First, let's do this proof starting at $P$ to get to $Q$.
 \end{array}
 \end{equation*}
 
+
+</div>
+
+
 ## Logical Equivalence Cont.
+<div id="content">
 
 As previously stated, we can also start at $Q$ to get to $P$. 
 
@@ -230,7 +310,12 @@ As previously stated, we can also start at $Q$ to get to $P$.
 Either of these proofs are acceptable because they are saying the same thing! Which side you want to start at is really a personal preference.
 
 
+
+</div>
+
+
 ## Forall
+<div id="content">
 
 
 You may want to prove statements such as "$\forall x \in S, P(x) \implies Q(x)$."
@@ -244,7 +329,12 @@ You can often do this with a direct proof. All of the things we've directly prov
 - $\forall a,b,c \in \{\texttt{True}, \texttt{False}\}, {} \neg a \lor \neg(b \land \neg c) \equiv a \implies (b \implies c)$
 - $\forall a,b,c \in \mathbb{Z}$, if $a \mid b$ and $b \mid c$, then $a \mid c$
 
+
+</div>
+
+
 ## Forall, Exhaustive
+<div id="content">
 
 However, we can also prove "for all" statements by exhaustively looking at every element in $S$ and checking if $P(x)$ holds.
 
@@ -257,7 +347,12 @@ A good example is the set problem you've already seen:
 - $N = \{$Aksana$\}$ is the set of your friends who are vegan
 - We want to prove: $\forall x \in F,{} x \in N \implies x \in V$
 
+
+</div>
+
+
 ## Forall, Exhaustive
+<div id="content">
 
 However, we can also prove "for all" statements by *exhaustively* looking at every element in $S$ and checking if $P(x)$ holds. 
 
@@ -281,7 +376,12 @@ $\begin{array}{| l | c | c | c |}
          \hline
     \end{array}$
 
+
+</div>
+
+
 ## Proof by Cases
+<div id="content">
 
 A **Proof by Cases** is a kind of proof by exhaustion. You are breaking the set you are proving something about into smaller sets.
 
@@ -295,7 +395,12 @@ $sgn(x) = \begin{cases}
     1 & x>0
     \end{cases}$
     
+
+</div>
+
+
 ## Proof by Cases
+<div id="content">
 
 A **Proof by Cases** is a kind of proof by exhaustion. You are breaking the set you are proving something about into smaller sets.
 
@@ -320,7 +425,12 @@ $\begin{array}{l l l}
     \end{array}$
 
 
+
+</div>
+
+
 ## Proof by Cases Cont.
+<div id="content">
 
 Case 2: $x = 0$
 
@@ -342,7 +452,12 @@ $\begin{array}{l l l}
       5. & sgn(x) = |x| & \textrm{Compared Lines 3 and 5} \\
     \end{array}$
 
+
+</div>
+
+
 ## Proof of Existence
+<div id="content">
 
 Sometimes you just need to prove the existence of something. 
 
@@ -357,7 +472,12 @@ Let's go back to our food example:
 - $N = \{$Aksana$\}$ is the set of your friends who are vegan
 - We want to prove: $\exists x \in F,{} x \in N \implies x \in V$
 
+
+</div>
+
+
 ## Proof of Existence
+<div id="content">
 
 Sometimes you just need to prove the existence of something. 
 
@@ -379,7 +499,12 @@ $\begin{array}{l l l}
       4. & x \in N \implies x \in V = \texttt{True} & \textrm{Applied Def. of Implication to Lines 3 and 4 } \square  \\
     \end{array}$
 
+
+</div>
+
+
 ## Proof of Existence
+<div id="content">
 
 Sometimes you will have to prove the existence of more complicated things. For example, you might want to argue the usefulness of exponential encryption by proving that exponential encryption can be decrypted:
 
@@ -394,11 +519,20 @@ You can do this by using RSA as an example:
 
 This can also be called a **constructive proof** because you are literally constructing your own example.
 
+
+</div>
+
+
 ## Common Constructive Proofs
+<div id="content">
 
 A common constructive proof you will see in computer science looks something like: 
 
 "This problem can be solved in this amount of time"
 
 People will prove this by constructing an algorithm that solves that problem and proving that the algorithm can be completed in a certain runtime.
+
+
+</div>
+
 

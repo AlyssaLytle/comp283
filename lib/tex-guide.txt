@@ -31,3 +31,7 @@ $$\exists$$,`\exists`
 ## Relations and Functions
 $$\circ$$,`\circ`
 $$\to$$,`\to`
+## Number Theory
+$$\mid$$,`\mid`
+$$a \bmod b$$,`a \bmod b`
+$$a \pmod b$$,`a \pmod b`

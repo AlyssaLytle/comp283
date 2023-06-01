@@ -1,4 +1,18 @@
+---
+title: Proofs
+theme: dracula
+center: false
+transition: 'none'
+contributors: Alyssa Byrnes
+---
+
+
+<div id="content">
+</div>
+
+
 ## Proofs
+<div id="content">
 - Proofs are useful because they let you say something about the tools you're using and building! 
 
 - In the real world, this is useful because it helps you explain your work and really convince people of your contribution.
@@ -13,7 +27,12 @@
 - > This new robot won't become sentient and kill you.
 
 
+
+</div>
+
+
 ## What a proof looks like
+<div id="content">
 
 - A good proof is like good code, clear and easy to follow! 
 
@@ -21,7 +40,12 @@
 
 - We're going to write our proofs in this class in a specific way. As you advance in Computer Science or Math, you will find that you don't need to be this structured when writing proofs. You can think of this method as your "training wheels". The benefit of it is that it helps you practice writing down your reasoning in a linear way, and it helps you remember to justify every statement you make.
 
+
+</div>
+
+
 ## What a proof looks like
+<div id="content">
 
 The two column format looks like this: 
 
@@ -35,7 +59,12 @@ $\begin{array}{l l l}
       \square 
  \end{array}$
  
+
+</div>
+
+
 ## Types of Proofs - Direct
+<div id="content">
  
  The first type of proof we will discuss is called a **direct proof**. Basically, we are trying to to prove $p \implies q$ by starting at $p$ and getting to $q$.
  
@@ -45,7 +74,12 @@ $\begin{array}{l l l}
  
  
  
+
+</div>
+
+
 ## Types of Proofs - Direct
+<div id="content">
  
  The first type of proof we will discuss is called a **direct proof**. Basically, we are trying to to prove $p \implies q$ by starting at $p$ and getting to $q$.
  
@@ -65,12 +99,22 @@ $\begin{array}{l l l}
 **Note that at every step you're basically saying, "Therefore..." this is where your implication $\implies$ is coming in.**
 
 
+
+</div>
+
+
 ## Example Proof
+<div id="content">
 
 We want to show $x-1 < \left \lfloor{x}\right \rfloor$
 
 
+
+</div>
+
+
 ## Example Proof
+<div id="content">
 
 We want to show $x-1 < \left \lfloor{x}\right \rfloor$
 
@@ -86,7 +130,12 @@ We want to show $x-1 < \left \lfloor{x}\right \rfloor$
  
  **Note that this is still a direct proof ($p \implies q$) but $p$ is never directly stated. If $p$ is never directly stated, you can just think of $p$ as your set of knowledge of the world.**
  
+
+</div>
+
+
 ## Example Proof 2
+<div id="content">
  
 Another example of this is when we do our logical equivalences.
  
@@ -100,7 +149,12 @@ Another example of this is when we do our logical equivalences.
 
  
  
+
+</div>
+
+
 ## Example Proof 2
+<div id="content">
  
   Another example of this is when we do our logical equivalences.
  
@@ -118,5 +172,9 @@ Another example of this is when we do our logical equivalences.
    3. & \equiv a \implies (\neg b \lor c) & \textrm{DeMorgan's}\\
    4. & \equiv a \implies (b \implies c) & \textrm{Implication Definition } \square \\
 \end{array}$
+
+
+
+</div>
 
 

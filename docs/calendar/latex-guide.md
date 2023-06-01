@@ -137,3 +137,19 @@ contributors: Alyssa Byrnes
         <td> <code>\to</code></td>
     </tr>
 </table>
+
+## Number Theory
+<table>
+    <tr>
+        <td> $$\mid$$</td>
+        <td> <code>\mid</code></td>
+    </tr>
+    <tr>
+        <td> $$a \bmod b$$</td>
+        <td> <code>a \bmod b</code></td>
+    </tr>
+    <tr>
+        <td> $$a \pmod b$$</td>
+        <td> <code>a \pmod b</code></td>
+    </tr>
+</table>

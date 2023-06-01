@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>NumberTheory</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    /* .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    } */
+
+    #left {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:45%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #left14 {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:30%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #right34 {
+      left:50%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:60%;
+      font-size: 65%;
+    }
+    
+    #right {
+      left:31.25%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:45%;
+      font-size: 75%;
+    }
+
+    #text {
+      font-size: 75%;
+    }
+
+    #content {
+      font-size: 75%;
+    }
+
+    #smalltext {
+      font-size: 40%;
+    }
+
+    #medtext {
+      font-size: 60%;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">NumberTheory</h1>
+</section>
+
+<section class="slide level2">
+
+<div id="content">
+
+</div>
+</section>
+<section id="useful-operators---floor-and-ceiling" class="slide level2">
+<h2>Useful Operators - Floor and Ceiling</h2>
+<div id="content">
+<p>The <strong>floor</strong> operator, denoted <span
+class="math inline">\(\left \lfloor{x}\right \rfloor\)</span>, tells us
+the greatest integer <span class="math inline">\(\leq x\)</span>.</p>
+<p>The <strong>ceiling</strong> operator, denoted <span
+class="math inline">\(\left \lceil{x}\right \rceil\)</span>, tells us
+the smallest integer <span class="math inline">\(\geq x\)</span>.</p>
+<p>(Basically, they’re just fancy ways of saying “round down” and “round
+up”)</p>
+<h3 id="example">Example</h3>
+<ul>
+<li class="fragment"><span class="math inline">\(\left
+\lfloor{7.5}\right \rfloor = 7\)</span> <br></li>
+<li class="fragment"><span class="math inline">\(\left \lceil{7.5}\right
+\rceil = 8\)</span></li>
+</ul>
+</div>
+</section>
+<section id="property-of-floor" class="slide level2">
+<h2>Property of Floor</h2>
+<div id="content">
+<p><span class="math inline">\(x-1 &lt; \left \lfloor{x}\right \rfloor
+\leq x\)</span></p>
+<ul>
+<li class="fragment">Why?</li>
+<li class="fragment">By definition, we know <span
+class="math inline">\(\left \lfloor{x}\right \rfloor \leq
+x\)</span></li>
+<li class="fragment">We know <span class="math inline">\(x-1 &lt; \left
+\lfloor{x}\right \rfloor\)</span> because:
+<ul>
+<li class="fragment">We can write <span class="math inline">\(x\)</span>
+as <span class="math inline">\(x = y + d\)</span> where <span
+class="math inline">\(y\)</span> is an integer and <span
+class="math inline">\(d\)</span> is a decimal. (E.g. <span
+class="math inline">\(7.5 = 7 + .5\)</span>)</li>
+<li class="fragment">We know <span class="math inline">\(\left
+\lfloor{x}\right \rfloor = y\)</span> and that <span
+class="math inline">\(d\)</span> is some real number such that <span
+class="math inline">\(0 \leq d &lt; 1\)</span>.</li>
+<li class="fragment">We know <span class="math inline">\(d &lt;
+1\)</span>, so <span class="math inline">\(d-1\)</span> is negative,
+therefore <span class="math inline">\(y + d - 1 &lt; y\)</span>.</li>
+<li class="fragment">So <span class="math inline">\(x - 1 = y + d - 1
+&lt; y = \left \lfloor{x}\right \rfloor\)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="property-of-ceiling" class="slide level2">
+<h2>Property of Ceiling</h2>
+<div id="content">
+<p><span class="math inline">\(x \leq \left \lceil{x}\right \rceil &lt;
+x + 1\)</span></p>
+<ul>
+<li class="fragment">(You can prove this similarly to the way we proved
+the floor property!)</li>
+</ul>
+</div>
+</section>
+<section id="bases" class="slide level2">
+<h2>Bases</h2>
+<div id="content">
+<p>We usually represent numbers in base ten</p>
+<p><img src="https://i.imgur.com/8dmbsc7.png" width="600"/></p>
+</div>
+</section>
+<section id="bases-1" class="slide level2">
+<h2>Bases</h2>
+<div id="content">
+<ul>
+<li class="fragment">In general, a number in the form of digits <span
+class="math inline">\(d_k d_{k-1} \ldots d_1 d_0\)</span> can be
+represented as <span class="math display">\[\sum_{i\in[0,k]}d_i t^i =
+d_kt^k + d_{k-1}t^{k-1}+ \ldots + d_1t^1 + d_0t^0\]</span> where <span
+class="math inline">\(t\)</span> is the base</li>
+<li class="fragment">All digits <span class="math inline">\(d_i\)</span>
+are in the range <span class="math inline">\([0,t-1]\)</span></li>
+</ul>
+<h3 id="example-1">Example</h3>
+<ul>
+<li class="fragment">Let’s go back to representing the number <span
+class="math inline">\(10,475\)</span> in base <span
+class="math inline">\(10\)</span></li>
+<li class="fragment">So the digits are <span class="math inline">\(d_4 =
+1\)</span>, <span class="math inline">\(d_3 = 0\)</span>, <span
+class="math inline">\(d_2 = 4\)</span>, <span class="math inline">\(d_1
+= 7\)</span>, <span class="math inline">\(d_0 = 5\)</span> and the base
+is <span class="math inline">\(t = 10\)</span></li>
+<li class="fragment">Which gives us what we got before: <span
+class="math inline">\(10,475 = 1 \cdot 10^4 + 0 \cdot 10^3 + 4 \cdot
+10^2 + 7 \cdot 10^1 + 5 \cdot 10^0\)</span></li>
+<li class="fragment">Also note that all digits are between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(9\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="base-2" class="slide level2">
+<h2>Base 2</h2>
+<div id="left">
+<ul>
+<li class="fragment">Often in computer science, we represent numbers in
+base <span class="math inline">\(2\)</span>. This is also called
+“binary” representation.</li>
+<li class="fragment">Since our base <span class="math inline">\(t =
+2\)</span>, then our digits are in the range <span
+class="math inline">\([0,1]\)</span>. So basically, we are just looking
+at strings of <span class="math inline">\(0\)</span>s and <span
+class="math inline">\(1\)</span>s. <br> (Often we call <span
+class="math inline">\(0\)</span>s and <span
+class="math inline">\(1\)</span>s “bits”. <span
+class="math inline">\(8\)</span> bits is a byte.)</li>
+</ul>
+</div>
+<div id="right">
+<p><img src="https://i.imgur.com/brCatgF.png" width="500"/></p>
+</div>
+<!-- ## In Class Assignment
+<div id="content">
+
+In groups, write (in English) the procedure for converting a number from binary to base 10. 
+
+Then, write the procedure for converting a number from base 10 to binary.
+
+Hint: start by thinking what steps would you take to convert $10110$ to $22$ and $22$ to $10110$, then generalize it to any number.
+
+You can submit this as a group on Gradescope!
+
+(It's okay if you're wrong! We will go over the right answer after you submit. The idea is to just see that you put effort in.)
+
+
+</div> -->
+</section>
+<section id="length-of-binary-messages" class="slide level2">
+<h2>Length of Binary Messages</h2>
+<div id="content">
+<p>If I want to express <span class="math inline">\(x\)</span> in
+binary, how long will it be?</p>
+<p>(In other words, how many bits will it take?)</p>
+<ul>
+<li class="fragment">Think about the procedure we just did for
+converting a number to binary. We find the highest power of <span
+class="math inline">\(2\)</span> that is less than or equal to <span
+class="math inline">\(x\)</span>: <span class="math inline">\(k = \left
+\lfloor{\log_2(x)}\right \rfloor\)</span></li>
+<li class="fragment">We know this means that our string of bits will be
+of length <span class="math inline">\(k\)</span>.</li>
+<li class="fragment">This can be generalized for any base <span
+class="math inline">\(b\)</span>: The length of any number <span
+class="math inline">\(x\)</span> in base <span
+class="math inline">\(b\)</span> is <span class="math inline">\(\left
+\lfloor{\log_b(x)}\right \rfloor\)</span></li>
+</ul>
+</div>
+</section>
+<section id="length-of-binary-messages-1" class="slide level2">
+<h2>Length of Binary Messages</h2>
+<div id="content">
+<ul>
+<li class="fragment">While it makes sense to represent numbers in binary
+for computers, notice that it takes more digits to represent them. Think
+about it. Saying “<span class="math inline">\(10110\)</span>” instead of
+“<span class="math inline">\(22\)</span>” is longer.</li>
+<li class="fragment">So why do we do it? (I’ll link to a video…)</li>
+</ul>
+</div>
+</section>
+<section id="useful-operator---divides" class="slide level2">
+<h2>Useful Operator - Divides</h2>
+<p>For all integers <span class="math inline">\(a,b\)</span> we can say
+<span class="math inline">\(a\)</span> <strong>divides</strong> <span
+class="math inline">\(b\)</span>, or <span class="math inline">\(a \mid
+b\)</span>, iff there exists some integer <span
+class="math inline">\(m\)</span> such that <span
+class="math inline">\(a\cdot m = b\)</span>.</p>
+<h3 id="example-2">Example</h3>
+<ul>
+<li class="fragment">We can say <span class="math inline">\(2\)</span>
+divides <span class="math inline">\(6\)</span>, or <span
+class="math inline">\(2 \mid 6\)</span>, because <span
+class="math inline">\(2 \cdot 3 = 6\)</span></li>
+<li class="fragment">Notice that if <span class="math inline">\(b =
+0\)</span> and <span class="math inline">\(m = 0\)</span>, then <span
+class="math inline">\(a\)</span> can be anything. From this we conclude
+that every number divides <span class="math inline">\(0\)</span>. <br>
+<span class="math inline">\(\forall a \in \mathbb{Z}, a \mid
+0\)</span></li>
+</ul>
+</section>
+<section id="useful-operator---mod" class="slide level2">
+<h2>Useful Operator - Mod</h2>
+<div id="content">
+<p>For positive Integers, <span class="math inline">\(x \bmod y\)</span>
+is the remainder of <span class="math inline">\(x/y\)</span>.</p>
+<p>More generally, <span class="math inline">\(x \bmod y = x - \left
+\lfloor{x/y}\right \rfloor \cdot y\)</span>.</p>
+<h3 id="examples">Examples</h3>
+<ul>
+<li class="fragment"><p><span class="math inline">\(5 \bmod 2 =
+1\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(4 \bmod 2 =
+0\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(-1 \bmod 2 =
+1\)</span></p></li>
+<li class="fragment"><p>Note that the value of <span
+class="math inline">\(x \bmod y\)</span> is between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(y-1\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="congruence-modulo-y" class="slide level2">
+<h2>Congruence Modulo y</h2>
+<div id="content">
+<p>Another way we can express mods is via congruency.</p>
+<p><span class="math inline">\(x \equiv z \pmod y\)</span> reads as
+“<span class="math inline">\(x\)</span> is congruent to <span
+class="math inline">\(z\)</span> mod <span
+class="math inline">\(y\)</span>”.</p>
+<p>What this means is that <span class="math inline">\(x \bmod y = z
+\bmod y\)</span>.</p>
+<h3 id="example-3">Example</h3>
+<ul>
+<li class="fragment"><span class="math inline">\(4 \bmod 2 = 0\)</span>
+and <span class="math inline">\(6 \bmod 2 = 0\)</span>, so <span
+class="math inline">\(4 \equiv 6 \pmod 2\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="fun-with-primes" class="slide level2">
+<h2>Fun With Primes!</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p>Primes are a common conversation in both
+computer science and math. This is because they are incredibly
+useful!</p></li>
+<li class="fragment"><p>One popular application of primes is in
+cryptography.</p></li>
+<li class="fragment"><p>Why are primes important in this? We will
+discuss that! But first let’s learn a little more about primes.</p></li>
+</ul>
+<iframe src="https://drive.google.com/file/d/1ZUuo50GwpvDpz5Wj5--cC9fkr10uRbJT/preview" width="640" height="450" allow="autoplay">
+</iframe>
+</div>
+</section>
+<section id="prime-vs.-composite" class="slide level2">
+<h2>Prime vs. Composite</h2>
+<p>A positive integer <span class="math inline">\(N\)</span> is
+<strong>composite</strong> if it can be written as the product of two
+smaller, positive integers.</p>
+<p><span class="math inline">\(N\)</span> is composite <span
+class="math inline">\(\iff \exists a,b \in (1,N), N = a \cdot
+b\)</span></p>
+<p>An integer <span class="math inline">\(p\)</span> is
+<strong>prime</strong> if it’s not composite.</p>
+<p>In other words, <span class="math inline">\(p\)</span>’s only
+divisors are <span class="math inline">\(1\)</span> and itself.</p>
+</section>
+<section id="gcd-relatively-prime-numbers" class="slide level2">
+<h2>GCD + Relatively Prime Numbers</h2>
+<p>The <strong>greatest common divisor</strong> of two integers <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>, denoted <span
+class="math inline">\(GCD(x,y)\)</span> is the largest positive integer
+that divides both <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>.</p>
+<h3 id="example-4">Example</h3>
+<ul>
+<li class="fragment"><span class="math inline">\(GCD(8,12) =
+4\)</span></li>
+<li class="fragment"><span class="math inline">\(GCD(3,6) =
+3\)</span></li>
+<li class="fragment"><span class="math inline">\(GCD(4,7) =
+1\)</span></li>
+</ul>
+<p>If <span class="math inline">\(GCD(x,y) = 1\)</span>, then <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> are <strong>relatively prime</strong>
+(also called coprime).</p>
+</section>
+<section id="the-fundamental-theorem-of-arithmetic"
+class="slide level2">
+<h2>The Fundamental Theorem of Arithmetic</h2>
+<div id="content">
+<p>(It has the word “fundamental” in it so you know it’s important!)</p>
+<p>Every number can be written as a unique product of prime numbers.</p>
+<ul>
+<li class="fragment"><p>Proof by example (Not a real proof):</p></li>
+<li class="fragment"><p><span class="math inline">\(100 = 4 \cdot 25 = 2
+\cdot 2 \cdot 5 \cdot 5\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(2020 = 2 \cdot 2
+\cdot 5 \cdot 101\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="in-class-activity" class="slide level2">
+<h2>In Class Activity</h2>
+<div id="content">
+<p>Come up with step-by-step process to find the prime factorization of
+a number.</p>
+<p>(Do this using “brute force”. E.g. no fancy coding techniques
+yet!)</p>
+<p>In other words, if I give you a number <span
+class="math inline">\(x\)</span>, and I tell you to find its prime
+factors, how would you do it?</p>
+<p>Bonus: What is the runtime of this algorithm in “Big-O”?</p>
+</div>
+</section>
+<section id="in-class-activity-1" class="slide level2">
+<h2>In Class Activity</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p>Use your algorithm to find the prime
+factorization of 2020.</p></li>
+<li class="fragment"><p>Use your algorithm to find the prime
+factorization of 2021.</p></li>
+</ul>
+<p>Is one harder than the other? Why?</p>
+<ul>
+<li class="fragment"><p>One is harder because it’s harder to factor out
+large prime numbers! (In other words, it takes longer!) Think about what
+this means for really large primes!</p></li>
+<li class="fragment"><p>Why is it useful to have numbers that are hard
+to factor? We will get back to that…</p></li>
+</ul>
+</div>
+</section>
+<section id="mod-review" class="slide level2">
+<h2>Mod Review</h2>
+<div id="content">
+<p>For positive Integers, <span class="math inline">\(x \bmod y\)</span>
+is the remainder of <span class="math inline">\(x/y\)</span>.</p>
+<p>More generally, <span class="math inline">\(x \bmod y = x - \left
+\lfloor{x/y}\right \rfloor \cdot y\)</span>.</p>
+<h3 id="examples-1">Examples</h3>
+<ul>
+<li class="fragment"><p><span class="math inline">\(5 \bmod 2 =
+1\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(4 \bmod 2 =
+0\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(-1 \bmod 2 =
+1\)</span></p></li>
+<li class="fragment"><p>Note that the value of <span
+class="math inline">\(x \bmod y\)</span> is between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(y-1\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="mods-in-the-other-direction" class="slide level2">
+<h2>Mods in the Other direction</h2>
+<div id="content">
+<p>If I say a number is congruent to <span class="math inline">\(b \bmod
+y\)</span>, then that means it is of the form <span
+class="math inline">\(y \cdot k + b\)</span> where <span
+class="math inline">\(k\)</span> is an integer.</p>
+<h3 id="examples-2">Examples</h3>
+<ul>
+<li class="fragment"><p><span class="math inline">\(1 \bmod 2\)</span>
+(odd numbers) <span class="math inline">\(\equiv 2k +
+1\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(0 \bmod 2\)</span>
+(even number) <span class="math inline">\(\equiv 2k\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(3 \bmod 5 \equiv 5k
++ 3\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="exponent-encryption" class="slide level2">
+<h2>Exponent Encryption</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p>To encrypt <span
+class="math inline">\(x\)</span>, we want to find an encryption exponent
+<span class="math inline">\(e\)</span> and a decryption exponent <span
+class="math inline">\(d\)</span> and an integer <span
+class="math inline">\(z\)</span> so that:</p></li>
+<li class="fragment"><p>Our original message is: <span
+class="math inline">\(x\)</span></p></li>
+<li class="fragment"><p>Our encrypted message is: <span
+class="math inline">\(x^e \bmod z\)</span></p></li>
+<li class="fragment"><p>Our decrypted message is: <span
+class="math inline">\((x^e)^d \bmod z = x\)</span></p></li>
+<li class="fragment"><p>We want it so that you <em>have</em> to know
+<span class="math inline">\(d\)</span> and <span
+class="math inline">\(z\)</span> to decrypt the message.</p></li>
+<li class="fragment"><p>We also want it so that someone can know <span
+class="math inline">\(e\)</span> and <span
+class="math inline">\(z\)</span> and not figure out <span
+class="math inline">\(d\)</span> (and more importantly, <span
+class="math inline">\(x\)</span>).</p></li>
+<li class="fragment"><p>Lastly, according to how we defined our
+decrypted message, we have to find an <span
+class="math inline">\(e\)</span> and <span
+class="math inline">\(d\)</span> such that <span
+class="math inline">\((x^e)^d \bmod z = x\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="asymmetric-encryption-using-exponents-and-mods"
+class="slide level2">
+<h2>Asymmetric Encryption using Exponents and Mods</h2>
+<div id="content">
+<ul>
+<li class="fragment">We’re going to talk about how to encrypt and
+decrypt numbers. (Remember, numbers can be used to represent words, like
+in ASCII.)</li>
+</ul>
+<p>Say Bob wants to send a message <span
+class="math inline">\(x\)</span> to Alice. Say Alice has encryption and
+decryption keys <span class="math inline">\(e, d\)</span> and integer
+<span class="math inline">\(z\)</span>.</p>
+<ol type="1">
+<li class="fragment"><p>Alice sends Bob her <em>public key</em>: <span
+class="math inline">\((e,z)\)</span></p></li>
+<li class="fragment"><p>Bob encrypts his message and sends it back to
+Alice: <span class="math inline">\(x^{e} \bmod z\)</span></p></li>
+<li class="fragment"><p>Alice decrypts this message: <span
+class="math inline">\((x^e)^d \bmod z = x\)</span></p></li>
+</ol>
+<ul>
+<li class="fragment"><p>Note that Bob doesn’t know <span
+class="math inline">\(d\)</span>, this is Alice’s <em>private
+key</em>.</p></li>
+<li class="fragment"><p>So, we want it that Bob can know <span
+class="math inline">\(x^{e} \bmod z\)</span> and even <span
+class="math inline">\((x^e)^d \bmod z\)</span>, but he can’t be able to
+figure out <span class="math inline">\(d\)</span>. (It makes sense that
+<span class="math inline">\(d\)</span> would be hard to figure out since
+we’re working with mods, because a lot of things will be
+equal…)</p></li>
+<li class="fragment"><p>Also we want to pick an <span
+class="math inline">\(e\)</span> and a <span
+class="math inline">\(d\)</span> such that <span
+class="math inline">\((x^e)^d \bmod z = x\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="useful-math" class="slide level2">
+<h2>Useful Math</h2>
+<div id="content">
+<p>There is some math that will help us meet some of these requirements,
+so let’s learn about that first.</p>
+<p><strong>Fermat’s Little Theorem</strong> states:</p>
+<p>for all integers <span class="math inline">\(a\)</span> and all
+primes <span class="math inline">\(p&gt;1\)</span>, <span
+class="math inline">\(a^p \bmod p = a \bmod p\)</span>.</p>
+<p>Why? Let’s watch a video…</p>
+</div>
+</section>
+<section id="useful-math-1" class="slide level2">
+<h2>Useful Math</h2>
+<div id="content">
+<p>There is some math that will help us meet some of these requirements,
+so let’s learn about that first.</p>
+<p><strong>Fermat’s Little Theorem</strong> states:</p>
+<p>for all integers <span class="math inline">\(a\)</span> and all
+primes <span class="math inline">\(p&gt;1\)</span>, <span
+class="math inline">\(a^p \bmod p = a \bmod p\)</span>.</p>
+<p>Why? Let’s watch a video…</p>
+<p>You can use this to show:</p>
+<p>for all integers <span class="math inline">\(a\)</span>, if <span
+class="math inline">\(a\)</span> is not a multiple of <span
+class="math inline">\(p\)</span>, then <span
+class="math inline">\(a^{p-1} \bmod p = 1 \bmod p\)</span></p>
+</div>
+</section>
+<section id="things-we-can-derive-from-flt" class="slide level2">
+<h2>Things we can derive from FLT</h2>
+<div id="content">
+<p>We can use FLT to prove the following statement:</p>
+<p>Let <span class="math inline">\(p\)</span> and <span
+class="math inline">\(q\)</span> be distinct primes and let <span
+class="math inline">\(N = p \cdot q\)</span>.</p>
+<p>For all integers <span class="math inline">\(k\)</span> and for <span
+class="math inline">\(m \in [0,N)\)</span>,</p>
+<p><span class="math inline">\(m^{(p-1)(q-1)k+1} \bmod N = m \bmod
+N\)</span>.</p>
+<p>(Proof in 7.3.4 in book)</p>
+<ul>
+<li class="fragment"><p>What this means: We want to find some number
+<span class="math inline">\(y\)</span> that we can express as <span
+class="math inline">\(y = (p-1)(q-1)k+1\)</span>.</p></li>
+<li class="fragment"><p>This is the same as saying: We want a <span
+class="math inline">\(y\)</span> such that <span class="math inline">\(y
+= 1 \bmod (p-1)(q-1)\)</span>.</p></li>
+<li class="fragment"><p>Back to cryptography:</p></li>
+<li class="fragment"><p>Let <span class="math inline">\(z =
+(p-1)(q-1)\)</span></p></li>
+<li class="fragment"><p>Let <span class="math inline">\(e \cdot d = y =
+1 \bmod (p-1)(q-1)\)</span>.</p></li>
+<li class="fragment"><p>Then, <span class="math inline">\((x^e)^d \bmod
+z = x\)</span>!</p></li>
+</ul>
+</div>
+</section>
+<section id="rsa-encryption" class="slide level2">
+<h2>RSA Encryption</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p>Remember that our decrypted message is <span
+class="math inline">\((x^e)^d \bmod N = x\)</span> and we want <span
+class="math inline">\(d\)</span> to be hard to figure out.</p></li>
+<li class="fragment"><p>RSA encryption relies on the use of a number
+<span class="math inline">\(N\)</span> that is a product of
+<em>very</em> large prime numbers <span class="math inline">\(p\)</span>
+and <span class="math inline">\(q\)</span>. You make <span
+class="math inline">\(N\)</span> public, but your algorithm relies on
+<span class="math inline">\(p\)</span> and <span
+class="math inline">\(q\)</span>, so you want them to be hard to figure
+out! This is why it’s useful that primes are hard to factor. (Aka it is
+difficult to find out <span class="math inline">\(p\)</span> and <span
+class="math inline">\(q\)</span> from <span
+class="math inline">\(N\)</span>.)</p></li>
+<li class="fragment"><p>Let <span class="math inline">\(z =
+(p-1)(q-1)\)</span>. (Since <span class="math inline">\(p\)</span> and
+<span class="math inline">\(q\)</span> are hard to find out, <span
+class="math inline">\(z\)</span> is hard for a hacker to find
+out.)</p></li>
+<li class="fragment"><p>Choose encryption exponent <span
+class="math inline">\(e\)</span> so that <span
+class="math inline">\(GCD(e, z) = 1\)</span> and then choose decryption
+exponent <span class="math inline">\(d\)</span> so that <span
+class="math inline">\(e \cdot d = 1 \bmod (p-1)(q-1)\)</span>. (Again,
+since <span class="math inline">\(z\)</span> is hard to find out, <span
+class="math inline">\(d\)</span> will be hard to find out, even if the
+hacker knows <span class="math inline">\(e\)</span>.)</p></li>
+<li class="fragment"><p>Based on the last slide, since <span
+class="math inline">\(e \cdot d = 1 \bmod (p-1)(q-1)\)</span>, we know
+that any message <span class="math inline">\((x^e)^d \bmod N =
+x\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="biggest-rsa-takeways" class="slide level2">
+<h2>Biggest RSA Takeways</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p>Understand why it’s useful to know about primes.
+Eventually you might need to prove something using facts about primes!
+(Don’t worry about that yet, though.)</p></li>
+<li class="fragment"><p>Understand the rules of RSA. (I won’t make you
+generate your own keys, but you might have to work with existing
+ones!)</p></li>
+<li class="fragment"><p>Know the definitions we talked about (prime,
+coprime, mods, etc.)</p></li>
+</ul>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

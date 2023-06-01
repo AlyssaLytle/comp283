@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>ProofsCont</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    /* .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    } */
+
+    #left {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:45%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #left14 {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:30%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #right34 {
+      left:50%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:60%;
+      font-size: 65%;
+    }
+    
+    #right {
+      left:31.25%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:45%;
+      font-size: 75%;
+    }
+
+    #text {
+      font-size: 75%;
+    }
+
+    #content {
+      font-size: 75%;
+    }
+
+    #smalltext {
+      font-size: 40%;
+    }
+
+    #medtext {
+      font-size: 60%;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">ProofsCont</h1>
+</section>
+
+<section id="more-on-proofs" class="slide level1">
+<h1>More on Proofs</h1>
+<div id="content">
+
+</div>
+<h2 id="review">Review</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p>Statements you want to prove are usually of the
+form <span class="math inline">\(P \implies Q\)</span>.</p></li>
+<li class="fragment"><p>Sometimes this is obvious to see, and sometimes
+it takes a little reasoning.</p></li>
+<li class="fragment"><p>However, there are also times <span
+class="math inline">\(P\)</span> is not directly stated, so you can
+assume it means “everything you know about this subject is
+true”</p></li>
+<li class="fragment"><p>In other words, <span class="math inline">\(P
+\implies Q\)</span> could be stated as “If everything I know about this
+subject is true, then <span class="math inline">\(Q\)</span>.”</p></li>
+<li class="fragment"><p>What’s difficult about this is that it’s harder
+to know where to start (aka what to put on line <span
+class="math inline">\(1\)</span>) because you don’t have an obvious
+<span class="math inline">\(P\)</span>.</p></li>
+</ul>
+</div>
+<h2 id="finding-p-and-q">Finding P and Q</h2>
+<div id="content">
+<h3 id="example">Example</h3>
+<ul>
+<li class="fragment"><p>“If <span class="math inline">\(x\)</span> is
+even, <span class="math inline">\(x^2\)</span> is even.”</p></li>
+<li class="fragment"><p><span class="math inline">\(P:\)</span> <span
+class="math inline">\(x\)</span> is even</p></li>
+<li class="fragment"><p><span class="math inline">\(Q:\)</span> <span
+class="math inline">\(x^2\)</span> is even</p></li>
+<li class="fragment"><p>“There are infinitely many primes.”</p></li>
+<li class="fragment"><p>This can be restated as “For all <span
+class="math inline">\(a \in \mathbb{Z}\)</span>, if <span
+class="math inline">\(a\)</span> is prime, then there exists a prime
+<span class="math inline">\(b \in \mathbb{Z}\)</span> such that <span
+class="math inline">\(b&gt;a\)</span>.’’<br />
+</p></li>
+<li class="fragment"><p><span class="math inline">\(P:\)</span> <span
+class="math inline">\(a \in \mathbb{Z}\)</span> is prime</p></li>
+<li class="fragment"><p><span class="math inline">\(Q:\)</span> There
+exists <span class="math inline">\(b \in \mathbb{Z}\)</span> such that
+<span class="math inline">\(b&gt;a\)</span></p></li>
+<li class="fragment"><p>“<span class="math inline">\(x-1 &lt; \left
+\lfloor{x}\right \rfloor\)</span>”</p></li>
+<li class="fragment"><p><span class="math inline">\(P:\)</span>
+Everything you know about math is true</p></li>
+<li class="fragment"><p><span class="math inline">\(Q:\)</span> <span
+class="math inline">\(x-1 &lt; \left \lfloor{x}\right
+\rfloor\)</span></p></li>
+</ul>
+</div>
+<h2 id="rewrites">Rewrites</h2>
+<p>Here are some common rewrites you might see when constructing your
+proofs:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(n\)</span> is an even
+integer converts to <span class="math inline">\(n = 2t\)</span> for some
+<span class="math inline">\(t\)</span></li>
+<li class="fragment"><span class="math inline">\(n\)</span> is an odd
+integer converts to <span class="math inline">\(n = 2t + 1\)</span> for
+some <span class="math inline">\(t\)</span></li>
+<li class="fragment"><span class="math inline">\(n\)</span> is a
+rational number converts to <span class="math inline">\(n =
+\frac{a}{b}\)</span> where <span class="math inline">\(a\)</span> and
+<span class="math inline">\(b\)</span> are integers</li>
+<li class="fragment"><span class="math inline">\(n\)</span> divides
+<span class="math inline">\(m\)</span> converts to <span
+class="math inline">\(m = nt\)</span> for some integer <span
+class="math inline">\(t\)</span></li>
+<li class="fragment"><span class="math inline">\(n\)</span> is a square
+converts to <span class="math inline">\(n = t^2\)</span> for some
+integer <span class="math inline">\(t\)</span>.</li>
+<li class="fragment"><span class="math inline">\(n = a \bmod b\)</span>
+converts to <span class="math inline">\(n = bt + a\)</span> for some
+integer <span class="math inline">\(t\)</span>.</li>
+</ul>
+<h2 id="main-types-of-proofs">Main Types of Proofs</h2>
+<div id="content">
+<p>The four typical ways we show <span class="math inline">\(P \implies
+Q\)</span> are the following:</p>
+<ul>
+<li class="fragment"><p>Direct Proof</p></li>
+<li class="fragment"><p>Proof By Contradiction</p></li>
+<li class="fragment"><p>Proof By Contrapositive</p></li>
+<li class="fragment"><p>Proof By Counterexample</p></li>
+</ul>
+</div>
+<h2 id="direct-proofs">Direct Proofs</h2>
+<div id="content">
+<p>These are the proofs we did last class.</p>
+<p>To show <span class="math inline">\(P \implies Q\)</span>, you start
+with <span class="math inline">\(P\)</span> and you reason to get to
+<span class="math inline">\(Q\)</span>.</p>
+</div>
+<h2 id="proof-by-contradiction">Proof By Contradiction</h2>
+<div id="content">
+<ul>
+<li><span class="math inline">\(P \implies Q \equiv \neg(P \land \neg
+Q)\)</span>.</li>
+</ul>
+<ul>
+<li>This leads to why we do proofs by contradiction.</li>
+</ul>
+<ul>
+<li>Instead of proving <span class="math inline">\(P \implies
+Q\)</span>, we prove <span class="math inline">\(P \land \neg Q\)</span>
+does not hold.</li>
+</ul>
+<ul>
+<li>In other words, we start with <span class="math inline">\(P \land
+\neg Q\)</span> and get to an impossible state <span
+class="math inline">\(\bot\)</span>.</li>
+</ul>
+<h3 id="example-1">Example</h3>
+<ul>
+<li class="fragment"><p>A really famous proof is the proof that <span
+class="math inline">\(\sqrt{2}\)</span> is irrational.</p></li>
+<li class="fragment"><p>Since <span class="math inline">\(P\)</span>
+isn’t specified, we’ll make it “Everything I know about math is
+true”</p></li>
+<li class="fragment"><p><span class="math inline">\(Q: \sqrt{2}\)</span>
+is irrational.</p></li>
+<li class="fragment"><p>We want to show that <span
+class="math inline">\(P \land \neg Q\)</span> does NOT hold.</p></li>
+<li class="fragment"><p>So we say: Everything I know about math is true
+and <span class="math inline">\(\sqrt{2}\)</span> is
+<em>rational</em>.</p></li>
+</ul>
+</div>
+<h2 id="contradiction-example">Contradiction Example:</h2>
+<div id="content">
+<p>For this proof we are going to use the following statement:</p>
+<p><strong>Squared Evens Rule:</strong> If <span
+class="math inline">\(x^2\)</span> is even, then <span
+class="math inline">\(x\)</span> is even.</p>
+<p>Additionally, recall the definition of a rational number:</p>
+<p>A rational number can be written as <span
+class="math inline">\(\frac{a}{b}\)</span> such that <span
+class="math inline">\(a, b \in \mathbb{Z}\)</span> and <span
+class="math inline">\(GCD(a,b)=1\)</span>.</p>
+</div>
+<h2 id="contradiction-example-1">Contradiction Example</h2>
+<div id="content">
+<p><span class="math display">\[\begin{equation*}
+\begin{array}{l l l}
+   1. &amp;  \sqrt{2} \textrm{ is rational}  &amp;  \textrm{Assumption}
+\\
+   2.  &amp; \sqrt{2} = \frac{a}{b} \land a,b \in \mathbb{Z} \land
+GCD(a,b) = 1 &amp; \textrm{Definition of Rational Numbers} \\
+   3. &amp; \sqrt{2} b = a &amp; \textrm{Took left side of 2. and
+multiplied both sides by } b \\
+   4. &amp; 2 b^2 = a^2 &amp; \textrm{Squared both sides} \\
+   5. &amp; a^2 \textrm{ is even} &amp; \textrm{Definition of even
+number} \\
+   6. &amp; a \textrm{ is even} &amp; \textrm{Squared Evens Rule}\\
+   7. &amp; a = 2k \land k \in \mathbb{Z}  &amp; \textrm{Definition of
+even number}\\
+   8. &amp; 2b^2 = (2k)^2 &amp; \textrm{Plugged in 7. to 4.}\\
+   9. &amp; 2b^2 = 4k^2 &amp; \textrm{Simplified}\\
+   10. &amp; b^2 = 2k^2 &amp; \textrm{Divided both sides by } 2 \\
+   11. &amp; b^2 \textrm{ is even} &amp; \textrm{Definition of even
+number} \\
+   12. &amp; b \textrm{ is even} &amp; \textrm{Squared Evens Rule}\\
+   13. &amp; b= 2m \land m \in \mathbb{Z}  &amp; \textrm{Definition of
+even number}\\
+   14. &amp; 2 \textrm{ is a factor of both } a \textrm{ and } b &amp;
+\textrm{Lines 7. and 13.} \\
+   15. &amp; \bot &amp; \textrm{Lines 2. and 14. contradict each other }
+\square
+\end{array}
+\end{equation*}\]</span></p>
+</div>
+<h2 id="proof-by-contrapositive">Proof by Contrapositive</h2>
+<div id="content">
+<p>For a proof of contrapositive, you’re going to use the equality we
+proved last class:</p>
+<p><span class="math inline">\(P \implies Q \equiv \neg Q \implies \neg
+P\)</span>.</p>
+<p>In other words, instead of proving <span class="math inline">\(P
+\implies Q\)</span>, we are going to assume <span
+class="math inline">\(\neg Q\)</span> and show that it leads to <span
+class="math inline">\(\neg P\)</span>.</p>
+<h3 id="example-2">Example</h3>
+<ul>
+<li class="fragment"><p>We want to prove: If <span
+class="math inline">\(x^2\)</span> is odd, <span
+class="math inline">\(x\)</span> is odd.</p></li>
+<li class="fragment"><p><span class="math inline">\(P:\)</span> <span
+class="math inline">\(x^2\)</span> is odd</p></li>
+<li class="fragment"><p><span class="math inline">\(Q:\)</span> <span
+class="math inline">\(x\)</span> is odd.</p></li>
+<li class="fragment"><p>Let’s write this as a contrapositive: <span
+class="math inline">\(\neg Q \implies \neg P\)</span>.</p></li>
+<li class="fragment"><p>If <span class="math inline">\(x\)</span> is not
+odd, then <span class="math inline">\(x^2\)</span> is not odd. Or,
+equivalently, If <span class="math inline">\(x\)</span> is even, then
+<span class="math inline">\(x^2\)</span> is even. We’ve actually already
+proved this!<span class="math inline">\(\square\)</span></p></li>
+</ul>
+</div>
+<h2 id="proof-by-counterexample">Proof by Counterexample</h2>
+<div id="content">
+<p>If you want to disprove something, the easiest way is usually by
+counter example.</p>
+<p>You don’t have to do this in the typical two column format as long as
+you make your reasoning clear.</p>
+<h3 id="example-3">Example</h3>
+<ul>
+<li class="fragment"><p>Say I ask you to prove the following is false:
+If <span class="math inline">\(x\)</span> is even, <span
+class="math inline">\(x^2\)</span> is odd.</p></li>
+<li class="fragment"><p>Counterexample: <span class="math inline">\(x =
+2\)</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(2\)</span> is even,
+and <span class="math inline">\(2^2= 4\)</span> is even. <span
+class="math inline">\(\square\)</span></p></li>
+</ul>
+</div>
+<h2 id="other-types-of-proofs">Other Types of Proofs</h2>
+<div id="content">
+<p>You may see some other types of proofs that follow from the types of
+proofs we’ve already discussed. We will discuss a few.</p>
+<ul>
+<li class="fragment">Biconditional</li>
+<li class="fragment">Forall
+<ul>
+<li class="fragment">Exhaustive</li>
+<li class="fragment">Proof by Cases</li>
+</ul></li>
+<li class="fragment">Existence
+<ul>
+<li class="fragment">Constructive</li>
+</ul></li>
+</ul>
+</div>
+<h2 id="biconditional-proofs">Biconditional Proofs</h2>
+<div id="content">
+<ul>
+<li class="fragment"><p>For our proofs, we are basically writing a <span
+class="math inline">\(\implies\)</span> to get from line to
+line.</p></li>
+<li class="fragment"><p>Sometimes, instead of proving <span
+class="math inline">\(P \implies Q\)</span>, you’ll want to prove <span
+class="math inline">\(P \iff Q\)</span>.</p></li>
+<li class="fragment"><p>The benefit of this type of proof is that you
+can start from <span class="math inline">\(P\)</span> or <span
+class="math inline">\(Q\)</span> to get to the other side. This is
+because <span class="math inline">\(P \iff Q\)</span> is the same as
+saying <span class="math inline">\(Q \iff P\)</span>.</p></li>
+<li class="fragment"><p>The added requirement is that you have to use
+<span class="math inline">\(\iff\)</span> rules to get from line to
+line. Thankfully, most definitions are actually defined using <span
+class="math inline">\(\iff\)</span>.</p></li>
+</ul>
+</div>
+<h2 id="biconditional-proofs-1">Biconditional Proofs</h2>
+<div id="content">
+<h3 id="example-4">Example</h3>
+<p>We want to prove <span class="math inline">\(x \in \overline{A \cap
+B} \iff x \in \bar{A} \cup \bar{B}\)</span></p>
+<p><span class="math display">\[\begin{equation*}
+\begin{array}{l l l}
+  1. &amp; x \in \overline{A \cap B}   &amp;  \\
+  2. \iff &amp; \neg (x \in A \cap B)   &amp; \textrm{Complement
+Definition} \\
+  3. \iff &amp; \neg (x \in A \land x \in B) &amp; \textrm{Intersection
+Definition} \\
+  4. \iff &amp; \neg (x \in A) \lor \neg (x \in B) &amp;
+\textrm{DeMorgan&#39;s Logic} \\
+  5. \iff &amp; x \in \bar{A} \lor x \in \bar{B} &amp;
+\textrm{Complement Definition} \\
+  6. \iff &amp; x \in \bar{A} \cup \bar{B} &amp; \textrm{Union
+Definition}
+\end{array}
+\end{equation*}\]</span></p>
+</div>
+<h2 id="logical-equivalence">Logical Equivalence</h2>
+<div id="content">
+<p>Proofs of logical equivalence are of the form <span
+class="math inline">\(P \iff Q\)</span>.</p>
+<p>Why? Remember that if <span class="math inline">\(P \equiv
+Q\)</span>, then <span class="math inline">\(P \iff Q\)</span> is always
+true!</p>
+<h3 id="example-5">Example</h3>
+<p>Say we want to prove <span class="math inline">\(a \implies b \equiv
+\neg b \implies \neg a\)</span>.</p>
+<p>So we can say <span class="math inline">\(P: a \implies b\)</span>
+and <span class="math inline">\(Q: \neg b \implies \neg a\)</span>.</p>
+<p>First, let’s do this proof starting at <span
+class="math inline">\(P\)</span> to get to <span
+class="math inline">\(Q\)</span>.</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{array}{l l l}
+    1. &amp; a \implies b &amp; \textrm{Given } (P) \\
+    2. &amp; \equiv \neg a \lor b &amp; \textrm{Implication Definition}
+\\
+    3. &amp; \equiv b \lor \neg a &amp; \textrm{Commutativity} \\
+    4. &amp; \equiv \neg (\neg b) \lor \neg a &amp; \textrm{Double
+Negation} \\
+    5. &amp; \equiv \neg b \implies \neg a &amp; \textrm{Implication
+Definition }  \square ~ (Q)~ \\
+\end{array}
+\end{equation*}\]</span></p>
+</div>
+<h2 id="logical-equivalence-cont.">Logical Equivalence Cont.</h2>
+<div id="content">
+<p>As previously stated, we can also start at <span
+class="math inline">\(Q\)</span> to get to <span
+class="math inline">\(P\)</span>.</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{array}{l l l}
+    1. &amp; \equiv \neg b \implies \neg a &amp; \textrm{Given } (Q) \\
+    2. &amp; \equiv \neg \neg b \lor \neg a &amp; \textrm{Implication
+Definition}\\
+    3. &amp; \equiv b \lor \neg a &amp; \textrm{Double Negation} \\
+    4. &amp; \equiv \neg a \lor b &amp; \textrm{Commutativity} \\
+    5. &amp; \equiv a \implies b &amp; \textrm{Implication Definition }
+\square ~ (P)    \\
+\end{array}
+\end{equation*}\]</span></p>
+<p>Either of these proofs are acceptable because they are saying the
+same thing! Which side you want to start at is really a personal
+preference.</p>
+</div>
+<h2 id="forall">Forall</h2>
+<div id="content">
+<p>You may want to prove statements such as “<span
+class="math inline">\(\forall x \in S, P(x) \implies Q(x)\)</span>.”</p>
+<p>As previously discussed, to prove a “for all” statement, you want to
+look at every element in <span class="math inline">\(S\)</span> and show
+that <span class="math inline">\(P(x) \implies Q(x)\)</span> holds.</p>
+<p>You can often do this with a direct proof. All of the things we’ve
+directly proved so far are actually “for all” proofs.</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\forall x \in
+\mathbb{Z}\)</span>, If <span class="math inline">\(x\)</span> is even,
+<span class="math inline">\(x^2\)</span> is even</li>
+<li class="fragment"><span class="math inline">\(\forall x \in
+\mathbb{Z}, {} x-1 &lt; \left \lfloor{x}\right \rfloor\)</span></li>
+<li class="fragment"><span class="math inline">\(\forall a,b,c \in
+\{\texttt{True}, \texttt{False}\}, {} \neg a \lor \neg(b \land \neg c)
+\equiv a \implies (b \implies c)\)</span></li>
+<li class="fragment"><span class="math inline">\(\forall a,b,c \in
+\mathbb{Z}\)</span>, if <span class="math inline">\(a \mid b\)</span>
+and <span class="math inline">\(b \mid c\)</span>, then <span
+class="math inline">\(a \mid c\)</span></li>
+</ul>
+</div>
+<h2 id="forall-exhaustive">Forall, Exhaustive</h2>
+<div id="content">
+<p>However, we can also prove “for all” statements by exhaustively
+looking at every element in <span class="math inline">\(S\)</span> and
+checking if <span class="math inline">\(P(x)\)</span> holds.</p>
+<p>Fittingly, this is called a <strong>Proof by Exhaustion</strong>.</p>
+<p>A good example is the set problem you’ve already seen:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(F = \{\)</span>Erik,
+José, Nicoleta, Aksana<span class="math inline">\(\}\)</span></li>
+<li class="fragment"><span class="math inline">\(V = \{\)</span>Aksana,
+Erik<span class="math inline">\(\}\)</span> is the set of your friends
+who are vegetarian</li>
+<li class="fragment"><span class="math inline">\(N =
+\{\)</span>Aksana<span class="math inline">\(\}\)</span> is the set of
+your friends who are vegan</li>
+<li class="fragment">We want to prove: <span
+class="math inline">\(\forall x \in F,{} x \in N \implies x \in
+V\)</span></li>
+</ul>
+</div>
+<h2 id="forall-exhaustive-1">Forall, Exhaustive</h2>
+<div id="content">
+<p>However, we can also prove “for all” statements by
+<em>exhaustively</em> looking at every element in <span
+class="math inline">\(S\)</span> and checking if <span
+class="math inline">\(P(x)\)</span> holds.</p>
+<p>Fittingly, this is called a <strong>Proof by Exhaustion</strong>.</p>
+<p>A good example is the set problem you’ve already seen:</p>
+<ul>
+<li><span class="math inline">\(F = \{\)</span>Erik, José, Nicoleta,
+Aksana<span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(V = \{\)</span>Aksana, Erik<span
+class="math inline">\(\}\)</span> is the set of your friends who are
+vegetarian</li>
+<li><span class="math inline">\(N = \{\)</span>Aksana<span
+class="math inline">\(\}\)</span> is the set of your friends who are
+vegan</li>
+<li>We want to prove: <span class="math inline">\(\forall x \in F,{} x
+\in N \implies x \in V\)</span></li>
+</ul>
+<p><span class="math inline">\(\begin{array}{| l | c | c | c
+|}  \hline  x &amp; x \in N &amp; x \in V &amp; x \in N \implies x \in V
+\\  \hline  \textrm{Erik} &amp; \texttt{False} &amp; \texttt{False}
+&amp; \textrm{True} \\  \textrm{Jos\&#39;e} &amp; \texttt{False} &amp;
+\texttt{False} &amp; \textrm{True} \\  \textrm{Nicoleta} &amp;
+\texttt{False} &amp; \texttt{False} &amp; \textrm{True}
+\\  \textrm{Aksana} &amp; \texttt{True} &amp; \texttt{True} &amp;
+\textrm{True} \\  \hline  \end{array}\)</span></p>
+</div>
+<h2 id="proof-by-cases">Proof by Cases</h2>
+<div id="content">
+<p>A <strong>Proof by Cases</strong> is a kind of proof by exhaustion.
+You are breaking the set you are proving something about into smaller
+sets.</p>
+<p>A good example is when we proved the definition of absolute
+value.</p>
+<p><span class="math inline">\(|x| = sgn(x) \cdot x\)</span></p>
+<p><span class="math inline">\(sgn(x) = \begin{cases}  -1 &amp;
+x&lt;0\\  0 &amp; x =0\\  1 &amp; x&gt;0  \end{cases}\)</span></p>
+</div>
+<h2 id="proof-by-cases-1">Proof by Cases</h2>
+<div id="content">
+<p>A <strong>Proof by Cases</strong> is a kind of proof by exhaustion.
+You are breaking the set you are proving something about into smaller
+sets.</p>
+<p>A good example is when we proved the definition of absolute
+value.</p>
+<p><span class="math inline">\(|x| = sgn(x) \cdot x\)</span></p>
+<p><span class="math inline">\(sgn(x) = \begin{cases}  -1 &amp;
+x&lt;0\\  0 &amp; x =0\\  1 &amp; x&gt;0  \end{cases}\)</span></p>
+<p>Case 1: <span class="math inline">\(x &gt; 0\)</span></p>
+<p><span class="math inline">\(\begin{array}{l l l}  1. &amp; x &gt; 0
+&amp; \textrm{Case Assertion} \\  2. &amp; sgn(x) = 1 &amp;
+\textrm{Signum Def.} \\  3. &amp; sgn(x) \cdot x = x &amp;
+\textrm{Multiply both sides by } x \\  4. &amp; |x| = x &amp;
+\textrm{Applied Def. of Absolute Value to Line 1} \\  5. &amp; sgn(x) =
+|x| &amp; \textrm{Compared Lines 3 and 5} \\  \end{array}\)</span></p>
+</div>
+<h2 id="proof-by-cases-cont.">Proof by Cases Cont.</h2>
+<div id="content">
+<p>Case 2: <span class="math inline">\(x = 0\)</span></p>
+<p><span class="math inline">\(\begin{array}{l l l}  1. &amp; x = 0
+&amp; \textrm{Case Assertion} \\  2. &amp; sgn(x) = 0 &amp;
+\textrm{Signum Def.} \\  3. &amp; sgn(x) \cdot x = 0 &amp;
+\textrm{Multiply both sides by } x \\  4. &amp; |x| = 0 &amp;
+\textrm{Applied Def. of Absolute Value to Line 1} \\  5. &amp; sgn(x) =
+|x| &amp; \textrm{Compared Lines 3 and 5} \\  \end{array}\)</span></p>
+<p>Case 3: <span class="math inline">\(x &lt; 0\)</span></p>
+<p><span class="math inline">\(\begin{array}{l l l}  1. &amp; x &lt; 0
+&amp; \textrm{Case Assertion} \\  2. &amp; sgn(x) = -1 &amp;
+\textrm{Signum Def.} \\  3. &amp; sgn(x) \cdot x = -x &amp;
+\textrm{Multiply both sides by } x \\  4. &amp; |x| = -x &amp;
+\textrm{Applied Def. of Absolute Value to Line 1} \\  5. &amp; sgn(x) =
+|x| &amp; \textrm{Compared Lines 3 and 5} \\  \end{array}\)</span></p>
+</div>
+<h2 id="proof-of-existence">Proof of Existence</h2>
+<div id="content">
+<p>Sometimes you just need to prove the existence of something.</p>
+<p><span class="math inline">\(\exists x \in S, {} P(x)\)</span>.</p>
+<p>Again, like we discussed in class, you can show the existence of
+something by looking at every element of the set and finding an <span
+class="math inline">\(x\)</span> such that <span
+class="math inline">\(P(x)\)</span> is true.</p>
+<p>Let’s go back to our food example:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(F = \{\)</span>Erik,
+José, Nicoleta, Aksana<span class="math inline">\(\}\)</span></li>
+<li class="fragment"><span class="math inline">\(V = \{\)</span>Aksana,
+Erik<span class="math inline">\(\}\)</span> is the set of your friends
+who are vegetarian</li>
+<li class="fragment"><span class="math inline">\(N =
+\{\)</span>Aksana<span class="math inline">\(\}\)</span> is the set of
+your friends who are vegan</li>
+<li class="fragment">We want to prove: <span
+class="math inline">\(\exists x \in F,{} x \in N \implies x \in
+V\)</span></li>
+</ul>
+</div>
+<h2 id="proof-of-existence-1">Proof of Existence</h2>
+<div id="content">
+<p>Sometimes you just need to prove the existence of something.</p>
+<p><span class="math inline">\(\exists x \in S, {} P(x)\)</span>.</p>
+<p>Again, like we discussed in class, you can show the existence of
+something by looking at every element of the set and finding an <span
+class="math inline">\(x\)</span> such that <span
+class="math inline">\(P(x)\)</span> is true.</p>
+<p>Let’s go back to our food example:</p>
+<ul>
+<li><span class="math inline">\(F = \{\)</span>Erik, José, Nicoleta,
+Aksana<span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(V = \{\)</span>Aksana, Erik<span
+class="math inline">\(\}\)</span> is the set of your friends who are
+vegetarian</li>
+<li><span class="math inline">\(N = \{\)</span>Aksana<span
+class="math inline">\(\}\)</span> is the set of your friends who are
+vegan</li>
+<li>We want to prove: <span class="math inline">\(\exists x \in F,{} x
+\in N \implies x \in V\)</span></li>
+</ul>
+<p><span class="math inline">\(\begin{array}{l l l}  1. &amp; x =
+\textrm{Aksana} &amp; \textrm{Picked an }x \in F \\  2. &amp; x \in N =
+\texttt{True} &amp; \textrm{Given} \\  3. &amp; x \in V = \texttt{True}
+&amp; \textrm{Given} \\  4. &amp; x \in N \implies x \in V =
+\texttt{True} &amp; \textrm{Applied Def. of Implication to Lines 3 and 4
+} \square \\  \end{array}\)</span></p>
+</div>
+<h2 id="proof-of-existence-2">Proof of Existence</h2>
+<div id="content">
+<p>Sometimes you will have to prove the existence of more complicated
+things. For example, you might want to argue the usefulness of
+exponential encryption by proving that exponential encryption can be
+decrypted:</p>
+<p><span class="math inline">\(\exists e,d,x,N \in \mathbb{Z}, {} x^{e
+\cdot d} \bmod N = x\)</span></p>
+<p>You can do this by using RSA as an example:</p>
+<ul>
+<li><span class="math inline">\(N = p \cdot q\)</span></li>
+<li><span class="math inline">\(e \cdot d = 1 \bmod
+(p-1)(q-1)\)</span></li>
+</ul>
+<p>(I’m not going to do the actual proof of this because we already did
+it in class.)</p>
+<p>This can also be called a <strong>constructive proof</strong> because
+you are literally constructing your own example.</p>
+</div>
+<h2 id="common-constructive-proofs">Common Constructive Proofs</h2>
+<div id="content">
+<p>A common constructive proof you will see in computer science looks
+something like:</p>
+<p>“This problem can be solved in this amount of time”</p>
+<p>People will prove this by constructing an algorithm that solves that
+problem and proving that the algorithm can be completed in a certain
+runtime.</p>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

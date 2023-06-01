@@ -1,5 +1,5 @@
 ---
-title: NumberTheory
+title: PrimesRSA
 theme: dracula
 center: false
 transition: 'none'
@@ -7,196 +7,11 @@ contributors: Alyssa Byrnes
 ---
 
 
-<div id="content">
-</div>
-
-
-
-## Useful Operators - Floor and Ceiling
-<div id="content">
-
-The **floor** operator, denoted $\left \lfloor{x}\right \rfloor$, tells us the greatest integer $\leq x$.
-
-The **ceiling** operator, denoted $\left \lceil{x}\right \rceil$,  tells us the smallest integer $\geq x$.
-
-(Basically, they're just fancy ways of saying "round down" and "round up")
-
-### Example
-
-- $\left \lfloor{7.5}\right \rfloor = 7$ <br>
-- $\left \lceil{7.5}\right \rceil = 8$
-
-
-
-</div>
-
-
-## Property of Floor
-<div id="content">
-$x-1 < \left \lfloor{x}\right \rfloor \leq x$
-
-- Why?
-- By definition, we know $\left \lfloor{x}\right \rfloor \leq x$
-- We know $x-1 < \left \lfloor{x}\right \rfloor$ because:
-    - We can write $x$ as $x = y + d$ where $y$ is an integer and $d$ is a decimal. (E.g. $7.5 = 7 + .5$)
-    - We know $\left \lfloor{x}\right \rfloor = y$ and that $d$ is some real number such that $0 \leq d < 1$.
-    - We know $d < 1$, so $d-1$ is negative, therefore $y + d - 1 < y$.
-    - So $x - 1 = y + d - 1 < y = \left \lfloor{x}\right \rfloor$ 
-</div>
-
-
-## Property of Ceiling
-<div id="content">
-
-$x \leq \left \lceil{x}\right \rceil < x + 1$
-
-- (You can prove this similarly to the way we proved the floor property!)
-
-</div>
-
-
-## Bases
-<div id="content">
-
-We usually represent numbers in base ten
-
-<img src="https://i.imgur.com/8dmbsc7.png" width="600"/>
-
-
-</div>
-
-
-## Bases
-<div id="content">
-
-- In general, a number in the form of digits $d_k d_{k-1} \ldots d_1 d_0$ can be represented as
-$$\sum_{i\in[0,k]}d_i t^i = d_kt^k + d_{k-1}t^{k-1}+ \ldots + d_1t^1 + d_0t^0$$ where $t$ is the base
-- All digits $d_i$ are in the range $[0,t-1]$
-
-### Example
-
-- Let's go back to representing the number $10,475$ in base $10$
-- So the digits are $d_4 = 1$, $d_3 = 0$, $d_2 = 4$, $d_1 = 7$, $d_0 = 5$ and the base is $t = 10$
-- Which gives us what we got before: $10,475 = 1 \cdot 10^4 + 0 \cdot 10^3 + 4 \cdot 10^2 + 7 \cdot 10^1 + 5 \cdot 10^0$
-- Also note that all digits are between $0$ and $9$.
-</div>
-
-
-## Base 2
-<div id="left">
-
-- Often in computer science, we represent numbers in base $2$. This is also called "binary" representation.
-- Since our base $t = 2$, then our digits are in the range $[0,1]$. So basically, we are just looking at strings of $0$s and $1$s. <br> (Often we call $0$s and $1$s "bits". $8$ bits is a byte.)
-
-</div>
-
-<div id="right">
-
-<img src="https://i.imgur.com/brCatgF.png" width="500"/>
-
-
-</div>
-
-
-<!-- ## In Class Assignment
-<div id="content">
-
-In groups, write (in English) the procedure for converting a number from binary to base 10. 
-
-Then, write the procedure for converting a number from base 10 to binary.
-
-Hint: start by thinking what steps would you take to convert $10110$ to $22$ and $22$ to $10110$, then generalize it to any number.
-
-You can submit this as a group on Gradescope!
-
-(It's okay if you're wrong! We will go over the right answer after you submit. The idea is to just see that you put effort in.)
-
-
-</div> -->
-
-
-## Length of Binary Messages 
-<div id="content">
-
-If I want to express $x$ in binary, how long will it be? 
-
-(In other words, how many bits will it take?)
-
--  Think about the procedure we just did for converting a number to binary. We find the highest power of $2$ that is less than or equal to $x$: $k = \left \lfloor{\log_2(x)}\right \rfloor$
--  We know this means that our string of bits will be of length $k$.
--  This can be generalized for any base $b$: The length of any number $x$ in base $b$ is $\left \lfloor{\log_b(x)}\right \rfloor$
-
-</div>
-
-
-## Length of Binary Messages
-<div id="content">
-
-- While it makes sense to represent numbers in binary for computers, notice that it takes more digits to represent them. Think about it. Saying "$10110$" instead of "$22$" is longer. 
-- So why do we do it? (I'll link to a video...)
-
-</div>
-
-
-## Useful Operator - Divides
-
-For all integers $a,b$ we can say $a$ **divides** $b$, or $a \mid b$, iff there exists some integer $m$ such that $a\cdot m = b$.
-
-### Example
-
-- We can say $2$ divides $6$, or $2 \mid 6$, because $2 \cdot 3 = 6$
-- Notice that if $b = 0$ and $m = 0$, then $a$ can be anything. From this we conclude that every number divides $0$. <br>
-$\forall a \in \mathbb{Z}, a \mid 0$
-
-
-## Useful Operator - Mod
-<div id="content">
-
-For positive Integers, $x \bmod y$ is the remainder of $x/y$.
-
-More generally, $x \bmod y = x - \left \lfloor{x/y}\right \rfloor \cdot y$.
-
-### Examples
-
--  $5 \bmod 2 = 1$
-
--  $4 \bmod 2 = 0$
-
--  $-1 \bmod 2 = 1$
-
-
-- Note that the value of $x \bmod y$ is between $0$ and $y-1$.
-
-    
-    
-
-</div>
-
-
-## Congruence Modulo y
-<div id="content">
-
-Another way we can express mods is via congruency.
-
-$x \equiv z \pmod y$ reads as "$x$ is congruent to $z$ mod $y$".
-
-What this means is that $x \bmod y = z \bmod y$.
-
-### Example
-
--  $4 \bmod 2 = 0$ and $6 \bmod 2 = 0$, so $4 \equiv 6 \pmod 2$.
-
-
-</div>
-
-
 ## Fun With Primes!
 <div id="content">
 
 - Primes are a common conversation in both computer science and math. This is because they are incredibly useful!
-
 - One popular application of primes is in cryptography. 
-
 - Why are primes important in this? We will discuss that! But first let's learn a little more about primes.
 
 <iframe src="https://drive.google.com/file/d/1ZUuo50GwpvDpz5Wj5--cC9fkr10uRbJT/preview" width="640" height="450" allow="autoplay"></iframe>
@@ -236,7 +51,7 @@ If $GCD(x,y) = 1$, then $x$ and $y$ are **relatively prime** (also called coprim
 
 Every number can be written as a unique product of prime numbers.
 
-- Proof by example (Not a real proof):
+Proof by example (Not a real proof):
 
 -  $100 = 4 \cdot 25 = 2 \cdot 2 \cdot 5 \cdot 5$
 -  $2020 = 2 \cdot 2 \cdot 5 \cdot 101$
@@ -245,7 +60,7 @@ Every number can be written as a unique product of prime numbers.
 </div>
 
 
-## In Class Activity
+<!-- ## In Class Activity
 <div id="content">
 
 Come up with step-by-step process to find the prime factorization of a number.
@@ -274,7 +89,26 @@ Is one harder than the other? Why?
 - Why is it useful to have numbers that are hard to factor? We will get back to that...
 
 
-</div>
+</div> -->
+
+## Power of Primes
+
+- Try it yourself: come up with step-by-step process to find the prime factorization of a number.
+- Use your algorithm to find the prime factorization of both 2020 and 2021.
+
+## Power of Primes
+
+A number that is a product of two large primes can take an extremely long time to factor.
+
+Consider the number
+
+25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784406918290641249515082189298559149176184502808489120072844992687392807287776735971418347270261896375014971824691165077613379859095700097330459748808428401797429100642458691817195118746121515172654632282216869987549182422433637259085141865462043576798423387184774447920739934236584823824281198163815010674810451660377306056201619676256133844143603833904414952634432190114657544454178424020924616515723350778707749817125772467962926386356373289912154831438167899885040445364023527381951378636564391212010397122822120720357
+
+It is 617 digits long, and 2048 bits. It is also the product of two large primes!
+
+It is estimated that it would take a classical computer around 300 trillion years to factor this!
+
+This is the foundation of RSA Cryptography.
 
 
 ## Mod Review
@@ -287,14 +121,8 @@ More generally, $x \bmod y = x - \left \lfloor{x/y}\right \rfloor \cdot y$.
 ### Examples
 
 -  $5 \bmod 2 = 1$
-
 -  $4 \bmod 2 = 0$
-
 -  $-1 \bmod 2 = 1$
-
-
-- Note that the value of $x \bmod y$ is between $0$ and $y-1$.
-
 
 </div>
 
@@ -307,13 +135,8 @@ If I say a number is congruent to $b \bmod y$, then that means it is of the form
 ### Examples
 
 -  $1 \bmod 2$ (odd numbers) $\equiv 2k + 1$
-
--  $0 \bmod 2$ (even number) $\equiv 2k$
-
+-  $0 \bmod 2$ (even numbers) $\equiv 2k$
 -  $3 \bmod 5 \equiv 5k + 3$
-
-
-
 
 </div>
 
@@ -322,22 +145,13 @@ If I say a number is congruent to $b \bmod y$, then that means it is of the form
 <div id="content">
 
 - To encrypt $x$, we want to find an encryption exponent $e$ and a decryption exponent $d$ and an integer $z$ so that:
-
 -  Our original message is: $x$
-
 -  Our encrypted message is: $x^e \bmod z$
-
 -  Our decrypted message is: $(x^e)^d \bmod z = x$
-
 - We want it so that you *have* to know $d$ and $z$ to decrypt the message. 
-
 - We also want it so that someone can know $e$ and $z$ and not figure out $d$ (and more importantly, $x$).
-
 - Lastly, according to how we defined our decrypted message, we have to find an $e$ and $d$ such that $(x^e)^d \bmod z = x$.
-
-
 </div>
-
 
 ## Asymmetric Encryption using Exponents and Mods
 <div id="content">
@@ -459,13 +273,4 @@ $m^{(p-1)(q-1)k+1} \bmod N = m \bmod N$.
 - Know the definitions we talked about (prime, coprime, mods, etc.)
 
 
-
-
-
-
-
-
-
 </div>
-
-
