@@ -185,6 +185,17 @@ What this means is that $x \bmod y = z \bmod y$.
 
 </div>
 
+## GCD + Relatively Prime Numbers
+<div id="content">
+The **greatest common divisor** of two integers $x$ and $y$, denoted $GCD(x,y)$ is the largest positive integer that divides both $x$ and $y$.
+
+### Example
+- $GCD(8,12) = 4$
+- $GCD(3,6) = 3$
+- $GCD(4,7) = 1$
+
+If $GCD(x,y) = 1$, then $x$ and $y$ are **relatively prime** (also called coprime).
+</div>
 
 
 
