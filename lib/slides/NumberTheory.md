@@ -124,13 +124,13 @@ If I want to express $x$ in binary, how long will it be?
 </div>
 
 
-## Length of Binary Messages
+<!-- ## Length of Binary Messages
 <div id="content">
 
 - While it makes sense to represent numbers in binary for computers, notice that it takes more digits to represent them. Think about it. Saying "$10110$" instead of "$22$" is longer. 
 - So why do we do it? (I'll link to a video...)
 
-</div>
+</div> -->
 
 
 ## Useful Operator - Divides
