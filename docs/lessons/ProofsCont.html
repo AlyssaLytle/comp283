@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>ProofsCont</title>
+  <title>Proofs Continued</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -138,144 +138,84 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">ProofsCont</h1>
+  <h1 class="title">Proofs Continued</h1>
 </section>
 
-<section id="more-on-proofs" class="slide level1">
-<h1>More on Proofs</h1>
-<div id="content">
-
-</div>
-<h2 id="review">Review</h2>
+<section id="review" class="slide level2">
+<h2>Review</h2>
 <div id="content">
 <ul>
-<li class="fragment"><p>Statements you want to prove are usually of the
-form <span class="math inline">\(P \implies Q\)</span>.</p></li>
-<li class="fragment"><p>Sometimes this is obvious to see, and sometimes
-it takes a little reasoning.</p></li>
-<li class="fragment"><p>However, there are also times <span
+<li class="fragment">Statements you want to prove are usually of the
+form <span class="math inline">\(P \rightarrow Q\)</span>.</li>
+<li class="fragment">Sometimes this is obvious to see, and sometimes it
+takes a little reasoning.</li>
+<li class="fragment">However, there are also times <span
 class="math inline">\(P\)</span> is not directly stated, so you can
-assume it means “everything you know about this subject is
-true”</p></li>
-<li class="fragment"><p>In other words, <span class="math inline">\(P
-\implies Q\)</span> could be stated as “If everything I know about this
-subject is true, then <span class="math inline">\(Q\)</span>.”</p></li>
-<li class="fragment"><p>What’s difficult about this is that it’s harder
-to know where to start (aka what to put on line <span
+assume it means “everything you know about this subject is true”</li>
+<li class="fragment">In other words, <span class="math inline">\(P
+\rightarrow Q\)</span> could be stated as “If everything I know about
+this subject is true, then <span class="math inline">\(Q\)</span>.”</li>
+<li class="fragment">What’s difficult about this is that it’s harder to
+know where to start (aka what to put on line <span
 class="math inline">\(1\)</span>) because you don’t have an obvious
-<span class="math inline">\(P\)</span>.</p></li>
+<span class="math inline">\(P\)</span>.</li>
 </ul>
 </div>
-<h2 id="finding-p-and-q">Finding P and Q</h2>
+</section>
+<section id="main-types-of-proofs" class="slide level2">
+<h2>Main Types of Proofs</h2>
 <div id="content">
-<h3 id="example">Example</h3>
+<p>The four typical ways we show <span class="math inline">\(P
+\rightarrow Q\)</span> are the following:</p>
 <ul>
-<li class="fragment"><p>“If <span class="math inline">\(x\)</span> is
-even, <span class="math inline">\(x^2\)</span> is even.”</p></li>
-<li class="fragment"><p><span class="math inline">\(P:\)</span> <span
-class="math inline">\(x\)</span> is even</p></li>
-<li class="fragment"><p><span class="math inline">\(Q:\)</span> <span
-class="math inline">\(x^2\)</span> is even</p></li>
-<li class="fragment"><p>“There are infinitely many primes.”</p></li>
-<li class="fragment"><p>This can be restated as “For all <span
-class="math inline">\(a \in \mathbb{Z}\)</span>, if <span
-class="math inline">\(a\)</span> is prime, then there exists a prime
-<span class="math inline">\(b \in \mathbb{Z}\)</span> such that <span
-class="math inline">\(b&gt;a\)</span>.’’<br />
-</p></li>
-<li class="fragment"><p><span class="math inline">\(P:\)</span> <span
-class="math inline">\(a \in \mathbb{Z}\)</span> is prime</p></li>
-<li class="fragment"><p><span class="math inline">\(Q:\)</span> There
-exists <span class="math inline">\(b \in \mathbb{Z}\)</span> such that
-<span class="math inline">\(b&gt;a\)</span></p></li>
-<li class="fragment"><p>“<span class="math inline">\(x-1 &lt; \left
-\lfloor{x}\right \rfloor\)</span>”</p></li>
-<li class="fragment"><p><span class="math inline">\(P:\)</span>
-Everything you know about math is true</p></li>
-<li class="fragment"><p><span class="math inline">\(Q:\)</span> <span
-class="math inline">\(x-1 &lt; \left \lfloor{x}\right
-\rfloor\)</span></p></li>
+<li class="fragment">Direct Proof</li>
+<li class="fragment">Proof By Contradiction</li>
+<li class="fragment">Proof By Contrapositive</li>
+<li class="fragment">Proof By Counterexample</li>
 </ul>
 </div>
-<h2 id="rewrites">Rewrites</h2>
-<p>Here are some common rewrites you might see when constructing your
-proofs:</p>
-<ul>
-<li class="fragment"><span class="math inline">\(n\)</span> is an even
-integer converts to <span class="math inline">\(n = 2t\)</span> for some
-<span class="math inline">\(t\)</span></li>
-<li class="fragment"><span class="math inline">\(n\)</span> is an odd
-integer converts to <span class="math inline">\(n = 2t + 1\)</span> for
-some <span class="math inline">\(t\)</span></li>
-<li class="fragment"><span class="math inline">\(n\)</span> is a
-rational number converts to <span class="math inline">\(n =
-\frac{a}{b}\)</span> where <span class="math inline">\(a\)</span> and
-<span class="math inline">\(b\)</span> are integers</li>
-<li class="fragment"><span class="math inline">\(n\)</span> divides
-<span class="math inline">\(m\)</span> converts to <span
-class="math inline">\(m = nt\)</span> for some integer <span
-class="math inline">\(t\)</span></li>
-<li class="fragment"><span class="math inline">\(n\)</span> is a square
-converts to <span class="math inline">\(n = t^2\)</span> for some
-integer <span class="math inline">\(t\)</span>.</li>
-<li class="fragment"><span class="math inline">\(n = a \bmod b\)</span>
-converts to <span class="math inline">\(n = bt + a\)</span> for some
-integer <span class="math inline">\(t\)</span>.</li>
-</ul>
-<h2 id="main-types-of-proofs">Main Types of Proofs</h2>
-<div id="content">
-<p>The four typical ways we show <span class="math inline">\(P \implies
-Q\)</span> are the following:</p>
-<ul>
-<li class="fragment"><p>Direct Proof</p></li>
-<li class="fragment"><p>Proof By Contradiction</p></li>
-<li class="fragment"><p>Proof By Contrapositive</p></li>
-<li class="fragment"><p>Proof By Counterexample</p></li>
-</ul>
-</div>
-<h2 id="direct-proofs">Direct Proofs</h2>
+</section>
+<section id="direct-proofs" class="slide level2">
+<h2>Direct Proofs</h2>
 <div id="content">
 <p>These are the proofs we did last class.</p>
-<p>To show <span class="math inline">\(P \implies Q\)</span>, you start
-with <span class="math inline">\(P\)</span> and you reason to get to
-<span class="math inline">\(Q\)</span>.</p>
+<p>To show <span class="math inline">\(P \rightarrow Q\)</span>, you
+start with <span class="math inline">\(P\)</span> and you reason to get
+to <span class="math inline">\(Q\)</span>.</p>
 </div>
-<h2 id="proof-by-contradiction">Proof By Contradiction</h2>
+</section>
+<section id="proof-by-contradiction" class="slide level2">
+<h2>Proof By Contradiction</h2>
 <div id="content">
 <ul>
-<li><span class="math inline">\(P \implies Q \equiv \neg(P \land \neg
-Q)\)</span>.</li>
+<li class="fragment"><span class="math inline">\(P \rightarrow Q \equiv
+\neg(P \land \neg Q)\)</span>.</li>
+<li class="fragment">This leads to why we do proofs by
+contradiction.</li>
+<li class="fragment">Instead of proving <span class="math inline">\(P
+\rightarrow Q\)</span>, we prove <span class="math inline">\(P \land
+\neg Q\)</span> does not hold.</li>
+<li class="fragment">In other words, we start with <span
+class="math inline">\(P \land \neg Q\)</span> and get to an impossible
+state <span class="math inline">\(\bot\)</span>.</li>
 </ul>
+<h3 id="example">Example</h3>
 <ul>
-<li>This leads to why we do proofs by contradiction.</li>
-</ul>
-<ul>
-<li>Instead of proving <span class="math inline">\(P \implies
-Q\)</span>, we prove <span class="math inline">\(P \land \neg Q\)</span>
-does not hold.</li>
-</ul>
-<ul>
-<li>In other words, we start with <span class="math inline">\(P \land
-\neg Q\)</span> and get to an impossible state <span
-class="math inline">\(\bot\)</span>.</li>
-</ul>
-<h3 id="example-1">Example</h3>
-<ul>
-<li class="fragment"><p>A really famous proof is the proof that <span
-class="math inline">\(\sqrt{2}\)</span> is irrational.</p></li>
-<li class="fragment"><p>Since <span class="math inline">\(P\)</span>
-isn’t specified, we’ll make it “Everything I know about math is
-true”</p></li>
-<li class="fragment"><p><span class="math inline">\(Q: \sqrt{2}\)</span>
-is irrational.</p></li>
-<li class="fragment"><p>We want to show that <span
-class="math inline">\(P \land \neg Q\)</span> does NOT hold.</p></li>
-<li class="fragment"><p>So we say: Everything I know about math is true
-and <span class="math inline">\(\sqrt{2}\)</span> is
-<em>rational</em>.</p></li>
+<li class="fragment">A really famous proof is the proof that <span
+class="math inline">\(\sqrt{2}\)</span> is irrational.</li>
+<li class="fragment">Since <span class="math inline">\(P\)</span> isn’t
+specified, we’ll make it “Everything I know about math is true”</li>
+<li class="fragment"><span class="math inline">\(Q: \sqrt{2}\)</span> is
+irrational.</li>
+<li class="fragment">We want to show that <span class="math inline">\(P
+\land \neg Q\)</span> does NOT hold.</li>
+<li class="fragment">So we say: Everything I know about math is true and
+<span class="math inline">\(\sqrt{2}\)</span> is <em>rational</em>.</li>
 </ul>
 </div>
-<h2 id="contradiction-example">Contradiction Example:</h2>
+</section>
+<section id="contradiction-example" class="slide level2">
+<h2>Contradiction Example:</h2>
 <div id="content">
 <p>For this proof we are going to use the following statement:</p>
 <p><strong>Squared Evens Rule:</strong> If <span
@@ -287,7 +227,9 @@ class="math inline">\(\frac{a}{b}\)</span> such that <span
 class="math inline">\(a, b \in \mathbb{Z}\)</span> and <span
 class="math inline">\(GCD(a,b)=1\)</span>.</p>
 </div>
-<h2 id="contradiction-example-1">Contradiction Example</h2>
+</section>
+<section id="contradiction-example-1" class="slide level2">
+<h2>Contradiction Example</h2>
 <div id="content">
 <p><span class="math display">\[\begin{equation*}
 \begin{array}{l l l}
@@ -318,41 +260,46 @@ even number}\\
 \end{array}
 \end{equation*}\]</span></p>
 </div>
-<h2 id="proof-by-contrapositive">Proof by Contrapositive</h2>
+</section>
+<section id="proof-by-contrapositive" class="slide level2">
+<h2>Proof by Contrapositive</h2>
 <div id="content">
 <p>For a proof of contrapositive, you’re going to use the equality we
 proved last class:</p>
-<p><span class="math inline">\(P \implies Q \equiv \neg Q \implies \neg
-P\)</span>.</p>
+<p><span class="math inline">\(P \rightarrow Q \equiv \neg Q \rightarrow
+\neg P\)</span>.</p>
 <p>In other words, instead of proving <span class="math inline">\(P
-\implies Q\)</span>, we are going to assume <span
+\rightarrow Q\)</span>, we are going to assume <span
 class="math inline">\(\neg Q\)</span> and show that it leads to <span
 class="math inline">\(\neg P\)</span>.</p>
-<h3 id="example-2">Example</h3>
+<h3 id="example-1">Example</h3>
 <ul>
-<li class="fragment"><p>We want to prove: If <span
+<li class="fragment">We want to prove: If <span
 class="math inline">\(x^2\)</span> is odd, <span
-class="math inline">\(x\)</span> is odd.</p></li>
-<li class="fragment"><p><span class="math inline">\(P:\)</span> <span
-class="math inline">\(x^2\)</span> is odd</p></li>
-<li class="fragment"><p><span class="math inline">\(Q:\)</span> <span
-class="math inline">\(x\)</span> is odd.</p></li>
-<li class="fragment"><p>Let’s write this as a contrapositive: <span
-class="math inline">\(\neg Q \implies \neg P\)</span>.</p></li>
-<li class="fragment"><p>If <span class="math inline">\(x\)</span> is not
+class="math inline">\(x\)</span> is odd.<br />
+</li>
+<li class="fragment"><span class="math inline">\(P:\)</span> <span
+class="math inline">\(x^2\)</span> is odd</li>
+<li class="fragment"><span class="math inline">\(Q:\)</span> <span
+class="math inline">\(x\)</span> is odd.</li>
+<li class="fragment">Let’s write this as a contrapositive: <span
+class="math inline">\(\neg Q \rightarrow \neg P\)</span>.</li>
+<li class="fragment">If <span class="math inline">\(x\)</span> is not
 odd, then <span class="math inline">\(x^2\)</span> is not odd. Or,
 equivalently, If <span class="math inline">\(x\)</span> is even, then
 <span class="math inline">\(x^2\)</span> is even. We’ve actually already
-proved this!<span class="math inline">\(\square\)</span></p></li>
+proved this!<span class="math inline">\(\square\)</span></li>
 </ul>
 </div>
-<h2 id="proof-by-counterexample">Proof by Counterexample</h2>
+</section>
+<section id="proof-by-counterexample" class="slide level2">
+<h2>Proof by Counterexample</h2>
 <div id="content">
 <p>If you want to disprove something, the easiest way is usually by
 counter example.</p>
 <p>You don’t have to do this in the typical two column format as long as
 you make your reasoning clear.</p>
-<h3 id="example-3">Example</h3>
+<h3 id="example-2">Example</h3>
 <ul>
 <li class="fragment"><p>Say I ask you to prove the following is false:
 If <span class="math inline">\(x\)</span> is even, <span
@@ -364,7 +311,9 @@ and <span class="math inline">\(2^2= 4\)</span> is even. <span
 class="math inline">\(\square\)</span></p></li>
 </ul>
 </div>
-<h2 id="other-types-of-proofs">Other Types of Proofs</h2>
+</section>
+<section id="other-types-of-proofs" class="slide level2">
+<h2>Other Types of Proofs</h2>
 <div id="content">
 <p>You may see some other types of proofs that follow from the types of
 proofs we’ve already discussed. We will discuss a few.</p>
@@ -381,102 +330,117 @@ proofs we’ve already discussed. We will discuss a few.</p>
 </ul></li>
 </ul>
 </div>
-<h2 id="biconditional-proofs">Biconditional Proofs</h2>
+</section>
+<section id="biconditional-proofs" class="slide level2">
+<h2>Biconditional Proofs</h2>
 <div id="content">
 <ul>
-<li class="fragment"><p>For our proofs, we are basically writing a <span
-class="math inline">\(\implies\)</span> to get from line to
-line.</p></li>
-<li class="fragment"><p>Sometimes, instead of proving <span
-class="math inline">\(P \implies Q\)</span>, you’ll want to prove <span
-class="math inline">\(P \iff Q\)</span>.</p></li>
-<li class="fragment"><p>The benefit of this type of proof is that you
-can start from <span class="math inline">\(P\)</span> or <span
+<li class="fragment">For our proofs, we are basically writing a <span
+class="math inline">\(\rightarrow\)</span> to get from line to
+line.</li>
+<li class="fragment">Sometimes, instead of proving <span
+class="math inline">\(P \rightarrow Q\)</span>, you’ll want to prove
+<span class="math inline">\(P \leftrightarrow Q\)</span>.</li>
+<li class="fragment">The benefit of this type of proof is that you can
+start from <span class="math inline">\(P\)</span> or <span
 class="math inline">\(Q\)</span> to get to the other side. This is
-because <span class="math inline">\(P \iff Q\)</span> is the same as
-saying <span class="math inline">\(Q \iff P\)</span>.</p></li>
-<li class="fragment"><p>The added requirement is that you have to use
-<span class="math inline">\(\iff\)</span> rules to get from line to
+because <span class="math inline">\(P \leftrightarrow Q\)</span> is the
+same as saying <span class="math inline">\(Q \leftrightarrow
+P\)</span>.</li>
+<li class="fragment">The added requirement is that you have to use <span
+class="math inline">\(\leftrightarrow\)</span> rules to get from line to
 line. Thankfully, most definitions are actually defined using <span
-class="math inline">\(\iff\)</span>.</p></li>
+class="math inline">\(\leftrightarrow\)</span>.</li>
 </ul>
 </div>
-<h2 id="biconditional-proofs-1">Biconditional Proofs</h2>
+</section>
+<section id="biconditional-proofs-1" class="slide level2">
+<h2>Biconditional Proofs</h2>
 <div id="content">
-<h3 id="example-4">Example</h3>
+<h3 id="example-3">Example</h3>
 <p>We want to prove <span class="math inline">\(x \in \overline{A \cap
-B} \iff x \in \bar{A} \cup \bar{B}\)</span></p>
+B} \leftrightarrow x \in \bar{A} \cup \bar{B}\)</span></p>
 <p><span class="math display">\[\begin{equation*}
 \begin{array}{l l l}
   1. &amp; x \in \overline{A \cap B}   &amp;  \\
-  2. \iff &amp; \neg (x \in A \cap B)   &amp; \textrm{Complement
-Definition} \\
-  3. \iff &amp; \neg (x \in A \land x \in B) &amp; \textrm{Intersection
-Definition} \\
-  4. \iff &amp; \neg (x \in A) \lor \neg (x \in B) &amp;
-\textrm{DeMorgan&#39;s Logic} \\
-  5. \iff &amp; x \in \bar{A} \lor x \in \bar{B} &amp;
+  2.  \leftrightarrow &amp; \neg (x \in A \cap B)   &amp;
 \textrm{Complement Definition} \\
-  6. \iff &amp; x \in \bar{A} \cup \bar{B} &amp; \textrm{Union
-Definition}
+  3.  \leftrightarrow &amp; \neg (x \in A \land x \in B) &amp;
+\textrm{Intersection Definition} \\
+  4.  \leftrightarrow &amp; \neg (x \in A) \lor \neg (x \in B) &amp;
+\textrm{DeMorgan&#39;s Logic} \\
+  5.  \leftrightarrow &amp; x \in \bar{A} \lor x \in \bar{B} &amp;
+\textrm{Complement Definition} \\
+  6.  \leftrightarrow &amp; x \in \bar{A} \cup \bar{B} &amp;
+\textrm{Union Definition}
 \end{array}
 \end{equation*}\]</span></p>
 </div>
-<h2 id="logical-equivalence">Logical Equivalence</h2>
+</section>
+<section id="logical-equivalence" class="slide level2">
+<h2>Logical Equivalence</h2>
 <div id="content">
 <p>Proofs of logical equivalence are of the form <span
-class="math inline">\(P \iff Q\)</span>.</p>
+class="math inline">\(P \leftrightarrow Q\)</span>.</p>
 <p>Why? Remember that if <span class="math inline">\(P \equiv
-Q\)</span>, then <span class="math inline">\(P \iff Q\)</span> is always
-true!</p>
-<h3 id="example-5">Example</h3>
-<p>Say we want to prove <span class="math inline">\(a \implies b \equiv
-\neg b \implies \neg a\)</span>.</p>
-<p>So we can say <span class="math inline">\(P: a \implies b\)</span>
-and <span class="math inline">\(Q: \neg b \implies \neg a\)</span>.</p>
+Q\)</span>, then <span class="math inline">\(P \leftrightarrow
+Q\)</span> is always true!</p>
+<h3 id="example-4">Example</h3>
+<p>Say we want to prove <span class="math inline">\(a \rightarrow b
+\equiv \neg b \rightarrow \neg a\)</span>.</p>
+<p>So we can say <span class="math inline">\(P: a \rightarrow b\)</span>
+and <span class="math inline">\(Q: \neg b \rightarrow \neg
+a\)</span>.</p>
 <p>First, let’s do this proof starting at <span
 class="math inline">\(P\)</span> to get to <span
 class="math inline">\(Q\)</span>.</p>
 <p><span class="math display">\[\begin{equation*}
 \begin{array}{l l l}
-    1. &amp; a \implies b &amp; \textrm{Given } (P) \\
+    1. &amp; a  \rightarrow b &amp; \textrm{Given } (P) \\
     2. &amp; \equiv \neg a \lor b &amp; \textrm{Implication Definition}
 \\
     3. &amp; \equiv b \lor \neg a &amp; \textrm{Commutativity} \\
     4. &amp; \equiv \neg (\neg b) \lor \neg a &amp; \textrm{Double
 Negation} \\
-    5. &amp; \equiv \neg b \implies \neg a &amp; \textrm{Implication
+    5. &amp; \equiv \neg b  \rightarrow \neg a &amp; \textrm{Implication
 Definition }  \square ~ (Q)~ \\
 \end{array}
 \end{equation*}\]</span></p>
 </div>
-<h2 id="logical-equivalence-cont.">Logical Equivalence Cont.</h2>
+</section>
+<section id="logical-equivalence-cont." class="slide level2">
+<h2>Logical Equivalence Cont.</h2>
 <div id="content">
 <p>As previously stated, we can also start at <span
 class="math inline">\(Q\)</span> to get to <span
 class="math inline">\(P\)</span>.</p>
 <p><span class="math display">\[\begin{equation*}
 \begin{array}{l l l}
-    1. &amp; \equiv \neg b \implies \neg a &amp; \textrm{Given } (Q) \\
+    1. &amp; \equiv \neg b  \rightarrow \neg a &amp; \textrm{Given } (Q)
+\\
     2. &amp; \equiv \neg \neg b \lor \neg a &amp; \textrm{Implication
 Definition}\\
     3. &amp; \equiv b \lor \neg a &amp; \textrm{Double Negation} \\
     4. &amp; \equiv \neg a \lor b &amp; \textrm{Commutativity} \\
-    5. &amp; \equiv a \implies b &amp; \textrm{Implication Definition }
-\square ~ (P)    \\
+    5. &amp; \equiv a  \rightarrow b &amp; \textrm{Implication
+Definition } \square ~ (P)    \\
 \end{array}
 \end{equation*}\]</span></p>
 <p>Either of these proofs are acceptable because they are saying the
 same thing! Which side you want to start at is really a personal
 preference.</p>
 </div>
-<h2 id="forall">Forall</h2>
+</section>
+<section id="forall" class="slide level2">
+<h2>Forall</h2>
 <div id="content">
 <p>You may want to prove statements such as “<span
-class="math inline">\(\forall x \in S, P(x) \implies Q(x)\)</span>.”</p>
+class="math inline">\(\forall x \in S, P(x) \rightarrow
+Q(x)\)</span>.”</p>
 <p>As previously discussed, to prove a “for all” statement, you want to
 look at every element in <span class="math inline">\(S\)</span> and show
-that <span class="math inline">\(P(x) \implies Q(x)\)</span> holds.</p>
+that <span class="math inline">\(P(x) \rightarrow Q(x)\)</span>
+holds.</p>
 <p>You can often do this with a direct proof. All of the things we’ve
 directly proved so far are actually “for all” proofs.</p>
 <ul>
@@ -487,14 +451,16 @@ directly proved so far are actually “for all” proofs.</p>
 \mathbb{Z}, {} x-1 &lt; \left \lfloor{x}\right \rfloor\)</span></li>
 <li class="fragment"><span class="math inline">\(\forall a,b,c \in
 \{\texttt{True}, \texttt{False}\}, {} \neg a \lor \neg(b \land \neg c)
-\equiv a \implies (b \implies c)\)</span></li>
+\equiv a \rightarrow (b \rightarrow c)\)</span></li>
 <li class="fragment"><span class="math inline">\(\forall a,b,c \in
 \mathbb{Z}\)</span>, if <span class="math inline">\(a \mid b\)</span>
 and <span class="math inline">\(b \mid c\)</span>, then <span
 class="math inline">\(a \mid c\)</span></li>
 </ul>
 </div>
-<h2 id="forall-exhaustive">Forall, Exhaustive</h2>
+</section>
+<section id="forall-exhaustive" class="slide level2">
+<h2>Forall, Exhaustive</h2>
 <div id="content">
 <p>However, we can also prove “for all” statements by exhaustively
 looking at every element in <span class="math inline">\(S\)</span> and
@@ -511,11 +477,13 @@ who are vegetarian</li>
 \{\)</span>Aksana<span class="math inline">\(\}\)</span> is the set of
 your friends who are vegan</li>
 <li class="fragment">We want to prove: <span
-class="math inline">\(\forall x \in F,{} x \in N \implies x \in
+class="math inline">\(\forall x \in F,{} x \in N \rightarrow x \in
 V\)</span></li>
 </ul>
 </div>
-<h2 id="forall-exhaustive-1">Forall, Exhaustive</h2>
+</section>
+<section id="forall-exhaustive-1" class="slide level2">
+<h2>Forall, Exhaustive</h2>
 <div id="content">
 <p>However, we can also prove “for all” statements by
 <em>exhaustively</em> looking at every element in <span
@@ -533,18 +501,20 @@ vegetarian</li>
 class="math inline">\(\}\)</span> is the set of your friends who are
 vegan</li>
 <li>We want to prove: <span class="math inline">\(\forall x \in F,{} x
-\in N \implies x \in V\)</span></li>
+\in N \rightarrow x \in V\)</span></li>
 </ul>
 <p><span class="math inline">\(\begin{array}{| l | c | c | c
-|}  \hline  x &amp; x \in N &amp; x \in V &amp; x \in N \implies x \in V
-\\  \hline  \textrm{Erik} &amp; \texttt{False} &amp; \texttt{False}
-&amp; \textrm{True} \\  \textrm{Jos\&#39;e} &amp; \texttt{False} &amp;
-\texttt{False} &amp; \textrm{True} \\  \textrm{Nicoleta} &amp;
+|}  \hline  x &amp; x \in N &amp; x \in V &amp; x \in N \rightarrow x
+\in V \\  \hline  \textrm{Erik} &amp; \texttt{False} &amp;
+\texttt{False} &amp; \textrm{True} \\  \textrm{Jos\&#39;e} &amp;
 \texttt{False} &amp; \texttt{False} &amp; \textrm{True}
-\\  \textrm{Aksana} &amp; \texttt{True} &amp; \texttt{True} &amp;
-\textrm{True} \\  \hline  \end{array}\)</span></p>
+\\  \textrm{Nicoleta} &amp; \texttt{False} &amp; \texttt{False} &amp;
+\textrm{True} \\  \textrm{Aksana} &amp; \texttt{True} &amp;
+\texttt{True} &amp; \textrm{True} \\  \hline  \end{array}\)</span></p>
 </div>
-<h2 id="proof-by-cases">Proof by Cases</h2>
+</section>
+<section id="proof-by-cases" class="slide level2">
+<h2>Proof by Cases</h2>
 <div id="content">
 <p>A <strong>Proof by Cases</strong> is a kind of proof by exhaustion.
 You are breaking the set you are proving something about into smaller
@@ -555,7 +525,9 @@ value.</p>
 <p><span class="math inline">\(sgn(x) = \begin{cases}  -1 &amp;
 x&lt;0\\  0 &amp; x =0\\  1 &amp; x&gt;0  \end{cases}\)</span></p>
 </div>
-<h2 id="proof-by-cases-1">Proof by Cases</h2>
+</section>
+<section id="proof-by-cases-1" class="slide level2">
+<h2>Proof by Cases</h2>
 <div id="content">
 <p>A <strong>Proof by Cases</strong> is a kind of proof by exhaustion.
 You are breaking the set you are proving something about into smaller
@@ -573,7 +545,9 @@ x&lt;0\\  0 &amp; x =0\\  1 &amp; x&gt;0  \end{cases}\)</span></p>
 \textrm{Applied Def. of Absolute Value to Line 1} \\  5. &amp; sgn(x) =
 |x| &amp; \textrm{Compared Lines 3 and 5} \\  \end{array}\)</span></p>
 </div>
-<h2 id="proof-by-cases-cont.">Proof by Cases Cont.</h2>
+</section>
+<section id="proof-by-cases-cont." class="slide level2">
+<h2>Proof by Cases Cont.</h2>
 <div id="content">
 <p>Case 2: <span class="math inline">\(x = 0\)</span></p>
 <p><span class="math inline">\(\begin{array}{l l l}  1. &amp; x = 0
@@ -590,7 +564,9 @@ x&lt;0\\  0 &amp; x =0\\  1 &amp; x&gt;0  \end{cases}\)</span></p>
 \textrm{Applied Def. of Absolute Value to Line 1} \\  5. &amp; sgn(x) =
 |x| &amp; \textrm{Compared Lines 3 and 5} \\  \end{array}\)</span></p>
 </div>
-<h2 id="proof-of-existence">Proof of Existence</h2>
+</section>
+<section id="proof-of-existence" class="slide level2">
+<h2>Proof of Existence</h2>
 <div id="content">
 <p>Sometimes you just need to prove the existence of something.</p>
 <p><span class="math inline">\(\exists x \in S, {} P(x)\)</span>.</p>
@@ -609,11 +585,13 @@ who are vegetarian</li>
 \{\)</span>Aksana<span class="math inline">\(\}\)</span> is the set of
 your friends who are vegan</li>
 <li class="fragment">We want to prove: <span
-class="math inline">\(\exists x \in F,{} x \in N \implies x \in
+class="math inline">\(\exists x \in F,{} x \in N \rightarrow x \in
 V\)</span></li>
 </ul>
 </div>
-<h2 id="proof-of-existence-1">Proof of Existence</h2>
+</section>
+<section id="proof-of-existence-1" class="slide level2">
+<h2>Proof of Existence</h2>
 <div id="content">
 <p>Sometimes you just need to prove the existence of something.</p>
 <p><span class="math inline">\(\exists x \in S, {} P(x)\)</span>.</p>
@@ -632,16 +610,18 @@ vegetarian</li>
 class="math inline">\(\}\)</span> is the set of your friends who are
 vegan</li>
 <li>We want to prove: <span class="math inline">\(\exists x \in F,{} x
-\in N \implies x \in V\)</span></li>
+\in N \rightarrow x \in V\)</span></li>
 </ul>
 <p><span class="math inline">\(\begin{array}{l l l}  1. &amp; x =
 \textrm{Aksana} &amp; \textrm{Picked an }x \in F \\  2. &amp; x \in N =
 \texttt{True} &amp; \textrm{Given} \\  3. &amp; x \in V = \texttt{True}
-&amp; \textrm{Given} \\  4. &amp; x \in N \implies x \in V =
+&amp; \textrm{Given} \\  4. &amp; x \in N \rightarrow x \in V =
 \texttt{True} &amp; \textrm{Applied Def. of Implication to Lines 3 and 4
 } \square \\  \end{array}\)</span></p>
 </div>
-<h2 id="proof-of-existence-2">Proof of Existence</h2>
+</section>
+<section id="proof-of-existence-2" class="slide level2">
+<h2>Proof of Existence</h2>
 <div id="content">
 <p>Sometimes you will have to prove the existence of more complicated
 things. For example, you might want to argue the usefulness of
@@ -660,7 +640,9 @@ it in class.)</p>
 <p>This can also be called a <strong>constructive proof</strong> because
 you are literally constructing your own example.</p>
 </div>
-<h2 id="common-constructive-proofs">Common Constructive Proofs</h2>
+</section>
+<section id="common-constructive-proofs" class="slide level2">
+<h2>Common Constructive Proofs</h2>
 <div id="content">
 <p>A common constructive proof you will see in computer science looks
 something like:</p>

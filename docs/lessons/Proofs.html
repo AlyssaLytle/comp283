@@ -151,30 +151,26 @@
 <h2>Proofs</h2>
 <div id="content">
 <ul>
-<li class="fragment"><p>Proofs are useful because they let you say
-something about the tools you’re using and building!</p></li>
-<li class="fragment"><p>In the real world, this is useful because it
-helps you explain your work and really convince people of your
-contribution.</p></li>
-<li class="fragment"><p>Proofs are also helpful because they force you
-to write down your thoughts. In writing down your thoughts, you might
-find out that your thinking is flawed or you’re making assumptions where
-you shouldn’t.</p></li>
-<li class="fragment"><p>Examples of some things that you might
-prove:</p></li>
-<li class="fragment"><blockquote>
-<p>This cryptography scheme is secure.</p>
-</blockquote></li>
-<li class="fragment"><blockquote>
-<p>This new algorithm is the fastest out there.</p>
-</blockquote></li>
-<li class="fragment"><blockquote>
-<p>This network will lose less than <span class="math inline">\(.001
-\%\)</span> of the messages sent over it.</p>
-</blockquote></li>
-<li class="fragment"><blockquote>
-<p>This new robot won’t become sentient and kill you.</p>
-</blockquote></li>
+<li class="fragment">Proofs are useful because they let you say
+something about the tools you’re using and building!</li>
+<li class="fragment">In the real world, this is useful because it helps
+you explain your work and really convince people of your
+contribution.</li>
+<li class="fragment">Proofs are also helpful because they force you to
+write down your thoughts. In writing down your thoughts, you might find
+out that your thinking is flawed or you’re making assumptions where you
+shouldn’t.<br />
+</li>
+<li class="fragment">Examples of some things that you might prove:
+<ul>
+<li class="fragment">This cryptography scheme is secure.</li>
+<li class="fragment">This new algorithm is the fastest out there.</li>
+<li class="fragment">This network will lose less than <span
+class="math inline">\(.001 \%\)</span> of the messages sent over
+it.</li>
+<li class="fragment">This new robot won’t become sentient and kill
+you.</li>
+</ul></li>
 </ul>
 </div>
 </section>
@@ -182,19 +178,19 @@ prove:</p></li>
 <h2>What a proof looks like</h2>
 <div id="content">
 <ul>
-<li class="fragment"><p>A good proof is like good code, clear and easy
-to follow!</p></li>
-<li class="fragment"><p>When we were proving our logical equivalences,
-we always stated what equivalence we were using to get from one line to
-the next. You can think of this as something similar to commenting your
+<li class="fragment">A good proof is like good code, clear and easy to
+follow!</li>
+<li class="fragment">When we were proving our logical equivalences, we
+always stated what equivalence we were using to get from one line to the
+next. You can think of this as something similar to commenting your
 code. You want the next person to read it to be able to follow your
-train of thought.</p></li>
-<li class="fragment"><p>We’re going to write our proofs in this class in
-a specific way. As you advance in Computer Science or Math, you will
-find that you don’t need to be this structured when writing proofs. You
-can think of this method as your “training wheels”. The benefit of it is
+train of thought.</li>
+<li class="fragment">We’re going to write our proofs in this class in a
+specific way. As you advance in Computer Science or Math, you will find
+that you don’t need to be this structured when writing proofs. You can
+think of this method as your “training wheels”. The benefit of it is
 that it helps you practice writing down your reasoning in a linear way,
-and it helps you remember to justify every statement you make.</p></li>
+and it helps you remember to justify every statement you make.</li>
 </ul>
 </div>
 </section>
@@ -209,12 +205,88 @@ and it helps you remember to justify every statement you make.</p></li>
 \\  \square  \end{array}\)</span></p>
 </div>
 </section>
+<section id="finding-p-and-q" class="slide level2">
+<h2>Finding P and Q</h2>
+<div id="content">
+<h3 id="example">Example</h3>
+<ul>
+<li class="fragment">“If <span class="math inline">\(x\)</span> is even,
+<span class="math inline">\(x^2\)</span> is even.”</li>
+<li class="fragment"><span class="math inline">\(P:\)</span> <span
+class="math inline">\(x\)</span> is even</li>
+<li class="fragment"><span class="math inline">\(Q:\)</span> <span
+class="math inline">\(x^2\)</span> is even</li>
+</ul>
+</div>
+</section>
+<section id="finding-p-and-q-1" class="slide level2">
+<h2>Finding P and Q</h2>
+<div id="content">
+<h3 id="example-1">Example</h3>
+<ul>
+<li class="fragment">“There are infinitely many primes.”</li>
+<li class="fragment">This can be restated as “For all <span
+class="math inline">\(a \in \mathbb{Z}\)</span>, if <span
+class="math inline">\(a\)</span> is prime, then there exists a prime
+<span class="math inline">\(b \in \mathbb{Z}\)</span> such that <span
+class="math inline">\(b&gt;a\)</span>.’’<br />
+</li>
+<li class="fragment"><span class="math inline">\(P:\)</span> <span
+class="math inline">\(a \in \mathbb{Z}\)</span> is prime</li>
+<li class="fragment"><span class="math inline">\(Q:\)</span> There
+exists <span class="math inline">\(b \in \mathbb{Z}\)</span> such that
+<span class="math inline">\(b&gt;a\)</span></li>
+</ul>
+</div>
+</section>
+<section id="finding-p-and-q-2" class="slide level2">
+<h2>Finding P and Q</h2>
+<div id="content">
+<h3 id="example-2">Example</h3>
+<ul>
+<li class="fragment">“<span class="math inline">\(x-1 &lt; \left
+\lfloor{x}\right \rfloor\)</span>”</li>
+<li class="fragment"><span class="math inline">\(P:\)</span> Everything
+you know about math is true</li>
+<li class="fragment"><span class="math inline">\(Q:\)</span> <span
+class="math inline">\(x-1 &lt; \left \lfloor{x}\right
+\rfloor\)</span></li>
+</ul>
+</div>
+</section>
+<section id="rewrites" class="slide level2">
+<h2>Rewrites</h2>
+<p>Here are some common rewrites you might see when constructing your
+proofs:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(n\)</span> is an even
+integer converts to <span class="math inline">\(n = 2t\)</span> for some
+<span class="math inline">\(t\)</span></li>
+<li class="fragment"><span class="math inline">\(n\)</span> is an odd
+integer converts to <span class="math inline">\(n = 2t + 1\)</span> for
+some <span class="math inline">\(t\)</span></li>
+<li class="fragment"><span class="math inline">\(n\)</span> is a
+rational number converts to <span class="math inline">\(n =
+\frac{a}{b}\)</span> where <span class="math inline">\(a\)</span> and
+<span class="math inline">\(b\)</span> are integers</li>
+<li class="fragment"><span class="math inline">\(n\)</span> divides
+<span class="math inline">\(m\)</span> converts to <span
+class="math inline">\(m = nt\)</span> for some integer <span
+class="math inline">\(t\)</span></li>
+<li class="fragment"><span class="math inline">\(n\)</span> is a square
+converts to <span class="math inline">\(n = t^2\)</span> for some
+integer <span class="math inline">\(t\)</span>.</li>
+<li class="fragment"><span class="math inline">\(n = a \bmod b\)</span>
+converts to <span class="math inline">\(n = bt + a\)</span> for some
+integer <span class="math inline">\(t\)</span>.</li>
+</ul>
+</section>
 <section id="types-of-proofs---direct" class="slide level2">
 <h2>Types of Proofs - Direct</h2>
 <div id="content">
 <p>The first type of proof we will discuss is called a <strong>direct
 proof</strong>. Basically, we are trying to to prove <span
-class="math inline">\(p \implies q\)</span> by starting at <span
+class="math inline">\(p \rightarrow q\)</span> by starting at <span
 class="math inline">\(p\)</span> and getting to <span
 class="math inline">\(q\)</span>.</p>
 <p>For example, say we want to prove the following: “If <span
@@ -231,7 +303,7 @@ class="math inline">\(x^2\)</span> is even”</p>
 <div id="content">
 <p>The first type of proof we will discuss is called a <strong>direct
 proof</strong>. Basically, we are trying to to prove <span
-class="math inline">\(p \implies q\)</span> by starting at <span
+class="math inline">\(p \rightarrow q\)</span> by starting at <span
 class="math inline">\(p\)</span> and getting to <span
 class="math inline">\(q\)</span>.</p>
 <p>For example, say we want to prove the following: “If <span
@@ -251,7 +323,7 @@ is even} &amp; \textrm{Given (In other words, this is our } p
 \textrm{Definition of Even Number } \square  \end{array}\)</span></p>
 <p><strong>Note that at every step you’re basically saying, “Therefore…”
 this is where your implication <span
-class="math inline">\(\implies\)</span> is coming in.</strong></p>
+class="math inline">\(\rightarrow\)</span> is coming in.</strong></p>
 </div>
 </section>
 <section id="example-proof" class="slide level2">
@@ -277,7 +349,7 @@ definition of floor to line 1.} \\  7. &amp; x - 1 &lt; \left
 \lfloor{x}\right \rfloor &amp; \textrm{Plugged line 6 into line 5. }
 \square  \end{array}\)</span></p>
 <p><strong>Note that this is still a direct proof (<span
-class="math inline">\(p \implies q\)</span>) but <span
+class="math inline">\(p \rightarrow q\)</span>) but <span
 class="math inline">\(p\)</span> is never directly stated. If <span
 class="math inline">\(p\)</span> is never directly stated, you can just
 think of <span class="math inline">\(p\)</span> as your set of knowledge
@@ -288,50 +360,37 @@ of the world.</strong></p>
 <h2>Example Proof 2</h2>
 <div id="content">
 <p>Another example of this is when we do our logical equivalences.</p>
-<p>For example, on the midterm you proved <span
-class="math inline">\(\neg a \lor \neg(b \land \neg c) \equiv a \implies
-(b \implies c)\)</span>.</p>
+<p>For example, you’ve previously proved <span
+class="math inline">\(\neg a \lor \neg(b \land \neg c) \equiv a
+\rightarrow (b \rightarrow c)\)</span>.</p>
 <p>Since you are showing <span class="math inline">\(p \equiv
-q\)</span>, you actually are showing <span class="math inline">\(p \iff
-q\)</span> rather than just <span class="math inline">\(p \implies
-q\)</span>.</p>
+q\)</span>, you actually are showing <span class="math inline">\(p
+\leftrightarrow q\)</span> rather than just <span
+class="math inline">\(p \rightarrow q\)</span>.</p>
 <p>We could do this two ways. We could prove both <span
-class="math inline">\(p \implies q\)</span> and <span
-class="math inline">\(q \implies p\)</span>, or we can consolidate it
-into one proof by using <span class="math inline">\(\iff\)</span> at any
-step.</p>
+class="math inline">\(p \rightarrow q\)</span> and <span
+class="math inline">\(q \rightarrow p\)</span>, or we can consolidate it
+into one proof by using <span
+class="math inline">\(\leftrightarrow\)</span> at any step.</p>
 <p>We start at <span class="math inline">\(p\)</span>: <span
-class="math inline">\(\neg a \lor \neg(b \land \neg c)\)</span> and
-using our equivalences to get to <span class="math inline">\(q\)</span>:
-<span class="math inline">\(a \implies (b \implies c)\)</span>.</p>
+class="math inline">\(\neg a \lor \neg(b \land \neg c)\)</span> and use
+our equivalences to get to <span class="math inline">\(q\)</span>: <span
+class="math inline">\(a \rightarrow (b \rightarrow c)\)</span>.</p>
 </div>
 </section>
 <section id="example-proof-2-1" class="slide level2">
 <h2>Example Proof 2</h2>
 <div id="content">
-<p>Another example of this is when we do our logical equivalences.</p>
-<p>For example, on the midterm you proved <span
-class="math inline">\(\neg a \lor \neg(b \land \neg c) \equiv a \implies
-(b \implies c)\)</span>.</p>
-<p>Since you are showing <span class="math inline">\(p \equiv
-q\)</span>, you actually are showing <span class="math inline">\(p \iff
-q\)</span> rather than just <span class="math inline">\(p \implies
-q\)</span>.</p>
-<p>We could do this two ways. We could prove both <span
-class="math inline">\(p \implies q\)</span> and <span
-class="math inline">\(q \implies p\)</span>, or we can consolidate it
-into one proof by using <span class="math inline">\(\iff\)</span> at any
-step.</p>
 <p>We start at <span class="math inline">\(p\)</span>: <span
-class="math inline">\(\neg a \lor \neg(b \land \neg c)\)</span> and
-using our equivalences to get to <span class="math inline">\(q\)</span>:
-<span class="math inline">\(a \implies (b \implies c)\)</span>.</p>
+class="math inline">\(\neg a \lor \neg(b \land \neg c)\)</span> and use
+our equivalences to get to <span class="math inline">\(q\)</span>: <span
+class="math inline">\(a \rightarrow (b \rightarrow c)\)</span>.</p>
 <p><span class="math inline">\(\begin{array}{l l l}  1. &amp; \neg a
 \lor \neg(b \land \neg c) &amp; \textrm{Given} \\  2. &amp; \equiv a
-\implies \neg(b \land \neg c) &amp; \textrm{Implication
-Definition}\\  3. &amp; \equiv a \implies (\neg b \lor c) &amp;
-\textrm{DeMorgan&#39;s}\\  4. &amp; \equiv a \implies (b \implies c)
-&amp; \textrm{Implication Definition } \square \\
+\rightarrow \neg(b \land \neg c) &amp; \textrm{Implication
+Definition}\\  3. &amp; \equiv a \rightarrow (\neg b \lor c) &amp;
+\textrm{DeMorgan&#39;s}\\  4. &amp; \equiv a \rightarrow (b \rightarrow
+c) &amp; \textrm{Implication Definition } \square \\
 \end{array}\)</span></p>
 </div>
 </section>
