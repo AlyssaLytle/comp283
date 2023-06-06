@@ -6,4 +6,4 @@ contributors: Alyssa Byrnes
 
 # Proofs
 
-* Proofs: Video, [Slides](/comp283/lessons/Proofs.html), [Assignment](https://www.gradescope.com/)
+* Proofs: [Video](https://youtu.be/8JT9aPLxpPk), [Slides](/comp283/lessons/Proofs.html), [Assignment](https://www.gradescope.com/)
