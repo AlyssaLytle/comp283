@@ -135,7 +135,7 @@ In other words, instead of proving $P  \rightarrow Q$, we are going to assume $\
 </div>
 
 
-## Proof by Counterexample
+## (Dis-)Proof by Counterexample
 <div id="content">
 
 If you want to disprove something, the easiest way is usually by counter example. 
@@ -145,11 +145,8 @@ You don't have to do this in the typical two column format as long as you make y
 ### Example
 
 - Say I ask you to prove the following is false: If $x$ is even, $x^2$ is odd.
-
 - Counterexample: $x = 2$.
-
 - $2$ is even, and $2^2= 4$ is even. $\square$
-
 
 </div>
 
