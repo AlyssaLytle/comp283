@@ -59,8 +59,13 @@ To show $P  \rightarrow Q$, you start with $P$ and you reason to get to $Q$.
 -  In other words, we start with $P \land \neg Q$ and get to an impossible state $\bot$. 
 
 ### Example 
+- We want to prove: If $x^2$ is odd, $x$ is odd.  
+- $P:$ $x^2$ is odd 
+- $Q:$ $x$ is odd.
+- Let's write this as a contradiction:  $P \land \neg Q$.
+- $x^2$ is odd and $x$ is even.
 
-- A really famous proof is the proof that $\sqrt{2}$ is irrational.
+<!-- - A really famous proof is the proof that $\sqrt{2}$ is irrational.
 - Since $P$ isn't specified, we'll make it "Everything I know about math is true" 
 - $Q: \sqrt{2}$ is irrational.
 - We want to show that $P \land \neg Q$ does NOT hold. 
@@ -109,7 +114,7 @@ A rational number can be written as $\frac{a}{b}$ such that $a, b \in \mathbb{Z}
 \end{equation*}
 
 
-</div>
+</div> -->
 
 
 ## Proof by Contrapositive
@@ -128,7 +133,7 @@ In other words, instead of proving $P  \rightarrow Q$, we are going to assume $\
 - $P:$ $x^2$ is odd 
 - $Q:$ $x$ is odd.
 - Let's write this as a contrapositive:  $\neg Q  \rightarrow \neg P$.
-- If $x$ is not odd, then $x^2$ is not odd. Or, equivalently, If $x$ is even, then $x^2$ is even. We've actually already proved this!$\square$
+- If $x$ is not odd, then $x^2$ is not odd. Or, equivalently, If $x$ is even, then $x^2$ is even. 
 
 
 

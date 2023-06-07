@@ -187,6 +187,7 @@ to <span class="math inline">\(Q\)</span>.</p>
 <section id="proof-by-contradiction" class="slide level2">
 <h2>Proof By Contradiction</h2>
 <div id="content">
+
 <ul>
 <li class="fragment"><span class="math inline">\(P \rightarrow Q \equiv
 \neg(P \land \neg Q)\)</span>.</li>
@@ -201,65 +202,69 @@ state <span class="math inline">\(\bot\)</span>.</li>
 </ul>
 <h3 id="example">Example</h3>
 <ul>
-<li class="fragment">A really famous proof is the proof that <span
-class="math inline">\(\sqrt{2}\)</span> is irrational.</li>
-<li class="fragment">Since <span class="math inline">\(P\)</span> isn’t
-specified, we’ll make it “Everything I know about math is true”</li>
-<li class="fragment"><span class="math inline">\(Q: \sqrt{2}\)</span> is
-irrational.</li>
-<li class="fragment">We want to show that <span class="math inline">\(P
-\land \neg Q\)</span> does NOT hold.</li>
-<li class="fragment">So we say: Everything I know about math is true and
-<span class="math inline">\(\sqrt{2}\)</span> is <em>rational</em>.</li>
+<li class="fragment">We want to prove: If <span
+class="math inline">\(x^2\)</span> is odd, <span
+class="math inline">\(x\)</span> is odd.<br />
+</li>
+<li class="fragment"><span class="math inline">\(P:\)</span> <span
+class="math inline">\(x^2\)</span> is odd</li>
+<li class="fragment"><span class="math inline">\(Q:\)</span> <span
+class="math inline">\(x\)</span> is odd.</li>
+<li class="fragment">Let’s write this as a contradiction: <span
+class="math inline">\(P \land \neg Q\)</span>.</li>
+<li class="fragment"><span class="math inline">\(x^2\)</span> is odd and
+<span class="math inline">\(x\)</span> is even.</li>
 </ul>
+<!-- - A really famous proof is the proof that $\sqrt{2}$ is irrational.
+- Since $P$ isn't specified, we'll make it "Everything I know about math is true" 
+- $Q: \sqrt{2}$ is irrational.
+- We want to show that $P \land \neg Q$ does NOT hold. 
+- So we say: Everything I know about math is true and $\sqrt{2}$ is *rational*.
+
+
 </div>
-</section>
-<section id="contradiction-example" class="slide level2">
-<h2>Contradiction Example:</h2>
+
+
+## Contradiction Example:
 <div id="content">
-<p>For this proof we are going to use the following statement:</p>
-<p><strong>Squared Evens Rule:</strong> If <span
-class="math inline">\(x^2\)</span> is even, then <span
-class="math inline">\(x\)</span> is even.</p>
-<p>Additionally, recall the definition of a rational number:</p>
-<p>A rational number can be written as <span
-class="math inline">\(\frac{a}{b}\)</span> such that <span
-class="math inline">\(a, b \in \mathbb{Z}\)</span> and <span
-class="math inline">\(GCD(a,b)=1\)</span>.</p>
+
+For this proof we are going to use the following statement: 
+
+**Squared Evens Rule:** If $x^2$ is even, then $x$ is even.
+
+Additionally, recall the definition of a rational number:
+
+A rational number can be written as $\frac{a}{b}$ such that $a, b \in \mathbb{Z}$ and $GCD(a,b)=1$.
+
+
 </div>
-</section>
-<section id="contradiction-example-1" class="slide level2">
-<h2>Contradiction Example</h2>
+
+
+## Contradiction Example
 <div id="content">
-<p><span class="math display">\[\begin{equation*}
+
+\begin{equation*}
 \begin{array}{l l l}
-   1. &amp;  \sqrt{2} \textrm{ is rational}  &amp;  \textrm{Assumption}
-\\
-   2.  &amp; \sqrt{2} = \frac{a}{b} \land a,b \in \mathbb{Z} \land
-GCD(a,b) = 1 &amp; \textrm{Definition of Rational Numbers} \\
-   3. &amp; \sqrt{2} b = a &amp; \textrm{Took left side of 2. and
-multiplied both sides by } b \\
-   4. &amp; 2 b^2 = a^2 &amp; \textrm{Squared both sides} \\
-   5. &amp; a^2 \textrm{ is even} &amp; \textrm{Definition of even
-number} \\
-   6. &amp; a \textrm{ is even} &amp; \textrm{Squared Evens Rule}\\
-   7. &amp; a = 2k \land k \in \mathbb{Z}  &amp; \textrm{Definition of
-even number}\\
-   8. &amp; 2b^2 = (2k)^2 &amp; \textrm{Plugged in 7. to 4.}\\
-   9. &amp; 2b^2 = 4k^2 &amp; \textrm{Simplified}\\
-   10. &amp; b^2 = 2k^2 &amp; \textrm{Divided both sides by } 2 \\
-   11. &amp; b^2 \textrm{ is even} &amp; \textrm{Definition of even
-number} \\
-   12. &amp; b \textrm{ is even} &amp; \textrm{Squared Evens Rule}\\
-   13. &amp; b= 2m \land m \in \mathbb{Z}  &amp; \textrm{Definition of
-even number}\\
-   14. &amp; 2 \textrm{ is a factor of both } a \textrm{ and } b &amp;
-\textrm{Lines 7. and 13.} \\
-   15. &amp; \bot &amp; \textrm{Lines 2. and 14. contradict each other }
-\square
+   1. &  \sqrt{2} \textrm{ is rational}  &  \textrm{Assumption} \\
+   2.  & \sqrt{2} = \frac{a}{b} \land a,b \in \mathbb{Z} \land GCD(a,b) = 1 & \textrm{Definition of Rational Numbers} \\
+   3. & \sqrt{2} b = a & \textrm{Took left side of 2. and multiplied both sides by } b \\
+   4. & 2 b^2 = a^2 & \textrm{Squared both sides} \\
+   5. & a^2 \textrm{ is even} & \textrm{Definition of even number} \\
+   6. & a \textrm{ is even} & \textrm{Squared Evens Rule}\\
+   7. & a = 2k \land k \in \mathbb{Z}  & \textrm{Definition of even number}\\
+   8. & 2b^2 = (2k)^2 & \textrm{Plugged in 7. to 4.}\\
+   9. & 2b^2 = 4k^2 & \textrm{Simplified}\\
+   10. & b^2 = 2k^2 & \textrm{Divided both sides by } 2 \\
+   11. & b^2 \textrm{ is even} & \textrm{Definition of even number} \\
+   12. & b \textrm{ is even} & \textrm{Squared Evens Rule}\\
+   13. & b= 2m \land m \in \mathbb{Z}  & \textrm{Definition of even number}\\
+   14. & 2 \textrm{ is a factor of both } a \textrm{ and } b & \textrm{Lines 7. and 13.} \\
+   15. & \bot & \textrm{Lines 2. and 14. contradict each other } \square
 \end{array}
-\end{equation*}\]</span></p>
-</div>
+\end{equation*}
+
+
+</div> -->
 </section>
 <section id="proof-by-contrapositive" class="slide level2">
 <h2>Proof by Contrapositive</h2>
@@ -287,8 +292,7 @@ class="math inline">\(\neg Q \rightarrow \neg P\)</span>.</li>
 <li class="fragment">If <span class="math inline">\(x\)</span> is not
 odd, then <span class="math inline">\(x^2\)</span> is not odd. Or,
 equivalently, If <span class="math inline">\(x\)</span> is even, then
-<span class="math inline">\(x^2\)</span> is even. We’ve actually already
-proved this!<span class="math inline">\(\square\)</span></li>
+<span class="math inline">\(x^2\)</span> is even.</li>
 </ul>
 </div>
 </section>
