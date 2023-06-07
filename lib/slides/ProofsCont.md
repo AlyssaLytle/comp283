@@ -213,7 +213,7 @@ Say we want to prove $a  \rightarrow b \equiv \neg b  \rightarrow \neg a$.
 
 So we can say $P: a  \rightarrow b$ and $Q: \neg b  \rightarrow \neg a$.
 
-First, let's do this proof starting at $P$ to get to $Q$.
+<!-- First, let's do this proof starting at $P$ to get to $Q$.
  
 \begin{equation*}
 \begin{array}{l l l}
@@ -230,10 +230,10 @@ First, let's do this proof starting at $P$ to get to $Q$.
 
 
 ## Logical Equivalence Cont.
-<div id="content">
+<div id="content"> -->
 
 As previously stated, we can also start at $Q$ to get to $P$. 
-
+<!--
 \begin{equation*}
 \begin{array}{l l l}
     1. & \equiv \neg b  \rightarrow \neg a & \textrm{Given } (Q) \\
@@ -242,7 +242,7 @@ As previously stated, we can also start at $Q$ to get to $P$.
     4. & \equiv \neg a \lor b & \textrm{Commutativity} \\
     5. & \equiv a  \rightarrow b & \textrm{Implication Definition } \square ~ (P)    \\ 
 \end{array}
-\end{equation*}
+\end{equation*} -->
 
 Either of these proofs are acceptable because they are saying the same thing! Which side you want to start at is really a personal preference.
 
