@@ -145,8 +145,9 @@
 <h2>Recursion</h2>
 <div id="content">
 <p>There is still one type of proof we need to cover… but first we’re
-going to take a little bit of a detour. It is helpful to understand
-recursion before we move on to the next kind of proof.</p>
+going to take a little bit of a detour.</p>
+<p>It is helpful to understand <strong>recursion</strong> before we move
+on to the next kind of proof!</p>
 </div>
 </section>
 <section id="what-is-recursion" class="slide level2">
@@ -154,25 +155,6 @@ recursion before we move on to the next kind of proof.</p>
 <div id="content">
 <p><strong>Recursion</strong> is the idea of solving a problem by
 breaking it into smaller problems.</p>
-<h3 id="example---powersets">Example - Powersets:</h3>
-<ul>
-<li class="fragment">Recall when we defined powersets this way:</li>
-<li class="fragment"><span class="math inline">\(\mathscr{P}(X + \{c\} )
-= \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})\)</span></li>
-<li class="fragment">E.g. <span
-class="math inline">\(\mathscr{P}(\{1,2,3\}) = \mathscr{P}(\{1,2\} +
-\{3\}) = \mathscr{P}(\{1,2\}) \cup (\mathscr{P}(\{1,2\}) +
-\{3\})\)</span></li>
-<li class="fragment">This is essentially saying we can build a powerset
-by unioning two smaller sets. We are building something by combining two
-smaller things. That’s what makes this definition
-<strong>recursive</strong>.</li>
-</ul>
-</div>
-</section>
-<section id="what-is-recursion-1" class="slide level2">
-<h2>What is recursion?</h2>
-<div id="content">
 <h3 id="example---factorials">Example - Factorials:</h3>
 <ul>
 <li class="fragment">Another familiar function we know is <span
@@ -263,6 +245,24 @@ numbers that are defined via a recursive function.</li>
 &lt; 1\)</span>, <span class="math inline">\(F(n) = F(n-1) +
 F(n-2)\)</span>.</li>
 </ol>
+</div>
+</section>
+<section id="other-example---powersets" class="slide level2">
+<h2>Other Example - Powersets:</h2>
+<div id="content">
+<ul>
+<li class="fragment">We can define powersets this way:</li>
+<li class="fragment"><span class="math inline">\(\mathscr{P}(X + \{c\} )
+= \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})\)</span></li>
+<li class="fragment">E.g. <span
+class="math inline">\(\mathscr{P}(\{1,2,3\}) = \mathscr{P}(\{1,2\} +
+\{3\}) = \mathscr{P}(\{1,2\}) \cup (\mathscr{P}(\{1,2\}) +
+\{3\})\)</span></li>
+<li class="fragment">This is essentially saying we can build a powerset
+by unioning two smaller sets. We are building something by combining two
+smaller things. That’s what makes this definition
+<strong>recursive</strong>.</li>
+</ul>
 </div>
 </section>
 <section id="defining-functions-and-methods-recursively"
