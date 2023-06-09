@@ -7,22 +7,18 @@ contributors: Alyssa Byrnes
 ---
 
 
-<div id="content"
-</div
-
-
 ## Recursion
-<div id="content"
+<div id="content">
 
 There is still one type of proof we need to cover... but first we're going to take a little bit of a detour.
 It is helpful to understand recursion before we move on to the next kind of proof.
 
 
-</div
+</div>
 
 
 ## What is recursion?
-<div id="content"
+<div id="content">
 
 **Recursion** is the idea of solving a problem by breaking it into smaller problems.
 
@@ -34,11 +30,11 @@ It is helpful to understand recursion before we move on to the next kind of proo
 - This is essentially saying we can build a powerset by unioning two smaller sets. We are building something by combining two smaller things. That's what makes this definition **recursive**.
 
 
-</div
+</div>
 
 
 ## What is recursion?
-<div id="content"
+<div id="content">
 
 ### Example - Factorials:
 
@@ -47,11 +43,11 @@ It is helpful to understand recursion before we move on to the next kind of proo
 - This is a **recursive** definition because we are computing $n!$ by first computing $(n-1)!$.
 
 
-</div
+</div>
 
 
 ## Why do we use recursion?
-<div id="content"
+<div id="content">
 
 - Breaking a problem into smaller pieces can make it easier to solve.
 - Breaking a problem into smaller pieaces can also make it easier to reason about, making it easier to prove properties about it! 
@@ -60,11 +56,11 @@ It is helpful to understand recursion before we move on to the next kind of proo
 
 
 
-</div
+</div>
 
 
 ## Defining recursion
-<div id="content"
+<div id="content">
 
 We just gave an example of both a set and a function that were defined recursively.
 
@@ -88,11 +84,11 @@ There are two main parts of a recursive definition:
 
 
 
-</div
+</div>
 
 
 ## Recursion in Coding
-<div id="content"
+<div id="content">
 
 Here is an example of what recursion would look like in a programming language like Python.
 
@@ -107,38 +103,38 @@ Say we want to write a program that returns $n!$.
         
 
 
-</div
+</div>
 
 
 ## The Fibonacci numbers
-<div id="content"
+<div id="content">
 
 - The Fibonacci numbers are a very famous sequence of numbers that are defined via a recursive function.
 
 1. The base case: $F(0) = 0, F(1) = 1$
-2. Recursive rule: For $n  1$, $F(n) = F(n-1) + F(n-2)$.
+2. Recursive rule: For $n < 1$, $F(n) = F(n-1) + F(n-2)$.
 
 
-</div
+</div>
 
 
 ## Defining Functions and Methods Recursively
-<div id="content"
+<div id="content">
 
 I want to define a method $copy$ such that for all $n \in \mathbb{N}$, $copy(n)=n$
 
 For this, we are going to use the fact that $n = 1 \cdot n = 1 + 1 + \ldots + 1$, $n$ times.
 
 1. The base case: $copy(0) = 0$
-2. Recursive rule: For $n0$, $copy(n) = 1 + copy(n-1)$
+2. Recursive rule: For $n<0$, $copy(n) = 1 + copy(n-1)$
 
 
 
-</div
+</div>
 
 
 ## Defining Lists Recursively
-<div id="content"
+<div id="content">
 
 - We are going to give an example of how we can define a list and some functions on a list recursively
 - Say all elements of our list are in set $A$
@@ -153,11 +149,11 @@ For this, we are going to use the fact that $n = 1 \cdot n = 1 + 1 + \ldots + 1$
 - You can think of "$cons$" as short for "constructor".
 
 
-</div
+</div>
 
 
 ## Defining Lists Recursively
-<div id="content"
+<div id="content">
 
 1. Base case: Empty list $\langle ~ \rangle$
 
@@ -172,11 +168,11 @@ For this, we are going to use the fact that $n = 1 \cdot n = 1 + 1 + \ldots + 1$
 - $\langle a, b, c \rangle = cons(a, cons(b, cons(c, \langle ~ \rangle)))$
 
 
-</div
+</div>
 
 
 ## Useful Partial Functions
-<div id="content"
+<div id="content">
 
 - $head(cons( a,l )) = a$
 - $tail(cons( a,l )) = l$
@@ -191,17 +187,17 @@ For this, we are going to use the fact that $n = 1 \cdot n = 1 + 1 + \ldots + 1$
 
 
 
-</div
+</div>
 
 
 ## Strings and Languages
-<div id="content"
+<div id="content">
 
 - Strings and Languages are likely going to come up later in your computer science education, so it's good to be familiar with these definitions!
 - A **string** is a list containing characters from a given **alphabet** $\Sigma$
 - The set of all possible strings that can be made from an alphabet is $\Sigma^*$
 - A **language** is a set of strings $L \subseteq \Sigma^*$
 
-</div
+</div>
 
 

@@ -141,21 +141,17 @@
   <h1 class="title">Recursion</h1>
 </section>
 
-<section class="slide level2">
-
-<p>&lt;div id=“content” &lt;/div</p>
-</section>
 <section id="recursion" class="slide level2">
 <h2>Recursion</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <p>There is still one type of proof we need to cover… but first we’re
 going to take a little bit of a detour. It is helpful to understand
 recursion before we move on to the next kind of proof.</p>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="what-is-recursion" class="slide level2">
 <h2>What is recursion?</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <p><strong>Recursion</strong> is the idea of solving a problem by
 breaking it into smaller problems.</p>
 <h3 id="example---powersets">Example - Powersets:</h3>
@@ -172,11 +168,11 @@ by unioning two smaller sets. We are building something by combining two
 smaller things. That’s what makes this definition
 <strong>recursive</strong>.</li>
 </ul>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="what-is-recursion-1" class="slide level2">
 <h2>What is recursion?</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <h3 id="example---factorials">Example - Factorials:</h3>
 <ul>
 <li class="fragment">Another familiar function we know is <span
@@ -188,11 +184,11 @@ class="math inline">\(n! = n\cdot (n-1)!\)</span>.</li>
 because we are computing <span class="math inline">\(n!\)</span> by
 first computing <span class="math inline">\((n-1)!\)</span>.</li>
 </ul>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="why-do-we-use-recursion" class="slide level2">
 <h2>Why do we use recursion?</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <ul>
 <li class="fragment">Breaking a problem into smaller pieces can make it
 easier to solve.</li>
@@ -204,11 +200,11 @@ recursive definitions (haskell, racket, scheme, etc.)</li>
 <li class="fragment">Other programming languages support it by letting a
 function call itself. (I’ll give an example soon.)</li>
 </ul>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="defining-recursion" class="slide level2">
 <h2>Defining recursion</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <p>We just gave an example of both a set and a function that were
 defined recursively.</p>
 <p>You can also recursively define relations, tuples, lists,
@@ -235,11 +231,11 @@ class="math inline">\(\mathscr{P}(X + \{c\}) = \mathscr{P}(X) \cup
 <li class="fragment">The recursive rule: <span class="math inline">\(n!
 = n \cdot (n-1)!\)</span></li>
 </ol>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="recursion-in-coding" class="slide level2">
 <h2>Recursion in Coding</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <p>Here is an example of what recursion would look like in a programming
 language like Python.</p>
 <p>Say we want to write a program that returns <span
@@ -251,11 +247,11 @@ class="math inline">\(n!\)</span>.</p>
     else: #recursive rule
         return n * factorial(n-1) 
     </code></pre>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="the-fibonacci-numbers" class="slide level2">
 <h2>The Fibonacci numbers</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <ul>
 <li class="fragment">The Fibonacci numbers are a very famous sequence of
 numbers that are defined via a recursive function.</li>
@@ -264,15 +260,15 @@ numbers that are defined via a recursive function.</li>
 <li class="fragment">The base case: <span class="math inline">\(F(0) =
 0, F(1) = 1\)</span></li>
 <li class="fragment">Recursive rule: For <span class="math inline">\(n
-1\)</span>, <span class="math inline">\(F(n) = F(n-1) +
+&lt; 1\)</span>, <span class="math inline">\(F(n) = F(n-1) +
 F(n-2)\)</span>.</li>
 </ol>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="defining-functions-and-methods-recursively"
 class="slide level2">
 <h2>Defining Functions and Methods Recursively</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <p>I want to define a method <span class="math inline">\(copy\)</span>
 such that for all <span class="math inline">\(n \in \mathbb{N}\)</span>,
 <span class="math inline">\(copy(n)=n\)</span></p>
@@ -283,14 +279,14 @@ class="math inline">\(n\)</span> times.</p>
 <li class="fragment">The base case: <span class="math inline">\(copy(0)
 = 0\)</span></li>
 <li class="fragment">Recursive rule: For <span
-class="math inline">\(n0\)</span>, <span class="math inline">\(copy(n) =
-1 + copy(n-1)\)</span></li>
+class="math inline">\(n&lt;0\)</span>, <span
+class="math inline">\(copy(n) = 1 + copy(n-1)\)</span></li>
 </ol>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="defining-lists-recursively" class="slide level2">
 <h2>Defining Lists Recursively</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <ul>
 <li class="fragment">We are going to give an example of how we can
 define a list and some functions on a list recursively</li>
@@ -320,11 +316,11 @@ class="math inline">\(l\)</span></li>
 <li class="fragment">You can think of “<span
 class="math inline">\(cons\)</span>” as short for “constructor”.</li>
 </ul>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="defining-lists-recursively-1" class="slide level2">
 <h2>Defining Lists Recursively</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <ol type="1">
 <li class="fragment"><p>Base case: Empty list <span
 class="math inline">\(\langle ~ \rangle\)</span></p></li>
@@ -349,11 +345,11 @@ cons(a, cons(b, \langle ~ \rangle))\)</span></li>
 <li class="fragment"><span class="math inline">\(\langle a, b, c \rangle
 = cons(a, cons(b, cons(c, \langle ~ \rangle)))\)</span></li>
 </ul>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="useful-partial-functions" class="slide level2">
 <h2>Useful Partial Functions</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <ul>
 <li class="fragment"><span class="math inline">\(head(cons( a,l )) =
 a\)</span></li>
@@ -373,11 +369,11 @@ cons(c, \langle ~ \rangle)))) = a\)</span></li>
 cons(c, \langle ~ \rangle)))) = cons(b, cons(c, \langle ~ \rangle)) =
 \langle b, c \rangle\)</span></li>
 </ul>
-<p>&lt;/div</p>
+</div>
 </section>
 <section id="strings-and-languages" class="slide level2">
 <h2>Strings and Languages</h2>
-<p>&lt;div id=“content”</p>
+<div id="content">
 <ul>
 <li class="fragment">Strings and Languages are likely going to come up
 later in your computer science education, so it’s good to be familiar
@@ -390,7 +386,7 @@ from an alphabet is <span class="math inline">\(\Sigma^*\)</span></li>
 <li class="fragment">A <strong>language</strong> is a set of strings
 <span class="math inline">\(L \subseteq \Sigma^*\)</span></li>
 </ul>
-<p>&lt;/div</p>
+</div>
 </section>
     </div>
   </div>
