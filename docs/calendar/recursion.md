@@ -6,4 +6,4 @@ contributors: Alyssa Byrnes
 
 # Recursion
 
-* Recursion: Video, [Slides](/comp283/lessons/ProofsCont.html), [Assignment](https://www.gradescope.com/)
+* Recursion: Video, [Slides](/comp283/lessons/Recursion.html), [Assignment](https://www.gradescope.com/)

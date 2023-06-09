@@ -6,4 +6,4 @@ contributors: Alyssa Byrnes
 
 # Induction
 
-* Induction: Video, [Slides](/comp283/lessons/ProofsCont.html), [Assignment](https://www.gradescope.com/)
+* Induction: Video, [Slides](/comp283/lessons/Recursion.html), [Assignment](https://www.gradescope.com/)
