@@ -25,9 +25,7 @@ It is helpful to understand **recursion** before we move on to the next kind of 
 
 ### Example - Factorials:
 
-- A familiar function we know is $n! = n \cdot (n-1) \cdot \ldots \cdot 2 \cdot 1$
-- We can rewrite this as $n! = n\cdot (n-1)!$.
-- This is a **recursive** definition because we are computing $n!$ by first computing $(n-1)!$.
+
 
 
 </div>
@@ -76,8 +74,8 @@ There are two main parts of any recursive definition:
 
 ### Example: Factorials
 
-1. The base case: $1! = 1$
-2. The recursive rule: $n! = n \cdot (n-1)!$
+<!-- 1. The base case: $1! = 1$
+2. The recursive rule: $n! = n \cdot (n-1)!$ -->
 
 
 </div>
@@ -101,16 +99,18 @@ There are two main parts of any recursive definition:
 
 - We can define powersets recursively:
 - $\mathscr{P}(X + \{c\} ) = \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})$
-- E.g. $\mathscr{P}(\{1,2,3\}) = \mathscr{P}(\{1,2\} + \{3\}) = \mathscr{P}(\{1,2\}) \cup (\mathscr{P}(\{1,2\}) + \{3\})$
+<!-- - E.g. $\mathscr{P}(\{1,2,3\}) = \mathscr{P}(\{1,2\} + \{3\}) = \mathscr{P}(\{1,2\}) \cup (\mathscr{P}(\{1,2\}) + \{3\})$
 - This is essentially saying we can build a powerset by unioning two smaller sets. We are building something by combining two smaller things. That's what makes this definition **recursive**.
 
 
 ### Definition
 
 1. The base case: $\mathscr{P}(\{ \}) = \{\}$
-2. The recursive rule: $\mathscr{P}(X + \{c\}) = \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})$
+2. The recursive rule: $\mathscr{P}(X + \{c\}) = \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})$ -->
 
 </div>
+
+
 
 
 <!-- ## Defining Functions and Methods Recursively
@@ -136,11 +136,11 @@ For this, we are going to use the fact that $n = 1 \cdot n = 1 + 1 + \ldots + 1$
 (Aka all possible permutations of length $k \geq 0$ of the elements in $A$.)
 - We can also define this recursively.
 
-1. Base case: Empty list $\langle ~ \rangle$
+<!-- 1. Base case: Empty list $\langle ~ \rangle$
 2. Recursive rule: For any element $a \in A$ and all lists $l \in L$, $cons(a,l)$ is a list in $L$.
 
 - Basically, $cons(a,l)$ takes $a$ and attaches it to list $l$
-- You can think of "$cons$" as short for "constructor".
+- You can think of "$cons$" as short for "constructor". -->
 
 </div>
 
@@ -156,9 +156,9 @@ For this, we are going to use the fact that $n = 1 \cdot n = 1 + 1 + \ldots + 1$
 
 
 ### Examples
-- $\langle b \rangle = cons(b, \langle ~ \rangle)$
+<!-- - $\langle b \rangle = cons(b, \langle ~ \rangle)$
 - $\langle a, b \rangle = cons(a, cons(b, \langle ~ \rangle))$
-- $\langle a, b, c \rangle = cons(a, cons(b, cons(c, \langle ~ \rangle)))$
+- $\langle a, b, c \rangle = cons(a, cons(b, cons(c, \langle ~ \rangle)))$ -->
 
 </div>
 
@@ -172,9 +172,9 @@ For this, we are going to use the fact that $n = 1 \cdot n = 1 + 1 + \ldots + 1$
 
 ### Examples
 
-- $\langle a, b, c \rangle = cons(a, cons(b, cons(c, \langle ~ \rangle)))$
+<!-- - $\langle a, b, c \rangle = cons(a, cons(b, cons(c, \langle ~ \rangle)))$
 - $head(cons(a, cons(b, cons(c, \langle ~ \rangle)))) = a$
-- $tail(cons(a, cons(b, cons(c, \langle ~ \rangle)))) = cons(b, cons(c, \langle ~ \rangle)) = \langle b, c \rangle$
+- $tail(cons(a, cons(b, cons(c, \langle ~ \rangle)))) = cons(b, cons(c, \langle ~ \rangle)) = \langle b, c \rangle$ -->
 
 </div>
 

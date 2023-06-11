@@ -156,16 +156,6 @@ on to the next kind of proof!</p>
 <p><strong>Recursion</strong> is the idea of solving a problem by
 breaking it into smaller problems.</p>
 <h3 id="example---factorials">Example - Factorials:</h3>
-<ul>
-<li class="fragment">A familiar function we know is <span
-class="math inline">\(n! = n \cdot (n-1) \cdot \ldots \cdot 2 \cdot
-1\)</span></li>
-<li class="fragment">We can rewrite this as <span
-class="math inline">\(n! = n\cdot (n-1)!\)</span>.</li>
-<li class="fragment">This is a <strong>recursive</strong> definition
-because we are computing <span class="math inline">\(n!\)</span> by
-first computing <span class="math inline">\((n-1)!\)</span>.</li>
-</ul>
 </div>
 </section>
 <section id="recursion-in-coding" class="slide level2">
@@ -190,7 +180,7 @@ class="math inline">\(n!\)</span>.</p>
 <ul>
 <li class="fragment">Breaking a problem into smaller pieces can make it
 easier to solve.</li>
-<li class="fragment">Breaking a problem into smaller pieces can also
+<li class="fragment">Breaking a problem into smaller pieaces can also
 make it easier to reason about, making it easier to prove properties
 about it!</li>
 <li class="fragment">Many programming languages heavily rely on
@@ -215,12 +205,8 @@ you’re trying to define</li>
 next element/value given previous ones.</li>
 </ol>
 <h3 id="example-factorials">Example: Factorials</h3>
-<ol type="1">
-<li class="fragment">The base case: <span class="math inline">\(1! =
-1\)</span></li>
-<li class="fragment">The recursive rule: <span class="math inline">\(n!
-= n \cdot (n-1)!\)</span></li>
-</ol>
+<!-- 1. The base case: $1! = 1$
+2. The recursive rule: $n! = n \cdot (n-1)!$ -->
 </div>
 </section>
 <section id="the-fibonacci-numbers" class="slide level2">
@@ -234,7 +220,7 @@ numbers that are defined via a recursive function.</li>
 <li class="fragment">The base case: <span class="math inline">\(F(0) =
 0, F(1) = 1\)</span></li>
 <li class="fragment">Recursive rule: For <span class="math inline">\(n
-&gt; 1\)</span>, <span class="math inline">\(F(n) = F(n-1) +
+&lt; 1\)</span>, <span class="math inline">\(F(n) = F(n-1) +
 F(n-2)\)</span>.</li>
 </ol>
 </div>
@@ -245,24 +231,16 @@ F(n-2)\)</span>.</li>
 <ul>
 <li class="fragment">We can define powersets recursively:</li>
 <li class="fragment"><span class="math inline">\(\mathscr{P}(X + \{c\} )
-= \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})\)</span></li>
-<li class="fragment">E.g. <span
-class="math inline">\(\mathscr{P}(\{1,2,3\}) = \mathscr{P}(\{1,2\} +
-\{3\}) = \mathscr{P}(\{1,2\}) \cup (\mathscr{P}(\{1,2\}) +
-\{3\})\)</span></li>
-<li class="fragment">This is essentially saying we can build a powerset
-by unioning two smaller sets. We are building something by combining two
-smaller things. That’s what makes this definition
-<strong>recursive</strong>.</li>
+= \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})\)</span>
+<!-- - E.g. $\mathscr{P}(\{1,2,3\}) = \mathscr{P}(\{1,2\} + \{3\}) = \mathscr{P}(\{1,2\}) \cup (\mathscr{P}(\{1,2\}) + \{3\})$
+- This is essentially saying we can build a powerset by unioning two smaller sets. We are building something by combining two smaller things. That's what makes this definition **recursive**.
+
+
+### Definition
+
+1. The base case: $\mathscr{P}(\{ \}) = \{\}$
+2. The recursive rule: $\mathscr{P}(X + \{c\}) = \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})$ --></li>
 </ul>
-<h3 id="definition">Definition</h3>
-<ol type="1">
-<li class="fragment">The base case: <span
-class="math inline">\(\mathscr{P}(\{ \}) = \{\}\)</span></li>
-<li class="fragment">The recursive rule: <span
-class="math inline">\(\mathscr{P}(X + \{c\}) = \mathscr{P}(X) \cup
-(\mathscr{P}(X) + \{c\})\)</span></li>
-</ol>
 </div>
 <!-- ## Defining Functions and Methods Recursively
 <div id="content">
@@ -292,23 +270,11 @@ permutations of length <span class="math inline">\(k \geq 0\)</span> of
 the elements in <span class="math inline">\(A\)</span>.)</li>
 <li class="fragment">We can also define this recursively.</li>
 </ul>
-<ol type="1">
-<li class="fragment">Base case: Empty list <span
-class="math inline">\(\langle ~ \rangle\)</span></li>
-<li class="fragment">Recursive rule: For any element <span
-class="math inline">\(a \in A\)</span> and all lists <span
-class="math inline">\(l \in L\)</span>, <span
-class="math inline">\(cons(a,l)\)</span> is a list in <span
-class="math inline">\(L\)</span>.</li>
-</ol>
-<ul>
-<li class="fragment">Basically, <span
-class="math inline">\(cons(a,l)\)</span> takes <span
-class="math inline">\(a\)</span> and attaches it to list <span
-class="math inline">\(l\)</span></li>
-<li class="fragment">You can think of “<span
-class="math inline">\(cons\)</span>” as short for “constructor”.</li>
-</ul>
+<!-- 1. Base case: Empty list $\langle ~ \rangle$
+2. Recursive rule: For any element $a \in A$ and all lists $l \in L$, $cons(a,l)$ is a list in $L$.
+
+- Basically, $cons(a,l)$ takes $a$ and attaches it to list $l$
+- You can think of "$cons$" as short for "constructor". -->
 </div>
 </section>
 <section id="defining-lists-recursively-1" class="slide level2">
@@ -330,14 +296,9 @@ class="math inline">\(a\)</span> and attaches it to list <span
 class="math inline">\(l\)</span></li>
 </ul>
 <h3 id="examples">Examples</h3>
-<ul>
-<li class="fragment"><span class="math inline">\(\langle b \rangle =
-cons(b, \langle ~ \rangle)\)</span></li>
-<li class="fragment"><span class="math inline">\(\langle a, b \rangle =
-cons(a, cons(b, \langle ~ \rangle))\)</span></li>
-<li class="fragment"><span class="math inline">\(\langle a, b, c \rangle
-= cons(a, cons(b, cons(c, \langle ~ \rangle)))\)</span></li>
-</ul>
+<!-- - $\langle b \rangle = cons(b, \langle ~ \rangle)$
+- $\langle a, b \rangle = cons(a, cons(b, \langle ~ \rangle))$
+- $\langle a, b, c \rangle = cons(a, cons(b, cons(c, \langle ~ \rangle)))$ -->
 </div>
 </section>
 <section id="useful-partial-functions" class="slide level2">
@@ -353,15 +314,9 @@ returns an element and <span class="math inline">\(tail\)</span> returns
 a list!</li>
 </ul>
 <h3 id="examples-1">Examples</h3>
-<ul>
-<li class="fragment"><span class="math inline">\(\langle a, b, c \rangle
-= cons(a, cons(b, cons(c, \langle ~ \rangle)))\)</span></li>
-<li class="fragment"><span class="math inline">\(head(cons(a, cons(b,
-cons(c, \langle ~ \rangle)))) = a\)</span></li>
-<li class="fragment"><span class="math inline">\(tail(cons(a, cons(b,
-cons(c, \langle ~ \rangle)))) = cons(b, cons(c, \langle ~ \rangle)) =
-\langle b, c \rangle\)</span></li>
-</ul>
+<!-- - $\langle a, b, c \rangle = cons(a, cons(b, cons(c, \langle ~ \rangle)))$
+- $head(cons(a, cons(b, cons(c, \langle ~ \rangle)))) = a$
+- $tail(cons(a, cons(b, cons(c, \langle ~ \rangle)))) = cons(b, cons(c, \langle ~ \rangle)) = \langle b, c \rangle$ -->
 </div>
 </section>
 <section id="strings-and-languages" class="slide level2">
