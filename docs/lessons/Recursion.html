@@ -168,53 +168,6 @@ first computing <span class="math inline">\((n-1)!\)</span>.</li>
 </ul>
 </div>
 </section>
-<section id="why-do-we-use-recursion" class="slide level2">
-<h2>Why do we use recursion?</h2>
-<div id="content">
-<ul>
-<li class="fragment">Breaking a problem into smaller pieces can make it
-easier to solve.</li>
-<li class="fragment">Breaking a problem into smaller pieaces can also
-make it easier to reason about, making it easier to prove properties
-about it!</li>
-<li class="fragment">Many programming languages heavily rely on
-recursive definitions (haskell, racket, scheme, etc.)</li>
-<li class="fragment">Other programming languages support it by letting a
-function call itself. (I’ll give an example soon.)</li>
-</ul>
-</div>
-</section>
-<section id="defining-recursion" class="slide level2">
-<h2>Defining recursion</h2>
-<div id="content">
-<p>We just gave an example of both a set and a function that were
-defined recursively.</p>
-<p>You can also recursively define relations, tuples, lists,
-sequences…</p>
-<p>There are two main parts of a recursive definition:</p>
-<ol type="1">
-<li class="fragment">The base case: the initial element/value of what
-you’re trying to define</li>
-<li class="fragment">The recursive rule: tells you how to generate the
-next element/value given previous ones.</li>
-</ol>
-<h3 id="example-powersets">Example: Powersets</h3>
-<ol type="1">
-<li class="fragment">The base case: <span
-class="math inline">\(\mathscr{P}(\{ \}) = \{\}\)</span></li>
-<li class="fragment">The recursive rule: <span
-class="math inline">\(\mathscr{P}(X + \{c\}) = \mathscr{P}(X) \cup
-(\mathscr{P}(X) + \{c\})\)</span></li>
-</ol>
-<h3 id="example-factorials">Example: Factorials</h3>
-<ol type="1">
-<li class="fragment">The base case: <span class="math inline">\(0! =
-1\)</span></li>
-<li class="fragment">The recursive rule: <span class="math inline">\(n!
-= n \cdot (n-1)!\)</span></li>
-</ol>
-</div>
-</section>
 <section id="recursion-in-coding" class="slide level2">
 <h2>Recursion in Coding</h2>
 <div id="content">
@@ -229,6 +182,45 @@ class="math inline">\(n!\)</span>.</p>
     else: #recursive rule
         return n * factorial(n-1) 
     </code></pre>
+</div>
+</section>
+<section id="why-do-we-use-recursion" class="slide level2">
+<h2>Why do we use recursion?</h2>
+<div id="content">
+<ul>
+<li class="fragment">Breaking a problem into smaller pieces can make it
+easier to solve.</li>
+<li class="fragment">Breaking a problem into smaller pieaces can also
+make it easier to reason about, making it easier to prove properties
+about it!</li>
+<li class="fragment">Many programming languages heavily rely on
+recursive definitions (haskell, racket, scheme, etc.)</li>
+<li class="fragment">Other programming languages support it by letting a
+function call itself.</li>
+</ul>
+</div>
+</section>
+<section id="defining-recursion" class="slide level2">
+<h2>Defining recursion</h2>
+<div id="content">
+<p>We just gave an example of a function that is defined
+recursively.</p>
+<p>You can also recursively define sets, relations, tuples, lists,
+sequences, etc…</p>
+<p>There are two main parts of any recursive definition:</p>
+<ol type="1">
+<li class="fragment">The base case: the initial element/value of what
+you’re trying to define</li>
+<li class="fragment">The recursive rule: tells you how to generate the
+next element/value given previous ones.</li>
+</ol>
+<h3 id="example-factorials">Example: Factorials</h3>
+<ol type="1">
+<li class="fragment">The base case: <span class="math inline">\(0! =
+1\)</span></li>
+<li class="fragment">The recursive rule: <span class="math inline">\(n!
+= n \cdot (n-1)!\)</span></li>
+</ol>
 </div>
 </section>
 <section id="the-fibonacci-numbers" class="slide level2">
@@ -251,7 +243,7 @@ F(n-2)\)</span>.</li>
 <h2>Other Example - Powersets:</h2>
 <div id="content">
 <ul>
-<li class="fragment">We can define powersets this way:</li>
+<li class="fragment">We can define powersets recursively:</li>
 <li class="fragment"><span class="math inline">\(\mathscr{P}(X + \{c\} )
 = \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})\)</span></li>
 <li class="fragment">E.g. <span
@@ -263,6 +255,14 @@ by unioning two smaller sets. We are building something by combining two
 smaller things. That’s what makes this definition
 <strong>recursive</strong>.</li>
 </ul>
+<h3 id="definition">Definition</h3>
+<ol type="1">
+<li class="fragment">The base case: <span
+class="math inline">\(\mathscr{P}(\{ \}) = \{\}\)</span></li>
+<li class="fragment">The recursive rule: <span
+class="math inline">\(\mathscr{P}(X + \{c\}) = \mathscr{P}(X) \cup
+(\mathscr{P}(X) + \{c\})\)</span></li>
+</ol>
 </div>
 </section>
 <section id="defining-functions-and-methods-recursively"
