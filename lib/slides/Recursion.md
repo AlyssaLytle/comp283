@@ -25,7 +25,7 @@ It is helpful to understand **recursion** before we move on to the next kind of 
 
 ### Example - Factorials:
 
-- Another familiar function we know is $n! = n \cdot (n-1) \cdot \ldots \cdot 2 \cdot 1$
+- A familiar function we know is $n! = n \cdot (n-1) \cdot \ldots \cdot 2 \cdot 1$
 - We can rewrite this as $n! = n\cdot (n-1)!$.
 - This is a **recursive** definition because we are computing $n!$ by first computing $(n-1)!$.
 
