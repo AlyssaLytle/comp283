@@ -1,35 +1,58 @@
+---
+title: Induction
+theme: dracula
+center: false
+transition: 'none'
+contributors: Alyssa Byrnes
+---
+
+
+<div id="content">
+</div>
+
+
 ## (Strong) Induction
+<div id="content">
 
 - Induction is a type of proof we can do on recursively defined functions and sets
-
-- Say we are trying to prove $R(x) = P(x) \implies Q(x)$ holds in a recursively defined set $S = \{S_0, S_1, S_2, \ldots \}$
-
+- Say we are trying to prove $R(x)$ holds in a recursively defined set $S = \{S_0, S_1, S_2, \ldots \}$
 - We can prove this by:
-
     1. Showing $R(x)$ holds for the base case(s) of $S$
-    
     2. Assuming $R(k)$ holds for all $k < n$ in the recursive rule, showing that it also holds for step $n$. 
-    In other words, we're showing $\big(R(S_0) \land R(S_1) \land \ldots \land R(S_{n-2}) \land R(S_{n-1})\big) \implies R(S_{n})$.
-    
+    In other words, we're showing $\big(R(S_0) \land R(S_1) \land \ldots \land R(S_{n-2}) \land R(S_{n-1})\big) \implies R(S_{n})$.   
 - Remember that many things can be defined recursively, so even though $x \in S$, $x$ isn't necessarily a single element. $x$ can also be a set/function/mapping etc! Think about our recursive powersets definition.
+
+</div>
 
 
 ## Let's Start With an Example
+<div id="content">
+
+
+</div>
+
 
 ## Example with Template
+<div id="content">
 
 
 Recall the Fibonacci series...
 
->1. The base case: $F(0) = 0, F(1) = 1$
->2. Recursive rule: For $n > 1$, $F(n) = F(n-1) + F(n-2)$.
-
+::: nonincremental
+- The base case: $F(0) = 0, F(1) = 1$
+- Recursive rule: For $n > 1$, $F(n) = F(n-1) + F(n-2)$.
+:::
 
 We want to prove the following about the sum of the first $n$ numbers of the series:
 
 $\forall n \in \mathbb{N}, F(0) + F(1) + F(2) + \ldots + F(n-1) + F(n) = F(n+2) - 1$.
 
+
+</div>
+
+
 ## Example with Template
+<div id="content">
 
 S1. State the ‘for all’ statement that you want to prove:
 
@@ -39,7 +62,12 @@ S2. Say “we prove this by induction on” and state the induction parameter.
 
 - We prove this by induction on $n$.
 
+
+</div>
+
+
 ## Example with Template
+<div id="content">
 
 S3. Prove the base case(s).
 
@@ -50,7 +78,12 @@ S3. Prove the base case(s).
     - $F(0) + F(1) = F(3) - 1$
     - $1 = 2 - 1$ $\square$
         
+
+</div>
+
+
 ## Example with Template
+<div id="content">
 
 S4. Write Induction Step.
 
@@ -65,7 +98,12 @@ was given to you in S4:
 
 - and I want to prove $\sum_{i=0}^n F(i) = F(n+2) - 1$.
 
+
+</div>
+
+
 ## Example with Template
+<div id="content">
 
 S7. Do the proof for the specific $x$.
 
@@ -83,24 +121,36 @@ S7. Do the proof for the specific $x$.
 \end{equation*}
 
 
+
+</div>
+
+
 ## Example with Template
+<div id="content">
 
 S8. Declare victory.
 
 - Therefore, we have proved  $\forall n \in \mathbb{N}, F(0) + F(1) + F(2) + \ldots + F(n-1) + F(n) = F(n+2) - 1$.
 
 
+
+</div>
+
+
 ## Tips for Proving Something by Induction (S7)
+<div id="content">
 
 - Your Inductive Hypothesis (Step 5) should be line 1 in your proof.
-
 - The recursive definition of any structures you're using (e.g. sum, factorial, exponents, etc.) should be the next lines of your proof.
-
 - Step 6 is what the *last* line of your proof should be.
-
 - To start, think about how you can use your inductive hypothesis and recursive definitions to get to step 6. (Usually this means plugging a smaller version of $x$ into your inductive hypothesis and using your recursive definitions to rewrite it.)
 
-## Chocolate Bar Proof
+
+</div>
+
+
+<!-- ## Chocolate Bar Proof
+<div id="content">
 
 - Suppose that you have a chocolate bar made up of $r$ squares by $c$ squares that you want to share. At each step, you choose a piece of chocolate with two or more squares and break along a vertical or horizontal line between squares. Eventually, it will be reduced to single squares. 
 
@@ -113,3 +163,7 @@ S8. Declare victory.
 
     
     
+
+</div> -->
+
+

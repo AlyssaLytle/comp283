@@ -6,4 +6,4 @@ contributors: Alyssa Byrnes
 
 # Analyzing Algorithms and Invariants
 
-* Analyzing Algorithms and Invariants: Video, [Slides](/comp283/lessons/Recursion.html), [Assignment](https://www.gradescope.com/)
+* Analyzing Algorithms and Invariants: Video, [Slides](/comp283/lessons/Induction.html), [Assignment](https://www.gradescope.com/)
