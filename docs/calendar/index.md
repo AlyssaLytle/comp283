@@ -28,5 +28,6 @@ contributors: Alyssa Byrnes
 * Wed, June 14: Analyzing Algorithms + Invariants
 * Thu, June 15: Proving Invariants
 * Fri, June 16: Practice and Review
+
 * Tue, June 20: Practice and Review
 * ***Fri., June 23: FINAL EXAM***

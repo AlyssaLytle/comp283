@@ -37,5 +37,6 @@ contributors: Alyssa Byrnes
 * Wed, June 14: [Analyzing Algorithms + Invariants](/calendar/analyzing-algorithms-and-invariants.md)
 * Thu, June 15: [Proving Invariants](/calendar/proving-invariants.md)
 * Fri, June 16: [Practice and Review (9:30 am)](/calendar/practice-and-review-4.md)
+* Mon, June 19: *Holiday (Juneteenth), so there will be limited office hours from 11 am - 1 pm.*
 * Tue, June 20: [Practice and Review (9:30 am)](/calendar/practice-and-review-5.md)
 * ***Fri., June 23: FINAL EXAM***
