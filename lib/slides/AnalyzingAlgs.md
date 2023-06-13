@@ -1,4 +1,13 @@
+---
+title: AnalyzingAlgs
+theme: dracula
+center: false
+transition: 'none'
+contributors: Alyssa Byrnes
+---
+
 # Analyzing Algorithms
+<div id="content">
 
 - Invariants and Proofs
 
@@ -156,5 +165,9 @@ Case 2: $\verb|A[i]|  \leq \verb|max_elem|$
 
 
 8. Therefore, we have proved $\textrm{For input array } A, \forall i \in [0, \verb|length(A)|), \exists \verb| max_idx| \in [0,i), \textrm{ and } \forall j \in [0,i), \verb|A[max_idx]| \geq \verb|A[j]|$ by induction.
+
+
+
+</div>
 
 

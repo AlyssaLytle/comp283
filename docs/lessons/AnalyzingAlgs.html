@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>AnalyzingAlgs</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    /* .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    } */
+
+    #left {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:45%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #left14 {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:30%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #right34 {
+      left:50%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:60%;
+      font-size: 65%;
+    }
+    
+    #right {
+      left:31.25%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:45%;
+      font-size: 75%;
+    }
+
+    #text {
+      font-size: 75%;
+    }
+
+    #content {
+      font-size: 75%;
+    }
+
+    #smalltext {
+      font-size: 40%;
+    }
+
+    #medtext {
+      font-size: 60%;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">AnalyzingAlgs</h1>
+</section>
+
+<section id="analyzing-algorithms" class="slide level1">
+<h1>Analyzing Algorithms</h1>
+<div id="content">
+<ul>
+<li class="fragment"><p>Invariants and Proofs</p></li>
+<li class="fragment"><p>Analyzing Runtime</p></li>
+</ul>
+<section id="invariant" class="slide level1">
+<h1>Invariant</h1>
+<ul>
+<li class="fragment"><p>An <strong>invariant</strong> is a statement
+that is true during all steps of a procedure.</p></li>
+<li class="fragment"><p>In other words, your invariant should be true at
+Step 0, Step 1, and Step 1000 of your algorithm.</p></li>
+<li class="fragment"><p>If the invariant holds for an arbitrary step of
+your algorithm, this means it’ll always hold! (What does that sound
+like?)</p></li>
+<li class="fragment"><p>If the invariant always holds, this means that
+it’ll hold at the last step, which tells us something about our
+output!</p></li>
+</ul>
+</section>
+<section id="example" class="slide level1">
+<h1>Example</h1>
+<p>Let’s look at our pseudocode for finding the index of the max value
+in an array.</p>
+<pre><code>1. INPUT: array A
+2. max_idx = 0
+3. max_elem = A[0]
+4. n = length(A)
+5. FOR i in [1,n-1]:
+6.    IF A[i] &gt; max_elem:
+7.        max_elem = A[i]
+8.        max_idx = i
+9. RETURN max_idx</code></pre>
+<ul>
+<li class="fragment"><p>An example invariant could be:</p></li>
+<li class="fragment"><p><span class="math display">\[ \textrm{For input
+array } A, \forall i \in [0, \verb|length(A)|), \exists \verb| max_idx|
+\in [0,i), \textrm{ and } \forall j \in [0,i), \verb|A[max_idx]| \geq
+\verb|A[j]|\]</span></p></li>
+<li class="fragment"><p>Note that invariants are often called “loop
+invariants” because they are really describing what is happening inside
+of our loop!</p></li>
+<li class="fragment"><p>Now, let’s apply it for <span
+class="math inline">\(i = n-1\)</span> (aka, the end of our for
+loop)</p></li>
+<li class="fragment"><p><span class="math display">\[\exists \verb|
+max_idx| \in [0,n-1), \textrm{ and } \forall j \in [0,n-1),
+\verb|A[max_idx]| \geq \verb|A[j]|\]</span></p></li>
+<li class="fragment"><p>That looks a lot like what we wrote for our
+generalized output!</p></li>
+</ul>
+</section>
+<section id="proving-our-invariant" class="slide level1">
+<h1>Proving our Invariant</h1>
+<ul>
+<li class="fragment"><p>We’ve discussed that if we can prove our
+invariant, we can prove something about our output! So how do we prove
+our invariant?</p></li>
+<li class="fragment"><p>We can prove our invariant by
+induction!</p></li>
+<li class="fragment"><p>We are going to induct on our loop variable
+<span class="math inline">\(i\)</span> and show that for every trip
+through the loop our invariant holds!</p></li>
+</ul>
+<p><img src="https://i.imgur.com/JXtLDMR.png" width="600"/></p>
+</section>
+<section id="proving-our-invariant-1" class="slide level1">
+<h1>Proving our Invariant</h1>
+<ol type="1">
+<li class="fragment"><p>We want to prove: <span
+class="math inline">\(\textrm{For input array } A, \forall i \in [0,
+\verb|length(A)|), \exists \verb| max_idx| \in [0,i), \textrm{ and }
+\forall j \in [0,i), \verb|A[max_idx]| \geq
+\verb|A[j]|\)</span></p></li>
+<li class="fragment"><p>We prove this by induction on <span
+class="math inline">\(i\)</span>.</p></li>
+</ol>
+</section>
+<section id="proving-our-invariant-2" class="slide level1">
+<h1>Proving our Invariant</h1>
+<pre><code>1. INPUT: array A
+2. max_idx = 0
+3. max_elem = A[0]
+4. n = length(A)
+5. FOR i in [1,n-1]:
+6.    IF A[i] &gt; max_elem:
+7.        max_elem = A[i]
+8.        max_idx = i
+9. RETURN max_idx</code></pre>
+<p><img src="https://i.imgur.com/t5jrK7A.png" width="600"/></p>
+<ol start="3" type="1">
+<li class="fragment">Base case: <span class="math inline">\(i =
+1\)</span>. (<em>Before</em> we enter the loop.) <span
+class="math inline">\(\exists \verb| max_idx| \in [0,1), \textrm{ and }
+\forall j \in [0,1), \verb|A[max_idx]| \geq \verb|A[j]|\)</span></li>
+</ol>
+<ul>
+<li class="fragment">Possible values for <span
+class="math inline">\(\verb|max_idx|\)</span>: <span
+class="math inline">\(0\)</span></li>
+<li class="fragment">Possible values for <span
+class="math inline">\(j\)</span>: <span
+class="math inline">\(0\)</span></li>
+<li class="fragment"><span class="math inline">\(\verb|A[0]| \geq
+\verb|A[0]| \square\)</span></li>
+</ul>
+</section>
+<section id="proving-our-invariant-3" class="slide level1">
+<h1>Proving our Invariant</h1>
+<ol start="4" type="1">
+<li class="fragment"><p>For a given <span class="math inline">\(i &gt;
+1\)</span>,</p></li>
+<li class="fragment"><p>Induction Hypothesis: I can assume, for all
+<span class="math inline">\(k\)</span>, with 1 k &lt; i, that <span
+class="math inline">\(\exists \verb| max_idx| \in [0,k), \textrm{ and }
+\forall j \in [0,k), \verb|A[max_idx]| \geq
+\verb|A[j]|\)</span></p></li>
+<li class="fragment"><p>I want to prove that <span
+class="math inline">\(\exists \verb| max_idx| \in [0,i), \textrm{ and }
+\forall j \in [0,i), \verb|A[max_idx]| \geq
+\verb|A[j]|\)</span></p></li>
+</ol>
+<p><img src="https://i.imgur.com/a5HS6Lw.png" width="600"/></p>
+</section>
+<section id="proving-our-invariant-4" class="slide level1">
+<h1>Proving our invariant</h1>
+<ol start="7" type="1">
+<li class="fragment">Applying our Inductive Hypothesis, let <span
+class="math inline">\(k= i-1\)</span>.</li>
+</ol>
+<ul>
+<li class="fragment"><p>(In other words, we’re saying our invariant
+holds for all indexes up to <span
+class="math inline">\(i\)</span>.)</p></li>
+<li class="fragment"><p>This means: <span class="math inline">\(\exists
+\verb| max_idx| \in [0,i-1), \textrm{ and } \forall j \in [0,i-1),
+\verb|A[max_idx]| \geq \verb|A[j]|\)</span>.</p></li>
+<li class="fragment"><p>So we just need to take one more step through
+our loop such that we get to step <span
+class="math inline">\(i\)</span>.</p></li>
+<li class="fragment"><p>Line 6, we have an IF statement, so let’s do a
+proof by cases!</p></li>
+<li class="fragment"><p>Case 1: <span class="math inline">\(\verb|A[i]
+&gt; max_elem|\)</span></p></li>
+<li class="fragment"><p>Case 2: <span class="math inline">\(\verb|A[i]|
+\leq \verb|max_elem|\)</span></p></li>
+</ul>
+</section>
+<section id="proving-our-invariant-5" class="slide level1">
+<h1>Proving our invariant</h1>
+<pre><code>1. INPUT: array A
+2. max_idx = 0
+3. max_elem = A[0]
+4. n = length(A)
+5. FOR i in [1,n-1]:
+6.    IF A[i] &gt; max_elem:
+7.        max_elem = A[i]
+8.        max_idx = i
+9. RETURN max_idx</code></pre>
+<p>Case 1: <span class="math inline">\(\verb|A[i]| &gt;
+\verb|max_elem|\)</span></p>
+<p><span class="math display">\[\begin{equation}
+\begin{array}{l l l}
+    1. &amp; \forall k, 1 \leq k &lt; i, \exists \verb| max_idx| \in
+[0,k), \textrm{ and } \forall j \in [0,k), \verb|A[max_idx]| \geq
+\verb|A[j]|
+     &amp; \textrm{Ind. Hypothesis}\\
+     2. &amp; \exists \verb| max_idx| \in [0,i-1), \textrm{ and }
+\forall j \in [0,i-1), \verb|A[max_idx]| \geq \verb|A[j]| &amp;
+\textrm{Ind. Hypothesis with } k = i-1 \\
+     3. &amp; \verb|A[i] &gt; max_elem| &amp; \textrm{Case 1}\\
+     4. &amp; \verb|max_elem&#39; = A[i]| \land \verb|max_idx = i| &amp;
+\textrm{Defined in code}\\
+     5. &amp; \forall j \in [0,i), \verb|A[max_idx&#39;]| \geq
+\verb|A[j]| &amp; \textrm{Combined 2, 3, and 4}
+\end{array}
+\end{equation}\]</span></p>
+</section>
+<section id="proving-our-invariant-6" class="slide level1">
+<h1>Proving our invariant</h1>
+<pre><code>1. INPUT: array A
+2. max_idx = 0
+3. max_elem = A[0]
+4. n = length(A)
+5. FOR i in [1,n-1]:
+6.    IF A[i] &gt; max_elem:
+7.        max_elem = A[i]
+8.        max_idx = i
+9. RETURN max_idx</code></pre>
+<p>Case 2: <span class="math inline">\(\verb|A[i]| \leq
+\verb|max_elem|\)</span></p>
+<p><span class="math display">\[\begin{equation}
+\begin{array}{l l l}
+    1. &amp; \forall k, 1 \leq k &lt; i, \exists \verb| max_idx| \in
+[0,k), \textrm{ and } \forall j \in [0,k), \verb|A[max_idx]| \geq
+\verb|A[j]|
+     &amp; \textrm{Ind. Hypothesis}\\
+     2. &amp; \exists \verb| max_idx| \in [0,i-1), \textrm{ and }
+\forall j \in [0,i-1), \verb|A[max_idx]| \geq \verb|A[j]| &amp;
+\textrm{Ind. Hypothesis with } k = i-1 \\
+     3. &amp; \verb|A[i]| \leq \verb|max_elem| &amp; \textrm{Case 2}\\
+     4. &amp; \forall j \in [0,i), \verb|A[max_idx&#39;]| \geq
+\verb|A[j]| &amp; \textrm{Combined 2 and 3} \square
+\end{array}
+\end{equation}\]</span></p>
+<ol start="8" type="1">
+<li class="fragment">Therefore, we have proved <span
+class="math inline">\(\textrm{For input array } A, \forall i \in [0,
+\verb|length(A)|), \exists \verb| max_idx| \in [0,i), \textrm{ and }
+\forall j \in [0,i), \verb|A[max_idx]| \geq \verb|A[j]|\)</span> by
+induction.</li>
+</ol>
+</section>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
