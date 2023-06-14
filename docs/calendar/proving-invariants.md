@@ -6,4 +6,4 @@ contributors: Alyssa Byrnes
 
 # Proving Invariants
 
-* Proving Invariants: Video, [Slides](/comp283/static/slides/Invariants.pdf), [Assignment](https://www.gradescope.com/)
+* Proving Invariants: Video, [Slides](/comp283/lessons/AnalyzingAlgs.html), [Assignment](https://www.gradescope.com/)

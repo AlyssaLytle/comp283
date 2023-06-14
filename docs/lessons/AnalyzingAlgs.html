@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>AnalyzingAlgs</title>
+  <title>Proving Invariants</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -138,36 +138,101 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">AnalyzingAlgs</h1>
+  <h1 class="title">Proving Invariants</h1>
 </section>
 
-<section id="analyzing-algorithms" class="slide level1">
-<h1>Analyzing Algorithms</h1>
+<section id="invariant" class="slide level2">
+<h2>Invariant</h2>
 <div id="content">
 <ul>
-<li class="fragment"><p>Invariants and Proofs</p></li>
-<li class="fragment"><p>Analyzing Runtime</p></li>
-</ul>
-<section id="invariant" class="slide level1">
-<h1>Invariant</h1>
-<ul>
-<li class="fragment"><p>An <strong>invariant</strong> is a statement
-that is true during all steps of a procedure.</p></li>
-<li class="fragment"><p>In other words, your invariant should be true at
-Step 0, Step 1, and Step 1000 of your algorithm.</p></li>
-<li class="fragment"><p>If the invariant holds for an arbitrary step of
+<li class="fragment">An <strong>invariant</strong> is a statement that
+is true during all steps of a procedure.</li>
+<li class="fragment">In other words, your invariant should be true at
+Step 0, Step 1, and Step 1000 of your algorithm.</li>
+<li class="fragment">If the invariant holds for an arbitrary step of
 your algorithm, this means it’ll always hold! (What does that sound
-like?)</p></li>
-<li class="fragment"><p>If the invariant always holds, this means that
+like?)</li>
+<li class="fragment">If the invariant always holds, this means that
 it’ll hold at the last step, which tells us something about our
-output!</p></li>
+output!</li>
 </ul>
+</div>
+<!-- ## Example
+<div id="content">
+
+Let's look at our pseudocode for finding the index of the max value in a list.
+
+    1. INPUT: list A
+    2. max_idx = 0
+    3. max_elem = A[0]
+    4. n = length(A)
+    5. FOR i in [1,n-1]:
+    6.    IF A[i] > max_elem:
+    7.        max_elem = A[i]
+    8.        max_idx = i
+    9. RETURN max_idx
+    
+- An example invariant could be:
+
+- $$ \textrm{For input list } A, \forall i \in [0, \verb|length(A)|), \exists \verb| max_idx| \in [0,i-1], \textrm{ and } \forall j \in [0,i-1], \verb|A[max_idx]| \geq \verb|A[j]|$$
+
+- Note that invariants are often called "loop invariants" because they are really describing what is happening inside of our loop!
+
+- Now, let's apply it for $i = n-1$ (aka, the end of our for loop)
+
+- $$\exists \verb| max_idx| \in [0,n-1), \textrm{ and } \forall j \in [0,n-1), \verb|A[max_idx]| \geq \verb|A[j]|$$
+
+- That looks a lot like what we wrote for our generalized output!
+
+
+</div> -->
 </section>
-<section id="example" class="slide level1">
-<h1>Example</h1>
-<p>Let’s look at our pseudocode for finding the index of the max value
-in an array.</p>
-<pre><code>1. INPUT: array A
+<section id="proving-our-invariant" class="slide level2">
+<h2>Proving our Invariant</h2>
+<div id="content">
+<ul>
+<li class="fragment">We’ve discussed that if we can prove our invariant,
+we can prove something about our output! So how do we prove our
+invariant?</li>
+<li class="fragment">We can prove our invariant by induction!</li>
+<li class="fragment">We are going to induct on our loop variable <span
+class="math inline">\(i\)</span> and show that for every trip through
+the loop our invariant holds!</li>
+</ul>
+<p><img src="https://i.imgur.com/JXtLDMR.png" width="500"/></p>
+</div>
+</section>
+<section id="proving-our-invariant-1" class="slide level2">
+<h2>Proving our Invariant</h2>
+<div id="content">
+<h3 id="step-1">Step 1</h3>
+<p>We want to prove: <span class="math inline">\(\textrm{For input list
+} A,\)</span> <br> <span class="math inline">\(\forall i \in [0,
+\verb|length(A)|],\)</span> <br> <span class="math inline">\(\exists ~
+\verb| max_idx| \in [0,i-1],\)</span> <br> <span
+class="math inline">\(\forall j \in [0,i-1], \verb|A[max_idx]| \geq
+\verb|A[j]|\)</span></p>
+</div>
+</section>
+<section id="proving-our-invariant-2" class="slide level2">
+<h2>Proving our Invariant</h2>
+<div id="content">
+<h3 id="step-1-1">Step 1</h3>
+<p>We want to prove: <span class="math inline">\(\textrm{For input list
+} A,\)</span> <br> <span class="math inline">\(\forall i \in [0,
+\verb|length(A)|],\)</span> <br> <span class="math inline">\(\exists ~
+\verb| max_idx| \in [0,i-1],\)</span> <br> <span
+class="math inline">\(\forall j \in [0,i-1], \verb|A[max_idx]| \geq
+\verb|A[j]|\)</span></p>
+<h3 id="step-2">Step 2</h3>
+<p>We prove this by induction on <span
+class="math inline">\(i\)</span>.</p>
+</div>
+</section>
+<section id="proving-our-invariant-3" class="slide level2">
+<h2>Proving our Invariant</h2>
+<div id="left">
+<pre><code>1. INPUT: list A
 2. max_idx = 0
 3. max_elem = A[0]
 4. n = length(A)
@@ -176,70 +241,19 @@ in an array.</p>
 7.        max_elem = A[i]
 8.        max_idx = i
 9. RETURN max_idx</code></pre>
+</div>
+<div id="right">
+<p><img src="https://i.imgur.com/t5jrK7A.png" width="500"/></p>
+</div>
+<div id="content">
+<p><br><br><br><br><br><Br></p>
+<h3 id="step-3-base-case">Step 3 (Base case)</h3>
 <ul>
-<li class="fragment"><p>An example invariant could be:</p></li>
-<li class="fragment"><p><span class="math display">\[ \textrm{For input
-array } A, \forall i \in [0, \verb|length(A)|), \exists \verb| max_idx|
-\in [0,i), \textrm{ and } \forall j \in [0,i), \verb|A[max_idx]| \geq
-\verb|A[j]|\]</span></p></li>
-<li class="fragment"><p>Note that invariants are often called “loop
-invariants” because they are really describing what is happening inside
-of our loop!</p></li>
-<li class="fragment"><p>Now, let’s apply it for <span
-class="math inline">\(i = n-1\)</span> (aka, the end of our for
-loop)</p></li>
-<li class="fragment"><p><span class="math display">\[\exists \verb|
-max_idx| \in [0,n-1), \textrm{ and } \forall j \in [0,n-1),
-\verb|A[max_idx]| \geq \verb|A[j]|\]</span></p></li>
-<li class="fragment"><p>That looks a lot like what we wrote for our
-generalized output!</p></li>
-</ul>
-</section>
-<section id="proving-our-invariant" class="slide level1">
-<h1>Proving our Invariant</h1>
-<ul>
-<li class="fragment"><p>We’ve discussed that if we can prove our
-invariant, we can prove something about our output! So how do we prove
-our invariant?</p></li>
-<li class="fragment"><p>We can prove our invariant by
-induction!</p></li>
-<li class="fragment"><p>We are going to induct on our loop variable
-<span class="math inline">\(i\)</span> and show that for every trip
-through the loop our invariant holds!</p></li>
-</ul>
-<p><img src="https://i.imgur.com/JXtLDMR.png" width="600"/></p>
-</section>
-<section id="proving-our-invariant-1" class="slide level1">
-<h1>Proving our Invariant</h1>
-<ol type="1">
-<li class="fragment"><p>We want to prove: <span
-class="math inline">\(\textrm{For input array } A, \forall i \in [0,
-\verb|length(A)|), \exists \verb| max_idx| \in [0,i), \textrm{ and }
-\forall j \in [0,i), \verb|A[max_idx]| \geq
-\verb|A[j]|\)</span></p></li>
-<li class="fragment"><p>We prove this by induction on <span
-class="math inline">\(i\)</span>.</p></li>
-</ol>
-</section>
-<section id="proving-our-invariant-2" class="slide level1">
-<h1>Proving our Invariant</h1>
-<pre><code>1. INPUT: array A
-2. max_idx = 0
-3. max_elem = A[0]
-4. n = length(A)
-5. FOR i in [1,n-1]:
-6.    IF A[i] &gt; max_elem:
-7.        max_elem = A[i]
-8.        max_idx = i
-9. RETURN max_idx</code></pre>
-<p><img src="https://i.imgur.com/t5jrK7A.png" width="600"/></p>
-<ol start="3" type="1">
-<li class="fragment">Base case: <span class="math inline">\(i =
-1\)</span>. (<em>Before</em> we enter the loop.) <span
-class="math inline">\(\exists \verb| max_idx| \in [0,1), \textrm{ and }
-\forall j \in [0,1), \verb|A[max_idx]| \geq \verb|A[j]|\)</span></li>
-</ol>
-<ul>
+<li class="fragment"><em>Before</em> we enter the loop. (<span
+class="math inline">\(i=1\)</span>)</li>
+<li class="fragment"><span class="math inline">\(\exists \verb| max_idx|
+\in [0,0], \textrm{ and } \forall j \in [0,0], \verb|A[max_idx]| \geq
+\verb|A[j]|\)</span></li>
 <li class="fragment">Possible values for <span
 class="math inline">\(\verb|max_idx|\)</span>: <span
 class="math inline">\(0\)</span></li>
@@ -249,51 +263,33 @@ class="math inline">\(0\)</span></li>
 <li class="fragment"><span class="math inline">\(\verb|A[0]| \geq
 \verb|A[0]| \square\)</span></li>
 </ul>
+</div>
 </section>
-<section id="proving-our-invariant-3" class="slide level1">
-<h1>Proving our Invariant</h1>
-<ol start="4" type="1">
-<li class="fragment"><p>For a given <span class="math inline">\(i &gt;
-1\)</span>,</p></li>
-<li class="fragment"><p>Induction Hypothesis: I can assume, for all
-<span class="math inline">\(k\)</span>, with 1 k &lt; i, that <span
-class="math inline">\(\exists \verb| max_idx| \in [0,k), \textrm{ and }
-\forall j \in [0,k), \verb|A[max_idx]| \geq
-\verb|A[j]|\)</span></p></li>
-<li class="fragment"><p>I want to prove that <span
-class="math inline">\(\exists \verb| max_idx| \in [0,i), \textrm{ and }
-\forall j \in [0,i), \verb|A[max_idx]| \geq
-\verb|A[j]|\)</span></p></li>
-</ol>
+<section id="proving-our-invariant-4" class="slide level2">
+<h2>Proving our Invariant</h2>
+<div id="left">
+<h3 id="step-4">Step 4</h3>
+<p>For a given <span class="math inline">\(i &gt; 1\)</span>,</p>
+<h3 id="step-5">Step 5</h3>
+<p>Induction Hypothesis: I can assume, for all <span
+class="math inline">\(k\)</span>, with <span class="math inline">\(1
+\leq k &lt; i\)</span>, that <span class="math inline">\(\exists \verb|
+max_idx| \in [0,k-1],\)</span> and <span class="math inline">\(\forall j
+\in [0,k-1],\)</span> <span class="math inline">\(\verb|A[max_idx]| \geq
+\verb|A[j]|\)</span></p>
+<h3 id="step-6">Step 6</h3>
+<p>I want to prove that <span class="math inline">\(\exists \verb|
+max_idx| \in [0,i-1],\)</span> and <span class="math inline">\(\forall j
+\in [0,i-1], \verb|A[max_idx]| \geq \verb|A[j]|\)</span></p>
+</div>
+<div id="right">
 <p><img src="https://i.imgur.com/a5HS6Lw.png" width="600"/></p>
+</div>
 </section>
-<section id="proving-our-invariant-4" class="slide level1">
-<h1>Proving our invariant</h1>
-<ol start="7" type="1">
-<li class="fragment">Applying our Inductive Hypothesis, let <span
-class="math inline">\(k= i-1\)</span>.</li>
-</ol>
-<ul>
-<li class="fragment"><p>(In other words, we’re saying our invariant
-holds for all indexes up to <span
-class="math inline">\(i\)</span>.)</p></li>
-<li class="fragment"><p>This means: <span class="math inline">\(\exists
-\verb| max_idx| \in [0,i-1), \textrm{ and } \forall j \in [0,i-1),
-\verb|A[max_idx]| \geq \verb|A[j]|\)</span>.</p></li>
-<li class="fragment"><p>So we just need to take one more step through
-our loop such that we get to step <span
-class="math inline">\(i\)</span>.</p></li>
-<li class="fragment"><p>Line 6, we have an IF statement, so let’s do a
-proof by cases!</p></li>
-<li class="fragment"><p>Case 1: <span class="math inline">\(\verb|A[i]
-&gt; max_elem|\)</span></p></li>
-<li class="fragment"><p>Case 2: <span class="math inline">\(\verb|A[i]|
-\leq \verb|max_elem|\)</span></p></li>
-</ul>
-</section>
-<section id="proving-our-invariant-5" class="slide level1">
-<h1>Proving our invariant</h1>
-<pre><code>1. INPUT: array A
+<section id="proving-our-invariant-step-7" class="slide level2">
+<h2>Proving our Invariant (Step 7)</h2>
+<div id="content">
+<pre><code>1. INPUT: list A
 2. max_idx = 0
 3. max_elem = A[0]
 4. n = length(A)
@@ -302,28 +298,54 @@ proof by cases!</p></li>
 7.        max_elem = A[i]
 8.        max_idx = i
 9. RETURN max_idx</code></pre>
+<ul>
+<li class="fragment">Line 6, we have an IF statement, so let’s do a
+proof by cases!</li>
+<li class="fragment">Case 1: <span class="math inline">\(\verb|A[i]|
+&gt; \verb|max_elem|\)</span></li>
+<li class="fragment">Case 2: <span class="math inline">\(\verb|A[i]|
+\leq \verb|max_elem|\)</span></li>
+</ul>
+</div>
+</section>
+<section id="proving-our-invariant-step-7-1" class="slide level2">
+<h2>Proving our Invariant (Step 7)</h2>
+<div id="content">
+<pre><code>1. INPUT: list A
+2. max_idx = 0
+3. max_elem = A[0]
+4. n = length(A)
+5. FOR i in [1,n-1]:
+6.    IF A[i] &gt; max_elem:
+7.        max_elem = A[i]
+8.        max_idx = i
+9. RETURN max_idx</code></pre>
+</div>
+<div id="smalltext">
 <p>Case 1: <span class="math inline">\(\verb|A[i]| &gt;
 \verb|max_elem|\)</span></p>
 <p><span class="math display">\[\begin{equation}
 \begin{array}{l l l}
     1. &amp; \forall k, 1 \leq k &lt; i, \exists \verb| max_idx| \in
-[0,k), \textrm{ and } \forall j \in [0,k), \verb|A[max_idx]| \geq
+[0,k-1], \textrm{ and } \forall j \in [0,k-1], \verb|A[max_idx]| \geq
 \verb|A[j]|
      &amp; \textrm{Ind. Hypothesis}\\
-     2. &amp; \exists \verb| max_idx| \in [0,i-1), \textrm{ and }
-\forall j \in [0,i-1), \verb|A[max_idx]| \geq \verb|A[j]| &amp;
+     2. &amp; \exists \verb| max_idx| \in [0,i-2], \textrm{ and }
+\forall j \in [0,i-2], \verb|A[max_idx]| \geq \verb|A[j]| &amp;
 \textrm{Ind. Hypothesis with } k = i-1 \\
      3. &amp; \verb|A[i] &gt; max_elem| &amp; \textrm{Case 1}\\
-     4. &amp; \verb|max_elem&#39; = A[i]| \land \verb|max_idx = i| &amp;
-\textrm{Defined in code}\\
-     5. &amp; \forall j \in [0,i), \verb|A[max_idx&#39;]| \geq
-\verb|A[j]| &amp; \textrm{Combined 2, 3, and 4}
+     4. &amp; \verb|max_elem = A[i]| \land \verb|max_idx = i| &amp;
+\textrm{Defined in code lines 4-6}\\
+     5. &amp; \forall j \in [0,i-1], \verb|A[max_idx]| \geq \verb|A[j]|
+&amp; \textrm{Combined 2, 3, and 4}
 \end{array}
 \end{equation}\]</span></p>
+</div>
 </section>
-<section id="proving-our-invariant-6" class="slide level1">
-<h1>Proving our invariant</h1>
-<pre><code>1. INPUT: array A
+<section id="proving-our-invariant-step-7-2" class="slide level2">
+<h2>Proving our Invariant (Step 7)</h2>
+<div id="content">
+<pre><code>1. INPUT: list A
 2. max_idx = 0
 3. max_elem = A[0]
 4. n = length(A)
@@ -332,30 +354,36 @@ proof by cases!</p></li>
 7.        max_elem = A[i]
 8.        max_idx = i
 9. RETURN max_idx</code></pre>
+</div>
+<div id="smalltext">
 <p>Case 2: <span class="math inline">\(\verb|A[i]| \leq
 \verb|max_elem|\)</span></p>
 <p><span class="math display">\[\begin{equation}
 \begin{array}{l l l}
     1. &amp; \forall k, 1 \leq k &lt; i, \exists \verb| max_idx| \in
-[0,k), \textrm{ and } \forall j \in [0,k), \verb|A[max_idx]| \geq
+[0,k-1], \textrm{ and } \forall j \in [0,k-1], \verb|A[max_idx]| \geq
 \verb|A[j]|
      &amp; \textrm{Ind. Hypothesis}\\
-     2. &amp; \exists \verb| max_idx| \in [0,i-1), \textrm{ and }
-\forall j \in [0,i-1), \verb|A[max_idx]| \geq \verb|A[j]| &amp;
+     2. &amp; \exists \verb| max_idx| \in [0,i-2], \textrm{ and }
+\forall j \in [0,i-2], \verb|A[max_idx]| \geq \verb|A[j]| &amp;
 \textrm{Ind. Hypothesis with } k = i-1 \\
      3. &amp; \verb|A[i]| \leq \verb|max_elem| &amp; \textrm{Case 2}\\
-     4. &amp; \forall j \in [0,i), \verb|A[max_idx&#39;]| \geq
-\verb|A[j]| &amp; \textrm{Combined 2 and 3} \square
+     4. &amp; \forall j \in [0,i-1], \verb|A[max_idx]| \geq \verb|A[j]|
+&amp; \textrm{Combined 2 and 3} \square
 \end{array}
 \end{equation}\]</span></p>
-<ol start="8" type="1">
-<li class="fragment">Therefore, we have proved <span
-class="math inline">\(\textrm{For input array } A, \forall i \in [0,
-\verb|length(A)|), \exists \verb| max_idx| \in [0,i), \textrm{ and }
-\forall j \in [0,i), \verb|A[max_idx]| \geq \verb|A[j]|\)</span> by
-induction.</li>
-</ol>
+</div>
 </section>
+<section id="proving-our-invariant-5" class="slide level2">
+<h2>Proving Our Invariant</h2>
+<div id="content">
+<h3 id="step-8">Step 8</h3>
+<p>Therefore, we have proved <br> <span
+class="math inline">\(\textrm{For input list } A,\)</span> <br> <span
+class="math inline">\(\forall i \in [0, \verb|length(A)|),\)</span> <br>
+<span class="math inline">\(\exists \verb| max_idx| \in
+[0,i-1],\)</span> <span class="math inline">\(\forall j \in [0,i-1],
+\verb|A[max_idx]| \geq \verb|A[j]|\)</span> by induction.</p>
 </div>
 </section>
     </div>
