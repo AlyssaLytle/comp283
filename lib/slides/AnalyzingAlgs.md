@@ -230,7 +230,7 @@ Case 2: $\verb|A[i]|  \leq \verb|max_elem|$
 
 Therefore, we have proved <br> 
 $\textrm{For input list } A,$ <br>
-$\forall i \in [0, \verb|length(A)|),$ <br>
+$\forall i \in [0, \verb|length(A)|],$ <br>
 $\exists \verb| max_idx| \in [0,i-1],$ 
 $\forall j \in [0,i-1], \verb|A[max_idx]| \geq \verb|A[j]|$ by induction.
 
