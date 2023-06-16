@@ -8,4 +8,5 @@ contributors: Alyssa Byrnes
 
 ## Date and Time: Friday, Jun 16 at 9:30 am
 * [Zoom Link](https://unc.zoom.us/j/97009190129)
-* [Recording Link]()
+
+(No one attended, so no recording was taken.)
