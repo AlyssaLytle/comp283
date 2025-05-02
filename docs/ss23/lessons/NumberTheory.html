@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Number Theory</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    /* .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    } */
+
+    #left {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:45%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #left14 {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:30%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #right34 {
+      left:50%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:60%;
+      font-size: 65%;
+    }
+    
+    #right {
+      left:31.25%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:45%;
+      font-size: 75%;
+    }
+
+    #text {
+      font-size: 75%;
+    }
+
+    #content {
+      font-size: 75%;
+    }
+
+    #smalltext {
+      font-size: 40%;
+    }
+
+    #medtext {
+      font-size: 60%;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Number Theory</h1>
+</section>
+
+<section id="useful-operators---floor-and-ceiling" class="slide level2">
+<h2>Useful Operators - Floor and Ceiling</h2>
+<div id="content">
+<p>The <strong>floor</strong> operator, denoted <span
+class="math inline">\(\left \lfloor{x}\right \rfloor\)</span>, tells us
+the greatest integer <span class="math inline">\(\leq x\)</span>.</p>
+<p>The <strong>ceiling</strong> operator, denoted <span
+class="math inline">\(\left \lceil{x}\right \rceil\)</span>, tells us
+the smallest integer <span class="math inline">\(\geq x\)</span>.</p>
+<p>(Basically, they’re just fancy ways of saying “round down” and “round
+up”)</p>
+<h3 id="example">Example</h3>
+<ul>
+<li class="fragment"><span class="math inline">\(\left
+\lfloor{7.5}\right \rfloor = 7\)</span> <br></li>
+<li class="fragment"><span class="math inline">\(\left \lceil{7.5}\right
+\rceil = 8\)</span></li>
+</ul>
+</div>
+</section>
+<section id="property-of-floor" class="slide level2">
+<h2>Property of Floor</h2>
+<div id="content">
+<p><span class="math inline">\(x-1 &lt; \left \lfloor{x}\right \rfloor
+\leq x\)</span></p>
+<ul>
+<li class="fragment">Why?</li>
+<li class="fragment">By definition, we know <span
+class="math inline">\(\left \lfloor{x}\right \rfloor \leq
+x\)</span></li>
+<li class="fragment">We know <span class="math inline">\(x-1 &lt; \left
+\lfloor{x}\right \rfloor\)</span> because:
+<ul>
+<li class="fragment">We can write <span class="math inline">\(x\)</span>
+as <span class="math inline">\(x = y + d\)</span> where <span
+class="math inline">\(y\)</span> is an integer and <span
+class="math inline">\(d\)</span> is a decimal. (E.g. <span
+class="math inline">\(7.5 = 7 + .5\)</span>)</li>
+<li class="fragment">We know <span class="math inline">\(\left
+\lfloor{x}\right \rfloor = y\)</span> and that <span
+class="math inline">\(d\)</span> is some real number such that <span
+class="math inline">\(0 \leq d &lt; 1\)</span>.</li>
+<li class="fragment">We know <span class="math inline">\(d &lt;
+1\)</span>, so <span class="math inline">\(d-1\)</span> is negative,
+therefore <span class="math inline">\(y + d - 1 &lt; y\)</span>.</li>
+<li class="fragment">So <span class="math inline">\(x - 1 = y + d - 1
+&lt; y = \left \lfloor{x}\right \rfloor\)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="property-of-ceiling" class="slide level2">
+<h2>Property of Ceiling</h2>
+<div id="content">
+<p><span class="math inline">\(x \leq \left \lceil{x}\right \rceil &lt;
+x + 1\)</span></p>
+<ul>
+<li class="fragment">(You can prove this similarly to the way we proved
+the floor property!)</li>
+</ul>
+</div>
+</section>
+<section id="bases" class="slide level2">
+<h2>Bases</h2>
+<div id="content">
+<p>We usually represent numbers in base ten</p>
+<p><img src="https://i.imgur.com/8dmbsc7.png" width="600"/></p>
+</div>
+</section>
+<section id="bases-1" class="slide level2">
+<h2>Bases</h2>
+<div id="content">
+<ul>
+<li class="fragment">In general, a number in the form of digits <span
+class="math inline">\(d_k d_{k-1} \ldots d_1 d_0\)</span> can be
+represented as <span class="math display">\[\sum_{i\in[0,k]}d_i t^i =
+d_kt^k + d_{k-1}t^{k-1}+ \ldots + d_1t^1 + d_0t^0\]</span> where <span
+class="math inline">\(t\)</span> is the base</li>
+<li class="fragment">All digits <span class="math inline">\(d_i\)</span>
+are in the range <span class="math inline">\([0,t-1]\)</span></li>
+</ul>
+<h3 id="example-1">Example</h3>
+<ul>
+<li class="fragment">Let’s go back to representing the number <span
+class="math inline">\(10,475\)</span> in base <span
+class="math inline">\(10\)</span></li>
+<li class="fragment">So the digits are <span class="math inline">\(d_4 =
+1\)</span>, <span class="math inline">\(d_3 = 0\)</span>, <span
+class="math inline">\(d_2 = 4\)</span>, <span class="math inline">\(d_1
+= 7\)</span>, <span class="math inline">\(d_0 = 5\)</span> and the base
+is <span class="math inline">\(t = 10\)</span></li>
+<li class="fragment">Which gives us what we got before: <span
+class="math inline">\(10,475 = 1 \cdot 10^4 + 0 \cdot 10^3 + 4 \cdot
+10^2 + 7 \cdot 10^1 + 5 \cdot 10^0\)</span></li>
+<li class="fragment">Also note that all digits are between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(9\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="base-2" class="slide level2">
+<h2>Base 2</h2>
+<div id="left">
+<ul>
+<li class="fragment">Often in computer science, we represent numbers in
+base <span class="math inline">\(2\)</span>. This is also called
+“binary” representation.</li>
+<li class="fragment">Since our base <span class="math inline">\(t =
+2\)</span>, then our digits are in the range <span
+class="math inline">\([0,1]\)</span>. So basically, we are just looking
+at strings of <span class="math inline">\(0\)</span>s and <span
+class="math inline">\(1\)</span>s. <br> (Often we call <span
+class="math inline">\(0\)</span>s and <span
+class="math inline">\(1\)</span>s “bits”. <span
+class="math inline">\(8\)</span> bits is a byte.)</li>
+</ul>
+</div>
+<div id="right">
+<p><img src="https://i.imgur.com/brCatgF.png" width="500"/></p>
+</div>
+<!-- ## In Class Assignment
+<div id="content">
+
+In groups, write (in English) the procedure for converting a number from binary to base 10. 
+
+Then, write the procedure for converting a number from base 10 to binary.
+
+Hint: start by thinking what steps would you take to convert $10110$ to $22$ and $22$ to $10110$, then generalize it to any number.
+
+You can submit this as a group on Gradescope!
+
+(It's okay if you're wrong! We will go over the right answer after you submit. The idea is to just see that you put effort in.)
+
+
+</div> -->
+</section>
+<section id="length-of-binary-messages" class="slide level2">
+<h2>Length of Binary Messages</h2>
+<div id="content">
+<p>If I want to express <span class="math inline">\(x\)</span> in
+binary, how long will it be?</p>
+<p>(In other words, how many bits will it take?)</p>
+<ul>
+<li class="fragment">Think about the procedure we just did for
+converting a number to binary. We find the highest power of <span
+class="math inline">\(2\)</span> that is less than or equal to <span
+class="math inline">\(x\)</span>: <span class="math inline">\(k = \left
+\lfloor{\log_2(x)}\right \rfloor\)</span></li>
+<li class="fragment">We know this means that our string of bits will be
+of length <span class="math inline">\(k\)</span>.</li>
+<li class="fragment">This can be generalized for any base <span
+class="math inline">\(b\)</span>: The length of any number <span
+class="math inline">\(x\)</span> in base <span
+class="math inline">\(b\)</span> is <span class="math inline">\(\left
+\lfloor{\log_b(x)}\right \rfloor\)</span></li>
+</ul>
+</div>
+<!-- ## Length of Binary Messages
+<div id="content">
+
+- While it makes sense to represent numbers in binary for computers, notice that it takes more digits to represent them. Think about it. Saying "$10110$" instead of "$22$" is longer. 
+- So why do we do it? (I'll link to a video...)
+
+</div> -->
+</section>
+<section id="useful-operator---divides" class="slide level2">
+<h2>Useful Operator - Divides</h2>
+<p>For all integers <span class="math inline">\(a,b\)</span> we can say
+<span class="math inline">\(a\)</span> <strong>divides</strong> <span
+class="math inline">\(b\)</span>, or <span class="math inline">\(a \mid
+b\)</span>, iff there exists some integer <span
+class="math inline">\(m\)</span> such that <span
+class="math inline">\(a\cdot m = b\)</span>.</p>
+<h3 id="example-2">Example</h3>
+<ul>
+<li class="fragment">We can say <span class="math inline">\(2\)</span>
+divides <span class="math inline">\(6\)</span>, or <span
+class="math inline">\(2 \mid 6\)</span>, because <span
+class="math inline">\(2 \cdot 3 = 6\)</span></li>
+<li class="fragment">Notice that if <span class="math inline">\(b =
+0\)</span> and <span class="math inline">\(m = 0\)</span>, then <span
+class="math inline">\(a\)</span> can be anything. From this we conclude
+that every number divides <span class="math inline">\(0\)</span>. <br>
+<span class="math inline">\(\forall a \in \mathbb{Z}, a \mid
+0\)</span></li>
+</ul>
+</section>
+<section id="useful-operator---mod" class="slide level2">
+<h2>Useful Operator - Mod</h2>
+<div id="content">
+<p>For positive Integers, <span class="math inline">\(x \bmod y\)</span>
+is the remainder of <span class="math inline">\(x/y\)</span>.</p>
+<p>More generally, <span class="math inline">\(x \bmod y = x - \left
+\lfloor{x/y}\right \rfloor \cdot y\)</span>.</p>
+<h3 id="examples">Examples</h3>
+<ul>
+<li class="fragment"><span class="math inline">\(5 \bmod 2 =
+1\)</span></li>
+<li class="fragment"><span class="math inline">\(4 \bmod 2 =
+0\)</span></li>
+<li class="fragment"><span class="math inline">\(-1 \bmod 2 =
+1\)</span></li>
+<li class="fragment"><em>Note that the value of <span
+class="math inline">\(x \bmod y\)</span> is between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(y-1\)</span>!</em></li>
+</ul>
+</div>
+</section>
+<section id="congruence-modulo-y" class="slide level2">
+<h2>Congruence Modulo y</h2>
+<div id="content">
+<p>Another way we can express mods is via congruency.</p>
+<p><span class="math inline">\(x \equiv z \pmod y\)</span> reads as
+“<span class="math inline">\(x\)</span> is congruent to <span
+class="math inline">\(z\)</span> mod <span
+class="math inline">\(y\)</span>”.</p>
+<p>What this means is that <span class="math inline">\(x \bmod y = z
+\bmod y\)</span>.</p>
+<h3 id="example-3">Example</h3>
+<ul>
+<li class="fragment"><span class="math inline">\(4 \bmod 2 = 0\)</span>
+and <span class="math inline">\(6 \bmod 2 = 0\)</span>, so <span
+class="math inline">\(4 \equiv 6 \pmod 2\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="gcd-relatively-prime-numbers" class="slide level2">
+<h2>GCD + Relatively Prime Numbers</h2>
+<div id="content">
+<p>The <strong>greatest common divisor</strong> of two integers <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>, denoted <span
+class="math inline">\(GCD(x,y)\)</span> is the largest positive integer
+that divides both <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>.</p>
+<h3 id="example-4">Example</h3>
+<ul>
+<li class="fragment"><span class="math inline">\(GCD(8,12) =
+4\)</span></li>
+<li class="fragment"><span class="math inline">\(GCD(3,6) =
+3\)</span></li>
+<li class="fragment"><span class="math inline">\(GCD(4,7) =
+1\)</span></li>
+</ul>
+<p>If <span class="math inline">\(GCD(x,y) = 1\)</span>, then <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> are <strong>relatively prime</strong>
+(also called coprime).</p>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

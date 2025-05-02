@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Induction</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    /* .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    } */
+
+    #left {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:45%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #left14 {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:30%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #right34 {
+      left:50%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:60%;
+      font-size: 65%;
+    }
+    
+    #right {
+      left:31.25%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:45%;
+      font-size: 75%;
+    }
+
+    #text {
+      font-size: 75%;
+    }
+
+    #content {
+      font-size: 75%;
+    }
+
+    #smalltext {
+      font-size: 40%;
+    }
+
+    #medtext {
+      font-size: 60%;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Induction</h1>
+</section>
+
+<section class="slide level2">
+
+<div id="content">
+
+</div>
+</section>
+<section id="strong-induction" class="slide level2">
+<h2>(Strong) Induction</h2>
+<div id="content">
+<ul>
+<li class="fragment">Induction is a type of proof we can do on
+recursively defined functions and sets</li>
+<li class="fragment">Say we are trying to prove <span
+class="math inline">\(R(x)\)</span> holds in a recursively defined set
+<span class="math inline">\(S = \{S_0, S_1, S_2, \ldots \}\)</span></li>
+<li class="fragment">We can prove this by:
+<ol type="1">
+<li class="fragment">Showing <span class="math inline">\(R(x)\)</span>
+holds for the base case(s) of <span
+class="math inline">\(S\)</span></li>
+<li class="fragment">Assuming <span class="math inline">\(R(k)\)</span>
+holds for all <span class="math inline">\(k &lt; n\)</span> in the
+recursive rule, showing that it also holds for step <span
+class="math inline">\(n\)</span>. In other words, we’re showing <span
+class="math inline">\(\big(R(S_0) \land R(S_1) \land \ldots \land
+R(S_{n-2}) \land R(S_{n-1})\big) \implies R(S_{n})\)</span>.<br />
+</li>
+</ol></li>
+<li class="fragment">Remember that many things can be defined
+recursively, so even though <span class="math inline">\(x \in
+S\)</span>, <span class="math inline">\(x\)</span> isn’t necessarily a
+single element. <span class="math inline">\(x\)</span> can also be a
+set/function/mapping etc! Think about our recursive powersets
+definition.</li>
+</ul>
+</div>
+</section>
+<section id="lets-start-with-an-example" class="slide level2">
+<h2>Let’s Start With an Example</h2>
+<div id="content">
+
+</div>
+</section>
+<section id="example-with-template" class="slide level2">
+<h2>Example with Template</h2>
+<div id="content">
+<p>Recall the Fibonacci series…</p>
+<div>
+<ul>
+<li>The base case: <span class="math inline">\(F(0) = 0, F(1) =
+1\)</span></li>
+<li>Recursive rule: For <span class="math inline">\(n &gt; 1\)</span>,
+<span class="math inline">\(F(n) = F(n-1) + F(n-2)\)</span>.</li>
+</ul>
+</div>
+<p>We want to prove the following about the sum of the first <span
+class="math inline">\(n\)</span> numbers of the series:</p>
+<p><span class="math inline">\(\forall n \in \mathbb{N}, F(0) + F(1) +
+F(2) + \ldots + F(n-1) + F(n) = F(n+2) - 1\)</span>.</p>
+</div>
+</section>
+<section id="example-with-template-1" class="slide level2">
+<h2>Example with Template</h2>
+<div id="content">
+<p>S1. State the ‘for all’ statement that you want to prove:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\forall n \in
+\mathbb{N}, \sum_{i=0}^n F(i) = F(n+2) - 1\)</span>.</li>
+</ul>
+<p>S2. Say “we prove this by induction on” and state the induction
+parameter.</p>
+<ul>
+<li class="fragment">We prove this by induction on <span
+class="math inline">\(n\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="example-with-template-2" class="slide level2">
+<h2>Example with Template</h2>
+<div id="content">
+<p>S3. Prove the base case(s).</p>
+<ul>
+<li class="fragment"><span class="math inline">\(n=0\)</span>:
+<ul>
+<li class="fragment"><span class="math inline">\(F(0) = F(2) -
+1\)</span></li>
+<li class="fragment"><span class="math inline">\(0 = 0\)</span> <span
+class="math inline">\(\square\)</span></li>
+</ul></li>
+<li class="fragment"><span class="math inline">\(n = 1\)</span>:
+<ul>
+<li class="fragment"><span class="math inline">\(F(0) + F(1) = F(3) -
+1\)</span></li>
+<li class="fragment"><span class="math inline">\(1 = 2 - 1\)</span>
+<span class="math inline">\(\square\)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="example-with-template-3" class="slide level2">
+<h2>Example with Template</h2>
+<div id="content">
+<p>S4. Write Induction Step.</p>
+<ul>
+<li class="fragment">For a given <span class="math inline">\(n &gt;
+1\)</span>,</li>
+</ul>
+<p>S5. State the Induction Hypothesis (IH)</p>
+<ul>
+<li class="fragment">I can assume for all <span class="math inline">\(1
+\leq k \leq n\)</span> that <span class="math inline">\(\sum_{i=0}^k
+F(i) = F(k+2) - 1\)</span>,</li>
+</ul>
+<p>S6. State what you are going to prove about your specific value of
+<span class="math inline">\(x\)</span> that was given to you in S4:</p>
+<ul>
+<li class="fragment">and I want to prove <span
+class="math inline">\(\sum_{i=0}^n F(i) = F(n+2) - 1\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="example-with-template-4" class="slide level2">
+<h2>Example with Template</h2>
+<div id="content">
+<p>S7. Do the proof for the specific <span
+class="math inline">\(x\)</span>.</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{array}{l l l}
+        1. &amp; \forall 1 \leq k \leq n, {} \sum_{i=0}^k F(i) = F(k+2)
+- 1 &amp; \textrm{IH} \\
+        2. &amp; \textrm{Let } k = n - 1, \textrm{ then }
+\sum_{i=0}^{n-1} F(i) = F(n-1+2) - 1 &amp; \textrm{Applied IH} \\
+        3. &amp; \sum_{i=0}^{n-1} F(i) = F(n+1) - 1 &amp;
+\textrm{Rewrote Line 2}\\
+        4. &amp; \sum_{i=0}^{n-1} F(i) + F(n) = F(n+1) - 1 + F(n) &amp;
+\textrm{Added } F(n) \textrm{ to both sides.}\\
+        5. &amp; F(n+2) = F(n+1) + F(n) &amp; \textrm{Fibonacci Def.}\\
+        6. &amp; \sum_{i=0}^{n-1} F(i) + F(n) = F(n+2) - 1 &amp;
+\textrm{Plugged 5. into 4.}\\
+        7. &amp; \sum_{i=0}^n F(i) = \sum_{i=0}^{n-1} F(i) + F(n) &amp;
+\textrm{Def. of Sum} \\
+        8. &amp; \sum_{i=0}^{n} F(i) = F(n+2) - 1 &amp; \textrm{Plugged
+7. into 6.} \square
+    \end{array}
+\end{equation*}\]</span></p>
+</div>
+</section>
+<section id="example-with-template-5" class="slide level2">
+<h2>Example with Template</h2>
+<div id="content">
+<p>S8. Declare victory.</p>
+<ul>
+<li class="fragment">Therefore, we have proved <span
+class="math inline">\(\forall n \in \mathbb{N}, F(0) + F(1) + F(2) +
+\ldots + F(n-1) + F(n) = F(n+2) - 1\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="tips-for-proving-something-by-induction-s7"
+class="slide level2">
+<h2>Tips for Proving Something by Induction (S7)</h2>
+<div id="content">
+<ul>
+<li class="fragment">Your Inductive Hypothesis (Step 5) should be line 1
+in your proof.</li>
+<li class="fragment">The recursive definition of any structures you’re
+using (e.g. sum, factorial, exponents, etc.) should be the next lines of
+your proof.</li>
+<li class="fragment">Step 6 is what the <em>last</em> line of your proof
+should be.</li>
+<li class="fragment">To start, think about how you can use your
+inductive hypothesis and recursive definitions to get to step 6.
+(Usually this means plugging a smaller version of <span
+class="math inline">\(x\)</span> into your inductive hypothesis and
+using your recursive definitions to rewrite it.)</li>
+</ul>
+</div>
+<!-- ## Chocolate Bar Proof
+<div id="content">
+
+- Suppose that you have a chocolate bar made up of $r$ squares by $c$ squares that you want to share. At each step, you choose a piece of chocolate with two or more squares and break along a vertical or horizontal line between squares. Eventually, it will be reduced to single squares. 
+
+- We can prove by induction that the number of breaks required is rc -􀀀 1, no matter which way you break.
+
+- We want to prove that, for any chocolate bar $C$ with size $n = rc \geq 1$ squares, and any way to break it, it will be reduced to isolated squares after exactly $b(C) = n -􀀀 $1 breaks.
+
+- Hint: For your proof in step 7, break $C$ into two smaller bars $A$ and $B$ such that $A$ has $m$ squares and $B$ has $m-n$ squares. Then $b(C) = b(A) + b(B) + 1$. 
+
+
+    
+    
+
+</div> -->
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

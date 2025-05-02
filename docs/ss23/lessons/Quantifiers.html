@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Quantifiers</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    /* .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    } */
+
+    #left {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:45%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #left14 {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:30%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #right34 {
+      left:50%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:60%;
+      font-size: 65%;
+    }
+    
+    #right {
+      left:31.25%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:45%;
+      font-size: 75%;
+    }
+
+    #text {
+      font-size: 75%;
+    }
+
+    #content {
+      font-size: 75%;
+    }
+
+    #smalltext {
+      font-size: 40%;
+    }
+
+    #medtext {
+      font-size: 60%;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Quantifiers</h1>
+</section>
+
+<section id="predicate-definition" class="slide level2">
+<h2>Predicate Definition</h2>
+<div id="content">
+<p>A <strong>predicate</strong> is a function that maps each possible
+input to either <span class="math inline">\(\texttt{True}\)</span> or
+<span class="math inline">\(\texttt{False}\)</span>.</p>
+<h3 id="example">Example</h3>
+<blockquote>
+<p>Here are two predicates each taking their input <span
+class="math inline">\(x\)</span> from a set of days, <span
+class="math inline">\(D\)</span>:<br> <br><span
+class="math inline">\(p(x) =\)</span> “It rained in the morning on day
+<span class="math inline">\(x\)</span>,” and <br> <span
+class="math inline">\(q(x) =\)</span> “I walked to campus on day <span
+class="math inline">\(x\)</span>.” <br><br> We can combine these to
+write the statement “If it did not rain in the morning on day <span
+class="math inline">\(x\)</span>, then I walked to campus on day <span
+class="math inline">\(x\)</span>” as <span class="math inline">\(\neg
+p(x) \rightarrow q(x)\)</span> </p>
+</blockquote>
+</div>
+</section>
+<section id="motivation" class="slide level2">
+<h2>Motivation</h2>
+<div id="medtext">
+<p>We are going to introduce the next concept with an example…</p>
+<h3 id="example-1">Example</h3>
+<ul>
+<li class="fragment">Let’s say that my previous statement only applies
+on Mondays, Wednesdays, and Fridays. <br></li>
+<li class="fragment">How can we say this using what we already
+learned?<br></li>
+<li class="fragment"><span class="math inline">\((\neg
+p(\)</span>Mon<span class="math inline">\() \rightarrow
+q(\)</span>Mon<span class="math inline">\()) \land (\neg
+p(\)</span>Wed<span class="math inline">\() \rightarrow
+q(\)</span>Wed<span class="math inline">\()) \land (\neg
+p(\)</span>Fri<span class="math inline">\() \rightarrow
+q(\)</span>Fri<span class="math inline">\())\)</span> <br></li>
+<li class="fragment">We can also express this using set notation.
+<br></li>
+<li class="fragment">Say <span class="math inline">\(D= \{\)</span>Mon,
+Wed, Fri<span class="math inline">\(\}\)</span>. <br></li>
+<li class="fragment">Similar to how you use a summation <span
+class="math inline">\(\sum\)</span> for a sequence of additions, we can
+use the big and <span class="math inline">\(\bigwedge\)</span> to
+represent a sequence of ands. <br></li>
+<li class="fragment"><span class="math inline">\(\bigwedge\limits_{d \in
+D} (\neg p(d) \rightarrow q(d))\)</span></li>
+</ul>
+</div>
+</section>
+<section id="motivation-continued---universal-quantifier"
+class="slide level2">
+<h2>Motivation Continued - Universal Quantifier</h2>
+<div id="medtext">
+<p>We can also write this using a <strong>quantifier</strong>.</p>
+<p>The “for all” quantifier, denoted <span
+class="math inline">\(\forall\)</span>, is used to reason about all
+elements of a set.</p>
+<h3 id="example-continued">Example Continued</h3>
+<p>We already showed that for <span class="math inline">\(D=
+\{\)</span>Mon, Wed, Fri<span class="math inline">\(\}\)</span>,</p>
+<ul>
+<li class="fragment"><span class="math inline">\((\neg p(\textrm{Mon})
+\rightarrow q(\textrm{Mon})) \land (\neg p(\textrm{Wed}) \rightarrow
+q(\textrm{Wed})) \land (\neg p(\textrm{Fri}) \rightarrow
+q(\textrm{Fri}))\)</span></li>
+<li class="fragment"><span class="math inline">\(\equiv
+\bigwedge\limits_{d \in D} (\neg p(d) \rightarrow q(d))\)</span></li>
+<li class="fragment">There is another way we can say this.</li>
+<li class="fragment"><span class="math inline">\(\forall d \in D, (\neg
+p(d) \rightarrow q(d))\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="existential-quantifier" class="slide level2">
+<h2>Existential Quantifier</h2>
+<div id="medtext">
+<p>We can do something similar with “or” statements. For this we will
+introduce another quantifier.</p>
+<p>The “there exists” quantifier, denoted <span
+class="math inline">\(\exists\)</span>, is used to reason about at least
+one element of a set.</p>
+<h3 id="example-2">Example</h3>
+<ul>
+<li class="fragment">Now let’s say that for at least one day of Monday,
+Wednesday and Friday, if it’s not raining on day <span
+class="math inline">\(d\)</span>, then I walk to campus on day <span
+class="math inline">\(d\)</span>.</li>
+<li class="fragment">This can be written using logical or, big or, or
+with the “there exists” quantifier.</li>
+<li class="fragment"><span class="math inline">\((\neg p(\textrm{Mon})
+\rightarrow q(\textrm{Mon})) \lor (\neg p(\textrm{Wed}) \rightarrow
+q(\textrm{Wed})) \lor (\neg p(\textrm{Fri}) \rightarrow
+q(\textrm{Fri}))\)</span></li>
+<li class="fragment"><span class="math inline">\(\equiv
+\bigvee\limits_{d \in D} (\neg p(d) \rightarrow q(d))\)</span></li>
+<li class="fragment"><span class="math inline">\(\equiv \exists d \in D,
+(\neg p(d) \rightarrow q(d))\)</span></li>
+</ul>
+</div>
+</section>
+<section id="free-and-bounded-variables" class="slide level2">
+<h2>Free and Bounded Variables</h2>
+<div id="medtext">
+<p>A variable specified with a specified domain is a <strong>bounded
+variable</strong>.</p>
+<p>A variable without a specified domain is a <strong>free
+variable</strong>.</p>
+<h3 id="example-3">Example</h3>
+<blockquote>
+<p>In the expression <span class="math inline">\(\forall x \in
+\mathbb{Z}, f(x,y)\)</span>, <br> <span class="math inline">\(x\)</span>
+is a bounded variable and <span class="math inline">\(y\)</span> is a
+free variable.</p>
+</blockquote>
+<h3 id="example-4">Example</h3>
+<blockquote>
+<p>For <span class="math inline">\(\sum\limits_{k=0}^{10}
+(k+n)\)</span>, <br> <span class="math inline">\(k\)</span> is a bounded
+variable and <span class="math inline">\(n\)</span> is a free
+variable.</p>
+</blockquote>
+</div>
+</section>
+<section id="negation-and-inference" class="slide level2">
+<h2>Negation and Inference</h2>
+<div id="medtext">
+<p>Since ‘for all’ is a big ‘and,’ and ‘exists’ is a big ‘or,’ de
+Morgan’s laws say that the negation of one is the other (with its
+statement negated.) That is:</p>
+<p><span class="math inline">\(\neg(\forall x, p(x)) \equiv \exists x,
+\neg p(x)\)</span> and</p>
+<p><span class="math inline">\(\neg(\exists x, p(x)) \equiv \forall x,
+\neg p(x)\)</span></p>
+<p>Why are these true?</p>
+<h3 id="example-5">Example</h3>
+<ul>
+<li class="fragment"><span class="math inline">\(\neg(\forall x,
+p(x))\)</span> in English translates to “<span
+class="math inline">\(p(x)\)</span> does not hold for all <span
+class="math inline">\(x\)</span>”. <br></li>
+<li class="fragment">This is equivalent to saying, “There exists an
+<span class="math inline">\(x\)</span> where <span
+class="math inline">\(p(x)\)</span> does not hold”, or <span
+class="math inline">\(\exists x, \neg p(x)\)</span>. <br></li>
+<li class="fragment">Similarly, <span class="math inline">\(\neg(\exists
+x, p(x))\)</span> in English translates to “There does not exist <span
+class="math inline">\(x\)</span> such that <span
+class="math inline">\(p(x)\)</span> holds. <br></li>
+<li class="fragment">This is equivalent to saying “For all <span
+class="math inline">\(x\)</span>, <span
+class="math inline">\(p(x)\)</span> does not hold”, or <span
+class="math inline">\(\forall x, \neg p(x)\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="nested-quantifiers" class="slide level2">
+<h2>Nested Quantifiers</h2>
+<div id="content">
+<h3 id="example-6">Example</h3>
+<ul>
+<li class="fragment">This example is to help you get some practice with
+nested quantifiers and to understand that the order of them matters.
+<br></li>
+<li class="fragment">Say that <span
+class="math inline">\(loves(x,y)\)</span> is true iff person <span
+class="math inline">\(x\)</span> loves person <span
+class="math inline">\(y\)</span>. <br></li>
+<li class="fragment"><span class="math inline">\(\forall_{e \in
+P}\)</span> <span class="math inline">\(\exists_{s \in P},
+loves(e,s)\)</span> translates to “Everybody loves somebody.” <br></li>
+<li class="fragment"><span class="math inline">\(\exists_{s \in
+P}\)</span> <span class="math inline">\(\forall_{e \in P},
+loves(e,s)\)</span> translates to “There is somebody that everybody
+loves.” <br></li>
+</ul>
+</div>
+</section>
+<section id="other-notation" class="slide level2">
+<h2>Other Notation</h2>
+<div id="content">
+<p>Here are some other ways we can write things.</p>
+<ul>
+<li class="fragment">If we are talking about pairs of distinct integers,
+<span class="math inline">\(i, j \in [1..n]\)</span> with <span
+class="math inline">\(i &lt; j\)</span>, we may even write <span
+class="math inline">\(\forall_{1\leq i &lt; j \leq n}\)</span> or <span
+class="math inline">\(\exists_{1\leq i &lt; j \leq n}\)</span>.</li>
+<li class="fragment">If we are talking about elements <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> that are members of the same set <span
+class="math inline">\(S\)</span>, we can write <span
+class="math inline">\(\forall_{x,y \in S}\)</span> or <span
+class="math inline">\(\exists_{x,y \in S}\)</span>.</li>
+</ul>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

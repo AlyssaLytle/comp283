@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Recursion</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <style type="text/css">
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide h1 { text-align: left; font-size: 200%; text-decoration: underline; }
+    .reveal .slide h2 { text-align: left; font-size: 150%; text-decoration: underline; }
+    .reveal .slide h3 { text-align: left; font-size: 120%; text-decoration: underline; }
+
+    .scrollable {
+       bottom: 0px;
+       overflow-y: auto !important;
+       overflow-x: hidden !important;
+    }
+
+    .ABCD ol { list-style-type: none }
+    
+    .ABCD li {
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+    .ABCD li:nth-child(1n):before {
+        display: inline-block;
+        width: 34px;
+        height: 26px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-right: 6px;
+    }
+    /* .ABCD li:nth-child(1):before {
+        background-image: url("https://i.imgur.com/RMwhb9V.png");
+    }
+    .ABCD li:nth-child(2):before {
+        background-image: url("https://i.imgur.com/ohacW4o.png");
+    }
+    .ABCD li:nth-child(3):before {
+        background-image: url("https://i.imgur.com/aLbKhim.png");
+    }
+    .ABCD li:nth-child(4):before {
+        background-image: url("https://i.imgur.com/rO9kNmA.png");
+    }
+    .ABCD li:nth-child(5):before {
+        background-image: url("https://i.imgur.com/UNRTmoP.png");
+    }
+    .ABCD li:nth-child(6):before {
+        background-image: url("https://i.imgur.com/Bbd0ByA.png");
+    } */
+
+    #left {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:45%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #left14 {
+      left:-8.33%;
+      text-align: left;
+      float: left;
+      width:30%;
+      z-index:-10;
+      font-size: 75%;
+    }
+
+    #right34 {
+      left:50%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:60%;
+      font-size: 65%;
+    }
+    
+    #right {
+      left:31.25%;
+      top: 75px;
+      float: right;
+      text-align: left;
+      z-index:-10;
+      width:45%;
+      font-size: 75%;
+    }
+
+    #text {
+      font-size: 75%;
+    }
+
+    #content {
+      font-size: 75%;
+    }
+
+    #smalltext {
+      font-size: 40%;
+    }
+
+    #medtext {
+      font-size: 60%;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Recursion</h1>
+</section>
+
+<section id="recursion" class="slide level2">
+<h2>Recursion</h2>
+<div id="content">
+<p>There is still one type of proof we need to cover… but first we’re
+going to take a little bit of a detour.</p>
+<p>It is helpful to understand <strong>recursion</strong> before we move
+on to the next kind of proof!</p>
+</div>
+</section>
+<section id="what-is-recursion" class="slide level2">
+<h2>What is recursion?</h2>
+<div id="content">
+<p><strong>Recursion</strong> is the idea of solving a problem by
+breaking it into smaller problems.</p>
+<h3 id="example---factorials">Example - Factorials:</h3>
+</div>
+</section>
+<section id="recursion-in-coding" class="slide level2">
+<h2>Recursion in Coding</h2>
+<div id="content">
+<p>Here is an example of what recursion would look like in a programming
+language like Python.</p>
+<p>Say we want to write a program that returns <span
+class="math inline">\(n!\)</span>.</p>
+<pre><code>Def factorial:
+    input: natural number n
+    if n == 1: #base case
+        return 1
+    else: #recursive rule
+        return n * factorial(n-1) 
+    </code></pre>
+</div>
+</section>
+<section id="why-do-we-use-recursion" class="slide level2">
+<h2>Why do we use recursion?</h2>
+<div id="content">
+<ul>
+<li class="fragment">Breaking a problem into smaller pieces can make it
+easier to solve.</li>
+<li class="fragment">Breaking a problem into smaller pieaces can also
+make it easier to reason about, making it easier to prove properties
+about it!</li>
+<li class="fragment">Many programming languages heavily rely on
+recursive definitions (haskell, racket, scheme, etc.)</li>
+<li class="fragment">Other programming languages support it by letting a
+function call itself.</li>
+</ul>
+</div>
+</section>
+<section id="defining-recursion" class="slide level2">
+<h2>Defining recursion</h2>
+<div id="content">
+<p>We just gave an example of a function that is defined
+recursively.</p>
+<p>You can also recursively define sets, relations, tuples, lists,
+sequences, etc…</p>
+<p>There are two main parts of any recursive definition:</p>
+<ol type="1">
+<li class="fragment">The base case: the initial element/value of what
+you’re trying to define</li>
+<li class="fragment">The recursive rule: tells you how to generate the
+next element/value given previous ones.</li>
+</ol>
+<h3 id="example-factorials">Example: Factorials</h3>
+<!-- 1. The base case: $1! = 1$
+2. The recursive rule: $n! = n \cdot (n-1)!$ -->
+</div>
+</section>
+<section id="the-fibonacci-numbers" class="slide level2">
+<h2>The Fibonacci numbers</h2>
+<div id="content">
+<ul>
+<li class="fragment">The Fibonacci numbers are a very famous sequence of
+numbers that are defined via a recursive function.</li>
+</ul>
+<ol type="1">
+<li class="fragment">The base case: <span class="math inline">\(F(0) =
+0, F(1) = 1\)</span></li>
+<li class="fragment">Recursive rule: For <span class="math inline">\(n
+&lt; 1\)</span>, <span class="math inline">\(F(n) = F(n-1) +
+F(n-2)\)</span>.</li>
+</ol>
+</div>
+</section>
+<section id="other-example---powersets" class="slide level2">
+<h2>Other Example - Powersets:</h2>
+<div id="content">
+<ul>
+<li class="fragment">We can define powersets recursively:</li>
+<li class="fragment"><span class="math inline">\(\mathscr{P}(X + \{c\} )
+= \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})\)</span>
+<!-- - E.g. $\mathscr{P}(\{1,2,3\}) = \mathscr{P}(\{1,2\} + \{3\}) = \mathscr{P}(\{1,2\}) \cup (\mathscr{P}(\{1,2\}) + \{3\})$
+- This is essentially saying we can build a powerset by unioning two smaller sets. We are building something by combining two smaller things. That's what makes this definition **recursive**.
+
+
+### Definition
+
+1. The base case: $\mathscr{P}(\{ \}) = \{\}$
+2. The recursive rule: $\mathscr{P}(X + \{c\}) = \mathscr{P}(X) \cup (\mathscr{P}(X) + \{c\})$ --></li>
+</ul>
+</div>
+<!-- ## Defining Functions and Methods Recursively
+<div id="content">
+
+I want to define a method $copy$ such that for all $n \in \mathbb{N}$, $copy(n)=n$
+
+For this, we are going to use the fact that $n = 1 \cdot n = 1 + 1 + \ldots + 1$, $n$ times.
+
+1. The base case: $copy(0) = 0$
+2. Recursive rule: For $n<0$, $copy(n) = 1 + copy(n-1)$
+
+
+</div> -->
+</section>
+<section id="defining-lists-recursively" class="slide level2">
+<h2>Defining Lists Recursively</h2>
+<div id="content">
+<ul>
+<li class="fragment">We are going to give an example of how we can
+define a list and some functions on a list recursively</li>
+<li class="fragment">Say all elements of our list are in set <span
+class="math inline">\(A\)</span></li>
+<li class="fragment">The set of all possible lists <span
+class="math inline">\(L\)</span> can be defined as <span
+class="math inline">\(L = \bigcup_{k\geq0}A^k\)</span> (Aka all possible
+permutations of length <span class="math inline">\(k \geq 0\)</span> of
+the elements in <span class="math inline">\(A\)</span>.)</li>
+<li class="fragment">We can also define this recursively.</li>
+</ul>
+<!-- 1. Base case: Empty list $\langle ~ \rangle$
+2. Recursive rule: For any element $a \in A$ and all lists $l \in L$, $cons(a,l)$ is a list in $L$.
+
+- Basically, $cons(a,l)$ takes $a$ and attaches it to list $l$
+- You can think of "$cons$" as short for "constructor". -->
+</div>
+</section>
+<section id="defining-lists-recursively-1" class="slide level2">
+<h2>Defining Lists Recursively</h2>
+<div id="content">
+<ol type="1">
+<li class="fragment"><p>Base case: Empty list <span
+class="math inline">\(\langle ~ \rangle\)</span></p></li>
+<li class="fragment"><p>Recursive rule: For any element <span
+class="math inline">\(a \in A\)</span> and all lists <span
+class="math inline">\(l \in L\)</span>, <span
+class="math inline">\(cons(a,l)\)</span> is a list in <span
+class="math inline">\(L\)</span>.</p></li>
+</ol>
+<ul>
+<li class="fragment">Basically, <span
+class="math inline">\(cons(a,l)\)</span> takes <span
+class="math inline">\(a\)</span> and attaches it to list <span
+class="math inline">\(l\)</span></li>
+</ul>
+<h3 id="examples">Examples</h3>
+<!-- - $\langle b \rangle = cons(b, \langle ~ \rangle)$
+- $\langle a, b \rangle = cons(a, cons(b, \langle ~ \rangle))$
+- $\langle a, b, c \rangle = cons(a, cons(b, cons(c, \langle ~ \rangle)))$ -->
+</div>
+</section>
+<section id="useful-partial-functions" class="slide level2">
+<h2>Useful Partial Functions</h2>
+<div id="content">
+<ul>
+<li class="fragment"><span class="math inline">\(head(cons( a,l )) =
+a\)</span></li>
+<li class="fragment"><span class="math inline">\(tail(cons( a,l )) =
+l\)</span></li>
+<li class="fragment">Note that <span class="math inline">\(head\)</span>
+returns an element and <span class="math inline">\(tail\)</span> returns
+a list!</li>
+</ul>
+<h3 id="examples-1">Examples</h3>
+<!-- - $\langle a, b, c \rangle = cons(a, cons(b, cons(c, \langle ~ \rangle)))$
+- $head(cons(a, cons(b, cons(c, \langle ~ \rangle)))) = a$
+- $tail(cons(a, cons(b, cons(c, \langle ~ \rangle)))) = cons(b, cons(c, \langle ~ \rangle)) = \langle b, c \rangle$ -->
+</div>
+</section>
+<section id="strings-and-languages" class="slide level2">
+<h2>Strings and Languages</h2>
+<div id="content">
+<ul>
+<li class="fragment">Strings and Languages are likely going to come up
+later in your computer science education, so it’s good to be familiar
+with these definitions!</li>
+<li class="fragment">A <strong>string</strong> is a list containing
+characters from a given <strong>alphabet</strong> <span
+class="math inline">\(\Sigma\)</span></li>
+<li class="fragment">The set of all possible strings that can be made
+from an alphabet is <span class="math inline">\(\Sigma^*\)</span></li>
+<li class="fragment">A <strong>language</strong> is a set of strings
+<span class="math inline">\(L \subseteq \Sigma^*\)</span></li>
+</ul>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
