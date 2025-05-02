@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Comp 283, 2023 Summer Session 1
+title: Comp 283, 2025 Summer Session 1
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Course Site for Comp 283
