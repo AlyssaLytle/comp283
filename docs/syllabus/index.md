@@ -24,7 +24,7 @@ Anyone who wants to learn how to speak and think like a computer scientist!
 - Prerequisites:
 Calculus I
 - Textbook: 
-    - For many lessons, I will be referencing [the textbook of UNC's Dr. Snoeyink](https://www.cs.unc.edu/~snoeyink/c283/)
+    - For many lessons, I will be referencing [the textbook of Dr. Snoeyink](https://www.cs.unc.edu/~snoeyink/c283/)
 - Helpful Optional Textbooks:
     - [Applied Discrete Structures - Al Doerr and Ken Levasseur](https://discretemath.org/)
     - [Discrete Mathematics: An Open Introduction - Oscar Levin](https://discrete.openmathbooks.org/dmoi3.html)
