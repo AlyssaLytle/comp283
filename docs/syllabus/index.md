@@ -92,3 +92,9 @@ CAPS is strongly committed to addressing the mental health needs of a diverse st
 
 ### Title IX Resources
 Any student who is impacted by discrimination, harassment, interpersonal (relationship) violence, sexual violence, sexual exploitation, or stalking is encouraged to seek resources on campus or in the community. Reports can be made online to the EOC at https://eoc.unc.edu/report-an-incident/. Please contact the University’s Title IX Coordinator (titleixcoordinator@unc.edu), Report and Response Coordinators in the Equal Opportunity and Compliance Office (reportandresponse@unc.edu), Counseling and Psychological Services (confidential), or the Gender Violence Services Coordinators (gvsc@unc.edu; confidential) to discuss your specific needs. Additional resources are available at safe.unc.edu.
+
+## Disclaimer
+
+The instructor reserves the right to make changes to the syllabus, including assignment due dates and quiz dates. These changes will be announced as early as possible.
+
+Check the course site regularly for updates and announcements!
