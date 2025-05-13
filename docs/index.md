@@ -16,7 +16,7 @@ contributors: Alyssa Byrnes
 
 ## Calendar
 
-* Wed, May 14: [Class Intro + LaTeX](/calendar/day-0.html)
+* Wed, May 14: [Class Intro + LaTeX](/comp283/calendar/day-0.html)
 * Fri, June 20: Final Exam
 
 <!-- * Wed, May 17: [LaTeX + Pseudocode](/calendar/latex-and-pseudocode.md)
