@@ -7,14 +7,18 @@ contributors: Alyssa Byrnes
 # Welcome to Discrete Structures!
 
 ## Basic Class Format:
-* Monday-Thursday there will be online video lessons and corresponding assignments for you to complete on Gradescope. 
+* Monday-Wednesday there will be online video lessons and corresponding assignments for you to complete on Gradescope. 
 * Thursday I will host a live online review session *(time TBD)*
 * Friday will be **quiz day** where you are quizzed on previously learned concepts.
-* I will be available throughout the week to answer questions on our [class social media site](https://edstem.org/).
-* Office hours: [Schedule](/calendar/office-hours.md) and [Zoom link *(coming soon)*](/) 
+* The 283 Team will be available throughout the week to answer questions on our [class social media site](https://edstem.org/). *(Participation in Edstem is required for this course! Please email me if you have not received an invite to join EdStem!)*
+* Office hours: [Schedule](/comp283/calendar/office-hours.html) and [Zoom link *(coming soon)*](/) 
 * [LaTeX Guide](/calendar/latex-guide.md)
 
 ## Calendar
+
+* Wed, May 14: Class Intro + LaTeX
+* Fri, June 20: Final Exam
+
 <!-- * Wed, May 17: [LaTeX + Pseudocode](/calendar/latex-and-pseudocode.md)
 * Thu, May 18: [Propositional Logic](/calendar/propositional-logic.md)
 * Fri, May 19: [Practice and Review (11 am)](/calendar/practice-and-review-0.md)
