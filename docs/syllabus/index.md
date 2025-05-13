@@ -31,17 +31,22 @@ Calculus I
     - [Proofs - Jay Cummings](https://www.amazon.com/Proofs-Long-Form-Mathematics-Textbook-Math/dp/B08T8JCVF1/ref=sr_1_1?crid=2VC36XMADFKH0&keywords=proofs&qid=1680805106&sprefix=proofs%2Caps%2C81&sr=8-1)
 
 ## Class Design
-* Monday-Thursday there will be online video lessons and corresponding assignments for you to complete on Gradescope. 
+
+* This class is completely *virtual* and *asynchronous*.
+* Monday-Wednesday there will be online readable and/or video lessons and corresponding assignments for you to complete on Gradescope. 
 * Thursday I will host a live online review session (time TBD).
-* Friday will be **quiz day** where you are quizzed on previously learned concepts.
+* Friday will be **quiz day** where you are quizzed on previously learned concepts. 
 * I will be available throughout the week to answer questions on our [class social media site](https://edstem.org/).
 
+Lessons are graded for correctness and are due the day of release. (e.g. Monday's lesson is due by Monday night at 11:59 pm.)
+
+Quizzes are *timed* and must be done on the Friday of that quiz. 
 
 ## Class tools
 - [Class Website](https://alyssabyrnes.github.io/comp283/) - Bookmark this link! Lessons and important information will be posted here!
 - **EdStem** - a question and answer site we will use for most class questions, announcements, and discussions. You will be added via your UNC email.
 - **Zoom** - a video chat service, will be used for office hours
-- **Canvas** - A UNC-hosted class management site, you can use this to access your grades and course materials such as lecture slides and handouts
+- **Canvas** - A UNC-hosted class management site
 - **Gradescope** - used for assignments and assessments, I will enroll each student in advance
 
 
