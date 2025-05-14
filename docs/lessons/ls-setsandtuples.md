@@ -44,18 +44,17 @@ The cardinality of a finite set  is denoted $$|A|$$.
 
 
 
+
 ## Sets - Notation
+
+### Elements 
+
 $$a \in A$$ means $$a$$ is an element of $$A$$.
 
 $$a \notin A$$ means $$a$$ is *not* an element of $$A$$.
 
-## Sets - Notation
-$$a \in A$$ means $$a$$ is an element of $$A$$.
 
-$$a \notin A$$ means $$a$$ is *not* an element of $$A$$.
-
-
-### Example
+#### Example
 
 >Let $$A = \{$$"apples", "bananas", "oranges"$$\}$$
 
@@ -64,19 +63,14 @@ $$a \notin A$$ means $$a$$ is *not* an element of $$A$$.
 >"blueberries" $$\notin A$$
 
 
-## Sets - Notation
+### Brackets and Parentheses
 
 $$[a,b]$$ is the set of whole numbers $$\geq a$$  and $$\leq b$$.
 
 $$(a,b)$$ is the set of whole numbers $$> a$$  and $$< b$$.
 
-## Sets - Notation
 
-$$[a,b]$$ is the set of whole numbers $$\geq a$$  and $$\leq b$$.
-
-$$(a,b)$$ is the set of whole numbers $$> a$$  and $$< b$$.
-
-### Examples
+#### Examples
 
 >$$[1,5] = \{1,2,3,4,5\}$$
 
@@ -84,7 +78,7 @@ $$(a,b)$$ is the set of whole numbers $$> a$$  and $$< b$$.
 
 >$$[1,5) = \{1,2,3,4\}$$
 
-## Sets - Notation
+## Set Notation
 
 Sets are commonly expressed using *set notation*.
 
