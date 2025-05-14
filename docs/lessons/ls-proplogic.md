@@ -479,9 +479,9 @@ Here's an example of breaking up an English language sentence.
 
 
 ## Using Logic For Problem Solving 
-The rest of these slides are optional, but they demonstrate how logic can be used for problem solving!
+The rest of these slides (notes) are optional, but they demonstrate how logic can be used for problem solving!
 
-## Using Logic For Problem Solving 
+
 ### Knights and Knaves (Raymond Smullyan)
 On an island, every inhabitant is a knight who always tells the truth, or a knave who always lies. You meet three inhabitants, Alice, Bob, and Chris.
 
@@ -490,16 +490,14 @@ On an island, every inhabitant is a knight who always tells the truth, or a knav
 
 Can you determine uniquely what each of Alice, Bob, and Chris are?
 
-## Using Logic For Problem Solving
-### Knights and Knaves (Raymond Smullyan)
+
 
 1. Define convenient variables for propositions.
 2. Transform what they say into statements that *always* should evaluate to $$\texttt{True}$$. These are the rules of our world.
 3. Make a truth table – With 3 people, we have $$2^3$$ rows
 4. Check if a unique row makes both statements true. 
 
-## Using Logic For Problem Solving
-### Knights and Knaves (Raymond Smullyan)
+
 
 $$1.$$ Define convenient variables for propositions.
 
@@ -513,8 +511,6 @@ $$1.$$ Define convenient variables for propositions.
 - $$\neg C=$$ "Chris is a knave"
 
 
-## Using Logic For Problem Solving
-
 
 $$2.$$ Transform what they say into statements that *always* should evaluate to $$\texttt{True}$$. These are the rules of our world.
 
@@ -523,7 +519,7 @@ $$2.$$ Transform what they say into statements that *always* should evaluate to 
 
 
 
-## Using Logic For Problem Solving
+
 
 
 $$2.$$ Transform what they say into statements that *always* should evaluate to $$\texttt{True}$$. These are the rules of our world.
@@ -538,7 +534,6 @@ $$\neg A =$$ "Alice is a knave", $$\neg B =$$ "Bob is a knave",$$\neg C=$$ "Chri
 
 
 
-## Using Logic For Problem Solving
 
 
 $$2.$$ Transform what they say into statements that *always* should evaluate to $$\texttt{True}$$. These are the rules of our world.
@@ -555,7 +550,6 @@ $$\neg A =$$ "Alice is a knave", $$\neg B =$$ "Bob is a knave",$$\neg C=$$ "Chri
 
 
 
-## Using Logic For Problem Solving
 
 
 
@@ -581,7 +575,6 @@ F & T & F & T &F\\
 
 
 
-## Using Logic For Problem Solving
 
 
 $$4.$$ Check if a unique row makes both statements true. 
