@@ -15,10 +15,10 @@ A *proposition* is a sentence to which one and only one of the terms $$\texttt{T
 
 Which of the following are propositions?
 
--  We are currently in Chapel Hill. - $$\color{green}Yes$$
--  $$1 + 1 = 2$$ - Yes
--  $$2 + x = 4$$ - No
--  It is hot outside. - No
+-  We are currently in Chapel Hill. - $$\color{green}\texttt{Yes}$$
+-  $$1 + 1 = 2$$ - $$\color{green}\texttt{Yes}$$
+-  $$2 + x = 4$$ - $$\color{red}\texttt{No}$$
+-  It is hot outside. -$$\color{red}\texttt{No}$$
 
 
 ## Negation
