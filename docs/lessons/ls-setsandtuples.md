@@ -21,9 +21,9 @@ A ***set*** is an unordered collection of objects.
 
 The following are sets:
 
--  $$\{1,2,3\}$$
--  "all multiples of 7''
--  \{apples, $$7$$, $$\texttt{True}$$\}
+>  $$\{1,2,3\}$$
+> "all multiples of 7''
+>  \{apples, $$7$$, $$\texttt{True}$$\}
 
 Sets don't inherently have an order.
 
