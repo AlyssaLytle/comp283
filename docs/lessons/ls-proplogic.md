@@ -215,11 +215,11 @@ Everything else can be written as a combination of the above three, but in gener
 
 Logical expressions that result in the same truth values are considered *logical equivalences*.
 
-- One useful equivalence is *DeMorgan's Law*. It states: <br>
-$$$$ \neg (p \land q) \equiv \neg p \lor \neg q $$$$
-$$$$ \neg (p \lor q) \equiv \neg p \land \neg q $$$$
-- Another useful equivalence is: <br>
-$$$$ p \rightarrow q \equiv \neg p \lor q $$$$
+- One useful equivalence is *DeMorgan's Law*. It states: 
+$$ \neg (p \land q) \equiv \neg p \lor \neg q $$
+$$ \neg (p \lor q) \equiv \neg p \land \neg q $$
+- Another useful equivalence is: 
+$$ p \rightarrow q \equiv \neg p \lor q $$
 
 
 
