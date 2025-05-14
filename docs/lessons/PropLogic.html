@@ -1,31 +1,33 @@
-<!DOCTYPE html>
-<html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
   <title>Propositional Logic</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
-  <style>
-    .reveal .sourceCode {  /* see #7635 */
-      overflow: visible;
-    }
+  <style type="text/css">
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
     ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/dracula.css" id="theme">
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
   <style type="text/css">
     .reveal .slides {
       text-align: left;
@@ -132,67 +134,69 @@
     
 
   </style>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
-
-<section id="title-slide">
+<div class="slide titlepage">
   <h1 class="title">Propositional Logic</h1>
-</section>
-
-<section id="learning-objectives" class="slide level2">
-<h2>Learning Objectives</h2>
-<ul>
-<li class="fragment">Express statements in symbolic form, using the
-logic operations of negation, and, inclusive or, implies, if and only if
-(iff), and exclusive or (and their symbols: <span
-class="math inline">\(\neg, \land, \lor, \rightarrow,
-\leftrightarrow,\)</span> and <span
+</div>
+<div id="learning-objectives" class="slide section level2">
+<h1>Learning Objectives</h1>
+<ul class="incremental">
+<li>Express statements in symbolic form, using the logic operations of
+negation, and, inclusive or, implies, if and only if (iff), and
+exclusive or (and their symbols: <span class="math inline">\(\neg,
+\land, \lor, \rightarrow, \leftrightarrow,\)</span> and <span
 class="math inline">\(\oplus\)</span>) to express statements without
 ambiguity.</li>
-<li class="fragment">Create truth tables in order to recognize
-<em>tautologies</em> and <em>logically equivalent</em> expressions,
-including De Morgan’s rules and conditional expressions.</li>
-<li class="fragment">Demonstrate how to use these methods to solve a
-logic puzzle.</li>
+<li>Create truth tables in order to recognize <em>tautologies</em> and
+<em>logically equivalent</em> expressions, including De Morgan’s rules
+and conditional expressions.</li>
+<li>Demonstrate how to use these methods to solve a logic puzzle.</li>
 </ul>
-</section>
-<section id="propositions-and-basic-operations" class="slide level2">
-<h2>Propositions and Basic Operations</h2>
+</div>
+<div id="propositions-and-basic-operations"
+class="slide section level2">
+<h1>Propositions and Basic Operations</h1>
 <p>A <em>proposition</em> is a sentence to which one and only one of the
 terms <span class="math inline">\(\texttt{True}\)</span> or <span
 class="math inline">\(\texttt{False}\)</span> can be applied.</p>
 <p>Which of the following are propositions?</p>
-<ul>
-<li class="fragment">We are currently in Chapel Hill.</li>
-<li class="fragment"><span class="math inline">\(1 + 1 = 2\)</span></li>
-<li class="fragment"><span class="math inline">\(2 + x = 4\)</span></li>
-<li class="fragment">It is hot outside.</li>
+<ul class="incremental">
+<li>We are currently in Chapel Hill.</li>
+<li><span class="math inline">\(1 + 1 = 2\)</span></li>
+<li><span class="math inline">\(2 + x = 4\)</span></li>
+<li>It is hot outside.</li>
 </ul>
-</section>
-<section id="propositions-and-basic-operations-1" class="slide level2">
-<h2>Propositions and Basic Operations</h2>
+</div>
+<div id="propositions-and-basic-operations-1"
+class="slide section level2">
+<h1>Propositions and Basic Operations</h1>
 <p>A <em>proposition</em> is a sentence to which one and only one of the
 terms <span class="math inline">\(\texttt{True}\)</span> or <span
 class="math inline">\(\texttt{False}\)</span> can be applied.</p>
 <p>Which of the following are propositions?</p>
-<ul>
-<li class="fragment">We are currently in Chapel Hill. - Yes</li>
-<li class="fragment"><span class="math inline">\(1 + 1 = 2\)</span> -
-Yes</li>
-<li class="fragment"><span class="math inline">\(2 + x = 4\)</span> -
-No</li>
-<li class="fragment">It is hot outside. - No</li>
+<ul class="incremental">
+<li>We are currently in Chapel Hill. - Yes</li>
+<li><span class="math inline">\(1 + 1 = 2\)</span> - Yes</li>
+<li><span class="math inline">\(2 + x = 4\)</span> - No</li>
+<li>It is hot outside. - No</li>
 </ul>
-</section>
-<section id="negation" class="slide level2">
-<h2>Negation</h2>
+</div>
+<div id="negation" class="slide section level2">
+<h1>Negation</h1>
 <div id="left">
 <p>A <em>Truth Table</em> for negation would look like the
 following:</p>
-<p><span class="math inline">\(\begin{array}{|c|c|} \hline p &amp; \neg
-p \\ \hline T &amp; F \\ F &amp; T \\ \hline \end{array}\)</span></p>
+<p><span class="math inline">\(\begin{array}{|c|c|}
+\hline
+p  &amp; \neg p  \\
+\hline
+T &amp; F \\
+F &amp; T \\
+\hline
+\end{array}\)</span></p>
 <p>What this is saying is: <br> “When <span
 class="math inline">\(p\)</span> is <span
 class="math inline">\(\texttt{True}\)</span>, <span
@@ -205,54 +209,62 @@ class="math inline">\(\texttt{True}\)</span>.’’</p>
 </div>
 <div id="right">
 <p>Here is an example of a negated proposition:</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “Today is
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “Today is Monday.’’</li>
+<li><span class="math inline">\(\neg p\)</span>: “Today is not
 Monday.’’</li>
-<li class="fragment"><span class="math inline">\(\neg p\)</span>: “Today
-is not Monday.’’</li>
-<li class="fragment"><em>ALTERNATIVELY:</em> <span
-class="math inline">\(\neg p\)</span>: “It is not the case that today is
-Monday.’’</li>
+<li><em>ALTERNATIVELY:</em> <span class="math inline">\(\neg p\)</span>:
+“It is not the case that today is Monday.’’</li>
 </ul>
 </div>
-</section>
-<section id="conjunction" class="slide level2">
-<h2>Conjunction</h2>
+</div>
+<div id="conjunction" class="slide section level2">
+<h1>Conjunction</h1>
 <div id="left">
 <p>A Truth Table for conjunction would look like the following: <span
-class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
-\land q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F &amp; T
-&amp; F \\ F &amp; F &amp; F \\ \hline \end{array}\)</span></p>
+class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q &amp; p \land q  \\
+\hline
+T &amp; T &amp; T \\
+T &amp; F &amp; F \\
+F &amp; T &amp; F \\
+F &amp; F &amp; F \\
+\hline
+\end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of conjunction:</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “It is
-sunny today.’’</li>
-<li class="fragment"><span class="math inline">\(q\)</span>: “It is
-Monday.’’</li>
-<li class="fragment"><span class="math inline">\(p \land q\)</span>: “It
-is sunny today and today is Monday.’’</li>
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “It is sunny today.’’</li>
+<li><span class="math inline">\(q\)</span>: “It is Monday.’’</li>
+<li><span class="math inline">\(p \land q\)</span>: “It is sunny today
+and today is Monday.’’</li>
 </ul>
 </div>
-</section>
-<section id="conjunction-1" class="slide level2">
-<h2>Conjunction</h2>
+</div>
+<div id="conjunction-1" class="slide section level2">
+<h1>Conjunction</h1>
 <div id="left">
 <p>A Truth Table for conjunction would look like the following: <span
-class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
-\land q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F &amp; T
-&amp; F \\ F &amp; F &amp; F \\ \hline \end{array}\)</span></p>
+class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q &amp; p \land q  \\
+\hline
+T &amp; T &amp; T \\
+T &amp; F &amp; F \\
+F &amp; T &amp; F \\
+F &amp; F &amp; F \\
+\hline
+\end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of conjunction:</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “It is
-sunny today.’’</li>
-<li class="fragment"><span class="math inline">\(q\)</span>: “It is
-Monday.’’</li>
-<li class="fragment"><span class="math inline">\(p \land q\)</span>: “It
-is sunny today and today is Monday.’’</li>
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “It is sunny today.’’</li>
+<li><span class="math inline">\(q\)</span>: “It is Monday.’’</li>
+<li><span class="math inline">\(p \land q\)</span>: “It is sunny today
+and today is Monday.’’</li>
 </ul>
 <p>The conjunction (<span class="math inline">\(p \land q\)</span>) is
 <span class="math inline">\(\texttt{True}\)</span> on sunny Mondays, but
@@ -263,44 +275,54 @@ class="math inline">\(\texttt{False}\)</span> on any day that is not
 Monday (<span class="math inline">\(q\)</span> is <span
 class="math inline">\(\texttt{False}\)</span>).</p>
 </div>
-</section>
-<section id="disjunction" class="slide level2">
-<h2>Disjunction</h2>
+</div>
+<div id="disjunction" class="slide section level2">
+<h1>Disjunction</h1>
 <div id="left">
 <p>A Truth Table for disjunction would look like the following: <span
-class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
-\lor q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; T \\ F &amp; T
-&amp; T \\ F &amp; F &amp; F \\ \hline \end{array}\)</span></p>
+class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q &amp; p \lor q  \\
+\hline
+T &amp; T &amp; T \\
+T &amp; F &amp; T \\
+F &amp; T &amp; T \\
+F &amp; F &amp; F \\
+\hline
+\end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of disjunction.</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “It is
-sunny today.’’</li>
-<li class="fragment"><span class="math inline">\(q\)</span>: “It is
-Monday.’’</li>
-<li class="fragment"><span class="math inline">\(p \lor q\)</span>: “It
-is sunny today or today is Monday.’’</li>
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “It is sunny today.’’</li>
+<li><span class="math inline">\(q\)</span>: “It is Monday.’’</li>
+<li><span class="math inline">\(p \lor q\)</span>: “It is sunny today or
+today is Monday.’’</li>
 </ul>
 </div>
-</section>
-<section id="disjunction-1" class="slide level2">
-<h2>Disjunction</h2>
+</div>
+<div id="disjunction-1" class="slide section level2">
+<h1>Disjunction</h1>
 <div id="left">
 <p>A Truth Table for disjunction would look like the following: <span
-class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
-\lor q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; T \\ F &amp; T
-&amp; T \\ F &amp; F &amp; F \\ \hline \end{array}\)</span></p>
+class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q &amp; p \lor q  \\
+\hline
+T &amp; T &amp; T \\
+T &amp; F &amp; T \\
+F &amp; T &amp; T \\
+F &amp; F &amp; F \\
+\hline
+\end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of disjunction.</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “It is
-sunny today.’’</li>
-<li class="fragment"><span class="math inline">\(q\)</span>: “It is
-Monday.’’</li>
-<li class="fragment"><span class="math inline">\(p \lor q\)</span>: “It
-is sunny today or today is Monday.’’</li>
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “It is sunny today.’’</li>
+<li><span class="math inline">\(q\)</span>: “It is Monday.’’</li>
+<li><span class="math inline">\(p \lor q\)</span>: “It is sunny today or
+today is Monday.’’</li>
 </ul>
 <p>The disjunction (<span class="math inline">\(p \lor q\)</span>) is
 <span class="math inline">\(\texttt{True}\)</span> on sunny Mondays, on
@@ -311,44 +333,54 @@ class="math inline">\(\texttt{True}\)</span>). It is <span
 class="math inline">\(\texttt{False}\)</span> on any day where it is
 both not sunny and not Monday.</p>
 </div>
-</section>
-<section id="exclusive-or" class="slide level2">
-<h2>Exclusive Or</h2>
+</div>
+<div id="exclusive-or" class="slide section level2">
+<h1>Exclusive Or</h1>
 <div id="left">
 <p>A Truth Table for exclusive or would look like the following: <span
-class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q&amp; p
-\oplus q \\ \hline T &amp; T &amp; F \\ T &amp; F &amp; T \\ F &amp; T
-&amp; T \\ F &amp; F &amp; F \\ \hline \end{array}\)</span></p>
+class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q&amp; p \oplus q  \\
+\hline
+T &amp; T &amp; F \\
+T &amp; F &amp; T \\
+F &amp; T &amp; T \\
+F &amp; F &amp; F \\
+\hline
+\end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of exclusive or.</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “It is
-sunny today.’’</li>
-<li class="fragment"><span class="math inline">\(q\)</span>: “It is
-Monday.’’</li>
-<li class="fragment"><span class="math inline">\(p \oplus q\)</span>:
-“It is sunny today or today is Monday, but not both.’’</li>
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “It is sunny today.’’</li>
+<li><span class="math inline">\(q\)</span>: “It is Monday.’’</li>
+<li><span class="math inline">\(p \oplus q\)</span>: “It is sunny today
+or today is Monday, but not both.’’</li>
 </ul>
 </div>
-</section>
-<section id="exclusive-or-1" class="slide level2">
-<h2>Exclusive Or</h2>
+</div>
+<div id="exclusive-or-1" class="slide section level2">
+<h1>Exclusive Or</h1>
 <div id="left">
 <p>A Truth Table for exclusive or would look like the following: <span
-class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q&amp; p
-\oplus q \\ \hline T &amp; T &amp; F \\ T &amp; F &amp; T \\ F &amp; T
-&amp; T \\ F &amp; F &amp; F \\ \hline \end{array}\)</span></p>
+class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q&amp; p \oplus q  \\
+\hline
+T &amp; T &amp; F \\
+T &amp; F &amp; T \\
+F &amp; T &amp; T \\
+F &amp; F &amp; F \\
+\hline
+\end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of exclusive or.</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “It is
-sunny today.’’</li>
-<li class="fragment"><span class="math inline">\(q\)</span>: “It is
-Monday.’’</li>
-<li class="fragment"><span class="math inline">\(p \oplus q\)</span>:
-“It is sunny today or today is Monday, but not both.’’</li>
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “It is sunny today.’’</li>
+<li><span class="math inline">\(q\)</span>: “It is Monday.’’</li>
+<li><span class="math inline">\(p \oplus q\)</span>: “It is sunny today
+or today is Monday, but not both.’’</li>
 </ul>
 <p>The exclusive or (<span class="math inline">\(p \oplus q\)</span>) is
 <span class="math inline">\(\texttt{True}\)</span> on any sunny day
@@ -362,9 +394,9 @@ class="math inline">\(\texttt{True}\)</span>). Additionally, it is <span
 class="math inline">\(\texttt{False}\)</span> on any day where it is
 both not sunny and not Monday.</p>
 </div>
-</section>
-<section id="conditionals" class="slide level2">
-<h2>Conditionals</h2>
+</div>
+<div id="conditionals" class="slide section level2">
+<h1>Conditionals</h1>
 <div id="left">
 <p>The <em>conditional statement</em> <span class="math inline">\(p
 \rightarrow q\)</span> is False when <span
@@ -376,59 +408,74 @@ class="math inline">\(p\)</span> is called the hypothesis and <span
 class="math inline">\(q\)</span> the conclusion. This can also be called
 <em>implication</em>.</p>
 <p>Some English phrases for this would be:</p>
-<ul>
-<li class="fragment">If <span class="math inline">\(p\)</span>, then
-<span class="math inline">\(q\)</span>.</li>
-<li class="fragment"><span class="math inline">\(p\)</span> implies
-<span class="math inline">\(q\)</span>.</li>
-<li class="fragment"><span class="math inline">\(q\)</span> if <span
+<ul class="incremental">
+<li>If <span class="math inline">\(p\)</span>, then <span
+class="math inline">\(q\)</span>.</li>
+<li><span class="math inline">\(p\)</span> implies <span
+class="math inline">\(q\)</span>.</li>
+<li><span class="math inline">\(q\)</span> if <span
 class="math inline">\(p\)</span>.</li>
 </ul>
 </div>
 <div id="right">
 <p>A Truth Table for implication would look like the following: <span
-class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
-\rightarrow q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F
-&amp; T &amp; T \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
+class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q &amp; p \rightarrow q  \\
+\hline
+T &amp; T &amp; T \\
+T &amp; F &amp; F \\
+F &amp; T &amp; T \\
+F &amp; F &amp; T \\
+\hline
+\end{array}\)</span></p>
 </div>
-</section>
-<section id="conditionals-continued" class="slide level2">
-<h2>Conditionals Continued</h2>
+</div>
+<div id="conditionals-continued" class="slide section level2">
+<h1>Conditionals Continued</h1>
 <div id="left">
-<p><span class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q
-&amp; p \rightarrow q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F
-\\ F &amp; T &amp; T \\ F &amp; F &amp; T \\ \hline
+<p><span class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q &amp; p \rightarrow q  \\
+\hline
+T &amp; T &amp; T \\
+T &amp; F &amp; F \\
+F &amp; T &amp; T \\
+F &amp; F &amp; T \\
+\hline
 \end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of implication.</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “It is
-sunny.’’</li>
-<li class="fragment"><span class="math inline">\(q\)</span>: “I walk to
-campus.’’</li>
-<li class="fragment"><span class="math inline">\(p \rightarrow
-q\)</span>: “If it is sunny, then I walk to campus.’’</li>
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “It is sunny.’’</li>
+<li><span class="math inline">\(q\)</span>: “I walk to campus.’’</li>
+<li><span class="math inline">\(p \rightarrow q\)</span>: “If it is
+sunny, then I walk to campus.’’</li>
 </ul>
 </div>
-</section>
-<section id="conditionals-continued-1" class="slide level2">
-<h2>Conditionals Continued</h2>
+</div>
+<div id="conditionals-continued-1" class="slide section level2">
+<h1>Conditionals Continued</h1>
 <div id="left">
-<p><span class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q
-&amp; p \rightarrow q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F
-\\ F &amp; T &amp; T \\ F &amp; F &amp; T \\ \hline
+<p><span class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q &amp; p \rightarrow q  \\
+\hline
+T &amp; T &amp; T \\
+T &amp; F &amp; F \\
+F &amp; T &amp; T \\
+F &amp; F &amp; T \\
+\hline
 \end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of implication.</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “It is
-sunny.’’</li>
-<li class="fragment"><span class="math inline">\(q\)</span>: “I walk to
-campus.’’</li>
-<li class="fragment"><span class="math inline">\(p \rightarrow
-q\)</span>: “If it is sunny, then I walk to campus.’’</li>
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “It is sunny.’’</li>
+<li><span class="math inline">\(q\)</span>: “I walk to campus.’’</li>
+<li><span class="math inline">\(p \rightarrow q\)</span>: “If it is
+sunny, then I walk to campus.’’</li>
 </ul>
 <p>The implication (<span class="math inline">\(p \rightarrow
 q\)</span>) is <span class="math inline">\(\texttt{False}\)</span> if it
@@ -440,9 +487,9 @@ campus (<span class="math inline">\(q\)</span> is <span
 class="math inline">\(\texttt{True}\)</span>), this implication is still
 <span class="math inline">\(\texttt{True}\)</span>.</p>
 </div>
-</section>
-<section id="biconditionals" class="slide level2">
-<h2>Biconditionals</h2>
+</div>
+<div id="biconditionals" class="slide section level2">
+<h1>Biconditionals</h1>
 <div id="left">
 <p>The <em>biconditional statement</em> (“if and only if” or “iff”)
 <span class="math inline">\(p \leftrightarrow q\)</span> is <span
@@ -451,24 +498,29 @@ class="math inline">\(p\)</span> and <span
 class="math inline">\(q\)</span> have the same truth value, and <span
 class="math inline">\(\texttt{False}\)</span> otherwise.</p>
 <p>A Truth Table for implication would look like the following: <span
-class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
-\leftrightarrow q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F
-&amp; T &amp; F \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
+class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q &amp; p \leftrightarrow q  \\
+\hline
+T &amp; T &amp; T \\
+T &amp; F &amp; F \\
+F &amp; T &amp; F \\
+F &amp; F &amp; T \\
+\hline
+\end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of a biconditional.</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “It is
-sunny.’’</li>
-<li class="fragment"><span class="math inline">\(q\)</span>: “I walk to
-campus.’’</li>
-<li class="fragment"><span class="math inline">\(q \leftrightarrow
-p\)</span>: “I walk to campus if and only if it is sunny.’’</li>
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “It is sunny.’’</li>
+<li><span class="math inline">\(q\)</span>: “I walk to campus.’’</li>
+<li><span class="math inline">\(q \leftrightarrow p\)</span>: “I walk to
+campus if and only if it is sunny.’’</li>
 </ul>
 </div>
-</section>
-<section id="biconditionals-1" class="slide level2">
-<h2>Biconditionals</h2>
+</div>
+<div id="biconditionals-1" class="slide section level2">
+<h1>Biconditionals</h1>
 <div id="left">
 <p>The <em>biconditional statement</em> (“if and only if” or “iff”)
 <span class="math inline">\(p \leftrightarrow q\)</span> is <span
@@ -477,19 +529,24 @@ class="math inline">\(p\)</span> and <span
 class="math inline">\(q\)</span> have the same truth value, and <span
 class="math inline">\(\texttt{False}\)</span> otherwise.</p>
 <p>A Truth Table for implication would look like the following: <span
-class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp; q &amp; p
-\leftrightarrow q \\ \hline T &amp; T &amp; T \\ T &amp; F &amp; F \\ F
-&amp; T &amp; F \\ F &amp; F &amp; T \\ \hline \end{array}\)</span></p>
+class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; q &amp; p \leftrightarrow q  \\
+\hline
+T &amp; T &amp; T \\
+T &amp; F &amp; F \\
+F &amp; T &amp; F \\
+F &amp; F &amp; T \\
+\hline
+\end{array}\)</span></p>
 </div>
 <div id="right">
 <p>Here is an example of a biconditional.</p>
-<ul>
-<li class="fragment"><span class="math inline">\(p\)</span>: “It is
-sunny.’’</li>
-<li class="fragment"><span class="math inline">\(q\)</span>: “I walk to
-campus.’’</li>
-<li class="fragment"><span class="math inline">\(q \leftrightarrow
-p\)</span>: “I walk to campus if and only if it is sunny.’’</li>
+<ul class="incremental">
+<li><span class="math inline">\(p\)</span>: “It is sunny.’’</li>
+<li><span class="math inline">\(q\)</span>: “I walk to campus.’’</li>
+<li><span class="math inline">\(q \leftrightarrow p\)</span>: “I walk to
+campus if and only if it is sunny.’’</li>
 </ul>
 <p>The biconditional (<span class="math inline">\(p \leftrightarrow
 q\)</span>) is <span class="math inline">\(\texttt{True}\)</span> if it
@@ -503,39 +560,33 @@ campus (<span class="math inline">\(q\)</span> is <span
 class="math inline">\(\texttt{True}\)</span>), this biconditional is
 <span class="math inline">\(\texttt{False}\)</span>.</p>
 </div>
-</section>
-<section id="order-of-operations" class="slide level2">
-<h2>Order Of Operations</h2>
-<ul>
-<li class="fragment">Negations: <span
-class="math inline">\(\neg\)</span></li>
-<li class="fragment">Conjunctions: <span
-class="math inline">\(\land\)</span></li>
-<li class="fragment">Disjunctions: <span
-class="math inline">\(\lor\)</span></li>
+</div>
+<div id="order-of-operations" class="slide section level2">
+<h1>Order Of Operations</h1>
+<ul class="incremental">
+<li>Negations: <span class="math inline">\(\neg\)</span></li>
+<li>Conjunctions: <span class="math inline">\(\land\)</span></li>
+<li>Disjunctions: <span class="math inline">\(\lor\)</span></li>
 </ul>
 <p>Everything else can be written as a combination of the above three,
 but in general, it’s best to always clarify order of operations using
 parentheses!</p>
-</section>
-<section id="logical-equivalences" class="slide level2">
-<h2>Logical Equivalences</h2>
-<div>
+</div>
+<div id="logical-equivalences" class="slide section level2">
+<h1>Logical Equivalences</h1>
 <p>Logical expressions that result in the same truth values are
 considered <em>logical equivalences</em>.</p>
-<ul>
-<li class="fragment">One useful equivalence is <em>DeMorgan’s Law</em>.
-It states: <br> <span class="math display">\[ \neg (p \land q) \equiv
-\neg p \lor \neg q \]</span> <span class="math display">\[ \neg (p \lor
-q) \equiv \neg p \land \neg q \]</span></li>
-<li class="fragment">Another useful equivalence is: <br> <span
-class="math display">\[ p \rightarrow q \equiv \neg p \lor q
-\]</span></li>
+<ul class="incremental">
+<li>One useful equivalence is <em>DeMorgan’s Law</em>. It states: <br>
+<span class="math display">\[ \neg (p \land q) \equiv \neg p \lor \neg q
+\]</span> <span class="math display">\[ \neg (p \lor q) \equiv \neg p
+\land \neg q \]</span></li>
+<li>Another useful equivalence is: <br> <span class="math display">\[ p
+\rightarrow q \equiv \neg p \lor q \]</span></li>
 </ul>
 </div>
-</section>
-<section id="common-logical-equivalences" class="slide level2">
-<h2>Common Logical Equivalences</h2>
+<div id="common-logical-equivalences" class="slide section level2">
+<h1>Common Logical Equivalences</h1>
 <div id="smalltext">
 <span class="math display">\[\begin{array}{l l}
 \textbf{Commutative Laws} &amp;
@@ -595,24 +646,31 @@ p \land (p\lor  q)\equiv p\\
 p \implies q \equiv \neg p \lor q\\
 \end{array}\]</span>
 </div>
-</section>
-<section id="proving-equivalences" class="slide level2">
-<h2>Proving Equivalences</h2>
+</div>
+<div id="proving-equivalences" class="slide section level2">
+<h1>Proving Equivalences</h1>
 <p>Logical Equivalences can be proven two different ways:</p>
-<ol type="1">
-<li class="fragment">Using Truth Tables</li>
-<li class="fragment">Directly, using other logical equivalences</li>
+<ol class="incremental" style="list-style-type: decimal">
+<li>Using Truth Tables</li>
+<li>Directly, using other logical equivalences</li>
 </ol>
-</section>
-<section id="proving-equivalences---example-1" class="slide level2">
-<h2>Proving Equivalences - Example 1</h2>
+</div>
+<div id="proving-equivalences---example-1" class="slide section level2">
+<h1>Proving Equivalences - Example 1</h1>
 <p>We can prove the first part of DeMorgan’s Law <br> (<span
 class="math inline">\(\neg (p \land q) \equiv \neg p \lor \neg
 q\)</span>) using a truth table.</p>
-<p><span class="math inline">\(\begin{array}{|c|c|c|c|c|c|c|} \hline p
-&amp; q &amp; \neg p &amp; \neg q &amp; p \land q &amp; \neg(p \land q)
-&amp; \neg p \lor \neg q \\ \hline T &amp; T \\ T &amp; F \\ F &amp; T
-\\ F &amp; F \\ \hline \end{array}\)</span></p>
+<p><span class="math inline">\(\begin{array}{|c|c|c|c|c|c|c|}
+\hline
+p  &amp; q &amp; \neg p &amp; \neg q &amp; p \land q &amp; \neg(p \land
+q) &amp; \neg p \lor \neg q \\
+\hline
+T &amp; T  \\
+T &amp; F  \\
+F &amp; T  \\
+F &amp; F  \\
+\hline
+\end{array}\)</span></p>
 <!-- 
 ## Proving Equivalences
 We can prove the first part of DeMorgan's Law <br> ($\neg (p \land q) \equiv \neg p \lor \neg q$) using a truth table.
@@ -655,26 +713,32 @@ F & T  & T & F & F & T\\
 F & F & T & T & F & T \\
 \hline
 \end{array}$ -->
-</section>
-<section id="proving-equivalences---example-1-1" class="slide level2">
-<h2>Proving Equivalences - Example 1</h2>
+</div>
+<div id="proving-equivalences---example-1-1"
+class="slide section level2">
+<h1>Proving Equivalences - Example 1</h1>
 <p>We can prove the first part of DeMorgan’s Law <br> (<span
 class="math inline">\(\neg (p \land q) \equiv \neg p \lor \neg
 q\)</span>) using a truth table.</p>
-<p><span class="math inline">\(\begin{array}{|c|c|c|c|c|c|c|} \hline p
-&amp; q &amp; \neg p &amp; \neg q &amp; p \land q &amp; \neg(p \land q)
-&amp; \neg p \lor \neg q \\ \hline T &amp; T &amp; F &amp; F &amp; T
-&amp; F &amp; F\\ T &amp; F &amp; F &amp; T &amp; F &amp; T &amp; T\\ F
-&amp; T &amp; T &amp; F &amp; F &amp; T &amp; T\\ F &amp; F &amp; T
-&amp; T &amp; F &amp; T &amp; T \\ \hline \end{array}\)</span></p>
+<p><span class="math inline">\(\begin{array}{|c|c|c|c|c|c|c|}
+\hline
+p  &amp; q &amp; \neg p &amp; \neg q &amp; p \land q &amp; \neg(p \land
+q) &amp; \neg p \lor \neg q \\
+\hline
+T &amp; T &amp; F &amp; F &amp; T &amp; F &amp; F\\
+T &amp; F &amp; F &amp; T  &amp; F &amp; T &amp; T\\
+F &amp; T  &amp; T &amp; F &amp; F &amp; T &amp; T\\
+F &amp; F &amp; T &amp; T &amp; F &amp; T &amp; T \\
+\hline
+\end{array}\)</span></p>
 <p>The columns for <span class="math inline">\(\neg(p \land q)\)</span>
 and <span class="math inline">\(\neg p \lor \neg q\)</span> are equal,
 so this means <span class="math inline">\(\neg(p \land q)\)</span> and
 <span class="math inline">\(\neg p \lor \neg q\)</span> are
 <em>logically equivalent</em>!</p>
-</section>
-<section id="proving-equivalences---example-2" class="slide level2">
-<h2>Proving Equivalences - Example 2</h2>
+</div>
+<div id="proving-equivalences---example-2" class="slide section level2">
+<h1>Proving Equivalences - Example 2</h1>
 Prove <span class="math inline">\((a \land \neg b) \rightarrow c \equiv
 \neg a \lor b \lor c\)</span> directly using existing logical
 equivalences.
@@ -687,9 +751,10 @@ equivalences.
 \equiv \neg a \lor b \lor c &amp; \\
 \hline
 \end{array}\]</span>
-</section>
-<section id="proving-equivalences---example-2-1" class="slide level2">
-<h2>Proving Equivalences - Example 2</h2>
+</div>
+<div id="proving-equivalences---example-2-1"
+class="slide section level2">
+<h1>Proving Equivalences - Example 2</h1>
 Prove <span class="math inline">\((a \land \neg b) \rightarrow c \equiv
 \neg a \lor b \lor c\)</span> directly using existing logical
 equivalences.
@@ -704,9 +769,10 @@ equivalences.
 &amp; \\
 \hline
 \end{array}\]</span>
-</section>
-<section id="proving-equivalences---example-2-2" class="slide level2">
-<h2>Proving Equivalences - Example 2</h2>
+</div>
+<div id="proving-equivalences---example-2-2"
+class="slide section level2">
+<h1>Proving Equivalences - Example 2</h1>
 Prove <span class="math inline">\((a \land \neg b) \rightarrow c \equiv
 \neg a \lor b \lor c\)</span> directly using existing logical
 equivalences.
@@ -723,44 +789,57 @@ equivalences.
 \equiv \neg a \lor b \lor c &amp; \textbf{Double Negation}\\
 \hline
 \end{array}\]</span>
-</section>
-<section id="other-considerations" class="slide level2">
-<h2>Other Considerations</h2>
-<ul>
-<li class="fragment">A truth table computes all possible combinations of
-<span class="math inline">\(n\)</span> propositions, so a truth table
-always has how many rows?</li>
+</div>
+<div id="other-considerations" class="slide section level2">
+<h1>Other Considerations</h1>
+<ul class="incremental">
+<li>A truth table computes all possible combinations of <span
+class="math inline">\(n\)</span> propositions, so a truth table always
+has how many rows?</li>
 </ul>
 <p>propositions = <span class="math inline">\(\{p\}\)</span></p>
 <p>truth values = <span class="math inline">\(\{\texttt{True},
 \texttt{False}\}\)</span></p>
 <p>Truth table:</p>
-<p><span class="math inline">\(\begin{array}{|c|} \hline p \\ \hline T
-\\ F \\ \hline \end{array}\)</span></p>
+<p><span class="math inline">\(\begin{array}{|c|}
+\hline
+p    \\
+\hline
+T  \\
+F \\
+\hline
+\end{array}\)</span></p>
 <p>2 rows…</p>
-</section>
-<section id="other-considerations-1" class="slide level2">
-<h2>Other Considerations</h2>
-<ul>
-<li class="fragment">A truth table computes all possible combinations of
-<span class="math inline">\(n\)</span> propositions, so a truth table
-always has how many rows?</li>
+</div>
+<div id="other-considerations-1" class="slide section level2">
+<h1>Other Considerations</h1>
+<ul class="incremental">
+<li>A truth table computes all possible combinations of <span
+class="math inline">\(n\)</span> propositions, so a truth table always
+has how many rows?</li>
 </ul>
 <p>propositions = <span class="math inline">\(\{p, q\}\)</span></p>
 <p>truth values = <span class="math inline">\(\{\texttt{True},
 \texttt{False}\}\)</span></p>
 <p>Truth table:</p>
-<p><span class="math inline">\(\begin{array}{|c|c|} \hline p &amp; q \\
-\hline T &amp; T \\ T &amp; F \\ F &amp; T \\ F &amp; F \\ \hline
+<p><span class="math inline">\(\begin{array}{|c|c|}
+\hline
+p  &amp; q  \\
+\hline
+T &amp; T \\
+T &amp; F \\
+F &amp; T \\
+F &amp; F \\
+\hline
 \end{array}\)</span></p>
 <p>4 rows…</p>
-</section>
-<section id="other-considerations-2" class="slide level2">
-<h2>Other Considerations</h2>
-<ul>
-<li class="fragment">A truth table computes all possible combinations of
-<span class="math inline">\(n\)</span> propositions, so a truth table
-always has how many rows?</li>
+</div>
+<div id="other-considerations-2" class="slide section level2">
+<h1>Other Considerations</h1>
+<ul class="incremental">
+<li>A truth table computes all possible combinations of <span
+class="math inline">\(n\)</span> propositions, so a truth table always
+has how many rows?</li>
 </ul>
 <p>propositions = <span class="math inline">\(\{p,q,...\}\)</span> <span
 class="math inline">\(\leftarrow\)</span> <span
@@ -768,13 +847,13 @@ class="math inline">\(n\)</span> propositions</p>
 <p>truth values = <span class="math inline">\(\{\texttt{True},
 \texttt{False}\}\)</span></p>
 <p>?</p>
-</section>
-<section id="other-considerations-3" class="slide level2">
-<h2>Other Considerations</h2>
-<ul>
-<li class="fragment">A truth table computes all possible combinations of
-<span class="math inline">\(n\)</span> propositions, so a truth table
-always has how many rows?</li>
+</div>
+<div id="other-considerations-3" class="slide section level2">
+<h1>Other Considerations</h1>
+<ul class="incremental">
+<li>A truth table computes all possible combinations of <span
+class="math inline">\(n\)</span> propositions, so a truth table always
+has how many rows?</li>
 </ul>
 <p>propositions = <span class="math inline">\(\{p,q,...\}\)</span> <span
 class="math inline">\(\leftarrow\)</span> <span
@@ -782,178 +861,173 @@ class="math inline">\(n\)</span> propositions</p>
 <p>truth values = <span class="math inline">\(\{\texttt{True},
 \texttt{False}\}\)</span></p>
 <p><span class="math inline">\(2^n\)</span> rows!</p>
-</section>
-<section id="tautologies" class="slide level2">
-<h2>Tautologies</h2>
-<ul>
-<li class="fragment">Notice that a combination of propositions using
-operators (e.g. <span class="math inline">\(p \land q\)</span> makes a
-new proposition. These can also be called <em>compound
+</div>
+<div id="tautologies" class="slide section level2">
+<h1>Tautologies</h1>
+<ul class="incremental">
+<li>Notice that a combination of propositions using operators
+(e.g. <span class="math inline">\(p \land q\)</span> makes a new
+proposition. These can also be called <em>compound
 propositions</em>.</li>
-<li class="fragment">A compound proposition with a truth table where all
-the values in the last column are <span
-class="math inline">\(\texttt{True}\)</span> is called a
-<em>tautology</em>.</li>
-<li class="fragment">An example of this is <span class="math inline">\(p
-\lor \neg p\)</span>.</li>
+<li>A compound proposition with a truth table where all the values in
+the last column are <span class="math inline">\(\texttt{True}\)</span>
+is called a <em>tautology</em>.</li>
+<li>An example of this is <span class="math inline">\(p \lor \neg
+p\)</span>.</li>
 </ul>
-<p><span class="math inline">\(\begin{array}{|c|c|c|} \hline p &amp;
-\neg p &amp; p \lor \neg p \\ \hline T &amp; F &amp; T \\ F &amp; T
-&amp; T \\ \hline \end{array}\)</span></p>
+<p><span class="math inline">\(\begin{array}{|c|c|c|}
+\hline
+p  &amp; \neg p &amp; p \lor \neg p  \\
+\hline
+T &amp; F &amp; T \\
+F &amp; T &amp; T \\
+\hline
+\end{array}\)</span></p>
 <p>For all values, <span class="math inline">\(p \lor \neg p\)</span>
 evaluates to <span class="math inline">\(\texttt{True}\)</span>!</p>
-</section>
-<section id="translating-english-sentences" class="slide level2">
-<h2>Translating English Sentences</h2>
+</div>
+<div id="translating-english-sentences" class="slide section level2">
+<h1>Translating English Sentences</h1>
 <p>To translate logic to and from English sentences, it is important to
 know the common phrases for the operators.</p>
-<ul>
-<li class="fragment"><span class="math inline">\(\neg p\)</span>
-(Negation): “not <span class="math inline">\(p\)</span>”</li>
-<li class="fragment"><span class="math inline">\(p \land q\)</span>
-(Conjunction): “<span class="math inline">\(p\)</span> and <span
+<ul class="incremental">
+<li><span class="math inline">\(\neg p\)</span> (Negation): “not <span
+class="math inline">\(p\)</span>”</li>
+<li><span class="math inline">\(p \land q\)</span> (Conjunction): “<span
+class="math inline">\(p\)</span> and <span
 class="math inline">\(q\)</span>”</li>
-<li class="fragment"><span class="math inline">\(p \lor q\)</span>
-(Disjunction): “<span class="math inline">\(p\)</span> or <span
+<li><span class="math inline">\(p \lor q\)</span> (Disjunction): “<span
+class="math inline">\(p\)</span> or <span
 class="math inline">\(q\)</span>”</li>
-<li class="fragment"><span class="math inline">\(p \oplus q\)</span>
-(Exclusive Or): “<span class="math inline">\(p\)</span> xor <span
+<li><span class="math inline">\(p \oplus q\)</span> (Exclusive Or):
+“<span class="math inline">\(p\)</span> xor <span
 class="math inline">\(q\)</span>”; “<span
 class="math inline">\(p\)</span> or <span
 class="math inline">\(q\)</span>, but not both”</li>
-<li class="fragment"><span class="math inline">\(p \rightarrow
-q\)</span> (Conditional/Implication): “<span
-class="math inline">\(p\)</span> implies <span
-class="math inline">\(q\)</span>”; “if <span
+<li><span class="math inline">\(p \rightarrow q\)</span>
+(Conditional/Implication): “<span class="math inline">\(p\)</span>
+implies <span class="math inline">\(q\)</span>”; “if <span
 class="math inline">\(p\)</span> then <span
 class="math inline">\(q\)</span>”; “<span
 class="math inline">\(q\)</span> if <span
 class="math inline">\(p\)</span>”</li>
-<li class="fragment"><span class="math inline">\(p \leftrightarrow
-q\)</span> or <span class="math inline">\(p\)</span> iff <span
+<li><span class="math inline">\(p \leftrightarrow q\)</span> or <span
+class="math inline">\(p\)</span> iff <span
 class="math inline">\(q\)</span> (Biconditional): “<span
 class="math inline">\(p\)</span> if and only if <span
 class="math inline">\(q\)</span>”</li>
 </ul>
-</section>
-<section id="translating-english-sentences-1" class="slide level2">
-<h2>Translating English Sentences</h2>
+</div>
+<div id="translating-english-sentences-1" class="slide section level2">
+<h1>Translating English Sentences</h1>
 <div id="text">
 <p>Here’s an example of breaking up an English language sentence.</p>
-<ul>
-<li class="fragment">Start with the sentence: “You cannot ride the
-roller coaster if you are under 4 feet tall.’’</li>
-<li class="fragment">Then, you break your sentence to the smallest
-propositions possible.</li>
-<li class="fragment"><span class="math inline">\(a\)</span> = “You can
-ride the roller coaster’’</li>
-<li class="fragment"><span class="math inline">\(b\)</span> = “you are
-under 4 feet tall’’</li>
-<li class="fragment">Now your sentence is: Not <span
-class="math inline">\(a\)</span> if <span
-class="math inline">\(b\)</span>.</li>
-<li class="fragment">So you know you can write it as: <span
-class="math inline">\(b \rightarrow \neg a\)</span>.</li>
-<li class="fragment">Notes:
-<ul>
-<li class="fragment">If it doesn’t directly match any of the phrases
-listed, use truth tables to see what it matches.</li>
-<li class="fragment">Sometimes it takes a little
-experimenting/practice</li>
+<ul class="incremental">
+<li>Start with the sentence: “You cannot ride the roller coaster if you
+are under 4 feet tall.’’</li>
+<li>Then, you break your sentence to the smallest propositions
+possible.</li>
+<li><span class="math inline">\(a\)</span> = “You can ride the roller
+coaster’’</li>
+<li><span class="math inline">\(b\)</span> = “you are under 4 feet
+tall’’</li>
+<li>Now your sentence is: Not <span class="math inline">\(a\)</span> if
+<span class="math inline">\(b\)</span>.</li>
+<li>So you know you can write it as: <span class="math inline">\(b
+\rightarrow \neg a\)</span>.</li>
+<li>Notes:
+<ul class="incremental">
+<li>If it doesn’t directly match any of the phrases listed, use truth
+tables to see what it matches.</li>
+<li>Sometimes it takes a little experimenting/practice</li>
 </ul></li>
 </ul>
 </div>
-</section>
-<section id="using-logic-for-problem-solving" class="slide level2">
-<h2>Using Logic For Problem Solving</h2>
+</div>
+<div id="using-logic-for-problem-solving" class="slide section level2">
+<h1>Using Logic For Problem Solving</h1>
 <p>The rest of these slides are optional, but they demonstrate how logic
 can be used for problem solving!</p>
-</section>
-<section id="using-logic-for-problem-solving-1" class="slide level2">
-<h2>Using Logic For Problem Solving</h2>
+</div>
+<div id="using-logic-for-problem-solving-1"
+class="slide section level2">
+<h1>Using Logic For Problem Solving</h1>
 <h3 id="knights-and-knaves-raymond-smullyan">Knights and Knaves (Raymond
 Smullyan)</h3>
 <p>On an island, every inhabitant is a knight who always tells the
 truth, or a knave who always lies. You meet three inhabitants, Alice,
 Bob, and Chris.</p>
-<ul>
-<li class="fragment">Alice says: Bob is a knave or Chris is a
-knight.</li>
-<li class="fragment">Bob says: Alice is a knight if, and only if, Chris
-is a knave.</li>
+<ul class="incremental">
+<li>Alice says: Bob is a knave or Chris is a knight.</li>
+<li>Bob says: Alice is a knight if, and only if, Chris is a knave.</li>
 </ul>
 <p>Can you determine uniquely what each of Alice, Bob, and Chris
 are?</p>
-</section>
-<section id="using-logic-for-problem-solving-2" class="slide level2">
-<h2>Using Logic For Problem Solving</h2>
+</div>
+<div id="using-logic-for-problem-solving-2"
+class="slide section level2">
+<h1>Using Logic For Problem Solving</h1>
 <h3 id="knights-and-knaves-raymond-smullyan-1">Knights and Knaves
 (Raymond Smullyan)</h3>
-<ol type="1">
-<li class="fragment">Define convenient variables for propositions.</li>
-<li class="fragment">Transform what they say into statements that
-<em>always</em> should evaluate to <span
-class="math inline">\(\texttt{True}\)</span>. These are the rules of our
-world.</li>
-<li class="fragment">Make a truth table – With 3 people, we have <span
+<ol class="incremental" style="list-style-type: decimal">
+<li>Define convenient variables for propositions.</li>
+<li>Transform what they say into statements that <em>always</em> should
+evaluate to <span class="math inline">\(\texttt{True}\)</span>. These
+are the rules of our world.</li>
+<li>Make a truth table – With 3 people, we have <span
 class="math inline">\(2^3\)</span> rows</li>
-<li class="fragment">Check if a unique row makes both statements
-true.</li>
+<li>Check if a unique row makes both statements true.</li>
 </ol>
-</section>
-<section id="using-logic-for-problem-solving-3" class="slide level2">
-<h2>Using Logic For Problem Solving</h2>
+</div>
+<div id="using-logic-for-problem-solving-3"
+class="slide section level2">
+<h1>Using Logic For Problem Solving</h1>
 <h3 id="knights-and-knaves-raymond-smullyan-2">Knights and Knaves
 (Raymond Smullyan)</h3>
 <span class="math inline">\(1.\)</span> Define convenient variables for
 propositions.
 <div id="left">
-<ul>
-<li class="fragment"><span class="math inline">\(A =\)</span> “Alice is
-a knight”</li>
-<li class="fragment"><span class="math inline">\(B =\)</span> “Bob is a
-knight”</li>
-<li class="fragment"><span class="math inline">\(C=\)</span> “Chris is a
-knight”</li>
+<ul class="incremental">
+<li><span class="math inline">\(A =\)</span> “Alice is a knight”</li>
+<li><span class="math inline">\(B =\)</span> “Bob is a knight”</li>
+<li><span class="math inline">\(C=\)</span> “Chris is a knight”</li>
 </ul>
 </div>
 <div id="right">
-<ul>
-<li class="fragment"><span class="math inline">\(\neg A =\)</span>
-“Alice is a knave”</li>
-<li class="fragment"><span class="math inline">\(\neg B =\)</span> “Bob
-is a knave”</li>
-<li class="fragment"><span class="math inline">\(\neg C=\)</span> “Chris
-is a knave”</li>
+<ul class="incremental">
+<li><span class="math inline">\(\neg A =\)</span> “Alice is a
+knave”</li>
+<li><span class="math inline">\(\neg B =\)</span> “Bob is a knave”</li>
+<li><span class="math inline">\(\neg C=\)</span> “Chris is a knave”</li>
 </ul>
 </div>
-</section>
-<section id="using-logic-for-problem-solving-4" class="slide level2">
-<h2>Using Logic For Problem Solving</h2>
+</div>
+<div id="using-logic-for-problem-solving-4"
+class="slide section level2">
+<h1>Using Logic For Problem Solving</h1>
 <div id="text">
 <p><span class="math inline">\(2.\)</span> Transform what they say into
 statements that <em>always</em> should evaluate to <span
 class="math inline">\(\texttt{True}\)</span>. These are the rules of our
 world.</p>
-<ul>
-<li class="fragment">Alice says: Bob is a knave or Chris is a
-knight.</li>
-<li class="fragment">Bob says: Alice is a knight if, and only if, Chris
-is a knave.</li>
+<ul class="incremental">
+<li>Alice says: Bob is a knave or Chris is a knight.</li>
+<li>Bob says: Alice is a knight if, and only if, Chris is a knave.</li>
 </ul>
 </div>
-</section>
-<section id="using-logic-for-problem-solving-5" class="slide level2">
-<h2>Using Logic For Problem Solving</h2>
+</div>
+<div id="using-logic-for-problem-solving-5"
+class="slide section level2">
+<h1>Using Logic For Problem Solving</h1>
 <div id="text">
 <p><span class="math inline">\(2.\)</span> Transform what they say into
 statements that <em>always</em> should evaluate to <span
 class="math inline">\(\texttt{True}\)</span>. These are the rules of our
 world.</p>
-<ul>
-<li class="fragment">Alice says: Bob is a knave <span
-class="math inline">\(\lor\)</span> Chris is a knight</li>
-<li class="fragment">Bob says: Alice is a knight <span
+<ul class="incremental">
+<li>Alice says: Bob is a knave <span class="math inline">\(\lor\)</span>
+Chris is a knight</li>
+<li>Bob says: Alice is a knight <span
 class="math inline">\(\leftrightarrow\)</span> Chris is a knave</li>
 </ul>
 <p>(Propositions:</p>
@@ -964,19 +1038,19 @@ class="math inline">\(\neg A =\)</span> “Alice is a knave”, <span
 class="math inline">\(\neg B =\)</span> “Bob is a knave”,<span
 class="math inline">\(\neg C=\)</span> “Chris is a knave”})</p>
 </div>
-</section>
-<section id="using-logic-for-problem-solving-6" class="slide level2">
-<h2>Using Logic For Problem Solving</h2>
+</div>
+<div id="using-logic-for-problem-solving-6"
+class="slide section level2">
+<h1>Using Logic For Problem Solving</h1>
 <div id="text">
 <p><span class="math inline">\(2.\)</span> Transform what they say into
 statements that <em>always</em> should evaluate to <span
 class="math inline">\(\texttt{True}\)</span>. These are the rules of our
 world.</p>
-<ul>
-<li class="fragment">Alice says: <span class="math inline">\(\neg B \lor
+<ul class="incremental">
+<li>Alice says: <span class="math inline">\(\neg B \lor C\)</span></li>
+<li>Bob says: <span class="math inline">\(A \leftrightarrow \neg
 C\)</span></li>
-<li class="fragment">Bob says: <span class="math inline">\(A
-\leftrightarrow \neg C\)</span></li>
 </ul>
 <p>(Propositions:</p>
 <p><span class="math inline">\(\{A =\)</span> “Alice is a knight”, <span
@@ -986,55 +1060,71 @@ class="math inline">\(\neg A =\)</span> “Alice is a knave”, <span
 class="math inline">\(\neg B =\)</span> “Bob is a knave”,<span
 class="math inline">\(\neg C=\)</span> “Chris is a knave”})</p>
 </div>
-</section>
-<section id="using-logic-for-problem-solving-7" class="slide level2">
-<h2>Using Logic For Problem Solving</h2>
+</div>
+<div id="using-logic-for-problem-solving-7"
+class="slide section level2">
+<h1>Using Logic For Problem Solving</h1>
 <div id="text">
 <p><span class="math inline">\(3.\)</span> Make a truth table</p>
 <p>Rules of the World: <span class="math inline">\(A \rightarrow (\neg B
 \lor C)\)</span> and <span class="math inline">\(B \rightarrow (A
 \leftrightarrow \neg C)\)</span></p>
-<p><span class="math inline">\(\begin{array}{|c|c|c|c|c|} \hline A &amp;
-B &amp; C &amp; A \rightarrow (\neg B \lor C) &amp; B \rightarrow (A
-\leftrightarrow \neg C) \\ \hline T &amp; T &amp; T &amp; T &amp; F\\ T
-&amp; T &amp; F &amp; F &amp; T\\ \color{yellow}T &amp; \color{yellow}F
-&amp; \color{yellow}T &amp; \color{yellow}T &amp;\color{yellow}T\\
-\color{yellow}T &amp; \color{yellow}F &amp; \color{yellow}F
-&amp;\color{yellow} T &amp;\color{yellow}T\\ \color{yellow}F &amp;
-\color{yellow}T &amp; \color{yellow}T &amp; \color{yellow}T
-&amp;\color{yellow}T\\ F &amp; T &amp; F &amp; T &amp;F\\
-\color{yellow}F &amp; \color{yellow}F &amp; \color{yellow}T &amp;
-\color{yellow}T &amp;\color{yellow}T\\ \color{yellow}F &amp;
-\color{yellow}F &amp; \color{yellow}F &amp; \color{yellow}T
-&amp;\color{yellow}T\\ \hline \end{array}\)</span></p>
+<p><span class="math inline">\(\begin{array}{|c|c|c|c|c|}
+\hline
+A &amp; B &amp; C &amp;  A \rightarrow (\neg B \lor C) &amp; B
+\rightarrow (A \leftrightarrow \neg C) \\
+\hline
+T &amp; T &amp; T &amp; T &amp; F\\
+T &amp; T &amp; F &amp; F &amp; T\\
+\color{green}T &amp; \color{green}F &amp; \color{green}T &amp;
+\color{green}T &amp;\color{green}T\\
+\color{green}T &amp; \color{green}F &amp; \color{green}F
+&amp;\color{green} T &amp;\color{green}T\\
+\color{green}F &amp; \color{green}T &amp; \color{green}T
+&amp;  \color{green}T &amp;\color{green}T\\
+F &amp; T &amp; F &amp; T &amp;F\\
+\color{green}F &amp; \color{green}F &amp; \color{green}T &amp;
+\color{green}T &amp;\color{green}T\\
+\color{green}F &amp; \color{green}F &amp; \color{green}F &amp;
+\color{green}T &amp;\color{green}T\\
+\hline
+\end{array}\)</span></p>
 </div>
-</section>
-<section id="using-logic-for-problem-solving-8" class="slide level2">
-<h2>Using Logic For Problem Solving</h2>
+</div>
+<div id="using-logic-for-problem-solving-8"
+class="slide section level2">
+<h1>Using Logic For Problem Solving</h1>
 <div id="text">
 <p><span class="math inline">\(4.\)</span> Check if a unique row makes
 both statements true.</p>
 <!-- Rules of the World: $A \rightarrow (\neg B \lor C)$ and $B \rightarrow (A \leftrightarrow \neg C)$  -->
-<p><span class="math inline">\(\begin{array}{|c|c|c|c|c|} \hline A &amp;
-B &amp; C &amp; A \rightarrow (\neg B \lor C) &amp; B \rightarrow (A
-\leftrightarrow \neg C) \\ \hline T &amp; T &amp; T &amp; T &amp; F\\ T
-&amp; T &amp; F &amp; F &amp; T\\ \color{yellow}T &amp; \color{yellow}F
-&amp; \color{yellow}T &amp; \color{yellow}T &amp;\color{yellow}T\\
-\color{yellow}T &amp; \color{yellow}F &amp; \color{yellow}F
-&amp;\color{yellow} T &amp;\color{yellow}T\\ \color{yellow}F &amp;
-\color{yellow}T &amp; \color{yellow}T &amp; \color{yellow}T
-&amp;\color{yellow}T\\ F &amp; T &amp; F &amp; T &amp;F\\
-\color{yellow}F &amp; \color{yellow}F &amp; \color{yellow}T &amp;
-\color{yellow}T &amp;\color{yellow}T\\ \color{yellow}F &amp;
-\color{yellow}F &amp; \color{yellow}F &amp; \color{yellow}T
-&amp;\color{yellow}T\\ \hline \end{array}\)</span></p>
+<p><span class="math inline">\(\begin{array}{|c|c|c|c|c|}
+\hline
+A &amp; B &amp; C &amp;  A \rightarrow (\neg B \lor C) &amp; B
+\rightarrow (A \leftrightarrow \neg C) \\
+\hline
+T &amp; T &amp; T &amp; T &amp; F\\
+T &amp; T &amp; F &amp; F &amp; T\\
+\color{green}T &amp; \color{green}F &amp; \color{green}T &amp;
+\color{green}T &amp;\color{green}T\\
+\color{green}T &amp; \color{green}F &amp; \color{green}F
+&amp;\color{green} T &amp;\color{green}T\\
+\color{green}F &amp; \color{green}T &amp; \color{green}T
+&amp;  \color{green}T &amp;\color{green}T\\
+F &amp; T &amp; F &amp; T &amp;F\\
+\color{green}F &amp; \color{green}F &amp; \color{green}T &amp;
+\color{green}T &amp;\color{green}T\\
+\color{green}F &amp; \color{green}F &amp; \color{green}F &amp;
+\color{green}T &amp;\color{green}T\\
+\hline
+\end{array}\)</span></p>
 <!-- $\begin{array}{|c|c|c|c|c|}
 \hline
 A & B & C &  A \rightarrow (\neg B \lor C) & B \rightarrow (A \leftrightarrow \neg C) \\
 \hline
 T & T & T & T & F\\
 T&T&F&F&T\\
-\color{yellow}T & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
+\color{green}T & \color{green}F & \color{green}T & \color{green}T &\color{green}T\\
 T & F & F & T & T\\ 
 F & T & T &  T &T\\
 F & T & F & T &F\\
@@ -1042,38 +1132,37 @@ F & F & T & T & T\\
 F & F & F & T &T\\
 \hline
 \end{array}$ -->
-<p><strong>All of the values in yellow are assignments that could work!
+<p><strong>All of the values in green are assignments that could work!
 Let’s test one of these!</strong></p>
 </div>
-</section>
-<section id="testing-a-solution" class="slide level2">
-<h2>Testing A Solution…</h2>
+</div>
+<div id="testing-a-solution" class="slide section level2">
+<h1>Testing A Solution…</h1>
 <div id="text">
 <p><span class="math inline">\(A = T, B = F, C = T\)</span></p>
 <p>So, Alice is a knight, Bob is a knave, and Chris is a knight.</p>
-<ul>
-<li class="fragment">Alice says: Bob is a knave or Chris is a knight.
-<ul>
-<li class="fragment"><span class="math inline">\(A \rightarrow (\neg B
-\lor C)\)</span></li>
-<li class="fragment"><span class="math inline">\(T \rightarrow (\neg(F)
-\lor T)\)</span> evaluates to True!</li>
+<ul class="incremental">
+<li>Alice says: Bob is a knave or Chris is a knight.
+<ul class="incremental">
+<li><span class="math inline">\(A \rightarrow (\neg B \lor
+C)\)</span></li>
+<li><span class="math inline">\(T \rightarrow (\neg(F) \lor T)\)</span>
+evaluates to True!</li>
 </ul></li>
-<li class="fragment">Bob says: Alice is a knight if, and only if, Chris
-is a knave.
-<ul>
-<li class="fragment"><span class="math inline">\(B \rightarrow (A
-\leftrightarrow \neg C)\)</span></li>
-<li class="fragment"><span class="math inline">\(F \rightarrow (T
-\leftrightarrow \neg T)\)</span> evaluates to True!</li>
+<li>Bob says: Alice is a knight if, and only if, Chris is a knave.
+<ul class="incremental">
+<li><span class="math inline">\(B \rightarrow (A \leftrightarrow \neg
+C)\)</span></li>
+<li><span class="math inline">\(F \rightarrow (T \leftrightarrow \neg
+T)\)</span> evaluates to True!</li>
 </ul></li>
 </ul>
 <p>Both of our rules hold in this world with these assignments, so we
 know that this solution works!</p>
 </div>
-</section>
-<section id="why-this-isnt-a-good-problem" class="slide level2">
-<h2>Why this isn’t a good problem…</h2>
+</div>
+<div id="why-this-isnt-a-good-problem" class="slide section level2">
+<h1>Why this isn’t a good problem…</h1>
 <div id="text">
 <p>This problem isn’t explicit enough, so we found ourselves making an
 assumption.</p>
@@ -1081,28 +1170,28 @@ assumption.</p>
 actually know whether or not what they are saying is the truth, so their
 claim could either be true or false. This is why we were able to use
 implication.</p>
-<ul>
-<li class="fragment">Alice says: Bob is a knave or Chris is a knight.
-<ul>
-<li class="fragment"><span class="math inline">\(A \rightarrow (\neg B
-\lor C)\)</span></li>
+<ul class="incremental">
+<li>Alice says: Bob is a knave or Chris is a knight.
+<ul class="incremental">
+<li><span class="math inline">\(A \rightarrow (\neg B \lor
+C)\)</span></li>
 </ul></li>
 </ul>
 <p>However, what if we assumed that if someone is lying, they know their
 claim is false?</p>
 </div>
-</section>
-<section id="why-this-isnt-a-good-problem-1" class="slide level2">
-<h2>Why this isn’t a good problem…</h2>
+</div>
+<div id="why-this-isnt-a-good-problem-1" class="slide section level2">
+<h1>Why this isn’t a good problem…</h1>
 <div id="text">
 <p>If we assume that if someone is lying, they know their claim is
 false, then we would have to explain our rules using a
 <em>biconditional</em>.</p>
-<ul>
-<li class="fragment">Alice says: Bob is a knave or Chris is a knight.
-<ul>
-<li class="fragment"><span class="math inline">\(A \leftrightarrow (\neg
-B \lor C)\)</span></li>
+<ul class="incremental">
+<li>Alice says: Bob is a knave or Chris is a knight.
+<ul class="incremental">
+<li><span class="math inline">\(A \leftrightarrow (\neg B \lor
+C)\)</span></li>
 </ul></li>
 </ul>
 <p>Therefore, our answer is correct for what we <em>assume</em> the
@@ -1110,188 +1199,6 @@ rules of the world are, but that might not match the author of the
 puzzle’s original intention. This shows the benefit of logic! We can use
 it to address these ambiguities!</p>
 </div>
-</section>
-    </div>
-  </div>
-
-  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
-
-  <!-- reveal.js plugins -->
-  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
-  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
-  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
-
-  <script>
-
-      // Full list of configuration options available at:
-      // https://revealjs.com/config/
-      Reveal.initialize({
-        // Display controls in the bottom right corner
-        controls: true,
-
-        // Help the user learn the controls by providing hints, for example by
-        // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: true,
-
-        // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'bottom-right',
-
-        // Visibility rule for backwards navigation arrows; "faded", "hidden"
-        // or "visible"
-        controlsBackArrows: 'faded',
-
-        // Display a presentation progress bar
-        progress: true,
-
-        // Display the page number of the current slide
-        slideNumber: false,
-
-        // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
-
-        // Add the current slide number to the URL hash so that reloading the
-        // page/copying the URL will return you to the same slide
-        hash: true,
-
-        // Start with 1 for the hash rather than 0
-        hashOneBasedIndex: false,
-
-        // Flags if we should monitor the hash and change slides accordingly
-        respondToHashChanges: true,
-
-        // Push each slide change to the browser history
-        history: false,
-
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-
-        // Enable the slide overview mode
-        overview: true,
-
-        // Disables the default reveal.js slide layout (scaling and centering)
-        // so that you can use custom CSS layout
-        disableLayout: false,
-
-        // Vertical centering of slides
-        center: false,
-
-        // Enables touch navigation on devices with touch input
-        touch: true,
-
-        // Loop the presentation
-        loop: false,
-
-        // Change the presentation direction to be RTL
-        rtl: false,
-
-        // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'default',
-
-        // Randomizes the order of slides each time the presentation loads
-        shuffle: false,
-
-        // Turns fragments on and off globally
-        fragments: true,
-
-        // Flags whether to include the current fragment in the URL,
-        // so that reloading brings you to the same fragment position
-        fragmentInURL: true,
-
-        // Flags if the presentation is running in an embedded mode,
-        // i.e. contained within a limited portion of the screen
-        embedded: false,
-
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-
-        // Flags if it should be possible to pause the presentation (blackout)
-        pause: true,
-
-        // Flags if speaker notes should be visible to all viewers
-        showNotes: false,
-
-        // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: null,
-
-        // Global override for preloading lazy-loaded iframes (null/true/false)
-        preloadIframes: null,
-
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
-
-        // Use this method for navigation when auto-sliding
-        autoSlideMethod: null,
-
-        // Specify the average time in seconds that you think you will spend
-        // presenting each slide. This is used to show a pacing timer in the
-        // speaker view
-        defaultTiming: null,
-
-        // Enable slide navigation via mouse wheel
-        mouseWheel: false,
-
-        // The display mode that will be used to show slides
-        display: 'block',
-
-        // Hide cursor if inactive
-        hideInactiveCursor: true,
-
-        // Time before the cursor is hidden (in ms)
-        hideCursorTime: 5000,
-
-        // Opens links in an iframe preview overlay
-        previewLinks: false,
-
-        // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
-
-        // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
-
-        // Transition style for full page slide backgrounds
-        // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'fade',
-
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
-
-        // Number of slides away from the current that are visible on mobile
-        // devices. It is advisable to set this to a lower number than
-        // viewDistance in order to save resources.
-        mobileViewDistance: 2,
-
-        math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
-
-        // reveal.js plugins
-        plugins: [
-          RevealMath,
-          RevealNotes,
-          RevealSearch,
-          RevealZoom
-        ]
-      });
-    </script>
-    </body>
+</div>
+</body>
 </html>

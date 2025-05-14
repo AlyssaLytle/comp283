@@ -754,12 +754,12 @@ A & B & C &  A \rightarrow (\neg B \lor C) & B \rightarrow (A \leftrightarrow \n
 \hline
 T & T & T & T & F\\
 T & T & F & F & T\\
-\color{yellow}T & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
-\color{yellow}T & \color{yellow}F & \color{yellow}F &\color{yellow} T &\color{yellow}T\\ 
-\color{yellow}F & \color{yellow}T & \color{yellow}T &  \color{yellow}T &\color{yellow}T\\
+\color{green}T & \color{green}F & \color{green}T & \color{green}T &\color{green}T\\
+\color{green}T & \color{green}F & \color{green}F &\color{green} T &\color{green}T\\ 
+\color{green}F & \color{green}T & \color{green}T &  \color{green}T &\color{green}T\\
 F & T & F & T &F\\
-\color{yellow}F & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
-\color{yellow}F & \color{yellow}F & \color{yellow}F & \color{yellow}T &\color{yellow}T\\
+\color{green}F & \color{green}F & \color{green}T & \color{green}T &\color{green}T\\
+\color{green}F & \color{green}F & \color{green}F & \color{green}T &\color{green}T\\
 \hline
 \end{array}$
 
@@ -779,12 +779,12 @@ A & B & C &  A \rightarrow (\neg B \lor C) & B \rightarrow (A \leftrightarrow \n
 \hline
 T & T & T & T & F\\
 T & T & F & F & T\\
-\color{yellow}T & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
-\color{yellow}T & \color{yellow}F & \color{yellow}F &\color{yellow} T &\color{yellow}T\\ 
-\color{yellow}F & \color{yellow}T & \color{yellow}T &  \color{yellow}T &\color{yellow}T\\
+\color{green}T & \color{green}F & \color{green}T & \color{green}T &\color{green}T\\
+\color{green}T & \color{green}F & \color{green}F &\color{green} T &\color{green}T\\ 
+\color{green}F & \color{green}T & \color{green}T &  \color{green}T &\color{green}T\\
 F & T & F & T &F\\
-\color{yellow}F & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
-\color{yellow}F & \color{yellow}F & \color{yellow}F & \color{yellow}T &\color{yellow}T\\
+\color{green}F & \color{green}F & \color{green}T & \color{green}T &\color{green}T\\
+\color{green}F & \color{green}F & \color{green}F & \color{green}T &\color{green}T\\
 \hline
 \end{array}$
 
@@ -794,7 +794,7 @@ A & B & C &  A \rightarrow (\neg B \lor C) & B \rightarrow (A \leftrightarrow \n
 \hline
 T & T & T & T & F\\
 T&T&F&F&T\\
-\color{yellow}T & \color{yellow}F & \color{yellow}T & \color{yellow}T &\color{yellow}T\\
+\color{green}T & \color{green}F & \color{green}T & \color{green}T &\color{green}T\\
 T & F & F & T & T\\ 
 F & T & T &  T &T\\
 F & T & F & T &F\\
@@ -803,7 +803,7 @@ F & F & F & T &T\\
 \hline
 \end{array}$ -->
 
-**All of the values in yellow are assignments that could work! Let's test one of these!**
+**All of the values in green are assignments that could work! Let's test one of these!**
 </div> 
 
 ## Testing A Solution... 

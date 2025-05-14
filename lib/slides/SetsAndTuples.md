@@ -130,7 +130,8 @@ Within braces, we can write a rule consisting of a function, a vertical bar, and
 
 ### Example
 
->We can express the set $\{\frac{1}{2}, \frac{1}{4}, \frac{1}{8} \}$ as...
+>We can express the set $\{\
+frac{1}{2}, \frac{1}{4}, \frac{1}{8} \}$ as...
 
 ><img src="https://i.imgur.com/S8631Np.png" width="700"/>
 
@@ -391,7 +392,7 @@ Why does this formula work? Some reasoning behind this by example...
 - And we know that the number of possible permutations for one of those sets of size $k$ is $k!$.
 - So, the number of $k$-permutations is equal to the number of $k$-combinations times $k!$.
 - Equivalently, we can say that the number of $k$-combinations is equal to the number of $k$-permutations divided by $k!$.
-- The number of $k$ permutations $= \frac{n!}{(n-k)!}$
+- The number of $k$ permutations $= \tfrac{n!}{(n-k)!}$
 - The number of $k$ permutations $= \frac{n!}{(n-k)!} \cdot \frac{1}{k!} = \frac{n!}{k!(n-k)!} = {n \choose k}$
 </div>
 
