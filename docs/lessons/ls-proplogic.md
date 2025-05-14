@@ -223,7 +223,7 @@ $$ p \rightarrow q \equiv \neg p \lor q $$
 
 
 
-## Common Logical Equivalences
+### Common Logical Equivalences
 
 $$
 \begin{array}{l l}
@@ -292,7 +292,7 @@ Logical Equivalences can be proven two different ways:
 1. Using Truth Tables
 2. Directly, using other logical equivalences
 
-## Proving Equivalences - Example 1
+### Example 0
 We can prove the first part of DeMorgan's Law <br> ($$\neg (p \land q) \equiv \neg p \lor \neg q$$) using a truth table.
 
 $$\begin{array}{|c|c|c|c|c|c|c|}
@@ -364,9 +364,10 @@ F & F & T & T & F & T & T \\
 
 The columns for $$\neg(p \land q)$$ and $$\neg p \lor \neg q$$ are equal, so this means $$\neg(p \land q)$$ and $$\neg p \lor \neg q$$ are *logically equivalent*!
 
-## Proving Equivalences - Example 2
+### Example 1
 
 Prove $$(a \land \neg b) \rightarrow c \equiv \neg a \lor b \lor c$$ directly using existing logical equivalences.
+$$
 \begin{array}{|c|c|}
 \hline
 \textbf{Equivalence} & \textbf{Rule Used}\\
@@ -378,7 +379,7 @@ Prove $$(a \land \neg b) \rightarrow c \equiv \neg a \lor b \lor c$$ directly us
  \equiv  \neg a \lor \neg \neg b \lor c & \textbf{DeMorgan's} \\ \hline
 \equiv \neg a \lor b \lor c & \textbf{Double Negation}\\
 \hline
-\end{array}
+\end{array}$$
 
 ## Other Considerations
 
