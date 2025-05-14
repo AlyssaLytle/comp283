@@ -38,9 +38,9 @@ Let $$A$$ be a finite set. The number of different elements in $$A$$ is called i
 The cardinality of a finite set  is denoted $$|A|$$.
 
 
->$$\{1,2,3\}$$ is a finite set. Its cardinality is $$3$$.
+* $$\{1,2,3\}$$ is a finite set. Its cardinality is $$3$$.
 
->"all multiples of 7" is an infinite set. Cardinality here is a little more complicated... We will get back to that!
+* "all multiples of 7" is an infinite set. Cardinality here is a little more complicated... We will get back to that!
 
 
 
@@ -56,27 +56,27 @@ $$a \notin A$$ means $$a$$ is *not* an element of $$A$$.
 
 #### Example
 
->Let $$A = \{$$"apples", "bananas", "oranges"$$\}$$
+* Let $$A = \{$$"apples", "bananas", "oranges"$$\}$$
 
->"apples" $$\in A$$
+* "apples" $$\in A$$
 
->"blueberries" $$\notin A$$
+* "blueberries" $$\notin A$$
 
 
 ### Brackets and Parentheses
 
 $$[a,b]$$ is the set of whole numbers $$\geq a$$  and $$\leq b$$.
 
-$$(a,b)$$ is the set of whole numbers $$> a$$  and $$< b$$.
+$$(a,b)$$ is the set of whole numbers $$*  a$$  and $$< b$$.
 
 
 #### Examples
 
->$$[1,5] = \{1,2,3,4,5\}$$
+* $$[1,5] = \{1,2,3,4,5\}$$
 
->$$(1,5) = \{2,3,4\}$$
+* $$(1,5) = \{2,3,4\}$$
 
->$$[1,5) = \{1,2,3,4\}$$
+* $$[1,5) = \{1,2,3,4\}$$
 
 ## Set Notation
 
@@ -84,16 +84,16 @@ Sets are commonly expressed using *set notation*.
 
 Within braces, we can write a rule consisting of a function, a vertical bar, and a set to which the function is applied.
 
-<img src="https://i.imgur.com/AG0hluA.png" width="700"/>
+<img src="https://i.imgur.com/AG0hluA.png" width="700"/> 
 
 ## Sets - Notation
 
 ### Example
 
->We can express the set $$\{\
+* We can express the set $$\{\
 frac{1}{2}, \frac{1}{4}, \frac{1}{8} \}$$ as...
 
-><img src="https://i.imgur.com/S8631Np.png" width="700"/>
+* <img src="https://i.imgur.com/S8631Np.png" width="700"/> 
 
 
 ## Subsets
@@ -104,14 +104,14 @@ Can also be written: $$A \subseteq B$$
 
 ### Examples
 
->Let $$A = \{1,3,5\}$$ and $$B = \{1,2,3,4,5\}$$.
+* Let $$A = \{1,3,5\}$$ and $$B = \{1,2,3,4,5\}$$.
 
->>$$A \subseteq B$$.
+* * $$A \subseteq B$$.
 
 
->Let $$A = \{1,2,3\}$$ and $$B = \{3,2,1\}$$.
+* Let $$A = \{1,2,3\}$$ and $$B = \{3,2,1\}$$.
 
->>$$A \subseteq B$$ and $$B \subseteq A$$.
+* * $$A \subseteq B$$ and $$B \subseteq A$$.
 
 ## Equality 
 
@@ -119,7 +119,7 @@ $$A = B$$ if and only if every element of $$A$$ is an element of $$B$$ and conve
 That is, $$A \subseteq B$$ and $$B \subseteq A$$.
 
 ### Example
->Let $$A = \{1,2,3\}$$ and $$B = \{3,2,1\}$$. <br><br>
+* Let $$A = \{1,2,3\}$$ and $$B = \{3,2,1\}$$. <br* <br* 
 $$A \subseteq B$$ and $$B \subseteq A$$, so $$A=B$$
 
 ## Intersection
@@ -128,8 +128,8 @@ $$A \subseteq B$$ and $$B \subseteq A$$, so $$A=B$$
 $$A \cap B$$ is the set of elements that are both in $$A$$ **and** in $$B$$.
 
 ### Example
-> $$A = \{$$Apples, Bananas$$\}$$ <br> 
-$$B= \{$$Bananas, Oranges$$\}$$ <br>
+*  $$A = \{$$Apples, Bananas$$\}$$ <br*  
+$$B= \{$$Bananas, Oranges$$\}$$ <br* 
 $$A \cap B =$$ {Bananas}
 
 
@@ -142,8 +142,8 @@ $$x \in A \cap B$$ iff $$x \in A \land x \in B$$
 $$A \cup B$$ is the set of elements that are in either $$A$$ **or** $$B$$.
 
 ### Example
-> $$A = \{$$Apples, Bananas$$\}$$ <br>
-$$B= \{$$Bananas, Oranges$$\}$$ <br>
+*  $$A = \{$$Apples, Bananas$$\}$$ <br* 
+$$B= \{$$Bananas, Oranges$$\}$$ <br* 
 $$A \cup B =$$ {Apples, Bananas, Oranges}
  
 - Note how this ties into logic...
@@ -163,9 +163,9 @@ $$A \cup B =$$ {Apples, Bananas, Oranges}
 
 A $$k$$-***tuple*** is an ordered sequence of $$k$$ elements, which we write down in parentheses, $$(a_1,a_2,\ldots,a_k)$$.
 
-> The most common tuple seen in math is the coordinate pair $$(x,y)$$ on a graph. 
+*  The most common tuple seen in math is the coordinate pair $$(x,y)$$ on a graph. 
 
-> A 2-tuple is commonly called an *ordered pair*.
+*  A 2-tuple is commonly called an *ordered pair*.
 
 Two tuples are equal if and only if all of their corresponding elements are equal.
 $$(a_1,a_2,\ldots,a_k)$$ iff for all $$i\in[1,\ldots,k]$$ we have $$a_i=b_i$$.
@@ -178,7 +178,7 @@ The basic operation to create tuples is the Cartesian Product of two sets.
 The \textbf{cartesian product} of $$A$$ and $$B$$, $$A \times B = \{(a,b)|$$ for all $$a \in A$$ and for all $$b \in B\}$$
 
 ### Example
->Let $$L=\{a,b,c\}$$ and let $$D = \{0,1\}$$
+* Let $$L=\{a,b,c\}$$ and let $$D = \{0,1\}$$
 $$L \times D = \{(a,0),(a,1),(b,0),(b,1),(c,0),(c,1)\}$$
 $$D \times L = \{(0,a),(0,b),(0,c),(1,a),(1, b),(1,c)\}$$
 $$L \times L = L^2 = \{(a,a),(a,b),(a,c),(b,a),(b, b),(b,c),(c,a),(c, b),(c,c)\}$$
@@ -186,7 +186,7 @@ $$L \times L = L^2 = \{(a,a),(a,b),(a,c),(b,a),(b, b),(b,c),(c,a),(c, b),(c,c)\}
 The cartesian product is associative: $$D \times(L \times D) = (D \times L) \times D$$.
 
 The cartesian product is not necessarily commutative: $$D\times L \neq L \times D$$.
-</dov>
+</dov* 
 
 ## Sequences, Strings, and Series
 
@@ -203,7 +203,7 @@ Some other structures we may use:
 ***Concatenation*** is used to join two strings or lists by putting all elements of the second string behind all elements of the first.
 
 ### Example
->The concatenation of "hello" and "world" is "helloworld".
+* The concatenation of "hello" and "world" is "helloworld".
 
 ## Series
 
@@ -243,10 +243,10 @@ The best way to demonstrate what this means is by example...
 The **permutations** of $$n$$ distinct items are the set of all $$n$$-tuples that *never repeat* any item.
 
 ### Example
->Let $$A = \{Bob, Alice, Chris\}$$ <br>
-All permutations of $$A$$: <br>
-$$\big\{\{Bob, Alice, Chris\}, \{Bob, Chris, Alice\},$$ <br>
-$$\{Alice, Chris, Bob\}, \{Alice, Bob, Chris\},$$ <br>
+* Let $$A = \{Bob, Alice, Chris\}$$ <br* 
+All permutations of $$A$$: <br* 
+$$\big\{\{Bob, Alice, Chris\}, \{Bob, Chris, Alice\},$$ <br* 
+$$\{Alice, Chris, Bob\}, \{Alice, Bob, Chris\},$$ <br* 
 $$\{Chris, Bob, Alice\}, \{Chris, Alice, Bob\}\big\}$$
 
 ## Counting Permutations
@@ -256,7 +256,7 @@ The number of permutations of $$n$$ items is $$n!$$ ($$n$$ factorial).
 As a reminder, $$n! = n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 1$$.
 
 ### Example
->Let $$A = \{Bob, Alice, Chris\}$$ <br>
+* Let $$A = \{Bob, Alice, Chris\}$$ <br* 
 The number of possible permutations of $$A$$ is $$3! = 3 \cdot 2 \cdot 1 = 6$$. 
 
 ## Permutations Examples
@@ -310,11 +310,11 @@ A $$k$$-***combination*** is a set with $$k$$ elements chosen from a set of $$n$
 
 ### Example
 
->Compute all $$2$$-combinations of $$\{a,b,c\}$$. <br>
+* Compute all $$2$$-combinations of $$\{a,b,c\}$$. <br* 
 $$\{a,b\},\{a,c\}, \{b,c\}$$
 
 ### Permutations vs. Combinations
-> The $$2$$-permutations of $$\{a,b,c\}$$ would be $$(a,b), (b,a), (a,c), (c,a), (b,c), (c,b)$$.
+*  The $$2$$-permutations of $$\{a,b,c\}$$ would be $$(a,b), (b,a), (a,c), (c,a), (b,c), (c,b)$$.
 
 
 ## Number of Combinations
