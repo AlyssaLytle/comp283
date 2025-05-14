@@ -57,7 +57,7 @@ Here is an example of a negated proposition:
 
 ## Conjunction
 
-<div id="left">
+
 A Truth Table for conjunction would look like the following:
 $$\begin{array}{|c|c|c|}
 \hline
@@ -70,9 +70,6 @@ F & F & F \\
 \hline
 \end{array}$$
 
-</div>
-
-<div id="right" class="incremental"> 
 
 Here is an example of conjunction:
 
@@ -80,11 +77,11 @@ Here is an example of conjunction:
 -  $$q$$: "It is Monday.''
 -  $$p \land q$$: "It is sunny today and today is Monday.''
 
-</div>
+
 
 ## Conjunction
 
-<div id="left">
+
 A Truth Table for conjunction would look like the following:
 $$\begin{array}{|c|c|c|}
 \hline
@@ -97,9 +94,9 @@ F & F & F \\
 \hline
 \end{array}$$
 
-</div>
 
-<div id="right"> 
+
+
 
 Here is an example of conjunction:
 
@@ -108,10 +105,10 @@ Here is an example of conjunction:
 -  $$p \land q$$: "It is sunny today and today is Monday.''
 
 The conjunction ($$p \land q$$) is $$\texttt{True}$$ on sunny Mondays, but it is $$\texttt{False}$$ on any non-sunny day ($$p$$ is $$\texttt{False}$$), and it is $$\texttt{False}$$ on any day that is not Monday ($$q$$ is $$\texttt{False}$$).
-</div>
+
 
 ## Disjunction
-<div id="left">
+
 A Truth Table for disjunction would look like the following:
 $$\begin{array}{|c|c|c|}
 \hline
@@ -123,18 +120,18 @@ F & T & T \\
 F & F & F \\
 \hline
 \end{array}$$
-</div>
-<div id="right" class="incremental"> 
+
+
 Here is an example of disjunction.
 
 -  $$p$$: "It is sunny today.''
 -  $$q$$: "It is Monday.''
 -  $$p \lor q$$: "It is sunny today or today is Monday.''
 
-</div>
+
 
 ## Disjunction
-<div id="left">
+
 A Truth Table for disjunction would look like the following:
 $$\begin{array}{|c|c|c|}
 \hline
@@ -146,8 +143,7 @@ F & T & T \\
 F & F & F \\
 \hline
 \end{array}$$
-</div>
-<div id="right"> 
+
 Here is an example of disjunction.
 
 -  $$p$$: "It is sunny today.''
@@ -155,10 +151,10 @@ Here is an example of disjunction.
 -  $$p \lor q$$: "It is sunny today or today is Monday.''
 
 The disjunction ($$p \lor q$$) is $$\texttt{True}$$ on sunny Mondays, on any sunny day ($$p$$ is $$\texttt{True}$$), and on any Monday ($$q$$ is $$\texttt{True}$$). It is $$\texttt{False}$$ on any day where it is both not sunny and not Monday.
-</div>
+
 
 ## Exclusive Or
-<div id="left">
+
 A Truth Table for exclusive or would look like the following:
 $$\begin{array}{|c|c|c|}
 \hline
@@ -170,9 +166,7 @@ F & T & T \\
 F & F & F \\
 \hline
 \end{array}$$
-</div>
 
-<div id="right" class="incremental">
 Here is an example of exclusive or.
 
 -  $$p$$: "It is sunny today.''
@@ -180,10 +174,7 @@ Here is an example of exclusive or.
 -  $$p \oplus q$$: "It is sunny today or today is Monday, but not both.''
 
 
-</div>
 
-## Exclusive Or
-<div id="left">
 A Truth Table for exclusive or would look like the following:
 $$\begin{array}{|c|c|c|}
 \hline
@@ -195,9 +186,7 @@ F & T & T \\
 F & F & F \\
 \hline
 \end{array}$$
-</div>
 
-<div id="right">
 Here is an example of exclusive or.
 
 -  $$p$$: "It is sunny today.''
@@ -205,10 +194,10 @@ Here is an example of exclusive or.
 -  $$p \oplus q$$: "It is sunny today or today is Monday, but not both.''
 
 The exclusive or ($$p \oplus q$$) is $$\texttt{True}$$ on any sunny day ($$p$$ is $$\texttt{True}$$) and on any Monday ($$q$$ is $$\texttt{True}$$), EXCEPT for on sunny Mondays (both $$p$$ and $$q$$ are $$\texttt{True}$$). Additionally, it is $$\texttt{False}$$ on any day where it is both not sunny and not Monday.
-</div>
+
 
 ## Conditionals
-<div id="left"> 
+
 
 The *conditional statement* $$p \rightarrow q$$ is False when $$p$$ is $$\texttt{True}$$ and $$q$$ is $$\texttt{False}$$, and True otherwise. $$p$$ is called the hypothesis and $$q$$ the conclusion. This can also be called *implication*.
 
@@ -217,10 +206,10 @@ Some English phrases for this would be:
 -  If $$p$$, then $$q$$.
 -  $$p$$ implies $$q$$.
 -  $$q$$ if $$p$$.
-</div>
 
 
-<div id="right" class="incremental"> 
+
+
 A Truth Table for implication would look like the following:
 $$\begin{array}{|c|c|c|}
 \hline
@@ -232,10 +221,10 @@ F & T & T \\
 F & F & T \\
 \hline
 \end{array}$$
-</div>
+
 
 ## Conditionals Continued
-<div id="left"> 
+
 $$\begin{array}{|c|c|c|}
 \hline
 p  & q & p \rightarrow q  \\
@@ -246,19 +235,19 @@ F & T & T \\
 F & F & T \\
 \hline
 \end{array}$$
-</div>
 
-<div id="right" class="incremental"> 
+
+
 Here is an example of implication.
 
 -  $$p$$: "It is sunny.''
 -  $$q$$: "I walk to campus.''
 -  $$p \rightarrow q$$: "If it is sunny, then I walk to campus.''
 
-</div>
+
 
 ## Conditionals Continued
-<div id="left"> 
+
 $$\begin{array}{|c|c|c|}
 \hline
 p  & q & p \rightarrow q  \\
@@ -269,9 +258,9 @@ F & T & T \\
 F & F & T \\
 \hline
 \end{array}$$
-</div>
 
-<div id="right"> 
+
+
 Here is an example of implication.
 
 -  $$p$$: "It is sunny.''
@@ -281,10 +270,10 @@ Here is an example of implication.
 The implication ($$p \rightarrow q$$) is $$\texttt{False}$$ if it is sunny and I do NOT walk to campus. Otherwise, it is $$\texttt{True}$$. 
 
 If it is not sunny ($$p$$ is $$\texttt{False}$$) and I still walk to campus ($$q$$ is $$\texttt{True}$$), this implication is still $$\texttt{True}$$.
-</div>
+
 
 ## Biconditionals
-<div id="left"> 
+
 The *biconditional statement* ("if and only if" or "iff") $$p \leftrightarrow q$$ is $$\texttt{True}$$ when $$p$$ and $$q$$ have the same truth value, and $$\texttt{False}$$ otherwise.
 
 A Truth Table for implication would look like the following:
@@ -298,19 +287,19 @@ F & T & F \\
 F & F & T \\
 \hline
 \end{array}$$
-</div>
 
-<div id="right" class="incremental"> 
+
+
 Here is an example of a biconditional.
 
 -  $$p$$: "It is sunny.''
 -  $$q$$: "I walk to campus.''
 -  $$q \leftrightarrow p$$: "I walk to campus if and only if it is sunny.''
 
-</div>
+
 
 ## Biconditionals
-<div id="left"> 
+
 The *biconditional statement* ("if and only if" or "iff") $$p \leftrightarrow q$$ is $$\texttt{True}$$ when $$p$$ and $$q$$ have the same truth value, and $$\texttt{False}$$ otherwise.
 
 A Truth Table for implication would look like the following:
@@ -324,9 +313,9 @@ F & T & F \\
 F & F & T \\
 \hline
 \end{array}$$
-</div>
 
-<div id="right"> 
+
+
 Here is an example of a biconditional.
 
 -  $$p$$: "It is sunny.''
@@ -337,7 +326,7 @@ The biconditional ($$p \leftrightarrow q$$) is $$\texttt{True}$$ if it is sunny 
 
 
 Unlike the previous example, if it is not sunny ($$p$$ is $$\texttt{False}$$) and I still walk to campus ($$q$$ is $$\texttt{True}$$), this biconditional is $$\texttt{False}$$.
-</div>
+
 
 ## Order Of Operations
 - Negations: $$\neg$$
@@ -347,7 +336,7 @@ Unlike the previous example, if it is not sunny ($$p$$ is $$\texttt{False}$$) an
 Everything else can be written as a combination of the above three, but in general, it's best to always clarify order of operations using parentheses!
 
 ## Logical Equivalences
-<div class="incremental">
+
 Logical expressions that result in the same truth values are considered *logical equivalences*.
 
 - One useful equivalence is *DeMorgan's Law*. It states: <br>
@@ -356,10 +345,10 @@ $$$$ \neg (p \lor q) \equiv \neg p \land \neg q $$$$
 - Another useful equivalence is: <br>
 $$$$ p \rightarrow q \equiv \neg p \lor q $$$$
 
-</div>
+
 
 ## Common Logical Equivalences
-<div id="smalltext">
+
 \begin{array}{l l}
 \textbf{Commutative Laws} &
 p \lor q \equiv q \lor p \\
@@ -417,7 +406,7 @@ p \land (p\lor  q)\equiv p\\
 \textbf{Implication} & 
 p \implies q \equiv \neg p \lor q\\
 \end{array}
-</div>
+
 
 ## Proving Equivalences
 
@@ -635,7 +624,7 @@ To translate logic to and from English sentences, it is important to know the co
 
 ## Translating English Sentences
 
-<div id="text" class="incremental">
+
 
 Here's an example of breaking up an English language sentence.
 
@@ -648,7 +637,7 @@ Here's an example of breaking up an English language sentence.
 - Notes:
     - If it doesn't directly match any of the phrases listed, use truth tables to see what it matches.
     - Sometimes it takes a little experimenting/practice
-</div>
+
 
 ## Using Logic For Problem Solving 
 The rest of these slides are optional, but they demonstrate how logic can be used for problem solving!
@@ -674,30 +663,30 @@ Can you determine uniquely what each of Alice, Bob, and Chris are?
 ### Knights and Knaves (Raymond Smullyan)
 
 $$1.$$ Define convenient variables for propositions.
-<div id="left" class="incremental">
+
 - $$A =$$ "Alice is a knight" 
 - $$B =$$ "Bob is a knight"
 - $$C=$$ "Chris is a knight"
-</div>
-<div id="right" class="incremental">
+
+
 - $$\neg A =$$ "Alice is a knave" 
 - $$\neg B =$$ "Bob is a knave"
 - $$\neg C=$$ "Chris is a knave"
-</div>
+
 
 ## Using Logic For Problem Solving
 
-<div id="text">
+
 $$2.$$ Transform what they say into statements that *always* should evaluate to $$\texttt{True}$$. These are the rules of our world.
 
 - Alice says: Bob is a knave or Chris is a knight.
 - Bob says: Alice is a knight if, and only if, Chris is a knave.
 
-</div>
+
 
 ## Using Logic For Problem Solving
 
-<div id="text">
+
 $$2.$$ Transform what they say into statements that *always* should evaluate to $$\texttt{True}$$. These are the rules of our world.
 
 - Alice says: Bob is a knave $$\lor$$ Chris is a knight
@@ -708,11 +697,11 @@ $$2.$$ Transform what they say into statements that *always* should evaluate to 
 $$\{A =$$ "Alice is a knight", $$B =$$ "Bob is a knight",$$C=$$ "Chris is a knight",
 $$\neg A =$$ "Alice is a knave", $$\neg B =$$ "Bob is a knave",$$\neg C=$$ "Chris is a knave"\})
 
-</div>
+
 
 ## Using Logic For Problem Solving
 
-<div id="text">
+
 $$2.$$ Transform what they say into statements that *always* should evaluate to $$\texttt{True}$$. These are the rules of our world.
 
 - Alice says: $$\neg B \lor C$$
@@ -723,14 +712,14 @@ $$2.$$ Transform what they say into statements that *always* should evaluate to 
 $$\{A =$$ "Alice is a knight", $$B =$$ "Bob is a knight",$$C=$$ "Chris is a knight",
 $$\neg A =$$ "Alice is a knave", $$\neg B =$$ "Bob is a knave",$$\neg C=$$ "Chris is a knave"\})
 
-</div>
+
 
 
 
 ## Using Logic For Problem Solving
 
 
-<div id="text" class="incremental">
+
 $$3.$$ Make a truth table
 
 Rules of the World: $$A \rightarrow (\neg B \lor C)$$ and $$B \rightarrow (A \leftrightarrow \neg C)$$ 
@@ -751,11 +740,11 @@ F & T & F & T &F\\
 \end{array}$$
 
 
-</div>
+
 
 ## Using Logic For Problem Solving
 
-<div id="text">
+
 $$4.$$ Check if a unique row makes both statements true. 
 
 <!-- Rules of the World: $$A \rightarrow (\neg B \lor C)$$ and $$B \rightarrow (A \leftrightarrow \neg C)$$  -->
@@ -791,10 +780,10 @@ F & F & F & T &T\\
 \end{array}$$ -->
 
 **All of the values in green are assignments that could work! Let's test one of these!**
-</div> 
+ 
 
 ## Testing A Solution... 
-<div id="text">
+
 $$A = T, B = F, C = T$$
 
 So, Alice is a knight, Bob is a knave, and Chris is a knight.
@@ -808,7 +797,7 @@ So, Alice is a knight, Bob is a knave, and Chris is a knight.
     - $$F \rightarrow (T \leftrightarrow \neg T)$$ evaluates to True!
 
 Both of our rules hold in this world with these assignments, so we know that this solution works!
-</div>
+
 
 ## Why this isn't a good problem... 
 
