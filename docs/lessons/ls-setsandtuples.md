@@ -86,12 +86,11 @@ Within braces, we can write a rule consisting of a function, a vertical bar, and
 
 <img src="https://i.imgur.com/AG0hluA.png" width="700"/>
 
-## Sets - Notation
+
 
 ### Example
 
->We can express the set $$\{\
-frac{1}{2}, \frac{1}{4}, \frac{1}{8} \}$$ as...
+>We can express the set $$\{\frac{1}{2}, \frac{1}{4}, \frac{1}{8} \}$$ as...
 
 ><img src="https://i.imgur.com/S8631Np.png" width="700"/>
 
