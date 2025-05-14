@@ -176,7 +176,7 @@ $$(a_1,a_2,\ldots,a_k)$$ iff for all $$i\in[1,\ldots,k]$$ we have $$a_i=b_i$$.
 
 The basic operation to create tuples is the Cartesian Product of two sets.
 
-The \textbf{cartesian product} of $$A$$ and $$B$$, $$A \times B = \{(a,b)|$$ for all $$a \in A$$ and for all $$b \in B\}$$
+The \textbf{cartesian product} of $$A$$ and $$B$$, $$A \times B = \{(a,b)\mid$$ for all $$a \in A$$ and for all $$b \in B\}$$
 
 ### Example
 >Let $$L=\{a,b,c\}$$ and let $$D = \{0,1\}$$
@@ -235,8 +235,8 @@ The best way to demonstrate what this means is by example...
 - Now you want a set of three books, one of each type; how many sets of three are possible? 
 - You want to count all tuples of the form $$(m,p,r)$$, where $$m$$ is a math book, $$p$$ is a philosophy book, and $$r$$ is a religion book. You choose one of six math books, one of five philosophy books, and one of three religion books, so the product rule says, 
 - "$$6 \cdot 5 \cdot 3 = 90$$ sets of three are possible."
-- If $$M$$ is the set of math books, $$P$$ is the set of philosophy books, and $$R$$ is the set of religion books. You can get all possible sets of three using the **cartesian product**, and the **cardinality** of that is the number of possible sets, $$|M \times P \times R|$$.
-- We can see that $$|M|\cdot |P| \cdot |R| = |M \times P \times R|$$. 
+- If $$M$$ is the set of math books, $$P$$ is the set of philosophy books, and $$R$$ is the set of religion books. You can get all possible sets of three using the **cartesian product**, and the **cardinality** of that is the number of possible sets, $$\midM \times P \times R\mid$$.
+- We can see that $$\midM\mid\cdot \midP\mid \cdot \midR\mid = \midM \times P \times R\mid$$. 
 - *This exactly what the product rule is saying!*
 
 ## Permutations
