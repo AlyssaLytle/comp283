@@ -18,11 +18,11 @@ Which of the following are propositions?
 -  We are currently in Chapel Hill. - $$\color{green}\texttt{Yes}$$
 -  $$1 + 1 = 2$$ - $$\color{green}\texttt{Yes}$$
 -  $$2 + x = 4$$ - $$\color{red}\texttt{No}$$
--  It is hot outside. -$$\color{red}\texttt{No}$$
+-  It is hot outside. - $$\color{red}\texttt{No}$$
 
 
 ## Negation
-<div id="left">
+
 
 A *Truth Table* for negation would look like the following:
 
@@ -39,9 +39,9 @@ What this is saying is: <br>
 "When $$p$$ is $$\texttt{True}$$, $$\neg p$$ is $$\texttt{False}$$, <br>
 and when $$p$$ is $$\texttt{False}$$, $$\neg p$$ is $$\texttt{True}$$.''
 
-</div>
 
-<div id="right" class="incremental">
+
+
 
 Here is an example of a negated proposition:
 
@@ -49,7 +49,6 @@ Here is an example of a negated proposition:
 -  $$\neg p$$: "Today is not Monday.'' 
 -  *ALTERNATIVELY:* $$\neg p$$: "It is not the case that today is Monday.''
 
-</div>
 
 
 
