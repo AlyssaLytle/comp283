@@ -225,6 +225,7 @@ $$ p \rightarrow q \equiv \neg p \lor q $$
 
 ## Common Logical Equivalences
 
+$$
 \begin{array}{l l}
 \textbf{Commutative Laws} &
 p \lor q \equiv q \lor p \\
@@ -282,7 +283,7 @@ p \land (p\lor  q)\equiv p\\
 \textbf{Implication} & 
 p \implies q \equiv \neg p \lor q\\
 \end{array}
-
+$$
 
 ## Proving Equivalences
 
