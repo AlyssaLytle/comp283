@@ -292,7 +292,7 @@ Logical Equivalences can be proven two different ways:
 1. Using Truth Tables
 2. Directly, using other logical equivalences
 
-### Example 0
+### Example 1
 We can prove the first part of DeMorgan's Law <br> ($$\neg (p \land q) \equiv \neg p \lor \neg q$$) using a truth table.
 
 $$\begin{array}{|c|c|c|c|c|c|c|}
@@ -364,7 +364,7 @@ F & F & T & T & F & T & T \\
 
 The columns for $$\neg(p \land q)$$ and $$\neg p \lor \neg q$$ are equal, so this means $$\neg(p \land q)$$ and $$\neg p \lor \neg q$$ are *logically equivalent*!
 
-### Example 1
+### Example 2
 
 Prove $$(a \land \neg b) \rightarrow c \equiv \neg a \lor b \lor c$$ directly using existing logical equivalences.
 $$
