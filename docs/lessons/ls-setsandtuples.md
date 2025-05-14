@@ -21,7 +21,7 @@ A ***set*** is an unordered collection of objects.
 
 The following are sets:
 
->  $$\{1,2,3\}$$
+>  {$$1,2,3$$}
 
 > "all multiples of 7''
 
