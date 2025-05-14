@@ -18,6 +18,7 @@ contributors: Alyssa Byrnes
 
 * Wed, May 14: [Class Intro + LaTeX](/comp283/calendar/day-0.html)
 * Thu, May 15: [Propositional Logic](/calendar/propositional-logic.md)
+<!-- * Fri, May 16: [Sets, Tuples, and Counting] (/calendar/sets-tuples-and-counting.md) -->
 * Fri, June 20: Final Exam
 
 <!-- * Wed, May 17: [LaTeX + Pseudocode](/calendar/latex-and-pseudocode.md)
