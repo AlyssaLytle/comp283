@@ -7,18 +7,41 @@ contributors: Alyssa Byrnes
 # Welcome to Discrete Structures!
 
 ## Basic Class Format:
-* Monday-Wednesday there will be online video lessons and corresponding assignments for you to complete on Gradescope. 
-* Thursday I will host a live online review session *(time TBD)*
-* Friday will be **quiz day** where you are quizzed on previously learned concepts.
+* Mon-Wed there will be online video lessons and corresponding assignments for you to complete on Gradescope. 
+* Thurs I will host a live online review session *(time TBD)*
+* Fri will be **quiz ** where you are quizzed on previously learned concepts.
 * The 283 Team will be available throughout the week to answer questions on our [class social media site](https://edstem.org/). *(Participation in Edstem is required for this course! Please email me if you have not received an invite to join EdStem!)*
 * Office hours: [Schedule](/comp283/calendar/office-hours.html) and [Zoom link *(coming soon)*](/) 
 * [LaTeX Guide](/calendar/latex-guide.md)
 
 ## Calendar
 
-* Wed, May 14: [Class Intro + LaTeX](/comp283/calendar/day-0.html)
+* Wed, May 14: [Class Intro + LaTeX](/comp283/calendar/-0.html)
 * Thu, May 15: [Propositional Logic](/calendar/propositional-logic.md)
-<!-- * Fri, May 16: [Sets, Tuples, and Counting] (/calendar/sets-tuples-and-counting.md) -->
+* Fri, May 16: Sets, Tuples, and Counting
+<!-- [Sets, Tuples, and Counting] (/calendar/sets-tuples-and-counting.md) -->
+* Mon, May 19: Quantifiers
+* Tues, May 20: Set Operations
+* Wed, May 21: Relations
+* Thurs, May 22: Review and Practice
+* Fri, May 23: Quiz 0
+* Mon, May 26: Memorial Day  (No Class)
+* Tues, May 27: Functions
+* Wed, May 28: Recursion
+* Thurs, May 29: Review and Practice
+* Fri, May 30: Quiz 1
+* Mon, June 2: Number Theory + Applications
+* Tues, June 3: Proofs
+* Wed, June 4: Proofs
+* Thurs, June 5: Review and Practice
+* Fri, June 6: Quiz 2
+* Mon, June 9: Induction
+* Tues, June 10: Induction
+* Wed, June 11: Buffer 
+* Thurs, June 12: Review and Practice
+* Fri, June 13: Quiz 3
+* Mon, June 16: Analyzing Algorithms + Invariants
+* Tues, June 17: LDOC: Proving Invariants
 * Fri, June 20: Final Exam
 
 <!-- * Wed, May 17: [LaTeX + Pseudocode](/calendar/latex-and-pseudocode.md)
@@ -43,6 +66,6 @@ contributors: Alyssa Byrnes
 * Wed, June 14: [Analyzing Algorithms + Invariants](/calendar/analyzing-algorithms-and-invariants.md)
 * Thu, June 15: [Proving Invariants](/calendar/proving-invariants.md)
 * Fri, June 16: [Practice and Review (9:30 am)](/calendar/practice-and-review-4.md)
-* Mon, June 19: *Holiday (Juneteenth), so no office hours!*
+* Mon, June 19: *Holi (Juneteenth), so no office hours!*
 * Tue, June 20: [Practice and Review (9:30 am)](/calendar/practice-and-review-5.md)
 * ***Fri., June 23: FINAL EXAM*** -->
