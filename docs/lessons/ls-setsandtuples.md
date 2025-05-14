@@ -264,18 +264,6 @@ The number of possible permutations of $$A$$ is $$3! = 3 \cdot 2 \cdot 1 = 6$$.
 
 Let's go back to our previous example. 
 
-You have a set of six different math books, five different philosophy books, and three different religion books.  
-
-We want to know the number of ways to arrange three of the 14 books on the shelf and get one of each type. 
-
-Let's break this down...
-
-
-
-
-
-## Permutations Examples
-
 
 - You have a set of 6 different math books, 5 different philosophy books, and 3 different religion books. We want to know the number of ways to arrange three of the 14 books on the shelf and get one of each type. 
 - Let's break this down...
@@ -284,18 +272,7 @@ Let's break this down...
 - Let's say you just want to know how many times you can arrange a set of $$3$$ books, regardless of type. This is the same as counting how many permutations there are of a set of size $$3$$, so the answer is $$3!$$.
 - Now we can combine these two answers: $$3! \cdot 6 \cdot 5 \cdot 3$$
 
-
-## Permutations Examples Continued
-
-- Now let's say you want to know how many different ways you can arrange your $$14$$ books. That's pretty straightforward. You have $$14!$$ possible permutations of your set of books. 
-- Say you just wanted to know how many ways you can order any three of those fourteen books. We just stop our factorial early. $$14 \cdot 13 \cdot 12$$.
-- There's actually a way we can mathematically express this. It can be written as $$\frac{14!}{(14-3)!}$$.
-
-Let's draw out why this works...
-
-
-## Permutations Examples Continued
-
+### Example Expanded
 
 - Now let's say you want to know how many different ways you can arrange your $$14$$ books. That's pretty straightforward. You have $$14!$$ possible permutations of your set of books. 
 - Say you just wanted to know how many ways you can order any three of those fourteen books. We just stop our factorial early. $$14 \cdot 13 \cdot 12$$.
