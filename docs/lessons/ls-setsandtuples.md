@@ -21,7 +21,7 @@ A ***set*** is an unordered collection of objects.
 
 The following are sets:
 
->  $$\{1,2,3\}$$
+>  $\{1,2,3\}$
 
 > "all multiples of 7''
 
@@ -37,7 +37,7 @@ Any set that is not finite is an ***infinite set***.
 
 Let $$A$$ be a finite set. The number of different elements in $$A$$ is called its ***cardinality***. 
 
-The cardinality of a finite set  is denoted $$|A|$$.
+The cardinality of a finite set  is denoted  $$|A|$$ .
 
 
 >$$\{1,2,3\}$$ is a finite set. Its cardinality is $$3$$.
