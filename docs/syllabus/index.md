@@ -40,7 +40,7 @@ Calculus I
 
 Lessons are graded for correctness and are due the day of release. (e.g. Monday's lesson is due by Monday night at 11:59 pm.)
 
-Quizzes are *timed* and must be done on the Friday of that quiz. 
+Quizzes and the final exam are *timed* and must be done on the day of that exam. 
 
 ## Class tools
 - [Class Website](https://alyssabyrnes.github.io/comp283/) - Bookmark this link! Lessons and important information will be posted here!
