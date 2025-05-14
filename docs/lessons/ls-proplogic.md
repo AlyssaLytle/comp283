@@ -79,31 +79,6 @@ Here is an example of conjunction:
 
 
 
-## Conjunction
-
-
-A Truth Table for conjunction would look like the following:
-$$\begin{array}{|c|c|c|}
-\hline
-p  & q & p \land q  \\
-\hline
-T & T & T \\
-T & F & F \\
-F & T & F \\
-F & F & F \\
-\hline
-\end{array}$$
-
-
-
-
-
-Here is an example of conjunction:
-
--  $$p$$: "It is sunny today.''
--  $$q$$: "It is Monday.''
--  $$p \land q$$: "It is sunny today and today is Monday.''
-
 The conjunction ($$p \land q$$) is $$\texttt{True}$$ on sunny Mondays, but it is $$\texttt{False}$$ on any non-sunny day ($$p$$ is $$\texttt{False}$$), and it is $$\texttt{False}$$ on any day that is not Monday ($$q$$ is $$\texttt{False}$$).
 
 
@@ -130,25 +105,6 @@ Here is an example of disjunction.
 
 
 
-## Disjunction
-
-A Truth Table for disjunction would look like the following:
-$$\begin{array}{|c|c|c|}
-\hline
-p  & q & p \lor q  \\
-\hline
-T & T & T \\
-T & F & T \\
-F & T & T \\
-F & F & F \\
-\hline
-\end{array}$$
-
-Here is an example of disjunction.
-
--  $$p$$: "It is sunny today.''
--  $$q$$: "It is Monday.''
--  $$p \lor q$$: "It is sunny today or today is Monday.''
 
 The disjunction ($$p \lor q$$) is $$\texttt{True}$$ on sunny Mondays, on any sunny day ($$p$$ is $$\texttt{True}$$), and on any Monday ($$q$$ is $$\texttt{True}$$). It is $$\texttt{False}$$ on any day where it is both not sunny and not Monday.
 
@@ -174,24 +130,6 @@ Here is an example of exclusive or.
 -  $$p \oplus q$$: "It is sunny today or today is Monday, but not both.''
 
 
-
-A Truth Table for exclusive or would look like the following:
-$$\begin{array}{|c|c|c|}
-\hline
-p  & q& p \oplus q  \\
-\hline
-T & T & F \\
-T & F & T \\
-F & T & T \\
-F & F & F \\
-\hline
-\end{array}$$
-
-Here is an example of exclusive or.
-
--  $$p$$: "It is sunny today.''
--  $$q$$: "It is Monday.''
--  $$p \oplus q$$: "It is sunny today or today is Monday, but not both.''
 
 The exclusive or ($$p \oplus q$$) is $$\texttt{True}$$ on any sunny day ($$p$$ is $$\texttt{True}$$) and on any Monday ($$q$$ is $$\texttt{True}$$), EXCEPT for on sunny Mondays (both $$p$$ and $$q$$ are $$\texttt{True}$$). Additionally, it is $$\texttt{False}$$ on any day where it is both not sunny and not Monday.
 
@@ -223,49 +161,12 @@ F & F & T \\
 \end{array}$$
 
 
-## Conditionals Continued
-
-$$\begin{array}{|c|c|c|}
-\hline
-p  & q & p \rightarrow q  \\
-\hline
-T & T & T \\
-T & F & F \\
-F & T & T \\
-F & F & T \\
-\hline
-\end{array}$$
-
-
-
 Here is an example of implication.
 
 -  $$p$$: "It is sunny.''
 -  $$q$$: "I walk to campus.''
 -  $$p \rightarrow q$$: "If it is sunny, then I walk to campus.''
 
-
-
-## Conditionals Continued
-
-$$\begin{array}{|c|c|c|}
-\hline
-p  & q & p \rightarrow q  \\
-\hline
-T & T & T \\
-T & F & F \\
-F & T & T \\
-F & F & T \\
-\hline
-\end{array}$$
-
-
-
-Here is an example of implication.
-
--  $$p$$: "It is sunny.''
--  $$q$$: "I walk to campus.''
--  $$p \rightarrow q$$: "If it is sunny, then I walk to campus.''
 
 The implication ($$p \rightarrow q$$) is $$\texttt{False}$$ if it is sunny and I do NOT walk to campus. Otherwise, it is $$\texttt{True}$$. 
 
@@ -296,31 +197,6 @@ Here is an example of a biconditional.
 -  $$q$$: "I walk to campus.''
 -  $$q \leftrightarrow p$$: "I walk to campus if and only if it is sunny.''
 
-
-
-## Biconditionals
-
-The *biconditional statement* ("if and only if" or "iff") $$p \leftrightarrow q$$ is $$\texttt{True}$$ when $$p$$ and $$q$$ have the same truth value, and $$\texttt{False}$$ otherwise.
-
-A Truth Table for implication would look like the following:
-$$\begin{array}{|c|c|c|}
-\hline
-p  & q & p \leftrightarrow q  \\
-\hline
-T & T & T \\
-T & F & F \\
-F & T & F \\
-F & F & T \\
-\hline
-\end{array}$$
-
-
-
-Here is an example of a biconditional.
-
--  $$p$$: "It is sunny.''
--  $$q$$: "I walk to campus.''
--  $$q \leftrightarrow p$$: "I walk to campus if and only if it is sunny.''
 
 The biconditional ($$p \leftrightarrow q$$) is $$\texttt{True}$$ if it is sunny and I walk to campus or if it is not sunny and I don't walk to campus. Otherwise, it is $$\texttt{False}$$. 
 
@@ -472,8 +348,7 @@ F & F & T & T & F & T \\
 \hline
 \end{array}$$ -->
 
-## Proving Equivalences - Example 1
-We can prove the first part of DeMorgan's Law <br> ($$\neg (p \land q) \equiv \neg p \lor \neg q$$) using a truth table.
+
 
 $$\begin{array}{|c|c|c|c|c|c|c|}
 \hline
@@ -489,32 +364,7 @@ F & F & T & T & F & T & T \\
 The columns for $$\neg(p \land q)$$ and $$\neg p \lor \neg q$$ are equal, so this means $$\neg(p \land q)$$ and $$\neg p \lor \neg q$$ are *logically equivalent*!
 
 ## Proving Equivalences - Example 2
-Prove $$(a \land \neg b) \rightarrow c \equiv \neg a \lor b \lor c$$ directly using existing logical equivalences.
-\begin{array}{|c|c|}
-\hline
-\textbf{Equivalence} & \textbf{Rule Used}\\
-\hline
-(a \land \neg b) \rightarrow c & \textbf{Given} \\
-\ldots \\
-\equiv \neg a \lor b \lor c & \\
-\hline
-\end{array}
 
-## Proving Equivalences - Example 2
-Prove $$(a \land \neg b) \rightarrow c \equiv \neg a \lor b \lor c$$ directly using existing logical equivalences.
-\begin{array}{|c|c|}
-\hline
-\textbf{Equivalence} & \textbf{Rule Used}\\
-\hline
-(a \land \neg b) \rightarrow c & \textbf{Given} \\
-\hline
- & \\ \hline
- & \\ \hline
- & \\ 
-\hline
-\end{array}
-
-## Proving Equivalences - Example 2
 Prove $$(a \land \neg b) \rightarrow c \equiv \neg a \lor b \lor c$$ directly using existing logical equivalences.
 \begin{array}{|c|c|}
 \hline
@@ -532,6 +382,8 @@ Prove $$(a \land \neg b) \rightarrow c \equiv \neg a \lor b \lor c$$ directly us
 ## Other Considerations
 
 - A truth table computes all possible combinations of $$n$$ propositions, so a truth table always has how many rows?
+
+### Example 0
 
 propositions = $$\{p\}$$
 
@@ -551,10 +403,7 @@ F \\
 2 rows... 
 
 
-## Other Considerations
-
-- A truth table computes all possible combinations of $$n$$ propositions, so a truth table always has how many rows?
-
+### Example 1
 propositions = $$\{p, q\}$$
 
 truth values = $$\{\texttt{True}, \texttt{False}\}$$
@@ -575,17 +424,7 @@ F & F \\
 4 rows... 
 
 
-## Other Considerations
-
-- A truth table computes all possible combinations of $$n$$ propositions, so a truth table always has how many rows?
-
-propositions = $$\{p,q,...\}$$ $$\leftarrow$$ $$n$$ propositions 
-
-truth values = $$\{\texttt{True}, \texttt{False}\}$$
-
-?
-
-## Other Considerations
+### Example 2
 
 - A truth table computes all possible combinations of $$n$$ propositions, so a truth table always has how many rows?
 
@@ -622,9 +461,7 @@ To translate logic to and from English sentences, it is important to know the co
 -  $$p \rightarrow q$$ (Conditional/Implication): "$$p$$ implies $$q$$"; "if $$p$$ then $$q$$"; "$$q$$ if $$p$$"
 -  $$p \leftrightarrow q$$ or $$p$$ iff $$q$$ (Biconditional): "$$p$$ if and only if $$q$$"
 
-## Translating English Sentences
-
-
+### Example
 
 Here's an example of breaking up an English language sentence.
 
