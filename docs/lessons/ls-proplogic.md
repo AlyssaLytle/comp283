@@ -383,9 +383,9 @@ $$
 
 ## Other Considerations
 
-- A truth table computes all possible combinations of $$n$$ propositions, so a truth table always has how many rows?
+A truth table computes all possible combinations of $$n$$ propositions, so a truth table always has how many rows?
 
-### Example 0
+### Example 1
 
 propositions = $$\{p\}$$
 
@@ -405,7 +405,7 @@ F \\
 2 rows... 
 
 
-### Example 1
+### Example 2
 propositions = $$\{p, q\}$$
 
 truth values = $$\{\texttt{True}, \texttt{False}\}$$
@@ -426,9 +426,9 @@ F & F \\
 4 rows... 
 
 
-### Example 2
+### Example 3
 
-- A truth table computes all possible combinations of $$n$$ propositions, so a truth table always has how many rows?
+
 
 propositions = $$\{p,q,...\}$$ $$\leftarrow$$ $$n$$ propositions 
 
