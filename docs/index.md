@@ -16,7 +16,7 @@ contributors: Alyssa Byrnes
 
 ## Calendar (Subject to Change)
 
-* Wed, May 14: [Class Intro + LaTeX](/comp283/calendar/-0.html)
+* Wed, May 14: [Class Intro + LaTeX](/comp283/calendar/day-0.html)
 * Thu, May 15: [Propositional Logic](/calendar/propositional-logic.md)
 * Fri, May 16: Sets, Tuples, and Counting
 <!-- [Sets, Tuples, and Counting] (/calendar/sets-tuples-and-counting.md) -->
