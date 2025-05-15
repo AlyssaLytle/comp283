@@ -4,10 +4,6 @@ title: Quantifiers
 contributors: Alyssa Byrnes
 ---
 
-# Quantifiers (Predicate Logic)
-
-
-
 
 ## Predicate Definition
 
