@@ -5,7 +5,7 @@ contributors: Alyssa Byrnes
 ---
 
 ## Phrases to Know
-For these phrases, assume we're talking about different sets/tuples we can make from the set \{1,2,3\}.
+For these phrases, assume we're talking about different sets/tuples we can make from the set $$\{1,2,3\}$$.
 
 * "Order doesn't matter.'': This means that $$\{1,2,3\} = \{3,2,1\}$$. Notice this means we're talking about *sets*. If order doesn't matter, we are counting *combinations*.
 * "Order matters.'': This means $$(1,2,3) \neq (3,2,1)$$. Notice this means we're talking about *tuples*. If order matters, we are counting *permutations*.
