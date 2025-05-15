@@ -13,8 +13,11 @@ function that maps each possible input to either $$\texttt{True}$$ or $$\texttt{
 ### Example 
 
 >Here are two predicates each taking their input $$x$$ from a set of days, $$D$$:
-> $$p(x) =$$ "It rained in the morning on day $$x$$," and 
+
+> $$p(x) =$$ "It rained in the morning on day $$x$$," and
+
 > $$q(x) =$$ "I walked to campus on day $$x$$." 
+
 >We can combine these to write the statement "If it did not rain in the morning
 on day $$x$$, then I walked to campus on day $$x$$" as $$\neg p(x) \rightarrow q(x)$$ 
 
