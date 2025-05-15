@@ -11,7 +11,7 @@ contributors: Alyssa Byrnes
 * Thurs I will host a live online review session *(time TBD)*
 * Fri will be **quiz ** where you are quizzed on previously learned concepts.
 * The 283 Team will be available throughout the week to answer questions on our [class social media site](https://edstem.org/). *(Participation in Edstem is required for this course! Please email me if you have not received an invite to join EdStem!)*
-* Office hours: [Schedule](/comp283/calendar/office-hours.html) and [Zoom link *(coming soon)*](/) 
+* Office hours: [Schedule](/comp283/calendar/office-hours.html) and [Zoom link](https://unc.zoom.us/j/91317370256?pwd=w9HGqP30NCexoSiqKRsr6IAkggbOd4.1) 
 * [LaTeX Guide](/calendar/latex-guide.md)
 
 ## Calendar (Subject to Change)

@@ -6,7 +6,7 @@ contributors: Alyssa Byrnes
 # Office Hours 
 
 ## Zoom Link
-Join via [this link](/).
+Join via [this link](https://unc.zoom.us/j/91317370256?pwd=w9HGqP30NCexoSiqKRsr6IAkggbOd4.1).
 
 ## Office Hours 
 
