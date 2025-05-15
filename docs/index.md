@@ -14,7 +14,7 @@ contributors: Alyssa Byrnes
 * Office hours: [Schedule](/comp283/calendar/office-hours.html) and [Zoom link *(coming soon)*](/) 
 * [LaTeX Guide](/calendar/latex-guide.md)
 
-## Calendar
+## Calendar (Subject to Change)
 
 * Wed, May 14: [Class Intro + LaTeX](/comp283/calendar/-0.html)
 * Thu, May 15: [Propositional Logic](/calendar/propositional-logic.md)
