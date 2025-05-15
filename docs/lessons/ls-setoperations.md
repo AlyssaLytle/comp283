@@ -41,17 +41,19 @@ We are going to apply some of the stuff we learned about Predicate logic to lear
 
 <img src="https://i.imgur.com/0c94JPz.png" width="240"/>
 
-- $$a \in B$$ means $$a$$ is an element of $$B$$.<br>
+$$a \in B$$ means $$a$$ is an element of $$B$$.<br>
 
 
 
 <img src="https://i.imgur.com/UwPfgSt.png" width="300"/>
 
-- $$a \notin B$$ means $$a$$ is *not* an element of $$B$$.
+
+>$$a \notin B$$ means $$a$$ is *not* an element of $$B$$.
 
 
 
-- Note that technically, $$a \in B$$ and $$a \notin B$$ are predicates! They take an element and a set as input and give True or False as an output.
+
+>Note that technically, $$a \in B$$ and $$a \notin B$$ are predicates! They take an element and a set as input and give True or False as an output.
 
 
 
@@ -69,11 +71,16 @@ We write $$A \subseteq B$$ to denote the fact that $$A$$ is a subset of $$B$$.
 
 ### Using Predicate Logic 
 
-- $$\forall A,B, ~ A \subseteq B \leftrightarrow \forall x \in A, ~ x \in A \rightarrow x \in B$$
-- Technically, we didn't define the domains for $$A$$ and $$B$$, but given the context, we know they are sets, so we'll let it slide... 
-- We *could* say that all sets exist in some universe of sets $$S$$. 
-- Then our quantifier would say $$\forall A,B \in S \ldots$$ 
-- However, for the rest of these slides, we will just do it the lazy/easier to read way... 
+
+>$$\forall A,B, ~ A \subseteq B \leftrightarrow \forall x \in A, ~ x \in A \rightarrow x \in B$$
+
+>Technically, we didn't define the domains for $$A$$ and $$B$$, but given the context, we know they are sets, so we'll let it slide... 
+
+>We *could* say that all sets exist in some universe of sets $$S$$. 
+
+>Then our quantifier would say $$\forall A,B \in S \ldots$$ 
+
+>However, for the rest of these slides, we will just do it the lazy/easier to read way... 
 
 
 
@@ -83,10 +90,15 @@ We write $$A \subseteq B$$ to denote the fact that $$A$$ is a subset of $$B$$.
 
 ### Using Predicate Logic
 
-- Remember this?
-- For all sets $$A$$ and $$B$$, $$A = B$$  if and only if every element of $$A$$ is an element of $$B$$ and every element of $$B$$ is an element of $$A$$
-- $$\forall A,B, ~ A = B \leftrightarrow (A \subseteq B$$ and $$B \subseteq A)$$
-<!-- - $$\forall A,B, ~ A = B \leftrightarrow (\forall x, ~ (x \in A \leftrightarrow x \in B))$$ -->
+
+>Remember this?
+
+>For all sets $$A$$ and $$B$$, $$A = B$$  if and only if every element of $$A$$ is an element of $$B$$ and every element of $$B$$ is an element of $$A$$
+
+>$$\forall A,B, ~ A = B \leftrightarrow (A \subseteq B$$ and $$B \subseteq A)$$
+<!-
+>
+>$$\forall A,B, ~ A = B \leftrightarrow (\forall x, ~ (x \in A \leftrightarrow x \in B))$$ -->
 
 
 
@@ -172,7 +184,8 @@ The **difference** of sets $$A$$ and $$B$$ is the set that contains all elements
 
 ### Using Set Notation
 
->$$A - B = A\backslash B =\{\, x ~ | ~ x \in A \land x \notin B \}$$
+>$$A 
+>B = A\backslash B =\{\, x ~ | ~ x \in A \land x \notin B \}$$
 
 ### Using Predicate Logic
 
@@ -292,7 +305,8 @@ The powerset of a set $$A$$, denoted $$\mathscr{P}(A)$$ is the set of all subset
 
 >$$\mathscr{P}(A) = \{ S ~ | ~ S \subseteq A\}$$
 
-- $$|\mathscr{P}(A)| = 2^{|A|}$$
+
+>$$|\mathscr{P}(A)| = 2^{|A|}$$
 
 
 
@@ -301,9 +315,12 @@ The powerset of a set $$A$$, denoted $$\mathscr{P}(A)$$ is the set of all subset
 
 The $$k$$**-subsets** of a set $$A$$, denoted $${A \choose k}$$ are all subsets of $$A$$ that are size $$k$$.
 
-- Haven't we seen this notation before? Are we overloading operations??
-- Kind of... but here's why it's okay...
-- The size of $${A \choose k} = {|A| \choose k}$$
+
+>Haven't we seen this notation before? Are we overloading operations??
+
+>Kind of... but here's why it's okay...
+
+>The size of $${A \choose k} = {|A| \choose k}$$
 
 
 
