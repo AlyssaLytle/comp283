@@ -27,7 +27,7 @@ These are the general formulas for computing sets/tuples of size $$k$$ from a se
 
 
 
-## Other useful things to know}
+## Other useful things to know
 
     * If you don't know if the formula you're using is correct, try it with a smaller input. (E.g. if you're looking at the set $$\{1,2,3,4,5\}$$ try it with the set $$\{1,2,3\}$$.) This will help you confirm you are using the right formula.
     * If you see a question that looks like ``Find all combinations/permutations that don't have element $$x$$''. You should just consider your input to be the number of elements in the set without $$x$$. For example, in the homework question, we had $$13$$ beers, and $$3$$ were IPAs. So when I ask for all possible flights without IPAs, you're really just doing all possible flights of the set of beers without IPAs, so you're looking at combinations from a set of size $$10$$ instead of $$13$$.
