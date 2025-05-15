@@ -22,7 +22,7 @@ These are the general formulae for computing sets/tuples of size $$k$$ from a se
 * If "Order matters" and "Repetition allowed": $$n^k$$
 * If "Order matters" and "No Repetition'': $$\frac{n!}{(n-k)!}$$
 * If "Order doesn't matter'' and "No Repetition'': $$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
-* If "Order doesn't matter'' and ''Repetition allowed": $$\binom{k + n - 1}{k} = \frac{(k+n-1)!}{k!(n-1)!}$$. \\ (Don't worry about knowing this one. I just included it in case you're curious.)
+* If "Order doesn't matter'' and ''Repetition allowed": $$\binom{k + n - 1}{k} = \frac{(k+n-1)!}{k!(n-1)!}$$.  (Don't worry about knowing this one. I just included it in case you're curious.)
 
 
 
