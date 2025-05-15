@@ -67,9 +67,6 @@ We write $$A \subseteq B$$ to denote the fact that $$A$$ is a subset of $$B$$.
 
 
 
-## Subsets Cont.
-
-
 ### Using Predicate Logic 
 
 - $$\forall A,B, ~ A \subseteq B \leftrightarrow \forall x \in A, ~ x \in A \rightarrow x \in B$$
