@@ -187,7 +187,7 @@ $$L \times L = L^2 = \{(a,a),(a,b),(a,c),(b,a),(b, b),(b,c),(c,a),(c, b),(c,c)\}
 The cartesian product is associative: $$D \times(L \times D) = (D \times L) \times D$$.
 
 The cartesian product is not necessarily commutative: $$D\times L \neq L \times D$$.
-</dov>
+
 
 ## Sequences, Strings, and Series
 
