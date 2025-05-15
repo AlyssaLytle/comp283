@@ -96,8 +96,7 @@ We write $$A \subseteq B$$ to denote the fact that $$A$$ is a subset of $$B$$.
 >For all sets $$A$$ and $$B$$, $$A = B$$  if and only if every element of $$A$$ is an element of $$B$$ and every element of $$B$$ is an element of $$A$$
 
 >$$\forall A,B, ~ A = B \leftrightarrow (A \subseteq B$$ and $$B \subseteq A)$$
-<!-
->
+<!--
 >$$\forall A,B, ~ A = B \leftrightarrow (\forall x, ~ (x \in A \leftrightarrow x \in B))$$ -->
 
 
@@ -184,8 +183,7 @@ The **difference** of sets $$A$$ and $$B$$ is the set that contains all elements
 
 ### Using Set Notation
 
->$$A 
->B = A\backslash B =\{\, x ~ \mid ~ x \in A \land x \notin B \}$$
+>$$A - B = A\backslash B =\{\, x ~ \mid ~ x \in A \land x \notin B \}$$
 
 ### Using Predicate Logic
 
