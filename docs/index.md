@@ -19,7 +19,7 @@ contributors: Alyssa Byrnes
 * Wed, May 14: [Class Intro + LaTeX](/comp283/calendar/day-0.html)
 * Thu, May 15: [Propositional Logic](/calendar/propositional-logic.md)
 * Fri, May 16: [Sets, Tuples, and Counting](/calendar/sets-tuples-and-counting.md) 
-* Mon, May 19: Quantifiers
+* Mon, May 19: [Quantifiers](/calendar/quantifiers.md)
 * Tues, May 20: Set Operations
 * Wed, May 21: Relations
 * Thurs, May 22: Review and Practice
