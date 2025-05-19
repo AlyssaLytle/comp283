@@ -304,7 +304,7 @@ The powerset of a set $$A$$, denoted $$\mathscr{P}(A)$$ is the set of all subset
 >$$\mathscr{P}(A) = \{ S ~ \mid ~ S \subseteq A\}$$
 
 
->$$\mid\mathscr{P}(A)\mid = 2^{\midA\mid}$$
+>$$|\mathscr{P}(A)| = 2^{|A|}$$
 
 
 
@@ -318,7 +318,7 @@ The $$k$$**-subsets** of a set $$A$$, denoted $${A \choose k}$$ are all subsets 
 
 >Kind of... but here's why it's okay...
 
->The size of $${A \choose k} = {\midA\mid \choose k}$$
+>The size of $${A \choose k} = {|A| \choose k}$$
 
 
 
