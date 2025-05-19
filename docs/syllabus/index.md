@@ -12,7 +12,7 @@ contributors: Alyssa Byrnes
 - Instructor Information:
 Alyssa Byrnes-Lytle (she/her/hers)
 - Email: abyrnes1@cs.unc.edu 
-- Office Hours: [virtual](/calendar/office-hours.md)
+- Office Hours: [virtual](/calendar/office-hours.html)
 - Contact: via email or on EdStem
 - Undergraduate Teaching Assistants: Conor Jones, Bryen Alvarez, Austin Hill
 
