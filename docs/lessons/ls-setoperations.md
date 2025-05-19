@@ -318,7 +318,7 @@ The $$k$$**-subsets** of a set $$A$$, denoted $${A \choose k}$$ are all subsets 
 
 >Kind of... but here's why it's okay...
 
->The size of $${A \choose k} = {{|A|} \choose k}$$
+>The size of $${A \choose k} = {{\mid A\mid} \choose k}$$
 
 
 
