@@ -20,7 +20,7 @@ contributors: Alyssa Byrnes
 * Thu, May 15: [Propositional Logic](/calendar/propositional-logic.md)
 * Fri, May 16: [Sets, Tuples, and Counting](/calendar/sets-tuples-and-counting.md) 
 * Mon, May 19: [Quantifiers](/calendar/quantifiers.md)
-* Tues, May 20: Set Operations
+* Tues, May 20: [Set Operations](/calendar/set-operations.md)
 * Wed, May 21: Relations
 * Thurs, May 22: Review and Practice
 * Fri, May 23: Quiz 0
