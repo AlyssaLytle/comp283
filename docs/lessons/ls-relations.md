@@ -258,19 +258,19 @@ $$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
 
 >Is this symmetric? 
 
->Yes, because if $$x=y$$, then $$y=x$$ 
+> $$\color{green}\texttt{Yes, because if } x=y, \texttt{ then } y=x.$$ 
 
 >$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ 
 
 >Is this symmetric? 
 
->Yes, because if $$x\neq y$$, then $$y \neq x$$ 
+>$$\color{green}\texttt{Yes, because if } x\neq y, \texttt{ then }y \neq x$$ 
 
 >$$R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x < y \}$$ 
 
 >Is this symmetric? 
 
->No, because if $$x<y$$, it is not true that $$y<x$$.
+> $$\color{green}\texttt{No, because if } x<y, \texttt{ it is not true that }y<x$$.
 
 
 
