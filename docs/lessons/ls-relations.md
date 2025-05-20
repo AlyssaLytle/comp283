@@ -127,7 +127,7 @@ $$R = \{(x,y) \in [1,2,3,4] \mid x = y \}$$
 ## Complement and Inverse
 
 
-Every relations $$R \subseteq A \times B$$ has a **complement** and an **inverse**.
+Every relation $$R \subseteq A \times B$$ has a **complement** and an **inverse**.
 
 ### Complement Definition
 The *complement* of $$R$$, denoted $$\bar{R}$$, consists of all pairs from $$A \times B$$ that are not in R.
@@ -181,67 +181,11 @@ Another way to say this is $$\forall x \in A, (x R x)$$ holds.
 >$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ <br>
 >Is this reflexive?
 
+><p style="color:green;"> Yes! Because every integer equals itself! ($$x=x$$)</p>
 
-
-
-
-## Reflexive Relations
-
-
-$$R \subseteq A \times A$$
-
-$$R$$ is **reflexive** iff $$\forall x \in A, x R x$$.
-
-Another way to say this is $$\forall x \in A, (x R x)$$ holds.
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$<br>
->Is this reflexive? <br>
->Yes! Because every integer equals itself! ($$x=x$$)
-
-
-
-
-
-## Reflexive Relations
-
-
-$$R \subseteq A \times A$$
-
-$$R$$ is **reflexive** iff $$\forall x \in A, x R x$$.
-
-Another way to say this is $$\forall x \in A, (x R x)$$ holds.
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$<br>
->Is this reflexive? <br>
->Yes! Because every integer equals itself! ($$x=x$$) <br>
->$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ <br>
->Is this reflexive? <br>
-
-
-
-
-
-## Reflexive Relations
-
-
-$$R \subseteq A \times A$$
-
-$$R$$ is **reflexive** iff $$\forall x \in A, x R x$$.
-
-Another way to say this is $$\forall x \in A, (x R x)$$ holds.
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$<br>
->Is this reflexive? <br>
->Yes! Because every integer equals itself! ($$x=x$$) <br>
->$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ <br>
->Is this reflexive? <br>
->No! Because for every integer, $$x\neq x$$ does not hold.
+>$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ 
+>Is this reflexive? 
+> <p style="color:red;"> No! Because for every integer, $$x\neq x$$ does not hold.</p>
 
 
 
