@@ -21,8 +21,8 @@ contributors: Alyssa Byrnes
 * Fri, May 16: [Sets, Tuples, and Counting](/calendar/sets-tuples-and-counting.md) 
 * Mon, May 19: [Quantifiers](/calendar/quantifiers.md)
 * Tues, May 20: [Set Operations](/calendar/set-operations.md)
-* Wed, May 21: [Relations](/calendar/relations.html)
-* Thurs, May 22: [Review and Practice](calendar/practice-0.html)
+* Wed, May 21: [Relations](/calendar/relations.md)
+* Thurs, May 22: [Review and Practice](calendar/practice-0.md)
 * Fri, May 23: Quiz 0
 * Mon, May 26: Memorial Day  (No Class)
 * Tues, May 27: Functions
