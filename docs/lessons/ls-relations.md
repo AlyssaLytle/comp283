@@ -146,15 +146,15 @@ $$R^{-1} = \{ (y,x) \mid (x,y) \in R\}$$
 ## Complement and Inverse Example
 
 
-- Let $$P$$ be a group of coworkers: 
-- $$P = \{Alice, Bob, Chris \}$$
-- Say Alice sends an email to everyone else. Say Chris replies to her email.
-- $$R = \{ (a,b) \mid a,b \in P \land a \textrm{ sent an email to } b \}$$
-- So, $$R = \{(Alice, Bob), (Alice, Chris), (Chris, Alice) \}$$
-- The complement, $$\bar{R}$$, is the set $$(a,b)$$ where $$a$$ did not send an email to $$b$$.
-- $$\bar{R} = \{(Bob, Alice), (Bob, Chris), (Chris, Bob) \}$$
-- The inverse, $$R^{-1}$$, is the set of $$(b,a)$$ where $$b$$ received an email from $$a$$.
-- $$R^{-1} = \{(Bob,Alice), (Chris, Alice), (Alice, Chris)\}$$
+> Let $$P$$ be a group of coworkers: 
+> $$P = \{Alice, Bob, Chris \}$$
+> Say Alice sends an email to everyone else. Say Chris replies to her email.
+> $$R = \{ (a,b) \mid a,b \in P \land a \textrm{ sent an email to } b \}$$
+> So, $$R = \{(Alice, Bob), (Alice, Chris), (Chris, Alice) \}$$
+> The complement, $$\bar{R}$$, is the set $$(a,b)$$ where $$a$$ did not send an email to $$b$$.
+> $$\bar{R} = \{(Bob, Alice), (Bob, Chris), (Chris, Bob) \}$$
+> The inverse, $$R^{-1}$$, is the set of $$(b,a)$$ where $$b$$ received an email from $$a$$.
+> $$R^{-1} = \{(Bob,Alice), (Chris, Alice), (Alice, Chris)\}$$
 
 
 
