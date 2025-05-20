@@ -217,7 +217,7 @@ Another way to say this is $$\forall x \in A, (x R x)$$ holds.
 
 >$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ 
 >Is this reflexive? 
-> $$\color{red}\texttt{ No! Because for every integer,} x\neq x \texttt{does not hold.}$$
+> $$\color{red}\texttt{ No! Because for every integer,} x\neq x \texttt{ does not hold.}$$
 
 
 
@@ -235,13 +235,13 @@ Another way to say this is $$\forall x \in A, (x R x)$$ does not hold.
 
 >Is this irreflexive? 
 
->No! Because for all integers, $$x = x$$ holds. 
+> $$\color{red}\texttt{No! Because for all integers, } x = x \texttt{ holds}.$$ 
 
 >$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ 
 
 >Is this irreflexive? 
 
->Yes! Because for all integers, $$x \neq x$$ does not hold.
+> $$\color{red}\texttt{Yes! Because for all integers, } x \neq x \texttt{ does not hold.}$$
 
 
 
