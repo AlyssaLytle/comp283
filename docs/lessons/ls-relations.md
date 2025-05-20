@@ -29,7 +29,7 @@ so $$R$$ contains elements in $$\mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$$
 > $$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$ <br>
 > In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." <br>
 > Is $$(2,3) \in R$$? <br>
-> <p style="color:green;">Yes! Because $$2 \in \mathbb{Z},$$ $$3 \in \mathbb{Z},$$ and $$ 2 < 3 $$.</p>
+> $$\color{green}\texttt{Yes! Because} 2 \in \mathbb{Z}, 3 \in \mathbb{Z}, \texttt{and} 2 < 3 $$.
 
 
 
@@ -40,7 +40,7 @@ so $$R$$ contains elements in $$\mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$$
 > $$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$<br>
 > In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." <br>
 > Is $$(3,2) \in R$$?
-> <p style="color:red;">No! Because  $$3 \cancel{<} 2$$. </p>
+> $$\color{red}\texttt{No! Because } 3 \cancel{<} 2$$.
 
 
 
@@ -186,14 +186,15 @@ Another way to say this is $$\forall x \in A, (x R x)$$ holds.
 
 ### Example
 
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ <br>
+>$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ 
+
 >Is this reflexive?
 
 >$$\color{green}\texttt{ Yes! Because every integer equals itself!} (x=x)$$
 
 >$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ 
 >Is this reflexive? 
-> <p style="color:red;"> No! Because for every integer, $$x\neq x$$ does not hold.</p>
+> $$\color{red}\texttt{ No! Because for every integer,} x\neq x \texttt{does not hold.}$$
 
 
 
