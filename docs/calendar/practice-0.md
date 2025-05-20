@@ -35,10 +35,15 @@ Here are the practice problems to prepare you for the quiz! I will try and cover
 Express the following using predicate logic:
 
 4.1. No penny is a euro.
+
 4.2. There are coin purses of different sizes.
+
 4.3. There is a coin purse for every coin.
+
 4.4. No coin is without a coin purse. (Extra question: can there be an empty coin purse?)
+
 4.5. A coin purse with a euro must contain two coins.
+
 4.6. No coin purse holds both pennies and euros.
 
 
