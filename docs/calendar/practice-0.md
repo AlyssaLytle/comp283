@@ -15,6 +15,9 @@ Here are the practice problems to prepare you for the quiz! I will try and cover
 
 
 ## Problems
+
+### Logic 
+
 1. Prove $$a \leftrightarrow b \equiv (a \rightarrow b) \land (b \rightarrow a)$$ using a truth table.
 
 2. True or False: You can prove compound propositions $$X$$ and $$Y$$ are logically equivalent by showing $$X \leftrightarrow Y$$ is a tautology. Explain your answer.
@@ -22,6 +25,8 @@ Here are the practice problems to prepare you for the quiz! I will try and cover
 
 3. True or False: $$((a \lor b) \oplus \neg b) \lor \texttt{True}$$ always evaluates to $$\texttt{True}$$ regardless of the values of $$a$$ and $$b$$. Explain your answer.
 
+
+### Relations
 
 4. For this problem, let:
 
@@ -45,6 +50,7 @@ Express the following using predicate logic:
 > 4.5. A coin purse with a euro must contain two coins.
 
 > 4.6. No coin purse holds both pennies and euros.
+
 
 
 5. *(Coming Soon)*
