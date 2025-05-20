@@ -219,7 +219,9 @@ Another way to say this is $$\forall x \in A, (x R x)$$ holds.
 >$$\color{green}\texttt{ Yes! Because every integer equals itself!} (x=x)$$
 
 >$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ 
+
 >Is this reflexive? 
+
 > $$\color{red}\texttt{ No! Because for every integer,} x\neq x \texttt{ does not hold.}$$
 
 
@@ -244,7 +246,7 @@ Another way to say this is $$\forall x \in A, (x R x)$$ does not hold.
 
 >Is this irreflexive? 
 
-> $$\color{red}\texttt{Yes! Because for all integers, } x \neq x \texttt{ does not hold.}$$
+> $$\color{green}\texttt{Yes! Because for all integers, } x \neq x \texttt{ does not hold.}$$
 
 
 
@@ -291,7 +293,10 @@ You can also say, if $$x R y$$ holds, then $$y R x$$ does not hold.
 
 >Is this antisymmetric? 
 
->Yes! Because if $$x<y$$, then $$y \cancel{<} x$$ 
+>$$\color{green}\texttt{Yes! Because if } 
+x < y ,
+ \texttt{ then }
+y \cancel{<} x $$ 
 
 >$$R_{\textrm{lessthaneq}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \leq y \}$$ 
 
