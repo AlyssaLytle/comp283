@@ -42,6 +42,8 @@ Express the following using predicate logic:
 4.6. No coin purse holds both pennies and euros.
 
 
-
+5. *(Coming Soon)*
 
 ## Solutions
+
+*(Coming Soon)*
