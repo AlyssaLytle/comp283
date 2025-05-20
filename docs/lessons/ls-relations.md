@@ -275,7 +275,10 @@ $$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
 
 >Is this symmetric? 
 
-> $$\color{green}\texttt{No, because if } x<y, \texttt{ it is not true that }y<x$$.
+> $$\color{green}\texttt{No, because if } 
+x < y, 
+\texttt{ it is not true that } 
+y < x$$.
 
 
 
