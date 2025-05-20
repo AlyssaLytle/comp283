@@ -294,7 +294,7 @@ You can also say, if $$x R y$$ holds, then $$y R x$$ does not hold.
 
 >Is this antisymmetric? 
 
->Yes! Because if $$x \leq y$$, then $$y \cancel{\leq} x$$ 
+>$$\color{green}\texttt{Yes! Because if } x \leq y, \texttt{then} y \cancel{\leq} x$$
 
 >Wait... but what about if $$x=2$$ and $$y=2$$? $$x \leq y$$ and $$y \leq x$$ 
 
@@ -318,33 +318,5 @@ $$R$$ is **transitive** iff $$\forall x,y,z \in A, (x R y \land y R z) \implies 
 >$$\color{green}\texttt{Yes! Because if } x=y \land y = z, \texttt{then } x = z$$
 
 
-
-
-
-<!-- ## Something to Think About...
-
-
-Let's look at two relations:
-
-$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$
-
-As we already discussed, $$R_{\textrm{equal}}$$ is reflexive, symmetric, and transitive.
-
-$$R_{\textrm{iff}} = \{(x,y) \mid x,y \in \{T,F\} \land x \iff y \}$$
-
-$$R_{\textrm{iff}}$$ is also
-
-reflexive: $$x \iff x$$ holds
-
-symmetric: If $$x \iff y$$, then $$y \iff x$$
-
-transitive: If $$x \iff y$$ and $$y \iff z$$, then $$x \iff z$$
-
-Is it a coincidence that $$R_{\textrm{equal}}$$ and $$R_{\textrm{iff}}$$ have the same properties? 
-
-No! We've discussed before that $$\iff$$ is measure of equivalence!
-
-
- -->
 
 
