@@ -42,7 +42,10 @@ so $$R$$ contains elements in $$\mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$$
 
 > Is $$(2,3) \in R$$? 
 
-> $$\color{green}\texttt{Yes! Because} 2 \in \mathbb{Z}, 3 \in \mathbb{Z}, \texttt{and} 2 < 3 $$.
+> $$\color{green}\texttt{Yes! Because } 
+2 \in \mathbb{Z}, 
+3 \in \mathbb{Z}, 
+\texttt{ and } 2 < 3 $$.
 
 
 
