@@ -108,7 +108,7 @@ You can represent relation $$R \subseteq A \times B$$ using a **graph** by makin
 
 
 
-You can represent relation $$R \subseteq A \times B$$ as a $$|A| \times |B|$$ matrix $$M$$.
+You can represent relation $$R \subseteq A \times B$$ as a $$\mid A \mid \times \mid B \mid$$ matrix $$M$$.
 
 If $$(a,b) \in R$$, then on the matrix $$M[a,b] = T$$, otherwise  $$M[a,b] = F$$.
 
