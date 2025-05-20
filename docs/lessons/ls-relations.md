@@ -10,18 +10,6 @@ contributors: Alyssa Byrnes
 
 A **relation** on two sets, $$A$$ and $$B$$ is a subset of pair $$A \times B$$.
 
-### Example 1
-> Let's look at the following relation: <br> <br>
-$$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$ <br><br>
-In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." <br><br>
-What are our two sets?
-
-
-
-## Relations 
-
-
-A **relation** on two sets, $$A$$ and $$B$$ is a subset of pair $$A \times B$$.
 
 ### Example 1
 > Let's look at the following relation: <br> <br>
@@ -35,33 +23,15 @@ so $$R$$ contains elements in $$\mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$$
 
 
 
-
-## Example Continued
-
-
 ### Example 2
 
 > Let's look at the following relation: <br>
 > $$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$ <br>
 > In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." <br>
 > Is $$(2,3) \in R$$? <br>
+> Yes! Because $$2 \in \mathbb{Z}, 3 \in \mathbb{Z},$$ and $$2<3$$.
 
 
-
-## Example Continued
-
-
-### Example 2
-
-> Let's look at the following relation: <br>
-> $$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$ <br>
-> In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." <br>
-> Is $$(2,3) \in R$$? <br><br>
-> Yes! Because $$2 \in Z, 3 \in Z,$$ and $$2<3$$.
-
-
-
-## Example Continued
 
 
 ### Example 3
@@ -70,19 +40,7 @@ so $$R$$ contains elements in $$\mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$$
 > $$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$<br>
 > In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." <br>
 > Is $$(3,2) \in R$$?
-
-
-
-## Example Continued
-
-
-### Example 3
-
-> Let's look at the following relation:<br>
-> $$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$<br>
-> In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." <br>
-> Is $$(3,2) \in R$$?<br><br>
-> No! Because  $$3 \cancel{<} 2$$.
+> <p style="color:red;">No! Because  $$3 \cancel{<} 2$$. </p>
 
 
 
