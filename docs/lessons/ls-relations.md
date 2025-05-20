@@ -29,7 +29,7 @@ so $$R$$ contains elements in $$\mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$$
 > $$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$ <br>
 > In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." <br>
 > Is $$(2,3) \in R$$? <br>
-> Yes! Because $$2 \in \mathbb{Z}, 3 \in \mathbb{Z},$$ and $$2<3$$.
+> <p style="color:green;">Yes! Because $2 \in \mathbb{Z}, 3 \in \mathbb{Z},$ and $ 2 < 3 $.</p>
 
 
 
@@ -40,7 +40,7 @@ so $$R$$ contains elements in $$\mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$$
 > $$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$<br>
 > In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." <br>
 > Is $$(3,2) \in R$$?
-> <p style="color:red;">No! Because  $$3 \cancel{<} 2$$. </p>
+> <p style="color:red;">No! Because  $3 \cancel{<} 2$. </p>
 
 
 
