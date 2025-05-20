@@ -198,51 +198,6 @@ Another way to say this is $$\forall x \in A, (x R x)$$ holds.
 
 
 
-## Irreflexive Relations
-
-
-$$R$$ is **irreflexive** iff $$\forall x \in A, (x \cancel{R} x)$$
-
-Another way to say this is $$\forall x \in A, (x R x)$$ does not hold.
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ <br>
->Is this irreflexive?
-
-
-
-## Irreflexive Relations
-
-
-$$R$$ is **irreflexive** iff $$\forall x \in A, (x \cancel{R} x)$$
-
-Another way to say this is $$\forall x \in A, (x R x)$$ does not hold.
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ <br>
->Is this irreflexive? <br>
->No! Because for all integers, $$x = x$$ holds.
-
-
-
-## Irreflexive Relations
-
-
-$$R$$ is **irreflexive** iff $$\forall x \in A, (x \cancel{R} x)$$
-
-Another way to say this is $$\forall x \in A, (x R x)$$ does not hold.
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ <br>
->Is this irreflexive? <br>
->No! Because for all integers, $$x = x$$ holds. <br>
->$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ <br>
->Is this irreflexive?
-
-
 
 ## Irreflexive Relations
 
@@ -262,85 +217,6 @@ Another way to say this is $$\forall x \in A, (x R x)$$ does not hold.
 
 
 
-## Symmetric Relations
-
-
-$$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ <br>
->Is this symmetric?
-
-
-
-
-
-## Symmetric Relations
-
-
-$$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$<br>
->Is this symmetric? <br>
->Yes, because if $$x=y$$, then $$y=x$$
-
-
-
-
-
-## Symmetric Relations
-
-
-$$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$<br>
->Is this symmetric? <br>
->Yes, because if $$x=y$$, then $$y=x$$ <br>
->$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ <br>
->Is this symmetric?
-
-
-
-
-## Symmetric Relations
-
-
-$$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$<br>
->Is this symmetric? <br>
->Yes, because if $$x=y$$, then $$y=x$$ <br>
->$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ <br>
->Is this symmetric? <br>
->Yes, because if $$x\neq y$$, then $$y \neq x$$
-
-
-
-
-
-## Symmetric Relations
-
-
-$$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$<br>
->Is this symmetric? <br>
->Yes, because if $$x=y$$, then $$y=x$$ <br>
->$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ <br>
->Is this symmetric? <br>
->Yes, because if $$x\neq y$$, then $$y \neq x$$ <br>
->$$R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x < y \}$$ <br>
->Is this symmetric?
-
 
 
 ## Symmetric Relations
@@ -359,76 +235,6 @@ $$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
 >$$R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x < y \}$$ <br>
 >Is this symmetric? <br>
 >No, because if $$x<y$$, it is not true that $$y<x$$.
-
-
-
-## Antisymmetric Relations
-
-
-$$R$$ is **antisymmetric** iff $$\forall x \neq y \in A, (x R y \implies y \cancel{R} x)$$
-
-You can also say, if $$x R y$$ holds, then $$y R x$$ does not hold.
-
-### Example
-
->$$R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x < y \}$$ <br>
->Is this antisymmetric?
-
-
-
-
-
-## Antisymmetric Relations
-
-
-$$R$$ is **antisymmetric** iff $$\forall x \neq y \in A, (x R y \implies y \cancel{R} x)$$
-
-You can also say, if $$x R y$$ holds, then $$y R x$$ does not hold.
-
-### Example
-
->$$R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x < y \}$$ <br>
->Is this antisymmetric? <br>
->Yes! Because if $$x<y$$, then $$y \cancel{<} x$$
-
-
-
-
-
-## Antisymmetric Relations
-
-
-$$R$$ is **antisymmetric** iff $$\forall x \neq y \in A, (x R y \implies y \cancel{R} x)$$
-
-You can also say, if $$x R y$$ holds, then $$y R x$$ does not hold.
-
-### Example
-
->$$R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x < y \}$$ <br>
->Is this antisymmetric? <br>
->Yes! Because if $$x<y$$, then $$y \cancel{<} x$$ <br>
->$$R_{\textrm{lessthaneq}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \leq y \}$$ <br>
->Is this antisymmetric?
-
-
-
-## Antisymmetric Relations
-
-
-$$R$$ is **antisymmetric** iff $$\forall x \neq y \in A, (x R y \implies y \cancel{R} x)$$
-
-You can also say, if $$x R y$$ holds, then $$y R x$$ does not hold.
-
-### Example
-
->$$R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x < y \}$$ <br>
->Is this antisymmetric? <br>
->Yes! Because if $$x<y$$, then $$y \cancel{<} x$$ <br>
->$$R_{\textrm{lessthaneq}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \leq y \}$$ <br>
->Is this antisymmetric? <br>
->Yes! Because if $$x \leq y$$, then $$y \cancel{\leq} x$$ <br>
->Wait... but what about if $$x=2$$ and $$y=2$$? $$x \leq y$$ and $$y \leq x$$
-
 
 
 
@@ -463,22 +269,8 @@ $$R$$ is **transitive** iff $$\forall x,y,z \in A, (x R y \land y R z) \implies 
 ### Example
 
 >$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ <br>
->Is this transitive?
-
-
-
-
-
-## Transitive Relations
-
-
-$$R$$ is **transitive** iff $$\forall x,y,z \in A, (x R y \land y R z) \implies x R z$$
-
-### Example
-
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ <br>
 >Is this transitive? <br>
->Yes! Because if $$x=y \land y = z$$, then $$x = z$$
+>$$\color{green}\texttt{Yes! Because if } x=y \land y = z, \texttt{then } x = z$$
 
 
 
