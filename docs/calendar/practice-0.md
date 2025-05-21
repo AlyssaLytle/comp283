@@ -138,7 +138,7 @@ In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \te
 #### 4.3
 > "For every coin, there exists a coin purse that that coin is in."
 
-> $$\forall x in S, \exists c \in C, IN(x,c)$$
+> $$\forall x \in S, \exists c \in C, IN(x,c)$$
 
 #### 4.4 
 
@@ -146,9 +146,9 @@ In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \te
 
 > This is just the same statement as above. We can transform it by adding a double negation.
 
-> $$\neg \neg \big(\forall x in S, \exists c \in C, IN(x,c)\big)$$
+> $$\neg \neg \big(\forall x \in S, \exists c \in C, IN(x,c)\big)$$
 
-> $$\equiv \neg \exists x in S, \forall c \in C, \neg IN(x,c)$$
+> $$\equiv \neg \exists x \in S, \forall c \in C, \neg IN(x,c)$$
 
 #### 4.5
 
