@@ -150,6 +150,8 @@ In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \te
 
 > $$\neg \neg \big(\forall x \in S, \exists c \in C, IN(x,c)\big)$$
 
+> $$ \equiv \neg \exists x \in S, \forall c \in C, \neg IN(x,c)$$
+
 #### 4.5
 
 > "There does not exist a purse that has no coins."
