@@ -53,7 +53,7 @@ Express the following using predicate logic:
 
 
 
-5. Let the relation $$R = \{(x,y) | x,y \in \mathbb{N} \land x + y = 10 \}$$.
+5. Let the relation $$R = \{(x,y) \mid x,y \in \mathbb{N} \land x + y = 10 \}$$.
 
 Justify your answers for the following using the formal definition of a symmetric relation given in class. If your answer is no, provide a counter example.
 
@@ -68,14 +68,14 @@ Justify your answers for the following using the formal definition of a symmetri
 ## Solutions
 
 $$
-\begin{array}{|c|c|c|c|c|c|c|}
+\begin{array}{|c|c|c|c|c|c|}
 \hline
 a  & b & a \to b & b \to a & a \leftrightarrow b  & (a \to b) \land (b \to a) &   \\
 \hline
-T & T & & & & & \\
-T & F & & & & & \\
-F & T & & & & & \\
-F & F & & & & & \\
+T & T & T & T & \color{green} T & T  \\
+T & F & F & T & F & F  \\
+F & T & T & F & F & F \\
+F & F & T & T & T & T  \\
 \hline
 \end{array}
 $$
