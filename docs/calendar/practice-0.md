@@ -53,7 +53,17 @@ Express the following using predicate logic:
 
 
 
-5. *(Coming Soon)*
+5. Let the relation $$R = \{(x,y) | x,y \in \mathbb{N} \land x + y = 10 \}$$.
+
+Justify your answers for the following using the formal definition of a symmetric relation given in class. If your answer is no, provide a counter example.
+
+> 5.1 Is $$R$$ symmetric? 
+
+> 5.2 Is $$R$$ reflexive? 
+
+> 5.3 Is $$R$$ transitive? 
+
+
 
 ## Solutions
 
