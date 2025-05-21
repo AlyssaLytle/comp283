@@ -67,4 +67,17 @@ Justify your answers for the following using the formal definition of a symmetri
 
 ## Solutions
 
-*(Coming Soon)*
+$$
+$$
+\begin{array}{|c|c|c|c|c|c|c|}
+\hline
+a  & b & a \to b & b \to a & a \leftrightarrow b  & (a \to b) \land (b \to a) &   \\
+\hline
+T & T & & & & & \\
+T & F & & & & & \\
+F & T & & & & & \\
+F & F & & & & & \\
+\hline
+\end{array}
+$$
+$$
