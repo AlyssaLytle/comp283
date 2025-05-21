@@ -9,7 +9,7 @@ contributors: Alyssa Byrnes
 Here are the practice problems to prepare you for the quiz! I will try and cover as many as possible, but please come to the review session with requests! We can also review problems from the lessons, but I encourage you to use office hours for this as well!
 
 ## Date and Time: Thurs, May 22 at 12 pm
-* [Zoom Link](/)
+* [Zoom Link](https://unc.zoom.us/j/91069874856)
 * [Recording Link](/)
 
 
