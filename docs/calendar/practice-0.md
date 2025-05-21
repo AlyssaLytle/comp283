@@ -171,18 +171,46 @@ For each of these questions, you want to plug the relation in to the definiton.
 
 ### 5.1 Is $$R$$ symmetric? 
 
-Definition: $$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
+* Definition: $$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
 
-Now, we substitute $$A$$ for $$\mathbb{N}$$ and subsitute $$x R y$$ for $$x + y = 10$$.
+* Now, we substitute $$A$$ with $$\mathbb{N}$$ and substitute $$x R y$$ with $$x + y = 10$$.
 
 $$R$$ is **symmetric** iff $$\forall x,y \in \mathbb{N}, (x + y = 10 \implies y + x = 10)$$
 
-We know that this is true because x + y = y + x! So *yes*, $$R$$ is symmetric.
+* Now we ask, is this statement True?
+
+We know that this is true because x + y = y + x! 
+
+You can test it by plugging in values... if 1 + 9 = 10 and 9 + 1 = 10. 
+
+So *yes*, $$R$$ is symmetric.
 
 ### 5.2 Is $$R$$ reflexive? 
 
-Definition: $$R$$ is **reflexive** iff $$\forall x \in A, x R x$$.
+* Definition: $$R$$ is **reflexive** iff $$\forall x \in A, x R x$$.
+
+* Now, we substitute $$A$$ with $$\mathbb{N}$$ and substitute $$x R y$$ with $$x + y = 10$$.
+
+$$R$$ is **reflexive** iff $$\forall x \in \mathbb{N}, x + x = 10$$.
+
+* Now we ask, is this statement True?
+
+Here, we can come up with a counter example. We can choose $$x = 3$$ The number $$3$$ is in $$\mathbb{N}$$, however $$3 + 3 \neq 10$$.
+
+Therefore, *no* R is not reflexive.
 
 ### 5.3 Is $$R$$ transitive? 
 
 * Definition: $$R$$ is **transitive** iff $$\forall x,y,z \in A, (x R y \land y R z) \implies x R z$$
+
+* Now, we substitute $$A$$ with $$\mathbb{N}$$ and substitute $$x R y$$ with $$x + y = 10$$.
+
+$$\forall x,y,z \in \mathbb{N}, (x + y = 10 \land y + z = 10) \implies x + z = 10$$
+
+* Now we ask, is this statement True?
+
+Here, we can come up with a counter example. We can choose $$x=2$$, $$y=8$$, $$z=2$$.
+
+$$x + y = 10$$ and $$y + z = 10$$ however $$x + z \neq 10$$.
+
+So, *no* $$R$$ is not transitive.
