@@ -140,7 +140,9 @@ In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \te
 
 > $$\forall x in S, \exists c \in C, IN(x,c)$$
 
-#### 4.4 "The does not exist a coin that isn't in a purse."
+#### 4.4 
+
+> "There does not exist a coin that isn't in a purse."
 
 > This is just the same statement as above. We can transform it by adding a double negation.
 
