@@ -71,7 +71,7 @@ Justify your answers for the following using the formal definition of a symmetri
 $$
 \begin{array}{|c|c|c|c|c|c|}
 \hline
-a  & b & a \to b & b \to a & a \leftrightarrow b  & (a \to b) \land (b \to a) &   \\
+a  & b & a \to b & b \to a & a \leftrightarrow b  & (a \to b) \land (b \to a)   \\
 \hline
 T & T & T & T & \color{green} T & \color{green} T  \\
 T & F & F & T & \color{green} F & \color{green} F  \\
@@ -81,4 +81,22 @@ F & F & T & T & \color{green} T & \color{green} T  \\
 \end{array}
 $$
 
-2.  
+Since the last two columns are equivalent, this shows that $$a \leftrightarrow b$$ and $$(a \to b) \land (b \to a)$$ are equivalent for all possible values of $$a$$ and $$b$$ and therefore *logically equivalent*.
+
+2.  Let's try this for $$X = p \rightarrow q  and Y =\neg p \lor q$$
+
+$$
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+  &  &  & X & Y & X \leftrightarrow Y    \\
+
+\hline
+p  & q & \neg p & p \to q & \neq p \lor q & \big(p \to q \big) \leftrightarrow \big( \neq p \lor q \big)    \\
+\hline
+T & & & & &  \\
+T & & & & &  \\
+F & & & & &  \\
+F & & & & &  \\
+\hline
+\end{array}
+$$
