@@ -158,7 +158,7 @@ In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \te
 
 #### 4.6
 
-> For all coin purses, if there is a coin in the purse that is a euro, then the purse must contain at least 2 coins. 
+> "For all coin purses, if there is a coin in the purse that is a euro, then the purse must contain at least 2 coins."
 
 > $$\forall x \in S, c \in C, \big(IN(x,c) \land e(x)\big) \to q(c) \geq 2$$
 
