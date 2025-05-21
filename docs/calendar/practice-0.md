@@ -115,3 +115,19 @@ This is True. You can demonstrate this with a truth table, but you can also just
 In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \texttt{True}$$.
 
 ### 4. 
+
+*There can be multiple correct answers for these statements, so please feel free to run them by us in the review session or on EdStem!*
+
+4.1 
+"For all coins, if a coin is a penny, then it is not a euro."
+$$\forall x \in S, p(x) \to \neg e(x)$$ 
+"There does not exist a coin that is both a penny and a euro."
+$$\neg \exists x \in S, p(x) \land e(x)$$ 
+
+4.2
+"It is not the case that all coin purses are the same size."
+$$\neg \big( \forall c_1, c_2 \in C, q(c_1) = q(c_2)
+    \big)$$
+
+"There exist coin purses of different sizes."
+$$ \exists c_1, c_2 \in C, q(c_1) \neq q(c_2) $$
