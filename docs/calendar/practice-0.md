@@ -48,8 +48,6 @@ Express the following using predicate logic:
 
 > 4.5. A coin purse with a euro must contain at least two coins.
 
-> 4.6. No coin purse holds both pennies and euros.
-
 
 ### 5. More Relations
 
@@ -154,6 +152,8 @@ In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \te
 
 > For all coin purses, if there is a coin in the purse that is a euro, then the purse must contain at least 2 coins. 
 
-> $$\forall s \in S, c \in C, \big(IN(s,c) \land e(s)\big) \to q(c) \geq 2$$
+> $$\forall x \in S, c \in C, \big(IN(x,c) \land e(x)\big) \to q(c) \geq 2$$
 
-#### 4.6
+### 5. 
+
+*Solution coming soon.*
