@@ -96,7 +96,7 @@ $$
   &  &  & X & Y & X \leftrightarrow Y    \\
 
 \hline
-p  & q & \neg p & p \to q & \neq p \lor q & \big(p \to q \big) \leftrightarrow \big( \neq p \lor q \big) \\
+p  & q & \neg p & p \to q & \neg p \lor q & \big(p \to q \big) \leftrightarrow \big( \neg p \lor q \big) \\
 \hline
 T & T & F & T & T & T \\
 T & F & F & F & F & T \\
@@ -118,11 +118,14 @@ In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \te
 
 *There can be multiple correct answers for these statements, so please feel free to run them by us in the review session or on EdStem!*
 
-4.1 
-"For all coins, if a coin is a penny, then it is not a euro."
-$$\forall x \in S, p(x) \to \neg e(x)$$ 
-"There does not exist a coin that is both a penny and a euro."
-$$\neg \exists x \in S, p(x) \land e(x)$$ 
+#### 4.1 
+> "For all coins, if a coin is a penny, then it is not a euro."
+
+> $$\forall x \in S, p(x) \to \neg e(x)$$ 
+
+> "There does not exist a coin that is both a penny and a euro."
+
+> $$\neg \exists x \in S, p(x) \land e(x)$$ 
 
 4.2
 "It is not the case that all coin purses are the same size."
@@ -131,3 +134,8 @@ $$\neg \big( \forall c_1, c_2 \in C, q(c_1) = q(c_2)
 
 "There exist coin purses of different sizes."
 $$ \exists c_1, c_2 \in C, q(c_1) \neq q(c_2) $$
+
+4.3
+"For every coin, there exists a coin purse that that coin is in."
+
+$$\forall x in S, \exists c \in C, IN(x,c)$$
