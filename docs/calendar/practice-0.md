@@ -205,7 +205,7 @@ Therefore, *no* R is not reflexive.
 
 * Now, we substitute $$A$$ with $$\mathbb{N}$$ and substitute $$x R y$$ with $$x + y = 10$$.
 
-$$\forall x,y,z \in \mathbb{N}, (x + y = 10 \land y + z = 10) \implies x + z = 10$$
+$$R$$ is **transitive** iff  $$\forall x,y,z \in \mathbb{N}, (x + y = 10 \land y + z = 10) \implies x + z = 10$$
 
 * Now we ask, is this statement True?
 
