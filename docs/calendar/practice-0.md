@@ -67,7 +67,8 @@ Justify your answers for the following using the formal definition of a symmetri
 
 ## Solutions
 
-1.
+### 1. Logic 
+
 $$
 \begin{array}{|c|c|c|c|c|c|}
 \hline
@@ -83,7 +84,11 @@ $$
 
 Since the last two columns are equivalent, this shows that $$a \leftrightarrow b$$ and $$(a \to b) \land (b \to a)$$ are equivalent for all possible values of $$a$$ and $$b$$ and therefore *logically equivalent*.
 
-2.  Let's try this for $$X = p \rightarrow q  and Y =\neg p \lor q$$
+
+### 2. Logic 
+True!
+
+Let's try this for $$X = p \rightarrow q$$  and $$Y =\neg p \lor q$$
 
 $$
 \begin{array}{|c|c|c|c|c|c|}
@@ -100,3 +105,13 @@ F & F & T & T & T & T \\
 \hline
 \end{array}
 $$
+
+As you can see, if two columns (in this case $$X$$ and $$Y$$) are equal (aka logically equivalent), then $$X \leftrightarrow Y$$ will always evaluate to $$\texttt{True}$$ (aka it's a tautology)! 
+
+### 3. Logic
+
+This is True. You can demonstrate this with a truth table, but you can also just reason that any X that is "or"ed with a $$\texttt{True}$$, will always be $$\texttt{True}$$. 
+
+In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \texttt{True}$$.
+
+### 4. 
