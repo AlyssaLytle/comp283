@@ -139,3 +139,12 @@ $$ \exists c_1, c_2 \in C, q(c_1) \neq q(c_2) $$
 "For every coin, there exists a coin purse that that coin is in."
 
 $$\forall x in S, \exists c \in C, IN(x,c)$$
+
+4.4 "The does not exist a coin that isn't in a purse."
+
+This is just the same statement as above. We can transform it by adding a double negation.
+
+$$\neg \neg \big(\forall x in S, \exists c \in C, IN(x,c)\big)$$
+
+$$\equiv \neg \exists x in S, \forall c \in C, \neg IN(x,c)$$
+
