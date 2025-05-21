@@ -4,7 +4,7 @@ title: Practice and Review 0
 contributors: Alyssa Byrnes
 ---
 
-# Practice and Review 0
+# Review and Practice 0
 
 Here are the practice problems to prepare you for the quiz! I will try and cover as many as possible, but please come to the review session with requests! We can also review problems from the lessons, but I encourage you to use office hours for this as well!
 
