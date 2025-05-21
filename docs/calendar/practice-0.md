@@ -91,12 +91,12 @@ $$
   &  &  & X & Y & X \leftrightarrow Y    \\
 
 \hline
-p  & q & \neg p & p \to q & \neq p \lor q & \big(p \to q \big) \leftrightarrow \big( \neq p \lor q \big)    \\
+p  & q & \neg p & p \to q & \neq p \lor q & \big(p \to q \big) \leftrightarrow \big( \neq p \lor q \big) \\
 \hline
-T & & & & &  \\
-T & & & & &  \\
-F & & & & &  \\
-F & & & & &  \\
+T & T & F & T & T & T \\
+T & F & F & F & F & T \\
+F & T & T & T & T & T \\
+F & F & T & T & T & T \\
 \hline
 \end{array}
 $$
