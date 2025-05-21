@@ -46,7 +46,7 @@ Express the following using predicate logic:
 
 > 4.4. No coin is without a coin purse. (Extra question: can there be an empty coin purse?)
 
-> 4.5. A coin purse with a euro must contain two coins.
+> 4.5. A coin purse with a euro must contain at least two coins.
 
 > 4.6. No coin purse holds both pennies and euros.
 
@@ -127,24 +127,33 @@ In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \te
 
 > $$\neg \exists x \in S, p(x) \land e(x)$$ 
 
-4.2
-"It is not the case that all coin purses are the same size."
-$$\neg \big( \forall c_1, c_2 \in C, q(c_1) = q(c_2)
+#### 4.2
+>"It is not the case that all coin purses are the same size."
+
+> $$\neg \big( \forall c_1, c_2 \in C, q(c_1) = q(c_2)
     \big)$$
 
-"There exist coin purses of different sizes."
-$$ \exists c_1, c_2 \in C, q(c_1) \neq q(c_2) $$
+> "There exist coin purses of different sizes."
 
-4.3
-"For every coin, there exists a coin purse that that coin is in."
+> $$ \exists c_1, c_2 \in C, q(c_1) \neq q(c_2) $$
 
-$$\forall x in S, \exists c \in C, IN(x,c)$$
+#### 4.3
+> "For every coin, there exists a coin purse that that coin is in."
 
-4.4 "The does not exist a coin that isn't in a purse."
+> $$\forall x in S, \exists c \in C, IN(x,c)$$
 
-This is just the same statement as above. We can transform it by adding a double negation.
+#### 4.4 "The does not exist a coin that isn't in a purse."
 
-$$\neg \neg \big(\forall x in S, \exists c \in C, IN(x,c)\big)$$
+> This is just the same statement as above. We can transform it by adding a double negation.
 
-$$\equiv \neg \exists x in S, \forall c \in C, \neg IN(x,c)$$
+> $$\neg \neg \big(\forall x in S, \exists c \in C, IN(x,c)\big)$$
 
+> $$\equiv \neg \exists x in S, \forall c \in C, \neg IN(x,c)$$
+
+#### 4.5
+
+> For all coin purses, if there is a coin in the purse that is a euro, then the purse must contain at least 2 coins. 
+
+> $$\forall s \in S, c \in C, \big(IN(s,c) \land e(s)\big) \to q(c) \geq 2$$
+
+#### 4.6
