@@ -175,6 +175,9 @@ Definition: $$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R 
 
 Now, we substitute $$A$$ for $$\mathbb{N}$$ and subsitute $$x R y$$ for $$x + y = 10$$.
 
+$$R$$ is **symmetric** iff $$\forall x,y \in \mathbb{N}, (x + y = 10 \implies y + x = 10)$$
+
+We know that this is true because x + y = y + x! So *yes*, $$R$$ is symmetric.
 
 ### 5.2 Is $$R$$ reflexive? 
 
