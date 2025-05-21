@@ -71,7 +71,7 @@ Justify your answers for the following using the formal definition of a symmetri
 $$
 \begin{array}{|c|c|c|c|c|c|}
 \hline
-a  & b & a \to b & b \to a & a \leftrightarrow b  & (a \to b) \land (b \to a)   \\
+a  & b & a \to b & b \to a & a \leftrightarrow b  & (a \to b) \land (b \to a)  \\
 \hline
 T & T & T & T & \color{green} T & \color{green} T  \\
 T & F & F & T & \color{green} F & \color{green} F  \\
