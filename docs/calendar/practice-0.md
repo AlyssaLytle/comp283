@@ -16,7 +16,7 @@ Here are the practice problems to prepare you for the quiz! I will try and cover
 
 ## Problems
 
-### Logic 
+### 1-3 Logic 
 
 1. Prove $$a \leftrightarrow b \equiv (a \rightarrow b) \land (b \rightarrow a)$$ using a truth table.
 
@@ -26,9 +26,8 @@ Here are the practice problems to prepare you for the quiz! I will try and cover
 3. True or False: $$((a \lor b) \oplus \neg b) \lor \texttt{True}$$ always evaluates to $$\texttt{True}$$ regardless of the values of $$a$$ and $$b$$. Explain your answer.
 
 
-### Relations
-
-4. For this problem, let:
+### 4. Sets, Quantifiers, + Relations 
+For this problem, let:
 
 * $$S$$ be the set of all coins I possess. It could potentially contain any coin type from any country of the world.
 * $$C$$ be the set of coin purses (Coins go IN these)
@@ -52,8 +51,9 @@ Express the following using predicate logic:
 > 4.6. No coin purse holds both pennies and euros.
 
 
+### 5. More Relations
 
-5. Let the relation $$R = \{(x,y) \mid x,y \in \mathbb{N} \land x + y = 10 \}$$.
+Let the relation $$R = \{(x,y) \mid x,y \in \mathbb{N} \land x + y = 10 \}$$.
 
 Justify your answers for the following using the formal definition of a symmetric relation given in class. If your answer is no, provide a counter example.
 
@@ -67,15 +67,18 @@ Justify your answers for the following using the formal definition of a symmetri
 
 ## Solutions
 
+1.
 $$
 \begin{array}{|c|c|c|c|c|c|}
 \hline
 a  & b & a \to b & b \to a & a \leftrightarrow b  & (a \to b) \land (b \to a) &   \\
 \hline
-T & T & T & T & \color{green} T & T  \\
-T & F & F & T & F & F  \\
-F & T & T & F & F & F \\
-F & F & T & T & T & T  \\
+T & T & T & T & \color{green} T & \color{green} T  \\
+T & F & F & T & \color{green} F & \color{green} F  \\
+F & T & T & F & \color{green} F & \color{green} F \\
+F & F & T & T & \color{green} T & \color{green} T  \\
 \hline
 \end{array}
 $$
+
+2.  
