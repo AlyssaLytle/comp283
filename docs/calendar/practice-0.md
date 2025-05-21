@@ -53,7 +53,7 @@ Express the following using predicate logic:
 
 ### 5. More Relations
 
-Let the relation $$R = \{(x,y) \mid x,y \in \mathbb{N} \land x + y = 10 \}$$.
+Let the relation $$R \subseteq \mathbb{N} \times \mathbb{N}$$ be defined such that $$R = \{(x,y) \mid x,y \in \mathbb{N} \land x + y = 10 \}$$.
 
 Justify your answers for the following using the formal definition of a symmetric relation given in class. If your answer is no, provide a counter example.
 
@@ -166,4 +166,20 @@ In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \te
 
 ### 5. 
 
-*Solution coming soon.*
+For each of these questions, you want to plug the relation in to the definiton.
+
+
+### 5.1 Is $$R$$ symmetric? 
+
+Definition: $$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
+
+Now, we substitute $$A$$ for $$\mathbb{N}$$ and subsitute $$x R y$$ for $$x + y = 10$$.
+
+
+### 5.2 Is $$R$$ reflexive? 
+
+Definition: $$R$$ is **reflexive** iff $$\forall x \in A, x R x$$.
+
+### 5.3 Is $$R$$ transitive? 
+
+* Definition: $$R$$ is **transitive** iff $$\forall x,y,z \in A, (x R y \land y R z) \implies x R z$$
