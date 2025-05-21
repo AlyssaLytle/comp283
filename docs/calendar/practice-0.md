@@ -46,7 +46,9 @@ Express the following using predicate logic:
 
 > 4.4. No coin is without a coin purse. (Extra question: can there be an empty coin purse?)
 
-> 4.5. A coin purse with a euro must contain at least two coins.
+> 4.5 There does not exist a purse without a coin. (Use $$IN$$ for this, not $$q(c)$$.)
+
+> 4.6. A coin purse with a euro must contain at least two coins.
 
 
 ### 5. More Relations
@@ -148,9 +150,13 @@ In other words, for any compound proposition $$X$$, $$X \lor \texttt{True} = \te
 
 > $$\neg \neg \big(\forall x \in S, \exists c \in C, IN(x,c)\big)$$
 
-> $$\equiv \neg \exists x \in S, \forall c \in C, \neg IN(x,c)$$
-
 #### 4.5
+
+> "There does not exist a purse that has no coins."
+
+> $$ \neg \exists c \in C, \forall x \in S, \neg IN(x,c)$$
+
+#### 4.6
 
 > For all coin purses, if there is a coin in the purse that is a euro, then the purse must contain at least 2 coins. 
 
