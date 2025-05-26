@@ -108,13 +108,13 @@ We can also apply functions to sets.
 
 Say that we have $$f: X \to Y$$
 
-$$f(X) = \{f(x) \mid x \in X \}$$
+$$f(X) = \{f(x) \vert x \in X \}$$
 
 This is called the *image* of $$X$$ under $$f$$.
 
 We can also say,
 
-$$f^{-1}(Y) = \{ x \in X \mid f(x) \in Y \}$$
+$$f^{-1}(Y) = \{ x \in X \vert f(x) \in Y \}$$
 
 This is called the *pre-image* of $$Y$$ under $$f$$.
 
@@ -263,7 +263,7 @@ Bringing it back to functions...
 
 <img src="https://i.imgur.com/GizItRg.png"  width="400"/>
 
-If you are mapping $$f: A \to B$$ and $$\mid A\mid >\mid B\mid $$, then there is no way to map from every element in $$A$$ without two of them hitting the same element in $$B$$. 
+If you are mapping $$f: A \to B$$ and $$\vert A\vert >\vert B\vert $$, then there is no way to map from every element in $$A$$ without two of them hitting the same element in $$B$$. 
 
 
 
@@ -285,36 +285,36 @@ majoring in computer science, then at least one is both.
 
 - Why? (Informal proof by contradiction. Start with false statement, and show that it leads to a contradiction. Aka show the negation is NOT true.)
 - Let $$S=$$ set of all students, $$M=$$ set of all CS majors, $$W=$$  set of all women.  $$M \subseteq S$$ and $$W \subseteq S$$.
-- "Majority are women" means $$\mid W\mid > \frac{35}{2}$$ or $$\mid W\mid \geq 18$$
-- "Majority are majoring in computer science" means $$\mid M\mid > \frac{35}{2}$$ or $$\mid M\mid \geq 18$$
+- "Majority are women" means $$\vert W\vert > \frac{35}{2}$$ or $$\vert W\vert \geq 18$$
+- "Majority are majoring in computer science" means $$\vert M\vert > \frac{35}{2}$$ or $$\vert M\vert \geq 18$$
 - If $$M \subseteq S$$ and $$W \subseteq S$$, then $$M \cup W \subseteq S$$ 
-- If $$M \cup W \subseteq S$$, then $$\mid M \cup W\mid \leq \mid S\mid $$
+- If $$M \cup W \subseteq S$$, then $$\vert M \cup W\vert \leq \vert S\vert $$
 - Negation: Assume no one is both a computer science major and a woman. ($$M \cap W = \{\}$$)
-- Since $$M \cap W = \{\}$$, $$\mid M \cup W\mid = \mid M\mid + \mid W\mid \geq 18 + 18 = 36$$.
-- $$\mid M \cup W\mid = 36$$ and $$\mid S\mid = 35$$, but $$\mid M \cup W\mid \leq \mid S\mid $$. $$\rightarrow \leftarrow$$
+- Since $$M \cap W = \{\}$$, $$\vert M \cup W\vert = \vert M\vert + \vert W\vert \geq 18 + 18 = 36$$.
+- $$\vert M \cup W\vert = 36$$ and $$\vert S\vert = 35$$, but $$\vert M \cup W\vert \leq \vert S\vert $$. $$\rightarrow \leftarrow$$
 
 
 
 ## Applying Pigeonhole Principle to Functions
 
 
-- Recall: If you are mapping $$f: A \to B$$ and $$\mid A\mid >\mid B\mid $$, then there is no way to map from every element in $$A$$ without two of them hitting the same element in $$B$$. 
+- Recall: If you are mapping $$f: A \to B$$ and $$\vert A\vert >\vert B\vert $$, then there is no way to map from every element in $$A$$ without two of them hitting the same element in $$B$$. 
 - Injection: each element of $$B$$ is hit by at most one element in $$A$$
-- So if $$\mid A\mid > \mid B\mid $$, by definition $$f$$ is not an injection. (Aka there are too many arrows coming from $$A$$.)
+- So if $$\vert A\vert > \vert B\vert $$, by definition $$f$$ is not an injection. (Aka there are too many arrows coming from $$A$$.)
 - Surjection: each element of $$B$$ is hit by at least one element in $$A$$
-- So if $$\mid A\mid < \mid B\mid $$, by definition $$f$$ is not a surjection. (Aka there are not enough arrows coming from $$A$$.)
-- From this follows: $$f: A \to B$$ is a bijection $$\iff \mid A\mid = \mid B\mid $$ 
+- So if $$\vert A\vert < \vert B\vert $$, by definition $$f$$ is not a surjection. (Aka there are not enough arrows coming from $$A$$.)
+- From this follows: $$f: A \to B$$ is a bijection $$\iff \vert A\vert = \vert B\vert $$ 
 
 
 
 ## Implications of Pigeonhole Principle
 
 
-- $$f: A \to B$$ is a bijection $$\iff \mid A\mid = \mid B\mid $$
+- $$f: A \to B$$ is a bijection $$\iff \vert A\vert = \vert B\vert $$
 - Think about what this means if $$A$$ and $$B$$ are infinite sets...
 - Let $$A = \mathbb{N}$$ and $$B = \mathbb{Z}$$
 - If we can show there exists a bijection $$f:  \mathbb{N} \to \mathbb{Z}$$, then 
-$$\mid \mathbb{N}\mid = \mid \mathbb{Z}\mid $$!
+$$\vert \mathbb{N}\vert = \vert \mathbb{Z}\vert $$!
 - (We can! Try it at home!)
 - A set is called **countably infinite** (or denumerable) if it can be put in bijective correspondence with the set of natural numbers. 
 - A set is called **countable** if it is either finite or countably infinite.

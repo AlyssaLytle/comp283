@@ -24,9 +24,9 @@ Note that if we can't explicitly define an $$x$$, then the minimum is undefined.
 
 - What is the minimum of $$\mathbb{Z}$$? <br>
     - It's undefined, because the lowest element of $$\mathbb{Z}$$ can't be explicitly stated. <br>
-- What is the minimum of $$\{x \mid x \in [0,10]\}$$? <br>
+- What is the minimum of $$\{x \vert x \in [0,10]\}$$? <br>
     - $$0$$ <br>
-- What is the minimum of $$\{x \mid x \in (0,10)\}$$? <br>
+- What is the minimum of $$\{x \vert x \in (0,10)\}$$? <br>
     - It's undefined. <br>
 
 
