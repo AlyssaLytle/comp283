@@ -31,20 +31,6 @@ Note that if we can't explicitly define an $$x$$, then the minimum is undefined.
 
 
 
-
-## Demonstrating Minimum
-
-
-Say we want to write code that checks if an element $$x$$ is the minimum element in set $$A$$.
-
-First in English, let's write down what we want it to do:
-
-Check each element $$y$$ in $$A$$ and see if $$x \leq y$$. If this is true for all $$y$$, then return True. If there is one $$y$$ where this is not true, return False. $$\leftarrow$$ (On assignments, when I tell you "explain to me in English how you would demonstrate this", this is what I mean!)
-
-
-
-
-
 ## Demonstrating Minimum
 
 

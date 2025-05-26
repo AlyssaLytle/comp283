@@ -312,7 +312,7 @@ majoring in computer science, then at least one is both.
 
 - $$f: A \to B$$ is a bijection $$\iff \mid A\mid = \mid B\mid $$
 - Think about what this means if $$A$$ and $$B$$ are infinite sets...
-- Lets $$A = \mathbb{N}$$ and $$B = \mathbb{Z}$$
+- Let $$A = \mathbb{N}$$ and $$B = \mathbb{Z}$$
 - If we can show there exists a bijection $$f:  \mathbb{N} \to \mathbb{Z}$$, then 
 $$\mid \mathbb{N}\mid = \mid \mathbb{Z}\mid $$!
 - (We can! Try it at home!)
