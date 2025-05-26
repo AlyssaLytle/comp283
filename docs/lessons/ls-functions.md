@@ -93,7 +93,7 @@ We can apply functions to tuples.
 
 A common example is the Pythagorean Theorem.
 
-$$$$ f(x,y) = \sqrt{x^2 + y^2}$$$$
+$$ f(x,y) = \sqrt{x^2 + y^2}$$
 
 Note that $$f: \mathbb{R} \times \mathbb{R} \to \mathbb{R}$$
 
