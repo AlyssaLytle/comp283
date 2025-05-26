@@ -37,7 +37,7 @@ Any set that is not finite is an ***infinite set***.
 
 Let $$A$$ be a finite set. The number of different elements in $$A$$ is called its ***cardinality***. 
 
-The cardinality of a finite set  is denoted  $$\mid A \mid$$ .
+The cardinality of a finite set  is denoted  $$\vert A \vert$$ .
 
 
 >$$\{1,2,3\}$$ is a finite set. Its cardinality is $$3$$.
@@ -156,7 +156,7 @@ $$A \cup B =$$ {Apples, Bananas, Oranges}
 - There are some standard symbols that represent specific sets you will see:
 - The set of **Natural Numbers** $$\mathbb{N}$$ is the set of all whole numbers $$\geq 0$$, $$\{0,1,2,3,4,\ldots\}$$.*
 - The set of **Integers** $$\mathbb{Z}$$ is the set of all whole numbers, $$\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}$$.
-- The set of **Rational Numbers** $$\mathbb{Q}$$ are numbers that can be represented as a quotient of whole numbers, $$\{\frac{p}{q} \mid p,q \in \mathbb{Z}\}$$
+- The set of **Rational Numbers** $$\mathbb{Q}$$ are numbers that can be represented as a quotient of whole numbers, $$\{\frac{p}{q} \vert p,q \in \mathbb{Z}\}$$
 - The set of **Real Numbers** $$\mathbb{R}$$ is all *real* numbers. 
 
 
@@ -176,7 +176,7 @@ $$(a_1,a_2,\ldots,a_k)$$ iff for all $$i\in[1,\ldots,k]$$ we have $$a_i=b_i$$.
 
 The basic operation to create tuples is the Cartesian Product of two sets.
 
-The \textbf{cartesian product} of $$A$$ and $$B$$, $$A \times B = \{(a,b)\mid$$ for all $$a \in A$$ and for all $$b \in B\}$$
+The \textbf{cartesian product} of $$A$$ and $$B$$, $$A \times B = \{(a,b)\vert$$ for all $$a \in A$$ and for all $$b \in B\}$$
 
 ### Example
 >Let $$L=\{a,b,c\}$$ and let $$D = \{0,1\}$$
@@ -235,8 +235,8 @@ The best way to demonstrate what this means is by example...
 - Now you want a set of three books, one of each type; how many sets of three are possible? 
 - You want to count all tuples of the form $$(m,p,r)$$, where $$m$$ is a math book, $$p$$ is a philosophy book, and $$r$$ is a religion book. You choose one of six math books, one of five philosophy books, and one of three religion books, so the product rule says, 
 - "$$6 \cdot 5 \cdot 3 = 90$$ sets of three are possible."
-- If $$M$$ is the set of math books, $$P$$ is the set of philosophy books, and $$R$$ is the set of religion books. You can get all possible sets of three using the **cartesian product**, and the **cardinality** of that is the number of possible sets, $$\mid M \times P \times R \mid$$.
-- We can see that $$\mid M \mid \cdot \mid P \mid \cdot \mid R\mid = \mid M \times P \times R\mid$$. 
+- If $$M$$ is the set of math books, $$P$$ is the set of philosophy books, and $$R$$ is the set of religion books. You can get all possible sets of three using the **cartesian product**, and the **cardinality** of that is the number of possible sets, $$\vert M \times P \times R \vert$$.
+- We can see that $$\vert M \vert \cdot \vert P \vert \cdot \vert R\vert = \vert M \times P \times R\vert$$. 
 - *This exactly what the product rule is saying!*
 
 ## Permutations

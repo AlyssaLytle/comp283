@@ -115,7 +115,7 @@ The complement of a set $$A$$, denoted $$\bar{A}$$ is the set of all elements in
 
 ### Using Set Notation
 
->$$\bar{A} = \{x ~ \mid ~ x \notin A\}$$
+>$$\bar{A} = \{x ~ \vert ~ x \notin A\}$$
 
 ### Using Predicate Logic
 
@@ -136,7 +136,7 @@ $$A \cap B$$ are the elements that are both in $$A$$ and $$B$$.
 
 ### Using Set Notation
 
->$$A \cap B = \{ x ~ \mid ~ x \in A \land x \in B \}$$
+>$$A \cap B = \{ x ~ \vert ~ x \in A \land x \in B \}$$
 
 ### Using Predicate Logic
 
@@ -159,7 +159,7 @@ $$A \cup B$$ are the elements that are either in $$A$$ or $$B$$.
 
 ### Using Set Notation
 
->$$A \cup B = \{ x ~ \mid ~ x \in A \lor x \in B \}$$
+>$$A \cup B = \{ x ~ \vert ~ x \in A \lor x \in B \}$$
 
 ### Using Predicate Logic
 
@@ -183,7 +183,7 @@ The **difference** of sets $$A$$ and $$B$$ is the set that contains all elements
 
 ### Using Set Notation
 
->$$A - B = A\backslash B =\{\, x ~ \mid ~ x \in A \land x \notin B \}$$
+>$$A - B = A\backslash B =\{\, x ~ \vert ~ x \in A \land x \notin B \}$$
 
 ### Using Predicate Logic
 
@@ -222,7 +222,7 @@ The **difference** of sets $$A$$ and $$B$$ is the set that contains all elements
 
 ### Using Set Notation
 
->$$A \oplus B = \{x ~ \mid ~ x \in A \oplus x \in B\}$$
+>$$A \oplus B = \{x ~ \vert ~ x \in A \oplus x \in B\}$$
 
 ### Using Predicate Logic
 
@@ -282,7 +282,7 @@ The **cartesian product** of $$A$$ and $$B$$,
 
 ### Using Set Notation
 
-> $$A \times B = \{(a,b)\mid \forall a \in A$$,  $$\forall b \in B\}$$
+> $$A \times B = \{(a,b)\vert \forall a \in A$$,  $$\forall b \in B\}$$
 
 ### Using Predicate Logic
 
@@ -301,7 +301,7 @@ The powerset of a set $$A$$, denoted $$\mathscr{P}(A)$$ is the set of all subset
 
 ### Using Set Notation
 
->$$\mathscr{P}(A) = \{ S ~ \mid ~ S \subseteq A\}$$
+>$$\mathscr{P}(A) = \{ S ~ \vert ~ S \subseteq A\}$$
 
 
 >$$|\mathscr{P}(A)| = 2^{|A|}$$
@@ -318,7 +318,7 @@ The $$k$$**-subsets** of a set $$A$$, denoted $${A \choose k}$$ are all subsets 
 
 >Kind of... but here's why it's okay...
 
->The size of $${A \choose k} = {\mid A\mid \choose k}$$
+>The size of $${A \choose k} = {\vert A\vert \choose k}$$
 
 
 

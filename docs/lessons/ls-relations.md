@@ -15,7 +15,7 @@ A **relation** on two sets, $$A$$ and $$B$$ is a subset of pair $$A \times B$$.
 > Let's look at the following relation: 
  
 
-$$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$ 
+$$R = \{(m,n) \vert m, n \in \mathbb{Z} \land m < n\}$$ 
 
 
 In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." 
@@ -36,7 +36,7 @@ so $$R$$ contains elements in $$\mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$$
 
 > Let's look at the following relation: 
 
-> $$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$ 
+> $$R = \{(m,n) \vert m, n \in \mathbb{Z} \land m < n\}$$ 
 
 > In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." 
 
@@ -54,7 +54,7 @@ so $$R$$ contains elements in $$\mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$$
 
 > Let's look at the following relation:
 
-> $$R = \{(m,n) \mid m, n \in \mathbb{Z} \land m < n\}$$
+> $$R = \{(m,n) \vert m, n \in \mathbb{Z} \land m < n\}$$
 
 > In English: "All pairs of integers $$(m,n)$$ such that $$m<n$$." 
 
@@ -79,7 +79,7 @@ We can use relations to describe many types of relationships!
 
 - Say we want to see all coins that have a coin purse. We could look at the relation: 
 
-- $$R = \{(x,c) \mid x \in X \land c \in C \land In(x,c) \}$$ 
+- $$R = \{(x,c) \vert x \in X \land c \in C \land In(x,c) \}$$ 
 
 - This would give us the pairs $$(x,c)$$ of each coin $$x$$ and its corresponding coin purse $$c$$. 
 
@@ -119,7 +119,7 @@ You can represent relation $$R \subseteq A \times B$$ using a **graph** by makin
 
 >Flowcharts are relations of the form:
 
->$$R = \{(m,n) \mid$$ "do $$m$$ before $$n$$" $$\}$$
+>$$R = \{(m,n) \vert$$ "do $$m$$ before $$n$$" $$\}$$
 
 
 
@@ -134,7 +134,7 @@ You can represent relation $$R \subseteq A \times B$$ using a **graph** by makin
 
 
 
-You can represent relation $$R \subseteq A \times B$$ as a $$\mid A \mid \times \mid B \mid$$ matrix $$M$$.
+You can represent relation $$R \subseteq A \times B$$ as a $$\vert A \vert \times \vert B \vert$$ matrix $$M$$.
 
 If $$(a,b) \in R$$, then on the matrix $$M[a,b] = T$$, otherwise  $$M[a,b] = F$$.
 
@@ -142,7 +142,7 @@ If $$(a,b) \in R$$, then on the matrix $$M[a,b] = T$$, otherwise  $$M[a,b] = F$$
 
 ### Example - Equality
 
-$$R = \{(x,y) \in [1,2,3,4] \mid x = y \}$$
+$$R = \{(x,y) \in [1,2,3,4] \vert x = y \}$$
 
 
 
@@ -158,12 +158,12 @@ Every relation $$R \subseteq A \times B$$ has a **complement** and an **inverse*
 ### Complement Definition
 The *complement* of $$R$$, denoted $$\bar{R}$$, consists of all pairs from $$A \times B$$ that are not in R.
 
-$$\bar{R} = \{ (x,y) \mid x \in A \land y \in B \land (x,y) \notin R \}$$
+$$\bar{R} = \{ (x,y) \vert x \in A \land y \in B \land (x,y) \notin R \}$$
 
 ### Inverse Definition
 The *inverse* of $$R$$, denoted $$R^{-1}$$, is obtained by simply swapping the order of every pair.
 
-$$R^{-1} = \{ (y,x) \mid (x,y) \in R\}$$
+$$R^{-1} = \{ (y,x) \vert (x,y) \in R\}$$
 
 
 
@@ -178,7 +178,7 @@ $$R^{-1} = \{ (y,x) \mid (x,y) \in R\}$$
 
 > Say Alice sends an email to everyone else. Say Chris replies to her email.
 
-> $$R = \{ (a,b) \mid a,b \in P \land a \textrm{ sent an email to } b \}$$
+> $$R = \{ (a,b) \vert a,b \in P \land a \textrm{ sent an email to } b \}$$
 
 > So, $$R = \{(Alice, Bob), (Alice, Chris), (Chris, Alice) \}$$
 
@@ -212,13 +212,13 @@ Another way to say this is $$\forall x \in A, (x R x)$$ holds.
 
 ### Example
 
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ 
+>$$R_{\textrm{equal}} = \{(x,y) \vert x,y \in \mathbb{Z} \land x = y \}$$ 
 
 >Is this reflexive?
 
 >$$\color{green}\texttt{ Yes! Because every integer equals itself!} (x=x)$$
 
->$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ 
+>$$R_{\textrm{nequal}} = \{(x,y) \vert x,y \in \mathbb{Z} \land x \neq y \}$$ 
 
 >Is this reflexive? 
 
@@ -236,13 +236,13 @@ Another way to say this is $$\forall x \in A, (x R x)$$ does not hold.
 
 ### Example
 
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ 
+>$$R_{\textrm{equal}} = \{(x,y) \vert x,y \in \mathbb{Z} \land x = y \}$$ 
 
 >Is this irreflexive? 
 
 > $$\color{red}\texttt{No! Because for all integers, } x = x \texttt{ holds}.$$ 
 
->$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ 
+>$$R_{\textrm{nequal}} = \{(x,y) \vert x,y \in \mathbb{Z} \land x \neq y \}$$ 
 
 >Is this irreflexive? 
 
@@ -259,19 +259,19 @@ $$R$$ is **symmetric** iff $$\forall x,y \in A, (x R y \implies y R x)$$
 
 ### Example
 
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$
+>$$R_{\textrm{equal}} = \{(x,y) \vert x,y \in \mathbb{Z} \land x = y \}$$
 
 >Is this symmetric? 
 
 > $$\color{green}\texttt{Yes, because if } x=y, \texttt{ then } y=x.$$ 
 
->$$R_{\textrm{nequal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \neq y \}$$ 
+>$$R_{\textrm{nequal}} = \{(x,y) \vert x,y \in \mathbb{Z} \land x \neq y \}$$ 
 
 >Is this symmetric? 
 
 >$$\color{green}\texttt{Yes, because if } x\neq y, \texttt{ then }y \neq x$$ 
 
->$$R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x < y \}$$ 
+>$$R_{\textrm{lessthan}} = \{(x,y) \vert x,y \in \mathbb{Z} \land x < y \}$$ 
 
 >Is this symmetric? 
 
@@ -292,7 +292,7 @@ You can also say, if $$x R y$$ holds, then $$y R x$$ does not hold.
 
 ### Example
 
->$$R_{\textrm{lessthan}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x < y \}$$ 
+>$$R_{\textrm{lessthan}} = \{(x,y) \vert x,y \in \mathbb{Z} \land x < y \}$$ 
 
 >Is this antisymmetric? 
 
@@ -301,7 +301,7 @@ x < y ,
  \texttt{ then }
 y \cancel{<} x $$ 
 
->$$R_{\textrm{lessthaneq}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x \leq y \}$$ 
+>$$R_{\textrm{lessthaneq}} = \{(x,y) \vert x,y \in \mathbb{Z} \land x \leq y \}$$ 
 
 >Is this antisymmetric? 
 
@@ -322,7 +322,7 @@ $$R$$ is **transitive** iff $$\forall x,y,z \in A, (x R y \land y R z) \implies 
 
 ### Example
 
->$$R_{\textrm{equal}} = \{(x,y) \mid x,y \in \mathbb{Z} \land x = y \}$$ 
+>$$R_{\textrm{equal}} = \{(x,y) \vert x,y \in \mathbb{Z} \land x = y \}$$ 
 
 >Is this transitive? 
 
