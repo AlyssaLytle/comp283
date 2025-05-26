@@ -62,7 +62,7 @@ We will demonstrate this with an example...
 
 
 
-## Composition Example
+### Example
 
 
 $$f(x) = x$$ and $$g(x) = \frac{1}{x}$$
@@ -108,13 +108,13 @@ We can also apply functions to sets.
 
 Say that we have $$f: X \to Y$$
 
-$$$$f(X) = \{f(x) | x \in X \}$$$$
+$$f(X) = \{f(x) | x \in X \}$$
 
 This is called the *image* of $$X$$ under $$f$$.
 
 We can also say,
 
-$$$$f^{-1}(Y) = \{ x \in X | f(x) \in Y \}$$$$
+$$f^{-1}(Y) = \{ x \in X | f(x) \in Y \}$$
 
 This is called the *pre-image* of $$Y$$ under $$f$$.
 
@@ -150,22 +150,6 @@ to exactly one element $$b=f(a)$$ from $$B$$.
 * When $$A = \mathbb{R}^+$$ and $$B = \mathbb{R}^+$$? <br>
   * Yes!
 
-
-
-
-
-## Types of Functions
-
-Recall...
-
-A  **function**  $$f$$ is a relation on $$A$$ and $$B$$ that maps each $$a$$ from  $$A$$ 
-to exactly one element $$b=f(a)$$ from $$B$$.
-
-$$\forall a\in A\  \exists b_1\in B\  \bigl((a,b_1)\in f
-\bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \rightarrow {b_2 =
-b_1}) \bigr).$$ 
-
-Actually, the full term for this definition is a **total function**.
 
 
 
@@ -273,9 +257,6 @@ We are going to demonstrate how to prove a function is a bijection. We are also 
 The pigeonhole principle states: You can not fit $$n+1$$ pigeons into $$n$$ holes without having two pigeons share a hole.
 
 
-
-## Pigeonhole Principle
-
 Bringing it back to functions...
 
 <img src="https://i.imgur.com/GizItRg.png"  width="400"/>
@@ -285,10 +266,9 @@ If you are mapping $$f: A \to B$$ and $$|A|>|B|$$, then there is no way to map f
 
 
 
+### How we can use it...
 
-
-## How we can use it...
-
+### Example 1
 
 An airport with 1,500 landings a day must be able to accommodate
 two planes landing in the same minute.
@@ -296,11 +276,7 @@ two planes landing in the same minute.
 - Why? There are $$1440$$ minutes in a day so, by the pigeonhole principle, if there are greater than $$1440$$ planes coming in, some planes will have to land in the same minute.
 
 
-
-
-
-## How we can use it...
-
+### Example 2
 
 In a class of $$35$$ students, if a majority are women and a majority are
 majoring in computer science, then at least one is both.
