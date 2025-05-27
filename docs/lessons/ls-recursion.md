@@ -38,8 +38,7 @@ Here is an example of what recursion would look like in a programming language l
 
 Say we want to write a program that returns $$n!$$.
 
-    Def factorial:
-        input: natural number n
+    def factorial(n):
         if n == 1: #base case
             return 1
         else: #recursive rule
