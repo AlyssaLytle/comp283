@@ -49,3 +49,15 @@ Let's break this into two properties (like we did in the lesson):
 b_1}).$$
 
 Now let's plug in the function and set names.
+
+- $$\forall x \in X\  \exists y_1\in Y\  \bigl((x,y_1)\in f
+\bigr)$$
+
+This is true. Over $$f$$, every element of $X$ maps to an element in $Y$
+
+- $$ \forall y_2\in Y\  ({(x,y_2)\in f} \rightarrow {y_2 =
+y_1}).$$
+
+This is not true. Element $$c$$ maps to both $$3$$ and $$4$$. 
+
+In other words, $$(c,3) \in f$$ and $$(c,4) \in f$$. Since $$3 \neq 4$$, our statement is violated.
