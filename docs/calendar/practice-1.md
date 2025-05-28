@@ -89,7 +89,16 @@ Therefore $$g$$ is a total function.
 
 ### 1.3 Is $$g$$ a bijection? 
 
-No. *(Explanation coming soon.)*
+No. You can prove this by plugging in $$g$$, mapping from $$Y$$ to $$Z$$, into the definition of a bijection:
+
+A bijection is one-to-one
+
+$$\forall x_1,x_2\in A, ~  \bigl(f(x_1)=f(x_2)\bigr) \rightarrow (x_1=x_2).$$
+
+
+and onto
+
+$$\forall y \in B ~ \exists x \in A, ~   f(x)=y$$.
 
 ### 1.4 Let $$h=g\circ f$$. Is $$h$$ is a total function?
 
@@ -97,4 +106,4 @@ Yes, $$h$$ is a total function. You can verify this by plugging in  domain $$X$$
 
 ### 1.5 Is $$h$$ a bijection?
 
-Yes. *(Explanation coming soon.)*
+Yes. Similar to 1.3, you can prove this by plugging in $$h$$, which maps from $$X$$ to $$Z$$ into the definition of a bijection.
