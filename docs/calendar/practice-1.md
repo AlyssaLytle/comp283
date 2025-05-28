@@ -33,7 +33,7 @@ For this problem, we will be discussing this figure:
 
 # Solutions
 
-1. First, we start with the definition of a total function.
+1.1 First, we start with the definition of a total function.
 
 $$A\times B$$ is a  function  iff  
 $$\forall a\in A\  \exists b_1\in B\  \bigl((a,b_1)\in f
@@ -53,7 +53,9 @@ Now let's plug in the function and set names.
 - $$\forall x \in X\  \exists y_1\in Y\  \bigl((x,y_1)\in f
 \bigr)$$
 
-This is true. Over $$f$$, every element of $X$ maps to an element in $Y$
+This is true. Over $$f$$, every element of $$X$$ maps to an element in $$Y$$.
+
+
 
 - $$ \forall y_2\in Y\  ({(x,y_2)\in f} \rightarrow {y_2 =
 y_1}).$$
@@ -61,3 +63,19 @@ y_1}).$$
 This is not true. Element $$c$$ maps to both $$3$$ and $$4$$. 
 
 In other words, $$(c,3) \in f$$ and $$(c,4) \in f$$. Since $$3 \neq 4$$, our statement is violated.
+
+Therefore, $$f$$ is NOT a total function.
+
+1.2 Similar to the last problem, let's plug our domain $$Y$$, our co-domain $$Z$$, and our function $$g$$ into the definition.
+
+- $$\forall y\in Y\  \exists z_1\in Z\  \bigl((y,z_1)\in g
+\bigr)$$
+
+This is true. Over $$g$$, every element of $$Y$$ maps to an element in $$Z$$.
+
+- $$ \forall z_2\in Z\  ({(y,z_2)\in g} \rightarrow {z_2 =
+z_1}).$$
+
+This is also true. Over $$g$$, every element in $$Z$$ is mapped to by at most one element in $$Y$$.
+
+Therefore $$g$$ is a total function.
