@@ -35,7 +35,7 @@ For this problem, we will be discussing this figure:
 
 1. First, we start with the definition of a total function.
 
-A\times B$$ is a  function  iff  
+$$A\times B$$ is a  function  iff  
 $$\forall a\in A\  \exists b_1\in B\  \bigl((a,b_1)\in f
 \bigr)\land \bigl(\forall b_2\in B\  ({(a,b_2)\in f} \rightarrow {b_2 =
 b_1}) \bigr).$$
