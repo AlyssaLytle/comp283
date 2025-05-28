@@ -29,6 +29,17 @@ For this problem, we will be discussing this figure:
 
 1.5. Is $$h$$ a bijection?
 
+## 2. Graph Representation of Functions
+
+In English, describe what the following would look like in a graph. (Describe it in terms of *elements* and *arrows*.)
+
+2.1 $$f: A \to B$$ is a partial function.
+
+2.2 $$f: A \to B$$ is a total function.
+
+2.3 $$f: A \to B$$ is one-to-one.
+
+2.3 $$f: A \to B$$ is onto.
 
 
 # Solutions
