@@ -87,10 +87,14 @@ This is also true. Over $$g$$, every element in $$Z$$ is mapped to by at most on
 
 Therefore $$g$$ is a total function.
 
-### 1.3 Is $$g$$ a bijection?
+### 1.3 Is $$g$$ a bijection? 
+
+No. *(Explanation coming soon.)*
 
 ### 1.4 Let $$h=g\circ f$$. Is $$h$$ is a total function?
 
 Yes, $$h$$ is a total function. You can verify this by plugging in  domain $$X$$, co-domain $$Z$$, and function $$h$$ into the definition of a function, similar to how we did in 1.1 and 1.2.
 
 ### 1.5 Is $$h$$ a bijection?
+
+Yes. *(Explanation coming soon.)*

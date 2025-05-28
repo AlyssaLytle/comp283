@@ -27,7 +27,7 @@ contributors: Alyssa Byrnes
 * Mon, May 26: Memorial Day  (No Class)
 * Tues, May 27: [Functions](/calendar/functions.md)
 * Wed, May 28: [Recursion](/calendar/recursion.md)
-* Thurs, May 29: Review and Practice
+* Thurs, May 29: [Review and Practice](/calendar/practice-1.md)
 * Fri, May 30: Quiz 1
 * Mon, June 2: Number Theory + Applications
 * Tues, June 3: Proofs
