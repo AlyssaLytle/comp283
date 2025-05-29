@@ -10,7 +10,7 @@ Here are the practice problems to prepare you for the quiz! I will try and cover
 
 ## Date and Time: Thurs, May 29 at 12 pm
 * [Zoom Link](https://unc.zoom.us/j/91069874856)
-* [Recording Link](/)
+* [Recording Link](https://unc.zoom.us/rec/share/ihlcGMOzS8bPsYfotNacHBLL3MSH9sHv4nAJFgr0_WWUcKT65wcd5-syED7BivwC.2t_ye94TyJMQ7m0T)
 
 # Problems
 
