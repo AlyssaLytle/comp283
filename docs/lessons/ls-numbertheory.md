@@ -18,7 +18,8 @@ The **ceiling** operator, denoted $$\left \lceil{x}\right \rceil$$,  tells us th
 
 ### Example
 
-- $$\left \lfloor{7.5}\right \rfloor = 7$$ <br>
+- $$\left \lfloor{7.5}\right \rfloor = 7$$ 
+
 - $$\left \lceil{7.5}\right \rceil = 8$$
 
 
@@ -81,7 +82,8 @@ $$$$\sum_{i\in[0,k]}d_i t^i = d_kt^k + d_{k-1}t^{k-1}+ \ldots + d_1t^1 + d_0t^0$
 
 
 - Often in computer science, we represent numbers in base $$2$$. This is also called "binary" representation.
-- Since our base $$t = 2$$, then our digits are in the range $$[0,1]$$. So basically, we are just looking at strings of $$0$$s and $$1$$s. <br> (Often we call $$0$$s and $$1$$s "bits". $$8$$ bits is a byte.)
+- Since our base $$t = 2$$, then our digits are in the range $$[0,1]$$. So basically, we are just looking at strings of $$0$$s and $$1$$s. 
+ (Often we call $$0$$s and $$1$$s "bits". $$8$$ bits is a byte.)
 
 
 
@@ -140,7 +142,8 @@ For all integers $$a,b$$ we can say $$a$$ **divides** $$b$$, or $$a \mid b$$, if
 ### Example
 
 - We can say $$2$$ divides $$6$$, or $$2 \mid 6$$, because $$2 \cdot 3 = 6$$
-- Notice that if $$b = 0$$ and $$m = 0$$, then $$a$$ can be anything. From this we conclude that every number divides $$0$$. <br>
+- Notice that if $$b = 0$$ and $$m = 0$$, then $$a$$ can be anything. From this we conclude that every number divides $$0$$. 
+
 $$\forall a \in \mathbb{Z}, a \mid 0$$
 
 
