@@ -29,7 +29,7 @@ contributors: Alyssa Byrnes
 * Wed, May 28: [Recursion](/calendar/recursion.md)
 * Thurs, May 29: [Review and Practice](/calendar/practice-1.md)
 * Fri, May 30: Quiz 1
-* Mon, June 2: Number Theory + Applications
+* Mon, June 2: [Number Theory + Applications](/calendar/number-theory.md)
 * Tues, June 3: Proofs
 * Wed, June 4: Proofs
 * Thurs, June 5: Review and Practice
