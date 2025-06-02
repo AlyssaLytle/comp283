@@ -4,13 +4,7 @@ title: ProofsCont
 contributors: Alyssa Byrnes
 ---
 
----
-title: Proofs Continued
-theme: dracula
-center: false
-transition: 'none'
-contributors: Alyssa Byrnes
----
+
 
 
 
@@ -189,8 +183,6 @@ You may see some other types of proofs that follow from the types of proofs we'v
 
 
 
-## Biconditional Proofs
-
 
 
 ### Example
@@ -318,7 +310,7 @@ $$\begin{array}{| l | c | c | c |}
        x  &  x \in N & x \in V & x \in N  \rightarrow x \in V \\
        \hline
        \textrm{Erik} & \texttt{False} & \texttt{False} & \textrm{True} \\
-        \textrm{Jos\'e} & \texttt{False} & \texttt{False} & \textrm{True}  \\
+        \textrm{Jos&eacute;} & \texttt{False} & \texttt{False} & \textrm{True}  \\
         \textrm{Nicoleta} & \texttt{False} & \texttt{False} & \textrm{True} \\
         \textrm{Aksana} & \texttt{True} & \texttt{True} & \textrm{True}  \\
          \hline
@@ -402,23 +394,6 @@ $$\begin{array}{l l l}
 
 
 
-
-
-## Proof of Existence
-
-
-Sometimes you just need to prove the existence of something. 
-
-$$\exists x \in S, {} P(x)$$.
-
-Again, like we discussed in class, you can show the existence of something by looking at every element of the set and finding an $$x$$ such that $$P(x)$$ is true. 
-
-Let's go back to our food example:
-
-- $$F = \{$$Erik, Jos&eacute;, Nicoleta, Aksana$$\}$$
-- $$V = \{$$Aksana, Erik$$\}$$ is the set of your friends who are vegetarian
-- $$N = \{$$Aksana$$\}$$ is the set of your friends who are vegan
-- We want to prove: $$\exists x \in F,{} x \in N  \rightarrow x \in V$$
 
 
 
