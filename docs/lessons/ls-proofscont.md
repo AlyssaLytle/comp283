@@ -236,6 +236,7 @@ $$
 
 As previously stated, we can also start at $$Q$$ to get to $$P$$. 
 
+$$
 \begin{equation*}
 \begin{array}{l l l}
     1. & \equiv \neg b  \rightarrow \neg a & \textrm{Given } (Q) \\
@@ -245,6 +246,7 @@ As previously stated, we can also start at $$Q$$ to get to $$P$$.
     5. & \equiv a  \rightarrow b & \textrm{Implication Definition } \square ~ (P)    \\ 
 \end{array}
 \end{equation*} 
+$$
 
 Either of these proofs are acceptable because they are saying the same thing! Which side you want to start at is really a personal preference.
 
