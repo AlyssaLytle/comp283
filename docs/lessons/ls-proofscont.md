@@ -369,7 +369,6 @@ $$\begin{array}{l l l}
 
 
 
-## Proof by Cases Cont.
 
 
 Case 2: $$x = 0$$
