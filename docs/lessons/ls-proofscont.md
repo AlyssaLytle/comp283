@@ -216,7 +216,7 @@ Say we want to prove $$a  \rightarrow b \equiv \neg b  \rightarrow \neg a$$.
 
 So we can say $$P: a  \rightarrow b$$ and $$Q: \neg b  \rightarrow \neg a$$.
 
-<!-- First, let's do this proof starting at $$P$$ to get to $$Q$$.
+First, let's do this proof starting at $$P$$ to get to $$Q$$.
  
 \begin{equation*}
 \begin{array}{l l l}
@@ -232,11 +232,8 @@ So we can say $$P: a  \rightarrow b$$ and $$Q: \neg b  \rightarrow \neg a$$.
 
 
 
-## Logical Equivalence Cont.
- -->
-
 As previously stated, we can also start at $$Q$$ to get to $$P$$. 
-<!--
+
 \begin{equation*}
 \begin{array}{l l l}
     1. & \equiv \neg b  \rightarrow \neg a & \textrm{Given } (Q) \\
@@ -245,7 +242,7 @@ As previously stated, we can also start at $$Q$$ to get to $$P$$.
     4. & \equiv \neg a \lor b & \textrm{Commutativity} \\
     5. & \equiv a  \rightarrow b & \textrm{Implication Definition } \square ~ (P)    \\ 
 \end{array}
-\end{equation*} -->
+\end{equation*} 
 
 Either of these proofs are acceptable because they are saying the same thing! Which side you want to start at is really a personal preference.
 
@@ -264,10 +261,10 @@ As previously discussed, to prove a "for all" statement, you want to look at eve
 
 You can often do this with a direct proof. All of the things we've directly proved so far are actually "for all" proofs.
 
-- $$\forall x \in \mathbb{Z}$$, If $$x$$ is even, $$x^2$$ is even
-- $$\forall x \in \mathbb{Z}, {} x-1 < \left \lfloor{x}\right \rfloor$$
-- $$\forall a,b,c \in \{\texttt{True}, \texttt{False}\}, {} \neg a \lor \neg(b \land \neg c) \equiv a  \rightarrow (b  \rightarrow c)$$
-- $$\forall a,b,c \in \mathbb{Z}$$, if $$a \mid b$$ and $$b \mid c$$, then $$a \mid c$$
+> $$\forall x \in \mathbb{Z}$$, If $$x$$ is even, $$x^2$$ is even
+> $$\forall x \in \mathbb{Z}, {} x-1 < \left \lfloor{x}\right \rfloor$$
+> $$\forall a,b,c \in \{\texttt{True}, \texttt{False}\}, {} \neg a \lor \neg(b \land \neg c) \equiv a  \rightarrow (b  \rightarrow c)$$
+> $$\forall a,b,c \in \mathbb{Z}$$, if $$a \mid b$$ and $$b \mid c$$, then $$a \mid c$$
 
 
 
