@@ -276,24 +276,6 @@ You can often do this with a direct proof. All of the things we've directly prov
 ## Forall, Exhaustive
 
 
-However, we can also prove "for all" statements by exhaustively looking at every element in $$S$$ and checking if $$P(x)$$ holds.
-
-Fittingly, this is called a **Proof by Exhaustion**.
-
-A good example is the set problem you've already seen:
-
-- $$F = \{$$Erik, Jos&eacute;, Nicoleta, Aksana$$\}$$
-- $$V = \{$$Aksana, Erik$$\}$$ is the set of your friends who are vegetarian
-- $$N = \{$$Aksana$$\}$$ is the set of your friends who are vegan
-- We want to prove: $$\forall x \in F,{} x \in N  \rightarrow x \in V$$
-
-
-
-
-
-## Forall, Exhaustive
-
-
 However, we can also prove "for all" statements by *exhaustively* looking at every element in $$S$$ and checking if $$P(x)$$ holds. 
 
 Fittingly, this is called a **Proof by Exhaustion**.
