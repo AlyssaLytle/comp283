@@ -320,23 +320,6 @@ $$\begin{array}{| l | c | c | c |}
 
 
 
-## Proof by Cases
-
-
-A **Proof by Cases** is a kind of proof by exhaustion. You are breaking the set you are proving something about into smaller sets.
-
-A good example is when we proved the definition of absolute value.
-
-$$|x| = sgn(x) \cdot x$$
-
-$$sgn(x) = \begin{cases}
-    -1 & x<0\\
-    0 & x =0\\
-    1 & x>0
-    \end{cases}$$
-    
-
-
 
 
 ## Proof by Cases
