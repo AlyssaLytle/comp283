@@ -188,6 +188,7 @@ You may see some other types of proofs that follow from the types of proofs we'v
 ### Example
 We want to prove $$x \in \overline{A \cap B}  \leftrightarrow x \in \bar{A} \cup \bar{B}$$
 
+$$
 \begin{equation*}
 \begin{array}{l l l}
   1. & x \in \overline{A \cap B}   &  \\
@@ -198,7 +199,7 @@ We want to prove $$x \in \overline{A \cap B}  \leftrightarrow x \in \bar{A} \cup
   6.  \leftrightarrow & x \in \bar{A} \cup \bar{B} & \textrm{Union Definition} 
 \end{array}
 \end{equation*}
-
+$$
 
 
 
@@ -218,6 +219,7 @@ So we can say $$P: a  \rightarrow b$$ and $$Q: \neg b  \rightarrow \neg a$$.
 
 First, let's do this proof starting at $$P$$ to get to $$Q$$.
  
+$$
 \begin{equation*}
 \begin{array}{l l l}
     1. & a  \rightarrow b & \textrm{Given } (P) \\
@@ -227,7 +229,7 @@ First, let's do this proof starting at $$P$$ to get to $$Q$$.
     5. & \equiv \neg b  \rightarrow \neg a & \textrm{Implication Definition }  \square ~ (Q)~ \\ 
 \end{array}
 \end{equation*}
-
+$$
 
 
 
