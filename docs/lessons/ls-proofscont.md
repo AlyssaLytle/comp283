@@ -293,7 +293,7 @@ $$\begin{array}{| l | c | c | c |}
        x  &  x \in N & x \in V & x \in N  \rightarrow x \in V \\
        \hline
        \textrm{Erik} & \texttt{False} & \texttt{False} & \textrm{True} \\
-        \textrm{Jos&eacute;} & \texttt{False} & \texttt{False} & \textrm{True}  \\
+        \textrm{Jose;} & \texttt{False} & \texttt{False} & \textrm{True}  \\
         \textrm{Nicoleta} & \texttt{False} & \texttt{False} & \textrm{True} \\
         \textrm{Aksana} & \texttt{True} & \texttt{True} & \textrm{True}  \\
          \hline
