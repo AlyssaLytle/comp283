@@ -30,8 +30,6 @@ contributors: Alyssa Byrnes
 
 
 
-## What a proof looks like
-
 
 The two column format looks like this: 
 
@@ -60,7 +58,7 @@ $$\begin{array}{l l l}
 
 
 
-## Finding P and Q
+
 
 
 ### Example
@@ -74,7 +72,6 @@ $$\begin{array}{l l l}
 
 
 
-## Finding P and Q
 
 
 ### Example
