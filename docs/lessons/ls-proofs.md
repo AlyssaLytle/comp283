@@ -99,20 +99,6 @@ Here are some common rewrites you might see when constructing your proofs:
 
 
 
-## Types of Proofs - Direct
-
- 
- The first type of proof we will discuss is called a **direct proof**. Basically, we are trying to to prove $$p  \rightarrow q$$ by starting at $$p$$ and getting to $$q$$.
- 
- For example, say we want to prove the following: "If $$x$$ is even, $$x^2$$ is even". 
- 
- Then $$p$$ is "$$x$$ is even" and $$q$$ is "$$x^2$$ is even"
- 
- 
- 
-
-
-
 
 ## Types of Proofs - Direct
 
@@ -142,14 +128,6 @@ $$\begin{array}{l l l}
 ## Example Proof
 
 
-We want to show $$x-1 < \left \lfloor{x}\right \rfloor$$
-
-
-
-
-
-
-## Example Proof
 
 
 We want to show $$x-1 < \left \lfloor{x}\right \rfloor$$
@@ -185,14 +163,6 @@ Another example of this is when we do our logical equivalences.
 
  
  
-
-
-
-
-## Example Proof 2
-
- 
- We start at $$p$$: $$\neg a \lor \neg(b \land \neg c)$$ and use our equivalences to get to $$q$$: $$a  \rightarrow (b  \rightarrow c)$$.
  
  $$\begin{array}{l l l}
    1. & \neg a \lor \neg(b \land \neg c)  & \textrm{Given} \\
