@@ -32,7 +32,7 @@ contributors: Alyssa Byrnes
 * Mon, June 2: [Number Theory + Applications](/calendar/number-theory.md)
 * Tues, June 3: [(Direct) Proofs](/calendar/proofs.md)
 * Wed, June 4: [More Proofs](/calendar/proofs-continued.md)
-* Thurs, June 5: Review and Practice
+* Thurs, June 5: [Review and Practice](/calendar/practice-2.md)
 * Fri, June 6: Quiz 2
 * Mon, June 9: Induction
 * Tues, June 10: Induction
