@@ -48,7 +48,7 @@ $$\forall n \in \mathbb{N}, F(0) + F(1) + F(2) + \ldots + F(n-1) + F(n) = F(n+2)
 
 
 
-## Example with Template
+
 
 
 S1. State the ‘for all’ statement that you want to prove:
@@ -62,8 +62,6 @@ S2. Say “we prove this by induction on” and state the induction parameter.
 
 
 
-
-## Example with Template
 
 
 S3. Prove the base case(s).
@@ -79,7 +77,7 @@ S3. Prove the base case(s).
 
 
 
-## Example with Template
+
 
 
 S4. Write Induction Step.
@@ -99,7 +97,6 @@ was given to you in S4:
 
 
 
-## Example with Template
 
 
 S7. Do the proof for the specific $$x$$.
@@ -122,7 +119,7 @@ S7. Do the proof for the specific $$x$$.
 
 
 
-## Example with Template
+
 
 
 S8. Declare victory.
