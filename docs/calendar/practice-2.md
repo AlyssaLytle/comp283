@@ -32,6 +32,7 @@ Prove that if $$x$$ and $$y$$ are real numbers such that $$x +y \leq 1$$, then $
 For finite sets $$X$$ and $$Y$$, how you would *exhaustively* prove that $$f: X \to Y$$ is a bijection?
 
 ## 5. Proofs over Sets
- Prove that if $$ x \in A \cap (B \cup C)$$, then $$x \in (A \cap B) \cup (A \cap C)$$. 
+
+Prove that if $$ x \in A \cap (B \cup C)$$, then $$x \in (A \cap B) \cup (A \cap C)$$. 
 
 (Hint: Translate this to propositional logic using the definitions of intersection and union.)
