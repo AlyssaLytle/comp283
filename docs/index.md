@@ -34,7 +34,7 @@ contributors: Alyssa Byrnes
 * Wed, June 4: [More Proofs](/calendar/proofs-continued.md)
 * Thurs, June 5: [Review and Practice](/calendar/practice-2.md)
 * Fri, June 6: Quiz 2
-* Mon, June 9: Induction
+* Mon, June 9: [Induction](/calendar/induction.md)
 * Tues, June 10: Induction
 * Wed, June 11: Buffer 
 * Thurs, June 12: Review and Practice
