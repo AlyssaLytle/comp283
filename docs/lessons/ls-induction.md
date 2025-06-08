@@ -36,10 +36,9 @@ contributors: Alyssa Byrnes
 
 Recall the Fibonacci series...
 
-::: nonincremental
 - The base case: $$F(0) = 0, F(1) = 1$$
 - Recursive rule: For $$n > 1$$, $$F(n) = F(n-1) + F(n-2)$$.
-:::
+
 
 We want to prove the following about the sum of the first $$n$$ numbers of the series:
 
