@@ -101,6 +101,7 @@ was given to you in S4:
 
 S7. Do the proof for the specific $$x$$.
 
+$$
 \begin{equation*}
     \begin{array}{l l l}
         1. & \forall 1 \leq k \leq n, {} \sum_{i=0}^k F(i) = F(k+2) - 1 & \textrm{IH} \\
@@ -113,7 +114,7 @@ S7. Do the proof for the specific $$x$$.
         8. & \sum_{i=0}^{n} F(i) = F(n+2) - 1 & \textrm{Plugged 7. into 6.} \square
     \end{array}
 \end{equation*}
-
+$$
 
 
 
