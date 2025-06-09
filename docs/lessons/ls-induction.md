@@ -142,7 +142,9 @@ S8. Declare victory.
 
 
 
+## Other Example
 
+In the video, we also do an example to prove $$\forall x>0, \sum_{i=1}^x 2i - 1 = x^2$$.
 
 <!-- ## Chocolate Bar Proof
 
