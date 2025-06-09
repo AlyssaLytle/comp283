@@ -35,8 +35,8 @@ contributors: Alyssa Byrnes
 * Thurs, June 5: [Review and Practice](/calendar/practice-2.md)
 * Fri, June 6: Quiz 2
 * Mon, June 9: [Induction](/calendar/induction.md)
-* Tues, June 10: Induction
-* Wed, June 11: Buffer 
+* Tues, June 10: *Induction Practice (No assignment, work on LS12!)*
+* Wed, June 11: Analyzing Algorithms + Invariants
 * Thurs, June 12: Review and Practice
 * Fri, June 13: Quiz 3
 * Mon, June 16: Analyzing Algorithms + Invariants
