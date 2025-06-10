@@ -28,6 +28,6 @@ and it returns a *result*.
 
 Note that an algorithm may be influenced by its environment and it may  produce side-effects which influence its environment. (I'll give an example of this soon!)
 
-<img src="/static/figs/algorithm.png" width="600"/>
+<img src="static/figs/algorithm.png" width="600"/>
 
 
