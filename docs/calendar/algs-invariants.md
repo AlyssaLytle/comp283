@@ -20,7 +20,7 @@ Some common examples of algorithms you might use in your day-to-day are:
 
 ## Anatomy of an Algorithm
 
-<img src="docs/static/figs/algorithm.png" width="600"/>
+<img src="comp283/static/figs/algorithm.png" width="600"/>
 
 An algorithm is given at least one *input*,
 
