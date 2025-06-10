@@ -44,7 +44,20 @@ It is not meant to run on a computer, but rather it helps you outline what your 
 
 You can reference your pseudocode to help you write actual code!
 
+### Example: Finding the low card in a deck
 
+Say I want to describe an algorithm to find the lowest card in the deck of cards. The general steps are:
+
+- Go from left to right
+- Remember the lowest card you’ve seen so far and compare it to the next cards
+
+```
+find_lowcard(deck)
+lowest_card = first card in deck
+Repeatedly until end of deck:
+	if current_card < lowest_card:
+		lowest_card = current_card
+```
 
 # LS13: Algorithms
 
@@ -58,7 +71,4 @@ What’s an example of an algorithm you use in your daily life?
 Think of anything with a step-by-step process, for example: picking your outfit, walking to class, choosing a YouTube video, ordering food, etc.
 Write 2–3 sentences describing what you do, in plain language.
 
-
-
-## Pseudocode
 
