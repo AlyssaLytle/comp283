@@ -111,9 +111,13 @@ Rewrite your description as a sequence of steps using algorithmic or logical lan
 Use words like:
 
 If... then...
+
 Else
+
 While...
+
 For each...
+
 Return
 
 *answer*
