@@ -66,7 +66,7 @@ We usually represent numbers in base ten
 
 
 - In general, a number in the form of digits $$d_k d_{k-1} \ldots d_1 d_0$$ can be represented as
-$$$$\sum_{i\in[0,k]}d_i t^i = d_kt^k + d_{k-1}t^{k-1}+ \ldots + d_1t^1 + d_0t^0$$$$ where $$t$$ is the base
+$$\sum_{i\in[0,k]}d_i t^i = d_kt^k + d_{k-1}t^{k-1}+ \ldots + d_1t^1 + d_0t^0$$ where $$t$$ is the base
 - All digits $$d_i$$ are in the range $$[0,t-1]$$
 
 ### Example
