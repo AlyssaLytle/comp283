@@ -20,7 +20,7 @@ Some common examples of algorithms you might use in your day-to-day are:
 
 ## Anatomy of an Algorithm
 
-<img src="comp283/static/figs/algorithm.png" width="600"/>
+<img src="/comp283/static/figs/algorithm.png" width="600"/>
 
 An algorithm is given at least one *input*,
 
@@ -51,12 +51,15 @@ Say I want to describe an algorithm to find the lowest card in the deck of cards
 - Go from left to right
 - Remember the lowest card you’ve seen so far and compare it to the next cards
 
+In pseudocode, you could express it like this:
+
 ```
-find_lowcard(deck)
+INPUT: deck of cards
 lowest_card = first card in deck
-Repeatedly until end of deck:
+for each card in the deck:
 	if current_card < lowest_card:
 		lowest_card = current_card
+RETURN lowest_card
 ```
 
 # LS13: Algorithms
