@@ -76,14 +76,14 @@ Please go to [Gradescope](www.gradescope.com) to complete this assignment.
 
 ## Example Submission
 
-# Part 1. Choose an Algorithm
+### Part 1. Choose an Algorithm
 What’s an example of an algorithm you use in your daily life?
 Think of anything with a step-by-step process, for example: picking your outfit, walking to class, choosing a YouTube video, ordering food, etc.
 Write 2–3 sentences describing what you do, in plain language.
 
 *answer*
 
-# Part 2. Identify Goals and Elements
+### Part 2. Identify Goals and Elements
 
 What are you trying to *optimize* with this algorithm?
 
@@ -105,7 +105,7 @@ How does this interact with the environment? (Is it impacted by its environment?
 
 *answer*
 
-# Part 3. Express in Pseudocode
+### Part 3. Express in Pseudocode
 
 Rewrite your description as a sequence of steps using algorithmic or logical language.
 Use words like:
@@ -119,7 +119,7 @@ Return
 *answer*
 
 
-# Part 4: Make a Claim and Justify It
+### Part 4: Make a Claim and Justify It
 
 Write a short claim about what your algorithm guarantees.
 It can be about its result or how it works.
