@@ -77,33 +77,41 @@ Please go to [Gradescope](www.gradescope.com) to complete this assignment.
 ## Example Submission
 
 ### Part 1. Choose an Algorithm
-What’s an example of an algorithm you use in your daily life?
+What's an example of an algorithm you use in your daily life?
 Think of anything with a step-by-step process, for example: picking your outfit, walking to class, choosing a YouTube video, ordering food, etc.
 Write 2–3 sentences describing what you do, in plain language.
 
-*answer*
+*Every night before bed, I decide what activity I want to do to relax. Sometimes I read a book, other times I watch TV, or I scroll on my phone. The choice depends on how I feel after the day and how much energy or time I have left.*
+
 
 ### Part 2. Identify Goals and Elements
 
 What are you trying to *optimize* with this algorithm?
 
-*answer*
+*I would like to increase my ability to wind down and quality of sleep.*
 
 What are your inputs?
 
-*answer*
+*Difficulty of the day, energy levels, time of night*
 
 In general what are your steps? (In a very abstract sense.)
 
-*answer*
+*Evaluate how tired I feel*
+
+
+*Estimate how much free time I have*
+
+
+*Choose the activity that feels most suitable for my energy and time, while aiming to prioritize no screen time to improve my quality of sleep.*
+
 
 What are your outputs?
 
-*answer*
+*The activity I choose*
 
 How does this interact with the environment? (Is it impacted by its environment? Is it impacting its environment?)
 
-*answer*
+*This algorithm is impacted by my environment because it depends on what I have available (e.g. a good book, a charged phone, etc.). It impacts my environment by adding light to it if I'm choosing screentime, using power from my electronics, creasing the pages of my book, etc.*
 
 ### Part 3. Express in Pseudocode
 
@@ -111,21 +119,29 @@ Rewrite your description as a sequence of steps using algorithmic or logical lan
 Use words like:
 
 If... then...
-
 Else
-
 While...
-
 For each...
-
 Return
 
-*answer*
-
+```
+If time_of_night is less than 30 minutes:
+    If energy_level is low:
+        Do "scroll on phone"
+    Else:
+        Do "watch TV"
+Else:
+    If difficulty_of_day is high AND energy_level is low:
+        Do "watch TV"
+    Else if energy_level is high:
+        Do "read book"
+    Else:
+        Randomly choose between "read book" and "watch TV"
+```
 
 ### Part 4: Make a Claim and Justify It
 
 Write a short claim about what your algorithm guarantees.
 It can be about its result or how it works.
 
-*answer*
+*This algorithm increases the likelihood that I read more often when I have the time and energy, while still adapting to days when I feel too tired.*
