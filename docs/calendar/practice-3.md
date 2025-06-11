@@ -40,7 +40,7 @@ You might be inclined express it like this:
 
 $$\forall n \in \mathbb{N}, \sum_{k=1}^n 2k + 1 = n^2$$
 
-But is this capturing the right numbers? Let's try a base case. When $$n = 1$$, \sum_{k=1}^1 2k + 1 = 2(1) + 1 = 3 \neq 1^2$$. We're essentially getting an "off-by-one" error where the left side of our equation is summing the odds starting at $$n=3$$. 
+But is this capturing the right numbers? Let's try a base case. When $$n = 1$$, $$ \sum_{k=1}^1 2k + 1 = 2(1) + 1 = 3 \neq 1^2$$. We're essentially getting an "off-by-one" error where the left side of our equation is summing the odds starting at $$n=3$$. 
 
 We're used to expressing odds as $$2k+1$$ (an even number plus one), but we can *also* express odds as $$2k-1$$ (an even number minus one)!
 
