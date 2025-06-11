@@ -24,6 +24,10 @@ The sum of the first $$n$$ odd natural numbers equals $$n^2$$
 
 Prove this expression.
 
+## 3. Induction over Fibonacci
+
+Prove $$F(3n)$$ is even.
+
 # Solutions
 
 ## 2
