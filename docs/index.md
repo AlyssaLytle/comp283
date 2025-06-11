@@ -37,7 +37,7 @@ contributors: Alyssa Byrnes
 * Mon, June 9: [Induction](/calendar/induction.md)
 * Tues, June 10: *Induction Practice (No assignment, work on LS12!)*
 * Wed, June 11: [Algorithms](/calendar/algs-invariants.md)
-* Thurs, June 12: Review and Practice
+* Thurs, June 12: [Review and Practice](/calendar/practice-3.md)
 * Fri, June 13: Quiz 3
 * Mon, June 16: Analyzing Algorithms + Invariants
 * Tues, June 17: LDOC: Proving Invariants
