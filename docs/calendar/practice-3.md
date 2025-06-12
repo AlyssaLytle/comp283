@@ -55,7 +55,7 @@ $$\forall n \in \mathbb{N}, \sum_{k=1}^n (2k - 1) = n^2$$
 State the ‘for all’ statement that you want to prove:
 
 
-$$\forall n \in \mathbb{N}, F(3n)$$ is even \\
+$$\forall n \in \mathbb{N}, F(3n)$$ is even 
 
 
 ### Step 2
@@ -69,7 +69,9 @@ Prove the base case(s):
 
 
 For $$n=0$$:
+
     * $$F(3(0)) = F(0) = 0$$
+
     * $$0$$ is even $$\square$$
 
 
@@ -130,5 +132,5 @@ State what you just proved.
 
 
 
-Therefore, $$\forall n \in \mathbb{N}, F(3n+1)$$ is odd. 
+Therefore, $$\forall n \in \mathbb{N}, F(3n)$$ is even. 
 
