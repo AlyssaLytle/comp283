@@ -130,5 +130,5 @@ State what you just proved.
 
 
 
-Therefore, $\forall n \in \mathbb{N}, F(3n+1)$ is odd. 
+Therefore, $$\forall n \in \mathbb{N}, F(3n+1)$$ is odd. 
 
