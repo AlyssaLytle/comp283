@@ -57,9 +57,9 @@ Let's look at our pseudocode for finding the index of the max value in a list.
 
 
 
-## Proving our Invariant
+<!-- ## Proving our Invariant -->
 
-
+<!-- 
 ### Step 1 
 We want to prove: 
 $$\textrm{For input list } A,$$  <br>
@@ -69,7 +69,7 @@ $$\forall j \in [0,i-1], \verb|A[max_idx]| \geq \verb|A[j]|$$
 
 
 
-## Proving our Invariant
+## Proving our Invariant -->
 
 
 ### Step 1 
@@ -86,7 +86,7 @@ We prove this by induction on $$i$$.
 
 
 
-## Proving our Invariant
+<!-- ## Proving our Invariant -->
 
 
     1. INPUT: list A
@@ -115,7 +115,7 @@ We prove this by induction on $$i$$.
 - $$\verb|A[0]| \geq \verb|A[0]| \square$$
 
 
-## Proving our Invariant
+<!-- ## Proving our Invariant -->
 
 
 ### Step 4
@@ -141,7 +141,7 @@ $$\forall j \in [0,i-1], \verb|A[max_idx]| \geq \verb|A[j]|$$
 
 
 
-## Proving our Invariant (Step 7)
+<!-- ## Proving our Invariant (Step 7) -->
 
 
     1. INPUT: list A
@@ -160,7 +160,7 @@ $$\forall j \in [0,i-1], \verb|A[max_idx]| \geq \verb|A[j]|$$
 
 
 
-## Proving our Invariant (Step 7)
+<!-- ## Proving our Invariant (Step 7) -->
 
 
     1. INPUT: list A
@@ -194,19 +194,6 @@ $$
 
 
 
-## Proving our Invariant (Step 7)
-
-
-    1. INPUT: list A
-    2. max_idx = 0
-    3. max_elem = A[0]
-    4. n = length(A)
-    5. FOR i in [1,n-1]:
-    6.    IF A[i] > max_elem:
-    7.        max_elem = A[i]
-    8.        max_idx = i
-    9. RETURN max_idx
-
 
 
 Case 2: $$\verb|A[i]|  \leq \verb|max_elem|$$
@@ -223,7 +210,7 @@ $$
 \end{equation}
 $$
 
-## Proving Our Invariant
+<!-- ## Proving Our Invariant -->
 
 
 ### Step 8
