@@ -39,8 +39,10 @@ contributors: Alyssa Byrnes
 * Wed, June 11: [Algorithms](/calendar/algs-invariants.md)
 * Thurs, June 12: [Review and Practice](/calendar/practice-3.md)
 * Fri, June 13: Quiz 3
-* Mon, June 16: Analyzing Algorithms + Invariants
+* Mon, June 16: [Analyzing Algorithms + Invariants](/calendar/analyzing-algorithms-and-invariants.md)
 * Tues, June 17: LDOC: Proving Invariants
+* Wed, June 18: Final Exam Review Session
+* Thurs, June 19: Juneteenth *(No class/office hours)*
 * Fri, June 20: Final Exam
 
 <!-- * Wed, May 17: [LaTeX + Pseudocode](/calendar/latex-and-pseudocode.md)
