@@ -196,7 +196,7 @@ $$
 
 
 
-Case 2: $$\verb|A[i]|  \leq \verb|max_elem|$$
+Case 2: $$\verb"A[i]"  \leq \verb"max_elem"$$
 
 $$
 \begin{equation}
