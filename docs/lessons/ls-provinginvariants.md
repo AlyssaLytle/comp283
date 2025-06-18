@@ -110,7 +110,7 @@ We prove this by induction on $$i$$.
 ### Step 3 (Base case) 
 - *Before* we enter the loop. ($$i=1$$)
 - $$\exists \verb" max_idx" \in [0,0], \textrm{ and } \forall j \in [0,0], \verb|A[max_idx]| \geq \verb|A[j]|$$
-- Possible values for $$\verb|max_idx|$$: $$0$$
+- Possible values for $$\verb"max_idx"$$: $$0$$
 - Possible values for $$j$$: $$0$$
 - $$\verb|A[0]| \geq \verb|A[0]| \square$$
 
