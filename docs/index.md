@@ -41,7 +41,7 @@ contributors: Alyssa Byrnes
 * Fri, June 13: Quiz 3
 * Mon, June 16: [Analyzing Algorithms + Invariants](/calendar/analyzing-algorithms-and-invariants.md)
 * Tues, June 17 (LDOC): [Proving Invariants](/calendar/proving-invariants.md)
-* Wed, June 18: Final Exam Review Session
+* Wed, June 18: [Final Exam Review Session](https://unc.zoom.us/j/97904604140)
 * Thurs, June 19: Juneteenth *(No class/office hours)*
 * Fri, June 20: Final Exam
 
